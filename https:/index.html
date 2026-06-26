@@ -1,0 +1,1419 @@
+<!DOCTYPE html>  <html lang="am">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>ሮሪ ሆቴል ፉትቦል ክለብ | Rori Hotel FC</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">  
+    <style>  
+        :root {  
+            --navy: #1A237E;  
+            --navy-dark: #0D1452;  
+            --navy-light: #283593;  
+            --gold: #FFD600;  
+            --gold-dark: #C8A600;  
+            --gold-glow: rgba(255, 214, 0, 0.3);  
+            --white: #F5F5F5;  
+            --gray: #B0B0B0;  
+            --dark: #0A0A0A;  
+            --card-bg: #111833;  
+            --card-border: rgba(255, 214, 0, 0.15);  
+            --text: #E0E0E0;  
+            --text-muted: #999;  
+            --radius: 16px;  
+            --radius-sm: 10px;  
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);  
+            --shadow-gold: 0 0 30px rgba(255, 214, 0, 0.25);  
+            --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;  
+            --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;  
+        }  * {  
+        margin: 0;  
+        padding: 0;  
+        box-sizing: border-box;  
+    }  
+
+    html {  
+        scroll-behavior: smooth;  
+        scroll-padding-top: 80px;  
+    }  
+
+    body {  
+        font-family: var(--font-body);  
+        background: var(--dark);  
+        color: var(--text);  
+        line-height: 1.7;  
+        overflow-x: hidden;  
+        -webkit-font-smoothing: antialiased;  
+    }  
+
+    body::after {  
+        content: '';  
+        position: fixed;  
+        top: 0;  
+        left: 0;  
+        width: 100%;  
+        height: 100%;  
+        pointer-events: none;  
+        z-index: 9999;  
+        background: repeating-linear-gradient(0deg,  
+                transparent,  
+                transparent 2px,  
+                rgba(0, 0, 0, 0.03) 2px,  
+                rgba(0, 0, 0, 0.03) 4px);  
+        opacity: 0.4;  
+    }  
+
+    .navbar {  
+        position: fixed;  
+        top: 0;  
+        left: 0;  
+        width: 100%;  
+        z-index: 1000;  
+        background: rgba(10, 10, 20, 0.85);  
+        backdrop-filter: blur(20px);  
+        -webkit-backdrop-filter: blur(20px);  
+        border-bottom: 1px solid rgba(255, 214, 0, 0.2);  
+        transition: var(--transition);  
+        padding: 0 2rem;  
+    }  
+    .navbar.scrolled {  
+        background: rgba(10, 10, 20, 0.95);  
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);  
+    }  
+    .nav-inner {  
+        max-width: 1300px;  
+        margin: 0 auto;  
+        display: flex;  
+        align-items: center;  
+        justify-content: space-between;  
+        height: 70px;  
+    }  
+    .nav-logo {  
+        display: flex;  
+        align-items: center;  
+        gap: 12px;  
+        text-decoration: none;  
+        color: var(--white);  
+    }  
+    .nav-logo-icon {  
+        width: 44px;  
+        height: 44px;  
+        background: var(--gold);  
+        border-radius: 50%;  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        font-size: 1.5rem;  
+        font-weight: 900;  
+        color: var(--navy);  
+        font-family: var(--font-display);  
+        letter-spacing: 1px;  
+        box-shadow: 0 0 20px rgba(255, 214, 0, 0.5);  
+        animation: floatBadge 3s ease-in-out infinite;  
+    }  
+    @keyframes floatBadge {  
+        0%, 100% { transform: translateY(0); }  
+        50% { transform: translateY(-6px); }  
+    }  
+    .nav-logo-text {  
+        font-family: var(--font-display);  
+        font-size: 1.5rem;  
+        letter-spacing: 2px;  
+        color: var(--white);  
+        line-height: 1;  
+    }  
+    .nav-logo-text span {  
+        color: var(--gold);  
+        display: block;  
+        font-size: 0.7rem;  
+        letter-spacing: 3px;  
+        font-family: var(--font-body);  
+        font-weight: 400;  
+    }  
+    .nav-links {  
+        display: flex;  
+        list-style: none;  
+        gap: 0.3rem;  
+        align-items: center;  
+        flex-wrap: wrap;  
+        justify-content: flex-end;  
+    }  
+    .nav-links a {  
+        color: var(--text);  
+        text-decoration: none;  
+        padding: 0.5rem 1rem;  
+        border-radius: 8px;  
+        font-weight: 500;  
+        font-size: 0.9rem;  
+        transition: var(--transition);  
+        letter-spacing: 0.5px;  
+        white-space: nowrap;  
+    }  
+    .nav-links a:hover,  
+    .nav-links a.active {  
+        color: var(--gold);  
+        background: rgba(255, 214, 0, 0.08);  
+    }  
+    .nav-cta {  
+        background: var(--gold) !important;  
+        color: var(--navy-dark) !important;  
+        font-weight: 700 !important;  
+        padding: 0.55rem 1.3rem !important;  
+        letter-spacing: 0.8px !important;  
+        box-shadow: 0 0 20px rgba(255, 214, 0, 0.35);  
+        transition: var(--transition);  
+    }  
+    .nav-cta:hover {  
+        background: #FFE440 !important;  
+        box-shadow: 0 0 35px rgba(255, 214, 0, 0.55) !important;  
+        transform: translateY(-2px);  
+    }  
+    .mobile-toggle {  
+        display: none;  
+        background: none;  
+        border: 2px solid var(--gold);  
+        color: var(--gold);  
+        font-size: 1.6rem;  
+        padding: 0.3rem 0.7rem;  
+        border-radius: 8px;  
+        cursor: pointer;  
+        transition: var(--transition);  
+    }  
+    .mobile-toggle:hover {  
+        background: var(--gold);  
+        color: var(--navy);  
+    }  
+
+    .section {  
+        padding: 5rem 2rem;  
+        max-width: 1300px;  
+        margin: 0 auto;  
+    }  
+    .section-header {  
+        text-align: center;  
+        margin-bottom: 3.5rem;  
+    }  
+    .section-tag {  
+        display: inline-block;  
+        font-family: var(--font-body);  
+        font-size: 0.8rem;  
+        letter-spacing: 4px;  
+        color: var(--gold);  
+        text-transform: uppercase;  
+        margin-bottom: 0.5rem;  
+        font-weight: 600;  
+    }  
+    .section-title {  
+        font-family: var(--font-display);  
+        font-size: clamp(2.2rem, 5vw, 3.5rem);  
+        color: var(--white);  
+        letter-spacing: 2px;  
+        line-height: 1.1;  
+        margin-bottom: 0.8rem;  
+    }  
+    .section-title .gold {  
+        color: var(--gold);  
+    }  
+    .section-subtitle {  
+        color: var(--text-muted);  
+        font-size: 1.05rem;  
+        max-width: 600px;  
+        margin: 0 auto;  
+    }  
+
+    #hero {  
+        min-height: 100vh;  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        text-align: center;  
+        position: relative;  
+        padding: 6rem 2rem 4rem;  
+        background: radial-gradient(ellipse at center, rgba(26, 35, 126, 0.5) 0%, rgba(10, 10, 20, 1) 70%),  
+            radial-gradient(ellipse at 50% 80%, rgba(255, 214, 0, 0.08) 0%, transparent 50%);  
+    }  
+    #hero::before {  
+        content: '';  
+        position: absolute;  
+        top: 0;  
+        left: 0;  
+        width: 100%;  
+        height: 100%;  
+        background: repeating-linear-gradient(0deg,  
+                transparent,  
+                transparent 3px,  
+                rgba(255, 214, 0, 0.03) 3px,  
+                rgba(255, 214, 0, 0.03) 6px);  
+        pointer-events: none;  
+        z-index: 0;  
+        animation: scanlineMove 8s linear infinite;  
+    }  
+    @keyframes scanlineMove {  
+        0% { background-position: 0 0; }  
+        100% { background-position: 0 100px; }  
+    }  
+    .hero-content {  
+        position: relative;  
+        z-index: 1;  
+        max-width: 800px;  
+    }  
+    .hero-badge {  
+        width: 120px;  
+        height: 120px;  
+        margin: 0 auto 2rem;  
+        background: var(--gold);  
+        border-radius: 50%;  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        font-family: var(--font-display);  
+        font-size: 3rem;  
+        color: var(--navy);  
+        box-shadow: 0 0 60px rgba(255, 214, 0, 0.5), 0 0 120px rgba(255, 214, 0, 0.2);  
+        animation: floatBadge 3s ease-in-out infinite;  
+        letter-spacing: 2px;  
+    }  
+    .hero-title {  
+        font-family: var(--font-display);  
+        font-size: clamp(3rem, 8vw, 6rem);  
+        color: var(--white);  
+        letter-spacing: 4px;  
+        line-height: 1;  
+        margin-bottom: 1rem;  
+        text-shadow: 0 0 60px rgba(255, 214, 0, 0.4);  
+    }  
+    .hero-title .gold {  
+        color: var(--gold);  
+    }  
+    .hero-desc {  
+        font-size: 1.2rem;  
+        color: var(--gray);  
+        margin-bottom: 2rem;  
+        max-width: 550px;  
+        margin-left: auto;  
+        margin-right: auto;  
+    }  
+    .hero-stats {  
+        display: flex;  
+        gap: 2rem;  
+        justify-content: center;  
+        flex-wrap: wrap;  
+        margin-bottom: 2.5rem;  
+    }  
+    .hero-stat {  
+        text-align: center;  
+        padding: 1rem 1.5rem;  
+        background: rgba(255, 255, 255, 0.03);  
+        border: 1px solid rgba(255, 214, 0, 0.2);  
+        border-radius: var(--radius-sm);  
+        min-width: 100px;  
+    }  
+    .hero-stat-num {  
+        font-family: var(--font-display);  
+        font-size: 2.2rem;  
+        color: var(--gold);  
+        letter-spacing: 1px;  
+    }  
+    .hero-stat-label {  
+        font-size: 0.75rem;  
+        color: var(--text-muted);  
+        letter-spacing: 2px;  
+        text-transform: uppercase;  
+    }  
+    .hero-cta-group {  
+        display: flex;  
+        gap: 1rem;  
+        justify-content: center;  
+        flex-wrap: wrap;  
+    }  
+    .btn {  
+        display: inline-block;  
+        padding: 0.85rem 2rem;  
+        border-radius: 50px;  
+        text-decoration: none;  
+        font-weight: 700;  
+        letter-spacing: 1px;  
+        font-size: 0.95rem;  
+        transition: var(--transition);  
+        cursor: pointer;  
+        border: none;  
+        font-family: var(--font-body);  
+    }  
+    .btn-gold {  
+        background: var(--gold);  
+        color: var(--navy-dark);  
+        box-shadow: 0 0 25px rgba(255, 214, 0, 0.4);  
+    }  
+    .btn-gold:hover {  
+        background: #FFE440;  
+        box-shadow: 0 0 45px rgba(255, 214, 0, 0.6);  
+        transform: translateY(-3px);  
+    }  
+    .btn-outline {  
+        border: 2px solid var(--gold);  
+        color: var(--gold);  
+        background: transparent;  
+    }  
+    .btn-outline:hover {  
+        background: rgba(255, 214, 0, 0.1);  
+        transform: translateY(-3px);  
+    }  
+
+    .cards-grid {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));  
+        gap: 1.5rem;  
+    }  
+    .card {  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius);  
+        padding: 2rem 1.5rem;  
+        transition: var(--transition);  
+        position: relative;  
+        overflow: hidden;  
+    }  
+    .card::before {  
+        content: '';  
+        position: absolute;  
+        top: 0;  
+        left: 0;  
+        width: 100%;  
+        height: 3px;  
+        background: var(--gold);  
+        transform: scaleX(0);  
+        transform-origin: left;  
+        transition: transform 0.4s ease;  
+    }  
+    .card:hover::before {  
+        transform: scaleX(1);  
+    }  
+    .card:hover {  
+        border-color: rgba(255, 214, 0, 0.5);  
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 214, 0, 0.1);  
+        transform: translateY(-4px);  
+    }  
+    .card-icon {  
+        font-size: 2.5rem;  
+        margin-bottom: 1rem;  
+        display: block;  
+    }  
+    .card h3 {  
+        font-family: var(--font-display);  
+        font-size: 1.5rem;  
+        letter-spacing: 1.5px;  
+        color: var(--white);  
+        margin-bottom: 0.5rem;  
+    }  
+    .card p {  
+        color: var(--text-muted);  
+        font-size: 0.9rem;  
+        line-height: 1.6;  
+    }  
+
+    .team-grid {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));  
+        gap: 1.2rem;  
+    }  
+    .player-card {  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius);  
+        padding: 1.5rem 1rem;  
+        text-align: center;  
+        transition: var(--transition);  
+        position: relative;  
+    }  
+    .player-card:hover {  
+        border-color: var(--gold);  
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);  
+        transform: translateY(-3px);  
+    }  
+    .player-avatar {  
+        width: 70px;  
+        height: 70px;  
+        border-radius: 50%;  
+        background: linear-gradient(135deg, var(--navy-light), var(--navy));  
+        margin: 0 auto 0.8rem;  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        font-family: var(--font-display);  
+        font-size: 1.6rem;  
+        color: var(--gold);  
+        border: 3px solid var(--gold);  
+        box-shadow: 0 0 15px rgba(255, 214, 0, 0.25);  
+    }  
+    .player-number {  
+        position: absolute;  
+        top: 10px;  
+        right: 14px;  
+        font-family: var(--font-display);  
+        font-size: 1.2rem;  
+        color: var(--gold);  
+        opacity: 0.7;  
+    }  
+    .player-name {  
+        font-family: var(--font-display);  
+        font-size: 1.1rem;  
+        letter-spacing: 1px;  
+        color: var(--white);  
+        margin-bottom: 2px;  
+    }  
+    .player-role {  
+        font-size: 0.75rem;  
+        color: var(--gold);  
+        letter-spacing: 1.5px;  
+        text-transform: uppercase;  
+    }  
+    .staff-section {  
+        margin-top: 3rem;  
+    }  
+    .staff-grid {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
+        gap: 1.2rem;  
+    }  
+    .staff-card {  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius);  
+        padding: 1.5rem;  
+        display: flex;  
+        align-items: center;  
+        gap: 1rem;  
+        transition: var(--transition);  
+    }  
+    .staff-card:hover {  
+        border-color: var(--gold);  
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);  
+        transform: translateX(3px);  
+    }  
+    .staff-avatar {  
+        width: 55px;  
+        height: 55px;  
+        border-radius: 50%;  
+        background: var(--navy-light);  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        font-size: 1.5rem;  
+        flex-shrink: 0;  
+        border: 2px solid var(--gold);  
+    }  
+    .staff-info h4 {  
+        font-family: var(--font-display);  
+        letter-spacing: 1px;  
+        color: var(--white);  
+        font-size: 1.05rem;  
+    }  
+    .staff-info span {  
+        font-size: 0.75rem;  
+        color: var(--gold);  
+        letter-spacing: 1.5px;  
+        text-transform: uppercase;  
+    }  
+
+    .health-grid {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+        gap: 1.2rem;  
+    }  
+    .health-card {  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius);  
+        padding: 2rem 1.2rem;  
+        text-align: center;  
+        transition: var(--transition);  
+    }  
+    .health-card:hover {  
+        border-color: var(--gold);  
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);  
+        transform: translateY(-4px);  
+    }  
+    .health-icon {  
+        font-size: 3rem;  
+        display: block;  
+        margin-bottom: 0.8rem;  
+    }  
+    .health-card h4 {  
+        font-family: var(--font-display);  
+        letter-spacing: 1.5px;  
+        color: var(--white);  
+        font-size: 1.2rem;  
+        margin-bottom: 0.3rem;  
+    }  
+    .health-card p {  
+        font-size: 0.8rem;  
+        color: var(--text-muted);  
+    }  
+
+    .news-ai-wrapper {  
+        display: grid;  
+        grid-template-columns: 1fr 1fr;  
+        gap: 2rem;  
+        align-items: start;  
+    }  
+    .news-list {  
+        display: flex;  
+        flex-direction: column;  
+        gap: 1rem;  
+    }  
+    .news-item {  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius-sm);  
+        padding: 1.2rem;  
+        transition: var(--transition);  
+        border-left: 4px solid var(--gold);  
+    }  
+    .news-item:hover {  
+        border-left-color: #FFE440;  
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);  
+    }  
+    .news-date {  
+        font-size: 0.7rem;  
+        color: var(--gold);  
+        letter-spacing: 2px;  
+    }  
+    .news-item h4 {  
+        font-family: var(--font-display);  
+        letter-spacing: 1px;  
+        color: var(--white);  
+        margin: 0.3rem 0;  
+    }  
+    .news-item p {  
+        font-size: 0.85rem;  
+        color: var(--text-muted);  
+    }  
+    .ai-panel {  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius);  
+        padding: 1.5rem;  
+        position: sticky;  
+        top: 100px;  
+    }  
+    .ai-panel h3 {  
+        font-family: var(--font-display);  
+        letter-spacing: 2px;  
+        color: var(--gold);  
+        font-size: 1.4rem;  
+        margin-bottom: 0.8rem;  
+        display: flex;  
+        align-items: center;  
+        gap: 0.5rem;  
+    }  
+    .ai-chat-box {  
+        background: rgba(0, 0, 0, 0.3);  
+        border-radius: var(--radius-sm);  
+        padding: 1rem;  
+        min-height: 200px;  
+        max-height: 350px;  
+        overflow-y: auto;  
+        margin-bottom: 1rem;  
+        display: flex;  
+        flex-direction: column;  
+        gap: 0.7rem;  
+        font-size: 0.85rem;  
+    }  
+    .ai-msg {  
+        padding: 0.7rem 1rem;  
+        border-radius: 12px;  
+        max-width: 85%;  
+        line-height: 1.5;  
+        animation: fadeInMsg 0.3s ease;  
+    }  
+    @keyframes fadeInMsg {  
+        from { opacity: 0; transform: translateY(8px); }  
+        to { opacity: 1; transform: translateY(0); }  
+    }  
+    .ai-msg.user {  
+        background: var(--navy-light);  
+        color: var(--white);  
+        align-self: flex-end;  
+        border-bottom-right-radius: 4px;  
+    }  
+    .ai-msg.bot {  
+        background: rgba(255, 214, 0, 0.1);  
+        color: var(--text);  
+        align-self: flex-start;  
+        border-bottom-left-radius: 4px;  
+        border-left: 2px solid var(--gold);  
+    }  
+    .ai-input-row {  
+        display: flex;  
+        gap: 0.5rem;  
+    }  
+    .ai-input-row input {  
+        flex: 1;  
+        padding: 0.7rem 1rem;  
+        border-radius: 50px;  
+        border: 1px solid rgba(255, 214, 0, 0.3);  
+        background: rgba(0, 0, 0, 0.4);  
+        color: var(--white);  
+        font-family: var(--font-body);  
+        font-size: 0.9rem;  
+        outline: none;  
+        transition: var(--transition);  
+    }  
+    .ai-input-row input:focus {  
+        border-color: var(--gold);  
+        box-shadow: 0 0 15px rgba(255, 214, 0, 0.2);  
+    }  
+    .ai-input-row button {  
+        padding: 0.7rem 1.2rem;  
+        border-radius: 50px;  
+        background: var(--gold);  
+        color: var(--navy-dark);  
+        font-weight: 700;  
+        border: none;  
+        cursor: pointer;  
+        letter-spacing: 1px;  
+        transition: var(--transition);  
+        font-family: var(--font-body);  
+    }  
+    .ai-input-row button:hover {  
+        background: #FFE440;  
+        box-shadow: 0 0 20px rgba(255, 214, 0, 0.5);  
+    }  
+
+    .gallery-grid {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+        gap: 1rem;  
+    }  
+    .gallery-card {  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius);  
+        overflow: hidden;  
+        transition: var(--transition);  
+        aspect-ratio: 4/3;  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        font-size: 3rem;  
+        cursor: pointer;  
+        position: relative;  
+    }  
+    .gallery-card:hover {  
+        border-color: var(--gold);  
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);  
+        transform: scale(1.03);  
+    }  
+    .gallery-overlay {  
+        position: absolute;  
+        bottom: 0;  
+        left: 0;  
+        width: 100%;  
+        padding: 0.8rem;  
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));  
+        color: var(--white);  
+        font-family: var(--font-display);  
+        letter-spacing: 1px;  
+        font-size: 0.9rem;  
+        text-align: center;  
+    }  
+
+    #register {  
+        background: radial-gradient(ellipse at center, rgba(26, 35, 126, 0.3) 0%, transparent 60%);  
+        border-radius: var(--radius);  
+        margin: 2rem auto;  
+    }  
+    .form-wrapper {  
+        max-width: 700px;  
+        margin: 0 auto;  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius);  
+        padding: 2.5rem;  
+    }  
+    .form-grid {  
+        display: grid;  
+        grid-template-columns: 1fr 1fr;  
+        gap: 1.2rem;  
+    }  
+    .form-full {  
+        grid-column: 1 / -1;  
+    }  
+    .form-group {  
+        display: flex;  
+        flex-direction: column;  
+        gap: 0.3rem;  
+    }  
+    .form-group label {  
+        font-size: 0.8rem;  
+        letter-spacing: 2px;  
+        color: var(--gold);  
+        text-transform: uppercase;  
+        font-weight: 600;  
+    }  
+    .form-group input,  
+    .form-group select,  
+    .form-group textarea {  
+        padding: 0.75rem 1rem;  
+        border-radius: 8px;  
+        border: 1px solid rgba(255, 214, 0, 0.25);  
+        background: rgba(0, 0, 0, 0.35);  
+        color: var(--white);  
+        font-family: var(--font-body);  
+        font-size: 0.9rem;  
+        transition: var(--transition);  
+        outline: none;  
+    }  
+    .form-group input:focus,  
+    .form-group select:focus,  
+    .form-group textarea:focus {  
+        border-color: var(--gold);  
+        box-shadow: 0 0 15px rgba(255, 214, 0, 0.15);  
+    }  
+    .form-group select {  
+        cursor: pointer;  
+    }  
+    .form-group select option {  
+        background: var(--navy-dark);  
+        color: var(--white);  
+    }  
+    .welcome-msg {  
+        margin-top: 1.5rem;  
+        padding: 1.5rem;  
+        background: rgba(255, 214, 0, 0.08);  
+        border-radius: var(--radius-sm);  
+        border-left: 4px solid var(--gold);  
+        display: none;  
+        animation: fadeInMsg 0.5s ease;  
+    }  
+    .welcome-msg.show {  
+        display: block;  
+    }  
+    .welcome-msg h4 {  
+        font-family: var(--font-display);  
+        letter-spacing: 1.5px;  
+        color: var(--gold);  
+        margin-bottom: 0.3rem;  
+    }  
+    .welcome-msg p {  
+        color: var(--text);  
+        font-size: 0.9rem;  
+    }  
+
+    .contact-grid {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+        gap: 1.5rem;  
+    }  
+    .contact-card {  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius);  
+        padding: 1.8rem;  
+        text-align: center;  
+        transition: var(--transition);  
+    }  
+    .contact-card:hover {  
+        border-color: var(--gold);  
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);  
+    }  
+    .contact-icon {  
+        font-size: 2.5rem;  
+        margin-bottom: 0.6rem;  
+        display: block;  
+    }  
+    .contact-card h4 {  
+        font-family: var(--font-display);  
+        letter-spacing: 1.5px;  
+        color: var(--white);  
+        font-size: 1.2rem;  
+        margin-bottom: 0.3rem;  
+    }  
+    .contact-card p {  
+        color: var(--text-muted);  
+        font-size: 0.85rem;  
+    }  
+    .contact-card a {  
+        color: var(--gold);  
+        text-decoration: none;  
+        font-weight: 600;  
+        word-break: break-all;  
+    }  
+    .contact-card a:hover {  
+        text-decoration: underline;  
+        color: #FFE440;  
+    }  
+
+    footer {  
+        text-align: center;  
+        padding: 2.5rem;  
+        border-top: 1px solid rgba(255, 214, 0, 0.15);  
+        color: var(--text-muted);  
+        font-size: 0.8rem;  
+        letter-spacing: 1px;  
+    }  
+    footer .gold {  
+        color: var(--gold);  
+    }  
+
+    .health-team-info {  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius);  
+        padding: 2rem;  
+        margin-bottom: 2rem;  
+    }  
+    .health-team-info p {  
+        margin-bottom: 1.2rem;  
+        color: var(--text);  
+        font-size: 1rem;  
+        line-height: 1.8;  
+    }  
+    .health-team-info .english {  
+        color: var(--text-muted);  
+        font-style: italic;  
+        border-left: 3px solid var(--gold);  
+        padding-left: 1.2rem;  
+    }  
+
+    .health-leadership-grid {  
+        display: grid;  
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));  
+        gap: 1.2rem;  
+        margin-top: 2rem;  
+    }  
+    .health-leadership-card {  
+        background: var(--card-bg);  
+        border: 1px solid var(--card-border);  
+        border-radius: var(--radius);  
+        padding: 1.8rem 1.5rem;  
+        text-align: center;  
+        transition: var(--transition);  
+    }  
+    .health-leadership-card:hover {  
+        border-color: var(--gold);  
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);  
+        transform: translateY(-4px);  
+    }  
+    .health-leadership-icon {  
+        font-size: 2.8rem;  
+        margin-bottom: 0.8rem;  
+    }  
+    .health-leadership-card h4 {  
+        font-family: var(--font-display);  
+        letter-spacing: 1.5px;  
+        color: var(--white);  
+        font-size: 1.3rem;  
+        margin-bottom: 0.2rem;  
+    }  
+    .health-leadership-card span {  
+        display: block;  
+        color: var(--gold);  
+        font-size: 0.8rem;  
+        letter-spacing: 2px;  
+        text-transform: uppercase;  
+        margin-bottom: 0.4rem;  
+    }  
+    .health-leadership-card p {  
+        color: var(--text-muted);  
+        font-size: 0.85rem;  
+    }  
+
+    .placeholder-card {  
+        background: rgba(255, 214, 0, 0.05);  
+        border: 1px dashed rgba(255, 214, 0, 0.3);  
+        display: flex;  
+        flex-direction: column;  
+        align-items: center;  
+        justify-content: center;  
+        text-align: center;  
+        padding: 2rem 1rem;  
+        border-radius: var(--radius);  
+        color: var(--text-muted);  
+        font-size: 0.9rem;  
+        cursor: default;  
+    }  
+    .placeholder-card .placeholder-icon {  
+        font-size: 2rem;  
+        margin-bottom: 0.5rem;  
+        opacity: 0.7;  
+    }  
+
+    @media (max-width: 900px) {  
+        .news-ai-wrapper {  
+            grid-template-columns: 1fr;  
+        }  
+        .ai-panel {  
+            position: static;  
+        }  
+        .form-grid {  
+            grid-template-columns: 1fr;  
+        }  
+        .nav-links {  
+            display: none;  
+            position: absolute;  
+            top: 70px;  
+            left: 0;  
+            width: 100%;  
+            background: rgba(10, 10, 20, 0.97);  
+            flex-direction: column;  
+            padding: 1.5rem;  
+            gap: 0.5rem;  
+            border-bottom: 2px solid var(--gold);  
+            backdrop-filter: blur(20px);  
+        }  
+        .nav-links.open {  
+            display: flex;  
+        }  
+        .mobile-toggle {  
+            display: block;  
+        }  
+        .hero-stats {  
+            gap: 1rem;  
+        }  
+        .hero-stat {  
+            min-width: 80px;  
+            padding: 0.7rem 1rem;  
+        }  
+        .hero-stat-num {  
+            font-size: 1.6rem;  
+        }  
+    }  
+    @media (max-width: 500px) {  
+        .section {  
+            padding: 3rem 1rem;  
+        }  
+        .hero-badge {  
+            width: 80px;  
+            height: 80px;  
+            font-size: 2rem;  
+        }  
+        .team-grid {  
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));  
+        }  
+        .gallery-grid {  
+            grid-template-columns: 1fr 1fr;  
+        }  
+    }  
+</style>
+
+</head>  
+<body>  
+    <nav class="navbar" id="navbar">  
+        <div class="nav-inner">  
+            <a href="#hero" class="nav-logo">  
+                <div class="nav-logo-icon">R</div>  
+                <div class="nav-logo-text">ሮሪ ሆቴል<span>Football Club</span></div>  
+            </a>  
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>  
+            <ul class="nav-links" id="navLinks">  
+                <li><a href="#hero" class="active">መነሻ</a></li>  
+                <li><a href="#about">ስለ እኛ</a></li>  
+                <li><a href="#healthteam">Rori Health Team</a></li>  
+                <li><a href="#team">ቡድን</a></li>  
+                <li><a href="#health">ጤና ፕሮግራሞች</a></li>  
+                <li><a href="#news">ዜና & AI</a></li>  
+                <li><a href="#gallery">ጋለሪ</a></li>  
+                <li><a href="#register" class="nav-cta">ይመዝገቡ</a></li>  
+                <li><a href="#contact">አድራሻ</a></li>  
+            </ul>  
+        </div>  
+    </nav>  <section id="hero">  
+    <div class="hero-content">  
+        <div class="hero-badge">R</div>  
+        <h1 class="hero-title">ሮሪ <span class="gold">ሆቴል</span> FC</h1>  
+        <p class="hero-desc">የሮሪ ሆቴል ፉትቦል ክለብ — ታላቅነት የሚጀምረው ከሜዳ ነው። ራዕያችንን በእያንዳንዱ ጨዋታ እንገነባለን።</p>  
+        <div class="hero-stats">  
+            <div class="hero-stat">  
+                <div class="hero-stat-num">12+</div>  
+                <div class="hero-stat-label">ዓመታት</div>  
+            </div>  
+            <div class="hero-stat">  
+                <div class="hero-stat-num">150+</div>  
+                <div class="hero-stat-label">ተጫዋቾች</div>  
+            </div>  
+            <div class="hero-stat">  
+                <div class="hero-stat-num">8</div>  
+                <div class="hero-stat-label">ዋንጫዎች</div>  
+            </div>  
+        </div>  
+        <div class="hero-cta-group">  
+            <a href="#register" class="btn btn-gold">አሁን ይቀላቀሉ</a>  
+            <a href="#about" class="btn btn-outline">ተጨማሪ ይወቁ</a>  
+        </div>  
+    </div>  
+</section>  
+
+<section id="about" class="section">  
+    <div class="section-header">  
+        <span class="section-tag">ስለ እኛ</span>  
+        <h2 class="section-title">ራዕይ · <span class="gold">ተልዕኮ</span> · እሴቶች</h2>  
+        <p class="section-subtitle">የሮሪ ሆቴል ፉትቦል ክለብ መሰረታዊ መርሆች እና አቅጣጫ</p>  
+    </div>  
+    <div class="cards-grid">  
+        <div class="card">  
+            <span class="card-icon">🔭</span>  
+            <h3>ራዕይ (Vision)</h3>  
+            <p>በኢትዮጵያ ፉትቦል ውስጥ ተወዳዳሪና አርአያ የሆነ ክለብ መገንባት፤ ወጣት ተሰጥኦዎችን በማፍራት በአፍሪካ ደረጃ መታወቅ።</p>  
+        </div>  
+        <div class="card">  
+            <span class="card-icon">🎯</span>  
+            <h3>ተልዕኮ (Mission)</h3>  
+            <p>ዘመናዊ ሥልጠና፣ ጤናማ አኗኗር እና የቡድን መንፈስን በማጣመር ተወዳዳሪ እና ዲሲፕሊን ያለው ቡድን ማፍራት።</p>  
+        </div>  
+        <div class="card">  
+            <span class="card-icon">💎</span>  
+            <h3>እሴቶች (Values)</h3>  
+            <p>ዲሲፕሊን · ትብብር · ክብር · ታማኝነት · ተከታታይነት — እነዚህ የኛ ማንነት መሰረቶች ናቸው።</p>  
+        </div>  
+        <div class="card">  
+            <span class="card-icon">🧘</span>  
+            <h3>የጤና ፍልስፍና</h3>  
+            <p>ጤናማ ሰውነት ለጠንካራ ጨዋታ። አመጋገብ፣ የአካል ብቃት፣ የአእምሮ ጤና እና የፊዚዮቴራፒ አገልግሎቶችን እናቀናጃለን።</p>  
+        </div>  
+    </div>  
+</section>  
+
+<section id="healthteam" class="section">  
+    <div class="section-header">  
+        <span class="section-tag">Rori Health Team</span>  
+        <h2 class="section-title">ሮሪ <span class="gold">ጤና ቡድን</span></h2>  
+        <p class="section-subtitle">በHawassa የተመሰረተ የጤና፣ የአካል ብቃት እና የሰራተኞች ደህንነት ቡድን</p>  
+    </div>  
+    <div class="health-team-info">  
+        <p>  
+            ሮሪ ጤና ቡድን በHawassa የተመሰረተ የጤና፣ የአካል ብቃት እና የሰራተኞች ደህንነት ለማሳደግ የተቋቋመ ቡድን ነው። ቡድኑ በ2026 ዓ.ም. በሮሪ ሆቴል CEO፣ በሆቴሉ GM፣ Staff እና Gym membershipአባላት በጋራ ትብብር ተመስርቶ የሰራተኞችን ጤና፣ አካላዊ ብቃት፣ የቡድን መንፈስ እና የጤናማ አኗኗር ባህል ለማጠናከር ይሰራል።  
+        </p>  
+        <p>  
+            የቡድኑ ዋና ዓላማ ሰራተኞች ጤናማ፣ ንቁ እና ከፍተኛ የሥራ ብቃት እንዲኖራቸው ማድረግ ነው። ለዚህም የአካል ብቃት ስልጠናዎች፣ የጤና ግንዛቤ ፕሮግራሞች፣ የስፖርት ውድድሮች፣ የቡድን ግንኙነት ማጠናከሪያ እንቅስቃሴዎች እና የጤናማ አኗኗር ዘመቻዎችን ያካሂዳል።  
+        </p>  
+        <p class="english">  
+            The Rori Health Team is a group established in Hawassa to promote health, fitness, and employee well‑being. Founded in 2026 through the joint collaboration of the Rori Hotel CEO, General Manager, staff, and gym members, the team works to strengthen employee health, physical fitness, team spirit, and a culture of healthy living. Its core mission is to ensure that employees are healthy, active, and achieve high work performance. To this end, it organizes fitness training sessions, health awareness programs, sports competitions, team‑building activities, and healthy lifestyle campaigns.  
+        </p>  
+    </div>  
+
+    <div style="margin-bottom: 1rem;">  
+        <h3 style="font-family:var(--font-display);letter-spacing:2px;color:var(--white);font-size:1.8rem;text-align:center;margin-bottom:0.5rem;">  
+            <span class="gold">አመራር</span> · Leadership  
+        </h3>  
+        <p style="color:var(--text-muted);text-align:center;font-size:0.9rem;">የሮሪ ጤና ቡድን አመራሮች · Rori Health Team Leadership</p>  
+    </div>  
+    <div class="health-leadership-grid">  
+        <div class="health-leadership-card">  
+            <div class="health-leadership-icon">👔</div>  
+            <h4>Yedidiya</h4>  
+            <span>ዋና አሰልጣኝ · Head Coach</span>  
+            <p>የቡድኑን አጠቃላይ የአካል ብቃት እና የስልጠና መርሃ ግብር ይመራል። Leads overall fitness and training programs.</p>  
+        </div>  
+        <div class="health-leadership-card">  
+            <div class="health-leadership-icon">🎖️</div>  
+            <h4>Bahilu</h4>  
+            <span>ካፒቴን · Captain</span>  
+            <p>የቡድኑ ካፒቴን በመሆን የአባላትን ተሳትፎና ትብብር ያቀናጃል። Coordinates member participation and team spirit.</p>  
+        </div>  
+        <div class="health-leadership-card">  
+            <div class="health-leadership-icon">🏥</div>  
+            <h4>Medical Department</h4>  
+            <span>የሕክምና ክፍል · Rori Hotel</span>  
+            <p>የሮሪ ሆቴል የሕክምና ክፍል ለቡድኑ የጤና ክትትልና የሕክምና ድጋፍ ይሰጣል። Provides health monitoring and medical support to the team.</p>  
+        </div>  
+    </div>  
+</section>  
+
+<section id="team" class="section">  
+    <div class="section-header">  
+        <span class="section-tag">ቡድናችን</span>  
+        <h2 class="section-title">ተጫዋቾች & <span class="gold">አሰልጣኞች</span></h2>  
+        <p class="section-subtitle">የሮሪ ሆቴል FC ቤተሰብ</p>  
+    </div>  
+    <div class="team-grid" id="playersGrid"></div>  
+    <div class="staff-section">  
+        <h3 style="font-family:var(--font-display);letter-spacing:2px;color:var(--white);text-align:center;margin-bottom:1.5rem;font-size:1.6rem;">  
+            የአሰልጣኝ ቡድን <span class="gold">Coaching Staff</span>  
+        </h3>  
+        <div class="staff-grid" id="staffGrid"></div>  
+    </div>  
+</section>  
+
+<section id="health" class="section">  
+    <div class="section-header">  
+        <span class="section-tag">ጤና ፕሮግራም</span>  
+        <h2 class="section-title">6 የጤንነት <span class="gold">ፕሮግራሞች</span></h2>  
+        <p class="section-subtitle">ለተጫዋቾቻችን ሁለንተናዊ የጤና አገልግሎት</p>  
+    </div>  
+    <div class="health-grid" id="healthGrid"></div>  
+</section>  
+
+<section id="news" class="section">  
+    <div class="section-header">  
+        <span class="section-tag">ዜና & AI</span>  
+        <h2 class="section-title">ክለብ ዜና & <span class="gold">AI ረዳት</span></h2>  
+        <p class="section-subtitle">ወቅታዊ መረጃ እና የኛ AI-powered ረዳት ጥያቄዎችዎን ይመልሳል</p>  
+    </div>  
+    <div class="news-ai-wrapper">  
+        <div class="news-list" id="newsList"></div>  
+        <div class="ai-panel" id="aiPanel">  
+            <h3>🤖 Ask Rori FC Anything</h3>  
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.8rem;">በአማርኛ ወይም በእንግሊዘኛ ይጠይቁ · Ask in Amharic or English</p>  
+            <div class="ai-chat-box" id="aiChatBox">  
+                <div class="ai-msg bot">ሰላም! ስለ ሮሪ ሆቴል FC ማንኛውንም ጥያቄ ይጠይቁ። Hello! Ask me anything about Rori Hotel FC. ⚽</div>  
+            </div>  
+            <div class="ai-input-row">  
+                <input type="text" id="aiInput" placeholder="ጥያቄዎን ያስገቡ... Type your question..." />  
+                <button id="aiSendBtn">ላክ Send</button>  
+            </div>  
+        </div>  
+    </div>  
+</section>  
+
+<section id="gallery" class="section">  
+    <div class="section-header">  
+        <span class="section-tag">ጋለሪ</span>  
+        <h2 class="section-title">የክለብ <span class="gold">ትዝታዎች</span></h2>  
+    </div>  
+    <div class="gallery-grid" id="galleryGrid"></div>  
+</section>  
+
+<section id="register" class="section">  
+    <div class="section-header">  
+        <span class="section-tag">ይመዝገቡ</span>  
+        <h2 class="section-title">ተጫዋች <span class="gold">ምዝገባ</span></h2>  
+        <p class="section-subtitle">የሮሪ ሆቴል FC አባል ይሁኑ — ቅጹን ይሙሉና የAI የእንኳን ደህና መጣችሁ መልዕክት ይቀበሉ</p>  
+    </div>  
+    <div class="form-wrapper">  
+        <form id="registrationForm">  
+            <div class="form-grid">  
+                <div class="form-group">  
+                    <label>ሙሉ ስም / Full Name</label>  
+                    <input type="text" id="regName" required placeholder="ሙሉ ስምዎን ያስገቡ" />  
+                </div>  
+                <div class="form-group">  
+                    <label>ዕድሜ / Age</label>  
+                    <input type="number" id="regAge" required min="10" max="50" placeholder="ዕድሜ" />  
+                </div>  
+                <div class="form-group">  
+                    <label>ስልክ / Phone</label>  
+                    <input type="tel" id="regPhone" required placeholder="+251..." />  
+                </div>  
+                <div class="form-group">  
+                    <label>ቦታ / Position</label>  
+                    <select id="regPosition" required>  
+                        <option value="">— ይምረጡ —</option>  
+                        <option value="Goalkeeper">ግብ ጠባቂ / Goalkeeper</option>  
+                        <option value="Defender">ተከላካይ / Defender</option>  
+                        <option value="Midfielder">አማካይ / Midfielder</option>  
+                        <option value="Forward">አጥቂ / Forward</option>  
+                        <option value="Other">ሌላ / Other</option>  
+                    </select>  
+                </div>  
+                <div class="form-group form-full">  
+                    <label>የቀድሞ ልምድ / Previous Experience</label>  
+                    <textarea id="regExperience" rows="3" placeholder="የቀድሞ የፉትቦል ልምድዎን በአጭሩ ይግለጹ..."></textarea>  
+                </div>  
+            </div>  
+            <button type="submit" class="btn btn-gold" style="width:100%;margin-top:1.5rem;font-size:1rem;">ይመዝገቡ · Register Now</button>  
+        </form>  
+        <div class="welcome-msg" id="welcomeMsg">  
+            <h4>🎉 የእንኳን ደህና መጡ መልዕክት (AI Generated)</h4>  
+            <p id="welcomeText"></p>  
+        </div>  
+    </div>  
+</section>  
+
+<!-- ───── UPDATED CONTACT SECTION ───── -->  
+<section id="contact" class="section">  
+    <div class="section-header">  
+        <span class="section-tag">አድራሻ</span>  
+        <h2 class="section-title">ያግኙን <span class="gold">Contact Us</span></h2>  
+    </div>  
+    <div class="contact-grid">  
+        <!-- Address card -->  
+        <div class="contact-card">  
+            <span class="contact-icon">📍</span>  
+            <h4>አድራሻ</h4>  
+            <p>Rori Hotel<br>Hawassa, Sidama Region<br>Ethiopia</p>  
+        </div>  
+        <!-- Phone card -->  
+        <div class="contact-card">  
+            <span class="contact-icon">📞</span>  
+            <h4>ስልክ</h4>  
+            <p><a href="tel:+251931444901">+251 931 444 901</a></p>  
+        </div>  
+        <!-- Telegram card -->  
+        <div class="contact-card">  
+            <span class="contact-icon">📲</span>  
+            <h4>Telegram</h4>  
+            <p>Join Our Telegram Community<br><a href="#" target="_blank">Coming Soon</a></p>  
+        </div>  
+        <!-- Email card -->  
+        <div class="contact-card">  
+            <span class="contact-icon">✉️</span>  
+            <h4>ኢሜል</h4>  
+            <p><a href="mailto:info@rorihealthteam.com">info@rorihealthteam.com</a></p>  
+        </div>  
+        <!-- TikTok card -->  
+        <div class="contact-card">  
+            <span class="contact-icon">🎵</span>  
+            <h4>TikTok</h4>  
+            <p><a href="https://www.tiktok.com/@rorihotel" target="_blank" rel="noopener">@rorihotel</a></p>  
+        </div>  
+    </div>  
+</section>  
+
+<footer>  
+    <p>&copy; 2026 <span class="gold">ሮሪ ሆቴል ፉትቦል ክለብ</span> · Rori Hotel Football Club · ሁሉም መብቶች የተጠበቁ ናቸው</p>  
+</footer>  
+
+<script>  
+    (function() {  
+        const players = [];  
+        const staff = [];  
+        const healthPrograms = [  
+            { title: 'የአካል ብቃት', sub: 'Fitness', desc: 'ዘመናዊ የአካል ብቃት ሥልጠና ፕሮግራም', icon: '🏋️' },  
+            { title: 'አመጋገብ', sub: 'Nutrition', desc: 'ለተጫዋቾች ተስማሚ የአመጋገብ እቅድ', icon: '🥗' },  
+            { title: 'ፊዚዮቴራፒ', sub: 'Physio', desc: 'የጡንቻና የአጥንት ሕክምና አገልግሎት', icon: '🦴' },  
+            { title: 'የአእምሮ ጤና', sub: 'Mental', desc: 'የስነልቦና ድጋፍና የአእምሮ ጤና አገልግሎት', icon: '🧠' },  
+            { title: 'ህክምና', sub: 'Medical', desc: 'መደበኛ የህክምና ምርመራና ክትትል', icon: '🏥' },  
+            { title: 'እንቅልፍ', sub: 'Sleep', desc: 'የእንቅልፍ ጥራት ክትትልና የማገገሚያ ፕሮግራም', icon: '😴' },  
+        ];  
+        const newsItems = [  
+            { date: 'ሰኔ 20, 2018', title: 'የወቅቱ የዝውውር ዜና — አዲስ ተጫዋቾች ተቀላቅለዋል', desc: 'ሮሪ ሆቴል FC በዚህ ሳምንት ሶስት አዳዲስ ተጫዋቾችን በይፋ አስተዋውቋል።' },  
+            { date: 'ሰኔ 15, 2018', title: 'የቅድመ-ውድድር ዝግጅት ሪፖርት', desc: 'ቡድኑ ለመጪው ውድድር ከፍተኛ ዝግጅት እያደረገ ይገኛል።' },  
+            { date: 'ሰኔ 10, 2018', title: 'የጤና ፕሮግራም ማስፋፊያ', desc: 'አዲስ የአመጋገብ እና የአእምሮ ጤና ፕሮግራም ተጀምሯል።' },  
+        ];  
+        const galleryItems = [  
+            { label: 'ቡድን ፎቶ 2026', emoji: '📸' },  
+            { label: 'የስልጠና ሜዳ', emoji: '⚽' },  
+            { label: 'ዋንጫ ማንሳት', emoji: '🏆' },  
+            { label: 'የጤና ክሊኒክ', emoji: '🏥' },  
+            { label: 'የደጋፊዎች ቀን', emoji: '🎉' },  
+            { label: 'የልጆች ካምፕ', emoji: '👦' },  
+        ];  
+
+        function renderPlayers() {  
+            document.getElementById('playersGrid').innerHTML = players.length === 0 ? `  
+                <div class="placeholder-card" style="grid-column: 1 / -1;">  
+                  <span class="placeholder-icon">⏳</span>  
+                  <span style="font-family:var(--font-display); font-size:1.2rem; letter-spacing:1px;">የተጫዋቾች ዝርዝር በቅርቡ ይገለጻል</span>  
+                  <span style="color:var(--gold);">Squad list coming soon</span>  
+                </div>` : '';  
+        }  
+        function renderStaff() {  
+            document.getElementById('staffGrid').innerHTML = staff.length === 0 ? `  
+                <div class="placeholder-card" style="grid-column: 1 / -1;">  
+                  <span class="placeholder-icon">⏳</span>  
+                  <span style="font-family:var(--font-display); font-size:1.2rem; letter-spacing:1px;">የአሰልጣኞች ዝርዝር በቅርቡ ይገለጻል</span>  
+                  <span style="color:var(--gold);">Coaching staff list coming soon</span>  
+                </div>` : '';  
+        }  
+        function renderHealth() {  
+            document.getElementById('healthGrid').innerHTML = healthPrograms.map(h => `  
+            <div class="health-card">  
+              <span class="health-icon">${h.icon}</span>  
+              <h4>${h.title}</h4>  
+              <p style="color:var(--gold);font-size:0.7rem;letter-spacing:1px;">${h.sub}</p>  
+              <p>${h.desc}</p>  
+            </div>`).join('');  
+        }  
+        function renderNews() {  
+            document.getElementById('newsList').innerHTML = newsItems.map(n => `  
+            <div class="news-item">  
+              <span class="news-date">📅 ${n.date}</span>  
+              <h4>${n.title}</h4>  
+              <p>${n.desc}</p>  
+            </div>`).join('');  
+        }  
+        function renderGallery() {  
+            document.getElementById('galleryGrid').innerHTML = galleryItems.map(g => `  
+            <div class="gallery-card">  
+              <span style="font-size:3.5rem;">${g.emoji}</span>  
+              <div class="gallery-overlay">${g.label}</div>  
+            </div>`).join('');  
+        }  
+
+        function getAIResponse(query) {  
+            const q = query.toLowerCase().trim();  
+            if (/ሰላም|ሀይ|hi|hello|hey/i.test(q)) {  
+                return 'ሰላም! ስለ ሮሪ ሆቴል FC ማንኛውንም ጥያቄ ይጠይቁ። Hello! Ask me anything about Rori Hotel FC. ⚽';  
+            }  
+            if (/አመሰግናለሁ|thanks|thank/i.test(q)) {  
+                return 'እንደምንም ሆነ! ሌላ ጥያቄ ካሎት ይጠይቁ። You\'re welcome! Ask another question if you have one. 🙌';  
+            }  
+            const isAmharic = /[ሀ-ፐ]/.test(q);  
+            return isAmharic ?  
+                'እባክዎ ስለ ክለቡ፣ ምዝገባ፣ ስልጠና፣ አድራሻ ወይም ዋንጫዎች በተለየ መልኩ ይጠይቁ።' :  
+                'Please ask specifically about the club, registration, training, location, or trophies.';  
+        }  
+
+        function sendAIMessage() {  
+            const input = document.getElementById('aiInput');  
+            const query = input.value.trim();  
+            if (!query) return;  
+            const chatBox = document.getElementById('aiChatBox');  
+            chatBox.appendChild(Object.assign(document.createElement('div'), { className: 'ai-msg user', textContent: query }));  
+            chatBox.appendChild(Object.assign(document.createElement('div'), { className: 'ai-msg bot', textContent: getAIResponse(query) }));  
+            chatBox.scrollTop = chatBox.scrollHeight;  
+            input.value = '';  
+        }  
+
+        function generateWelcomeMessage(name, position) {  
+            const posMap = { 'Goalkeeper': 'ግብ ጠባቂ', 'Defender': 'ተከላካይ', 'Midfielder': 'አማካይ', 'Forward': 'አጥቂ', 'Other': 'ተጫዋች' };  
+            const pos = posMap[position] || 'ተጫዋች';  
+            const msgs = [  
+                `እንኳን ደህና መጡ ${name}! 🎉 እንደ ${pos} ወደ ሮሪ ሆቴል FC በመቀላቀልዎ በጣም ደስተኞች ነን። ታላቅ ጉዞ አብረን እንጀምር! ⚽🏆`,  
+                `ሰላም ${name}! 👋 ወደ ሮሪ ሆቴል FC ቤተሰብ እንኳን ደህና መጡ። እንደ ${pos} የሚያደርጉት አስተዋጽኦ ትልቅ ይሆናል ብለን እናምናለን! 💪`,  
+                `ውድ ${name} 🌟 የሮሪ ሆቴል FC አዲሱ ${pos} — እንኳን ደህና መጡ! አብረን ታሪክ እንፍጠር። የስልጠና መርሃ-ግብሩን በቅርቡ እንልክልዎታለን።`,  
+            ];  
+            return msgs[Math.floor(Math.random() * msgs.length)];  
+        }  
+
+        renderPlayers();  
+        renderStaff();  
+        renderHealth();  
+        renderNews();  
+        renderGallery();  
+
+        document.getElementById('aiSendBtn').addEventListener('click', sendAIMessage);  
+        document.getElementById('aiInput').addEventListener('keydown', e => { if (e.key === 'Enter') sendAIMessage(); });  
+
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {  
+            e.preventDefault();  
+            const name = document.getElementById('regName').value.trim();  
+            const pos = document.getElementById('regPosition').value;  
+            document.getElementById('welcomeText').textContent = generateWelcomeMessage(name, pos);  
+            document.getElementById('welcomeMsg').classList.add('show');  
+            document.getElementById('welcomeMsg').scrollIntoView({ behavior: 'smooth', block: 'center' });  
+            setTimeout(() => this.reset(), 1500);  
+        });  
+
+        const mobileToggle = document.getElementById('mobileToggle');  
+        const navLinks = document.getElementById('navLinks');  
+        mobileToggle.addEventListener('click', () => {  
+            navLinks.classList.toggle('open');  
+            mobileToggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';  
+        });  
+        navLinks.querySelectorAll('a').forEach(link => {  
+            link.addEventListener('click', () => {  
+                navLinks.classList.remove('open');  
+                mobileToggle.textContent = '☰';  
+            });  
+        });  
+
+        window.addEventListener('scroll', () => {  
+            const navbar = document.getElementById('navbar');  
+            navbar.classList.toggle('scrolled', window.scrollY > 50);  
+            const sections = document.querySelectorAll('section[id]');  
+            let current = '';  
+            sections.forEach(sec => {  
+                if (window.scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id');  
+            });  
+            navLinks.querySelectorAll('a').forEach(a => {  
+                a.classList.toggle('active', a.getAttribute('href') === '#' + current);  
+            });  
+        });  
+
+        console.log('🏆 Rori Hotel FC – Contact section updated with new address, phone, Telegram, email, and TikTok.');  
+    })();  
+</script>
+
+</body>  
+</html>

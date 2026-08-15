@@ -22,9 +22,8 @@
             background-color: #0b1329;
             color: #ffffff;
             font-family: 'Inter', 'Poppins', 'Open Sans', sans-serif;
-            /* FIXED: Larger base font size with clamp() */
-            font-size: clamp(18px, 1.4vw, 24px);
-            font-weight: 500;
+            font-size: clamp(22px, 2.5vw, 34px) !important;
+            font-weight: 600;
             line-height: 1.8;
             scroll-behavior: smooth;
         }
@@ -49,40 +48,38 @@
         }
 
         /* ═══════════════════════════════════════
-           ── TYPOGRAPHY SCALING ──
-           All text uses clamp() for responsive sizing
+           ── TYPOGRAPHY SCALING (VERY LARGE) ──
            ═══════════════════════════════════════ */
 
-        /* ── Headings ── */
         h1 {
-            font-size: clamp(2.8rem, 8vw, 6rem) !important;
+            font-size: clamp(4.5rem, 12vw, 8rem) !important;
             font-weight: 900 !important;
-            letter-spacing: clamp(2px, 0.5vw, 5px) !important;
+            letter-spacing: clamp(3px, 0.8vw, 6px) !important;
             line-height: 1.1 !important;
             color: #FFD600 !important;
             text-shadow: 0 4px 30px rgba(255, 214, 0, 0.15) !important;
         }
 
         h2 {
-            font-size: clamp(2.2rem, 5vw, 4rem) !important;
-            font-weight: 800 !important;
-            letter-spacing: clamp(2px, 0.3vw, 4px) !important;
+            font-size: clamp(3.5rem, 8vw, 5.5rem) !important;
+            font-weight: 900 !important;
+            letter-spacing: clamp(3px, 0.6vw, 5px) !important;
             line-height: 1.2 !important;
             color: #FFD600 !important;
         }
 
         h3 {
-            font-size: clamp(1.6rem, 3vw, 2.8rem) !important;
+            font-size: clamp(2.5rem, 5vw, 3.8rem) !important;
             font-weight: 800 !important;
-            letter-spacing: clamp(1px, 0.2vw, 3px) !important;
+            letter-spacing: clamp(2px, 0.4vw, 4px) !important;
             line-height: 1.3 !important;
             color: #FFD600 !important;
         }
 
         .section-title {
-            font-size: clamp(2.5rem, 5vw, 4rem) !important;
+            font-size: clamp(3.5rem, 7vw, 5rem) !important;
             font-weight: 900 !important;
-            letter-spacing: clamp(2px, 0.4vw, 4px) !important;
+            letter-spacing: clamp(3px, 0.6vw, 5px) !important;
             margin-bottom: 60px !important;
             color: #FFD600 !important;
         }
@@ -90,385 +87,386 @@
         .section-title::after {
             content: "";
             display: block;
-            width: clamp(80px, 10vw, 140px);
-            height: 5px;
+            width: clamp(100px, 12vw, 160px);
+            height: 6px;
             background: #FFD600;
-            margin: 18px auto 0;
+            margin: 20px auto 0;
             border-radius: 4px;
         }
 
-        /* ── Paragraphs ── */
         p {
-            font-size: clamp(1.15rem, 2.2vw, 1.5rem) !important;
-            font-weight: 500 !important;
-            line-height: 1.8 !important;
-            color: #e8e8e8 !important;
-        }
-
-        /* ── Welcome Section Specific ── */
-        .welcome-content p {
-            font-size: clamp(1.2rem, 2.5vw, 1.6rem) !important;
+            font-size: clamp(1.6rem, 3vw, 2.2rem) !important;
+            font-weight: 600 !important;
             line-height: 1.9 !important;
-            font-weight: 500 !important;
             color: #f0f0f0 !important;
         }
 
+        /* ── Welcome Section ── */
+        .welcome-content p {
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem) !important;
+            line-height: 2 !important;
+            font-weight: 600 !important;
+            color: #f5f5f5 !important;
+        }
+
         .welcome-content .greeting-highlight {
-            font-size: clamp(1.5rem, 3.2vw, 2.2rem) !important;
-            font-weight: 800 !important;
+            font-size: clamp(2.2rem, 4vw, 2.8rem) !important;
+            font-weight: 900 !important;
             color: #FFD600 !important;
         }
 
         .welcome-content .closing {
-            font-size: clamp(1.3rem, 2.8vw, 1.8rem) !important;
-            font-weight: 700 !important;
+            font-size: clamp(2rem, 3.5vw, 2.6rem) !important;
+            font-weight: 800 !important;
             color: #FFD600 !important;
         }
 
         .welcome-content .closing .amharic {
-            font-size: clamp(1.4rem, 3vw, 2rem) !important;
-            font-weight: 700 !important;
+            font-size: clamp(2rem, 3.8vw, 2.8rem) !important;
+            font-weight: 800 !important;
             color: #FFD600 !important;
         }
 
         /* ── Card Text ── */
         .card p {
-            font-size: clamp(1.1rem, 1.8vw, 1.3rem) !important;
-            font-weight: 500 !important;
-            color: #d0d0d0 !important;
+            font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+            font-weight: 600 !important;
+            color: #d8d8d8 !important;
         }
 
         .card h3 {
-            font-size: clamp(1.8rem, 3vw, 2.6rem) !important;
-            font-weight: 800 !important;
+            font-size: clamp(2.5rem, 4.5vw, 3.5rem) !important;
+            font-weight: 900 !important;
             color: #FFD600 !important;
         }
 
         /* ── Player Cards ── */
         .player-name {
-            font-size: clamp(1.1rem, 1.6vw, 1.4rem) !important;
-            font-weight: 700 !important;
+            font-size: clamp(1.6rem, 2.2vw, 2rem) !important;
+            font-weight: 800 !important;
             color: #ffffff !important;
         }
 
         .player-role {
-            font-size: clamp(0.9rem, 1.2vw, 1rem) !important;
-            font-weight: 600 !important;
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
+            font-weight: 700 !important;
             color: #ffd700 !important;
         }
 
         .player-badge {
-            font-size: clamp(0.7rem, 0.9vw, 0.85rem) !important;
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem) !important;
             font-weight: 700 !important;
         }
 
         .player-number {
-            font-size: clamp(3rem, 5vw, 4.5rem) !important;
+            font-size: clamp(4rem, 7vw, 5.5rem) !important;
             font-weight: 900 !important;
         }
 
         /* ── Hero Player Info ── */
         .hero-info h3 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem) !important;
+            font-size: clamp(2.5rem, 4vw, 3.5rem) !important;
             font-weight: 900 !important;
             color: #fff !important;
         }
 
         .hero-info small {
-            font-size: clamp(0.75rem, 1vw, 0.9rem) !important;
+            font-size: clamp(1rem, 1.4vw, 1.3rem) !important;
             font-weight: 800 !important;
             letter-spacing: 2px !important;
             color: #f5c542 !important;
         }
 
         .hero-info strong {
-            font-size: clamp(1rem, 1.4vw, 1.4rem) !important;
+            font-size: clamp(1.4rem, 1.8vw, 1.8rem) !important;
             font-weight: 700 !important;
             color: #f5c542 !important;
         }
 
-        /* ── Hero Badge ── */
         .hero-badge {
-            font-size: clamp(0.7rem, 0.9vw, 0.9rem) !important;
+            font-size: clamp(0.9rem, 1.2vw, 1.2rem) !important;
             font-weight: 1000 !important;
             letter-spacing: 1px !important;
         }
 
         /* ── Stats ── */
         .stat-number {
-            font-size: clamp(2.8rem, 6vw, 4.5rem) !important;
+            font-size: clamp(4rem, 8vw, 6rem) !important;
             font-weight: 900 !important;
             color: #FFD600 !important;
         }
 
         .stat-item .stat-label {
-            font-size: clamp(1rem, 1.4vw, 1.3rem) !important;
-            font-weight: 600 !important;
-            color: #ccc !important;
+            font-size: clamp(1.3rem, 1.8vw, 1.8rem) !important;
+            font-weight: 700 !important;
+            color: #ddd !important;
             letter-spacing: 2px !important;
         }
 
         /* ── Buttons ── */
         .btn {
-            font-size: clamp(1.1rem, 1.6vw, 1.6rem) !important;
+            font-size: clamp(1.6rem, 2.2vw, 2.2rem) !important;
             font-weight: 800 !important;
-            padding: clamp(14px, 2vw, 22px) clamp(28px, 4vw, 55px) !important;
-            letter-spacing: 1.5px !important;
+            padding: clamp(18px, 2.5vw, 28px) clamp(35px, 5vw, 65px) !important;
+            letter-spacing: 2px !important;
         }
 
         /* ── Fund / Bank Details ── */
         .bank-details .account-number {
-            font-size: clamp(2rem, 4vw, 3.5rem) !important;
+            font-size: clamp(3rem, 5.5vw, 4.5rem) !important;
             font-weight: 900 !important;
-            letter-spacing: clamp(3px, 0.5vw, 5px) !important;
+            letter-spacing: clamp(4px, 0.8vw, 6px) !important;
         }
 
         .bank-details .account-name {
-            font-size: clamp(1.2rem, 1.8vw, 1.6rem) !important;
+            font-size: clamp(1.8rem, 2.5vw, 2.2rem) !important;
             font-weight: 700 !important;
         }
 
         .bank-details .telebirr {
-            font-size: clamp(1.4rem, 2.2vw, 2.2rem) !important;
+            font-size: clamp(2rem, 3vw, 2.8rem) !important;
             font-weight: 700 !important;
         }
 
         .fund-description p {
-            font-size: clamp(1.1rem, 2vw, 1.4rem) !important;
+            font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
             line-height: 1.9 !important;
         }
 
         /* ── Motto Banner ── */
         .motto-banner .motto-text {
-            font-size: clamp(2rem, 4.5vw, 3.5rem) !important;
+            font-size: clamp(3rem, 6vw, 4.5rem) !important;
             font-weight: 900 !important;
-            letter-spacing: clamp(2px, 0.4vw, 4px) !important;
+            letter-spacing: clamp(3px, 0.6vw, 5px) !important;
             color: #FFD600 !important;
             line-height: 1.4 !important;
         }
 
         .motto-banner .motto-sub {
-            font-size: clamp(1rem, 1.6vw, 1.4rem) !important;
-            font-weight: 500 !important;
+            font-size: clamp(1.4rem, 2vw, 1.8rem) !important;
+            font-weight: 600 !important;
             letter-spacing: 3px !important;
         }
 
         /* ── Anthem ── */
-        .anthem-content p {
-            font-size: clamp(1.1rem, 1.8vw, 1.4rem) !important;
+        .anthem-content .verse-text {
+            font-size: clamp(1.8rem, 3.2vw, 2.6rem) !important;
             line-height: 2.2 !important;
         }
 
-        .anthem-content p strong {
-            font-size: clamp(1.2rem, 2vw, 1.5rem) !important;
+        .anthem-content .chorus-block .verse-text {
+            font-size: clamp(2.2rem, 4vw, 3rem) !important;
+        }
+
+        .anthem-content .verse-label {
+            font-size: clamp(1.5rem, 2.2vw, 2rem) !important;
             font-weight: 800 !important;
         }
 
-        .anthem-content .outro p {
-            font-size: clamp(1.3rem, 2.2vw, 1.8rem) !important;
-            font-weight: 700 !important;
+        .anthem-container .anthem-title-main {
+            font-size: clamp(4rem, 8vw, 6rem) !important;
+        }
+
+        .anthem-container .anthem-subtitle {
+            font-size: clamp(1.5rem, 2.2vw, 2rem) !important;
+        }
+
+        .anthem-content .outro-block .verse-text {
+            font-size: clamp(2.5rem, 4.5vw, 3.5rem) !important;
         }
 
         /* ── Gallery Captions ── */
         .gallery-overlay h3 {
-            font-size: clamp(1rem, 1.5vw, 1.3rem) !important;
+            font-size: clamp(1.5rem, 2vw, 1.8rem) !important;
             font-weight: 700 !important;
             color: #ffd700 !important;
         }
 
         .gallery-overlay p {
-            font-size: clamp(0.8rem, 1vw, 0.95rem) !important;
+            font-size: clamp(1rem, 1.4vw, 1.2rem) !important;
             font-weight: 400 !important;
         }
 
         .img-caption {
-            font-size: clamp(1.1rem, 1.6vw, 1.4rem) !important;
+            font-size: clamp(1.5rem, 2vw, 2rem) !important;
             font-weight: 700 !important;
             color: #FFD600 !important;
         }
 
         .img-caption small {
-            font-size: clamp(0.85rem, 1.2vw, 1.05rem) !important;
+            font-size: clamp(1.1rem, 1.4vw, 1.3rem) !important;
             font-weight: 500 !important;
         }
 
         /* ── Staff Cards ── */
         .staff-card h3 {
-            font-size: clamp(1.1rem, 1.6vw, 1.4rem) !important;
+            font-size: clamp(1.6rem, 2vw, 2rem) !important;
             font-weight: 700 !important;
             color: #fff !important;
         }
 
         .staff-card small {
-            font-size: clamp(0.7rem, 0.9vw, 0.85rem) !important;
+            font-size: clamp(1rem, 1.2vw, 1.2rem) !important;
             font-weight: 900 !important;
             letter-spacing: 1px !important;
             color: #f5c542 !important;
         }
 
         .staff-icon {
-            font-size: clamp(2.2rem, 3.5vw, 3.5rem) !important;
+            font-size: clamp(3rem, 4.5vw, 4.5rem) !important;
         }
 
         /* ── Coach Section ── */
         .coach-details h3 {
-            font-size: clamp(2rem, 4vw, 3rem) !important;
+            font-size: clamp(3rem, 5vw, 4rem) !important;
             font-weight: 900 !important;
             color: #0a192f !important;
         }
 
         .coach-details .role {
-            font-size: clamp(1rem, 1.6vw, 1.4rem) !important;
+            font-size: clamp(1.5rem, 2vw, 2rem) !important;
             font-weight: 700 !important;
             color: #d4af37 !important;
         }
 
         .coach-details .bio {
-            font-size: clamp(0.95rem, 1.4vw, 1.2rem) !important;
+            font-size: clamp(1.2rem, 1.8vw, 1.6rem) !important;
             font-weight: 500 !important;
             color: #555555 !important;
             line-height: 1.8 !important;
         }
 
         /* ── Tables ── */
-        .contributions-table {
-            font-size: clamp(1rem, 1.4vw, 1.3rem) !important;
-        }
-
-        .contributions-table thead th {
-            font-size: clamp(1.1rem, 1.6vw, 1.5rem) !important;
-            font-weight: 700 !important;
-        }
-
-        .contributions-table tbody td {
-            font-size: clamp(0.95rem, 1.3vw, 1.2rem) !important;
-            font-weight: 500 !important;
-        }
-
+        .contributions-table,
         .fixtures-table {
-            font-size: clamp(1rem, 1.4vw, 1.3rem) !important;
+            font-size: clamp(1.3rem, 1.8vw, 1.8rem) !important;
         }
 
+        .contributions-table thead th,
         .fixtures-table thead th {
-            font-size: clamp(1.1rem, 1.6vw, 1.5rem) !important;
+            font-size: clamp(1.5rem, 2vw, 2rem) !important;
             font-weight: 700 !important;
         }
 
+        .contributions-table tbody td,
         .fixtures-table tbody td {
-            font-size: clamp(0.95rem, 1.3vw, 1.2rem) !important;
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem) !important;
             font-weight: 500 !important;
         }
 
         /* ── Registration Form ── */
         .registration-form label {
-            font-size: clamp(1rem, 1.4vw, 1.2rem) !important;
+            font-size: clamp(1.3rem, 1.8vw, 1.6rem) !important;
             font-weight: 700 !important;
-            color: #ccc !important;
+            color: #ddd !important;
         }
 
         .registration-form input,
         .registration-form select {
-            font-size: clamp(0.95rem, 1.2vw, 1.15rem) !important;
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
             font-weight: 500 !important;
+            padding: clamp(16px, 2vw, 22px) clamp(20px, 2.5vw, 28px) !important;
         }
 
         /* ── Chat ── */
         .chat-container h3 {
-            font-size: clamp(1.5rem, 2.5vw, 2.2rem) !important;
+            font-size: clamp(2.2rem, 3.5vw, 3rem) !important;
             font-weight: 800 !important;
         }
 
         .chat-messages p {
-            font-size: clamp(0.95rem, 1.2vw, 1.15rem) !important;
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
             font-weight: 500 !important;
         }
 
         .chat-input-area input {
-            font-size: clamp(0.95rem, 1.2vw, 1.2rem) !important;
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
             font-weight: 500 !important;
         }
 
         .chat-input-area button {
-            font-size: clamp(1rem, 1.4vw, 1.4rem) !important;
+            font-size: clamp(1.4rem, 1.8vw, 1.8rem) !important;
             font-weight: 800 !important;
         }
 
         /* ── Navbar ── */
         .nav-links a {
-            font-size: clamp(0.85rem, 1vw, 1.15rem) !important;
+            font-size: clamp(1.1rem, 1.4vw, 1.4rem) !important;
             font-weight: 700 !important;
         }
 
         /* ── Footer ── */
         footer p {
-            font-size: clamp(0.95rem, 1.2vw, 1.3rem) !important;
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem) !important;
             font-weight: 500 !important;
         }
 
         /* ── About Profile ── */
         .about-profile p {
-            font-size: clamp(1.1rem, 1.8vw, 1.5rem) !important;
+            font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
             line-height: 2 !important;
             font-weight: 500 !important;
         }
 
         .about-profile .motto-highlight {
-            font-size: clamp(1.4rem, 2.5vw, 2rem) !important;
+            font-size: clamp(2rem, 3.5vw, 2.8rem) !important;
             font-weight: 800 !important;
             color: #FFD600 !important;
         }
 
         /* ── Toast ── */
         .toast {
-            font-size: clamp(0.95rem, 1.2vw, 1.2rem) !important;
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem) !important;
             font-weight: 800 !important;
         }
 
         /* ── Cafe ── */
         .cafe-hero h2 {
-            font-size: clamp(2.8rem, 6vw, 6rem) !important;
+            font-size: clamp(4rem, 8vw, 7rem) !important;
             font-weight: 700 !important;
         }
 
         .cafe-hero p {
-            font-size: clamp(1rem, 1.8vw, 1.8rem) !important;
+            font-size: clamp(1.5rem, 2.2vw, 2.2rem) !important;
             font-weight: 300 !important;
-            letter-spacing: clamp(4px, 0.8vw, 8px) !important;
+            letter-spacing: clamp(5px, 1vw, 10px) !important;
         }
 
         .cafe-title {
-            font-size: clamp(2.2rem, 4.5vw, 4.2rem) !important;
+            font-size: clamp(3rem, 6vw, 5rem) !important;
             font-weight: 700 !important;
         }
 
         .cafe-category-title {
-            font-size: clamp(1.8rem, 3vw, 2.8rem) !important;
+            font-size: clamp(2.5rem, 4vw, 3.5rem) !important;
             font-weight: 700 !important;
         }
 
         .cafe-card h4 {
-            font-size: clamp(1.3rem, 2vw, 1.8rem) !important;
+            font-size: clamp(1.8rem, 2.5vw, 2.2rem) !important;
             font-weight: 700 !important;
         }
 
         .cafe-card p {
-            font-size: clamp(0.9rem, 1.2vw, 1.15rem) !important;
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
             font-weight: 400 !important;
         }
 
         .cafe-order-btn {
-            font-size: clamp(1.2rem, 1.8vw, 1.8rem) !important;
+            font-size: clamp(1.6rem, 2.2vw, 2.2rem) !important;
             font-weight: 700 !important;
-            padding: clamp(16px, 2vw, 24px) clamp(35px, 5vw, 70px) !important;
+            padding: clamp(20px, 2.5vw, 30px) clamp(40px, 6vw, 80px) !important;
         }
 
         .partner-card .variant-text {
-            font-size: clamp(1rem, 1.4vw, 1.4rem) !important;
+            font-size: clamp(1.4rem, 1.8vw, 1.8rem) !important;
         }
 
         /* ═══════════════════════════════════════
-           ── NAVBAR ──
+           ── REST OF THE STYLES ──
            ═══════════════════════════════════════ */
+
+        /* ── Navbar ── */
         nav {
             display: flex;
             align-items: center;
@@ -484,8 +482,8 @@
         }
 
         .nav-logo img {
-            height: 70px;
-            width: 70px;
+            height: 80px;
+            width: 80px;
             border-radius: 50%;
             border: 3px solid #FFD600;
             object-fit: cover;
@@ -504,7 +502,7 @@
             color: #ddd;
             text-decoration: none;
             font-weight: 700;
-            font-size: clamp(0.85rem, 1vw, 1.15rem);
+            font-size: clamp(1.1rem, 1.4vw, 1.4rem);
             transition: color 0.3s;
             white-space: nowrap;
             padding: 4px 6px;
@@ -518,9 +516,7 @@
             border-radius: 2px;
         }
 
-        /* ═══════════════════════════════════════
-           ── HERO ──
-           ═══════════════════════════════════════ */
+        /* ── Hero ── */
         .hero {
             position: relative;
             background:
@@ -566,9 +562,10 @@
             z-index: 2;
         }
 
+        /* ── Logo ── */
         .rori-logo {
-            width: 280px;
-            height: 280px;
+            width: 320px;
+            height: 320px;
             object-fit: cover;
             border-radius: 50%;
             display: block;
@@ -593,9 +590,9 @@
 
         .rori-profile h1 {
             margin: 0;
-            font-size: clamp(2.8rem, 8vw, 6rem);
+            font-size: clamp(4.5rem, 12vw, 8rem);
             font-weight: 900;
-            letter-spacing: clamp(2px, 0.5vw, 5px);
+            letter-spacing: clamp(3px, 0.8vw, 6px);
             color: #FFD600;
             text-shadow: 6px 6px 0 #1A237E, 0 0 50px rgba(255, 214, 0, 0.25);
             font-family: 'Poppins', sans-serif;
@@ -605,8 +602,8 @@
 
         .rori-profile p {
             margin-top: 18px;
-            font-size: clamp(1.2rem, 2.5vw, 2rem);
-            letter-spacing: clamp(4px, 0.8vw, 10px);
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            letter-spacing: clamp(5px, 1vw, 12px);
             color: #fff;
             max-width: 900px;
             margin-left: auto;
@@ -640,13 +637,13 @@
         }
 
         .stat-number {
-            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-size: clamp(4rem, 8vw, 6rem);
             color: #FFD600;
             font-weight: 900;
         }
 
         .stat-item .stat-label {
-            font-size: clamp(1rem, 1.4vw, 1.3rem);
+            font-size: clamp(1.3rem, 1.8vw, 1.8rem);
             color: #ccc;
             font-weight: 600;
             letter-spacing: 2px;
@@ -658,15 +655,13 @@
             z-index: 2;
         }
 
-        /* ═══════════════════════════════════════
-           ── BUTTONS ──
-           ═══════════════════════════════════════ */
+        /* ── Buttons ── */
         .btn {
             display: inline-block;
             background: #FFD600;
             color: #1A237E;
             font-weight: 800;
-            padding: clamp(14px, 2vw, 22px) clamp(28px, 4vw, 55px);
+            padding: clamp(18px, 2.5vw, 28px) clamp(35px, 5vw, 65px);
             border-radius: 50px;
             text-decoration: none;
             margin: 0 14px;
@@ -674,8 +669,8 @@
             border: none;
             cursor: pointer;
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.1rem, 1.6vw, 1.6rem);
-            letter-spacing: 1.5px;
+            font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+            letter-spacing: 2px;
             box-shadow: 0 4px 35px rgba(255, 214, 0, 0.35);
         }
 
@@ -699,36 +694,32 @@
             box-shadow: 0 0 40px rgba(255, 214, 0, 0.25);
         }
 
-        /* ═══════════════════════════════════════
-           ── SECTIONS ──
-           ═══════════════════════════════════════ */
+        /* ── Sections ── */
         section {
-            padding: clamp(50px, 8vw, 100px) 20px;
+            padding: clamp(60px, 10vw, 120px) 20px;
         }
 
         .section-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(3.5rem, 7vw, 5rem);
             color: #FFD600;
             text-align: center;
             margin-bottom: 60px;
             font-weight: 900;
             position: relative;
-            letter-spacing: clamp(2px, 0.4vw, 4px);
+            letter-spacing: clamp(3px, 0.6vw, 5px);
         }
 
         .section-title::after {
             content: "";
             display: block;
-            width: clamp(80px, 10vw, 140px);
-            height: 5px;
+            width: clamp(100px, 12vw, 160px);
+            height: 6px;
             background: #FFD600;
-            margin: 18px auto 0;
+            margin: 20px auto 0;
             border-radius: 4px;
         }
 
-        /* ═══════════════════════════════════════
-           ── WELCOME SECTION ──
-           ═══════════════════════════════════════ */
+        /* ── Welcome Section ── */
         .welcome-section {
             background: linear-gradient(135deg, #0d1137, #121836);
             border-top: 5px solid #FFD600;
@@ -744,7 +735,7 @@
         .welcome-content {
             background: rgba(18, 24, 54, 0.6);
             border-radius: 30px;
-            padding: clamp(30px, 5vw, 60px) clamp(20px, 4vw, 70px);
+            padding: clamp(35px, 6vw, 70px) clamp(25px, 5vw, 80px);
             border: 2px solid rgba(255, 214, 0, 0.15);
             position: relative;
             backdrop-filter: blur(8px);
@@ -752,7 +743,7 @@
 
         .welcome-content::before {
             content: "“";
-            font-size: clamp(4rem, 10vw, 8rem);
+            font-size: clamp(5rem, 12vw, 9rem);
             color: #FFD600;
             opacity: 0.1;
             position: absolute;
@@ -762,11 +753,11 @@
         }
 
         .welcome-content p {
-            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-            line-height: 1.9;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 2;
             margin-bottom: 22px;
-            color: #f0f0f0;
-            font-weight: 500;
+            color: #f5f5f5;
+            font-weight: 600;
         }
 
         .welcome-content p:last-of-type {
@@ -775,8 +766,8 @@
 
         .welcome-content .greeting-highlight {
             color: #FFD600;
-            font-weight: 800;
-            font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+            font-weight: 900;
+            font-size: clamp(2.2rem, 4vw, 2.8rem);
             font-family: 'Poppins', sans-serif;
             letter-spacing: 2px;
         }
@@ -785,30 +776,28 @@
             margin-top: 35px;
             padding-top: 35px;
             border-top: 3px solid rgba(255, 214, 0, 0.25);
-            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
-            font-weight: 700;
+            font-size: clamp(2rem, 3.5vw, 2.6rem);
+            font-weight: 800;
             color: #FFD600;
         }
 
         .welcome-content .closing .amharic {
             display: block;
-            font-size: clamp(1.4rem, 3vw, 2rem);
+            font-size: clamp(2rem, 3.8vw, 2.8rem);
             margin-top: 12px;
             font-family: 'Poppins', sans-serif;
             letter-spacing: 2px;
         }
 
-        /* ═══════════════════════════════════════
-           ── ABOUT ──
-           ═══════════════════════════════════════ */
+        /* ── About ── */
         .about-profile {
             max-width: 1100px;
             margin: 0 auto 60px;
             background: rgba(18, 24, 54, 0.7);
             border-left: 12px solid #FFD600;
-            padding: clamp(28px, 4vw, 50px) clamp(22px, 4vw, 60px);
+            padding: clamp(30px, 5vw, 55px) clamp(25px, 5vw, 65px);
             border-radius: 22px;
-            font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
             line-height: 2;
             text-align: center;
             color: #e8e8e8;
@@ -818,27 +807,25 @@
         .about-profile .motto-highlight {
             color: #FFD600;
             font-weight: 800;
-            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
             display: block;
             margin-top: 20px;
             font-family: 'Poppins', sans-serif;
             letter-spacing: 2px;
         }
 
-        /* ═══════════════════════════════════════
-           ── CARDS ──
-           ═══════════════════════════════════════ */
+        /* ── Cards ── */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(260px, 25vw, 320px), 1fr));
-            gap: clamp(20px, 3vw, 40px);
+            grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 28vw, 350px), 1fr));
+            gap: clamp(25px, 4vw, 45px);
             margin-top: 35px;
         }
 
         .card {
             background: #121836;
             border-radius: 25px;
-            padding: clamp(22px, 3vw, 40px) clamp(18px, 2.5vw, 35px);
+            padding: clamp(25px, 4vw, 45px) clamp(20px, 3vw, 40px);
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             border: 2px solid rgba(255, 214, 0, 0.15);
             text-align: center;
@@ -854,13 +841,13 @@
         .card h3 {
             color: #FFD600;
             margin: 22px 0 16px;
-            font-size: clamp(1.8rem, 3vw, 2.6rem);
-            font-weight: 800;
+            font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+            font-weight: 900;
         }
 
         .card p {
-            font-size: clamp(1.1rem, 1.8vw, 1.3rem);
-            font-weight: 500;
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-weight: 600;
             color: #d0d0d0;
         }
 
@@ -884,16 +871,14 @@
             padding: 12px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             font-weight: 500;
-            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            font-size: clamp(1.3rem, 1.8vw, 1.6rem);
         }
 
         .card ul li:last-child {
             border-bottom: none;
         }
 
-        /* ═══════════════════════════════════════
-           ── FUND SECTION ──
-           ═══════════════════════════════════════ */
+        /* ── Fund section ── */
         .fund-section {
             max-width: 1200px;
             margin: 0 auto;
@@ -902,10 +887,10 @@
         .fund-description {
             background: rgba(18, 24, 54, 0.7);
             border-radius: 25px;
-            padding: clamp(28px, 4vw, 50px) clamp(22px, 4vw, 60px);
+            padding: clamp(30px, 5vw, 55px) clamp(25px, 5vw, 65px);
             margin-bottom: 40px;
             border: 2px solid rgba(255, 214, 0, 0.15);
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
             line-height: 1.9;
             text-align: center;
             font-weight: 500;
@@ -913,7 +898,7 @@
 
         .fund-description p {
             margin-bottom: 18px;
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
         }
 
         .fund-description p:last-child {
@@ -922,18 +907,18 @@
 
         .fund-benefits {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 22vw, 260px), 1fr));
-            gap: clamp(15px, 2vw, 25px);
+            grid-template-columns: repeat(auto-fit, minmax(clamp(220px, 25vw, 280px), 1fr));
+            gap: clamp(20px, 2.5vw, 30px);
             margin: 35px 0 45px;
         }
 
         .fund-benefits .benefit-item {
             background: #1A237E;
-            padding: clamp(20px, 2.5vw, 28px) clamp(15px, 2vw, 22px);
+            padding: clamp(22px, 3vw, 32px) clamp(18px, 2.5vw, 25px);
             border-radius: 18px;
             border: 2px solid rgba(255, 214, 0, 0.25);
             font-weight: 700;
-            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem);
             text-align: center;
             transition: all 0.3s ease;
         }
@@ -946,7 +931,7 @@
 
         .fund-benefits .benefit-item .icon {
             display: block;
-            font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+            font-size: clamp(3rem, 4.5vw, 4rem);
             margin-bottom: 12px;
         }
 
@@ -954,25 +939,25 @@
             background: linear-gradient(135deg, #1A237E, #0d1137);
             border: 4px solid #FFD600;
             border-radius: 25px;
-            padding: clamp(25px, 3.5vw, 40px) clamp(20px, 3.5vw, 50px);
+            padding: clamp(30px, 4.5vw, 45px) clamp(25px, 4vw, 55px);
             text-align: center;
             margin-top: 25px;
             box-shadow: 0 0 60px rgba(255, 214, 0, 0.06);
         }
 
         .bank-details .bank-label {
-            font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+            font-size: clamp(1.3rem, 1.8vw, 1.8rem);
             color: #ccc;
             margin-bottom: 12px;
             font-weight: 600;
         }
 
         .bank-details .account-number {
-            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-size: clamp(3rem, 5.5vw, 4.5rem);
             font-weight: 900;
             color: #FFD600;
             font-family: 'Poppins', sans-serif;
-            letter-spacing: clamp(3px, 0.5vw, 5px);
+            letter-spacing: clamp(4px, 0.8vw, 6px);
             word-break: break-all;
         }
 
@@ -980,10 +965,10 @@
             background: transparent;
             border: 2px solid #FFD600;
             color: #FFD600;
-            padding: clamp(8px, 1vw, 12px) clamp(20px, 2.5vw, 35px);
+            padding: clamp(10px, 1.2vw, 15px) clamp(22px, 3vw, 40px);
             border-radius: 30px;
             cursor: pointer;
-            font-size: clamp(0.95rem, 1.2vw, 1.2rem);
+            font-size: clamp(1.1rem, 1.4vw, 1.4rem);
             font-weight: 700;
             margin-top: 14px;
             transition: all 0.3s ease;
@@ -996,14 +981,14 @@
         }
 
         .bank-details .account-name {
-            font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+            font-size: clamp(1.8rem, 2.5vw, 2.2rem);
             color: #fff;
             margin-top: 14px;
             font-weight: 700;
         }
 
         .bank-details .telebirr {
-            font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+            font-size: clamp(2rem, 3vw, 2.8rem);
             color: #FFD600;
             margin-top: 12px;
             font-family: 'Poppins', sans-serif;
@@ -1011,9 +996,7 @@
             letter-spacing: 3px;
         }
 
-        /* ═══════════════════════════════════════
-           ── CONTRIBUTIONS TABLE ──
-           ═══════════════════════════════════════ */
+        /* ── Contributions Table ── */
         .contributions-section {
             max-width: 1100px;
             margin: 0 auto;
@@ -1021,7 +1004,7 @@
 
         .contributions-intro {
             text-align: center;
-            font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+            font-size: clamp(1.5rem, 2.2vw, 2rem);
             margin-bottom: 35px;
             color: #ccc;
             font-weight: 500;
@@ -1039,7 +1022,7 @@
         .contributions-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: clamp(1rem, 1.4vw, 1.3rem);
+            font-size: clamp(1.3rem, 1.8vw, 1.8rem);
         }
 
         .contributions-table thead {
@@ -1048,11 +1031,11 @@
         }
 
         .contributions-table thead th {
-            padding: clamp(14px, 1.5vw, 20px) clamp(16px, 2vw, 28px);
+            padding: clamp(16px, 1.8vw, 24px) clamp(18px, 2.5vw, 32px);
             text-align: left;
             color: #FFD600;
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+            font-size: clamp(1.5rem, 2vw, 2rem);
             font-weight: 700;
             letter-spacing: 1px;
         }
@@ -1075,10 +1058,10 @@
         }
 
         .contributions-table tbody td {
-            padding: clamp(12px, 1.5vw, 18px) clamp(16px, 2vw, 28px);
+            padding: clamp(14px, 1.8vw, 22px) clamp(18px, 2.5vw, 32px);
             color: #e0e0e0;
             font-weight: 500;
-            font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem);
         }
 
         .contributions-table tbody td:first-child {
@@ -1102,40 +1085,38 @@
 
         .contributions-table .highlight-row td {
             font-weight: 800;
-            font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+            font-size: clamp(1.5rem, 2vw, 2rem);
             color: #FFD600;
-            padding: clamp(16px, 2vw, 24px) clamp(16px, 2vw, 28px);
+            padding: clamp(18px, 2.2vw, 28px) clamp(18px, 2.5vw, 32px);
         }
 
         .contributions-table .highlight-row td:last-child {
-            font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+            font-size: clamp(1.8rem, 2.5vw, 2.4rem);
         }
 
         .contributions-thanks {
             background: rgba(18, 24, 54, 0.7);
             border-left: 12px solid #FFD600;
             border-radius: 22px;
-            padding: clamp(25px, 3.5vw, 40px) clamp(20px, 3.5vw, 50px);
+            padding: clamp(28px, 4vw, 45px) clamp(22px, 4vw, 55px);
             text-align: center;
-            font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+            font-size: clamp(1.5rem, 2vw, 2rem);
             line-height: 2.2;
             color: #e8e8e8;
             font-weight: 500;
         }
 
         .contributions-thanks .thanks-icon {
-            font-size: clamp(2.5rem, 4.5vw, 4rem);
+            font-size: clamp(3.5rem, 5vw, 4.5rem);
             display: block;
             margin-bottom: 14px;
         }
 
-        /* ═══════════════════════════════════════
-           ── REGULATIONS ──
-           ═══════════════════════════════════════ */
+        /* ── Regulations ── */
         .regulations-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: clamp(25px, 4vw, 45px);
+            gap: clamp(30px, 5vw, 50px);
             max-width: 1300px;
             margin: 0 auto;
         }
@@ -1146,7 +1127,7 @@
 
         .regulations-grid .card h3 {
             text-align: center;
-            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-size: clamp(2.5rem, 4.5vw, 3.5rem);
         }
 
         .regulations-grid .card ul li {
@@ -1156,7 +1137,7 @@
             align-items: flex-start;
             gap: 16px;
             font-weight: 500;
-            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            font-size: clamp(1.3rem, 1.8vw, 1.6rem);
         }
 
         .regulations-grid .card ul li::before {
@@ -1164,21 +1145,19 @@
             color: #FFD600;
             font-weight: bold;
             flex-shrink: 0;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
         .regulations-grid .card ul li:last-child {
             border-bottom: none;
         }
 
-        /* ═══════════════════════════════════════
-           ── MOTTO BANNER ──
-           ═══════════════════════════════════════ */
+        /* ── Motto banner ── */
         .motto-banner {
             background: linear-gradient(135deg, #1A237E, #0d1137);
             border: 4px solid #FFD600;
             border-radius: 30px;
-            padding: clamp(35px, 5vw, 60px) clamp(25px, 4vw, 50px);
+            padding: clamp(40px, 6vw, 65px) clamp(30px, 5vw, 55px);
             margin: 60px auto 0;
             max-width: 1050px;
             text-align: center;
@@ -1186,29 +1165,27 @@
         }
 
         .motto-banner .motto-text {
-            font-size: clamp(2rem, 4.5vw, 3.5rem);
+            font-size: clamp(3rem, 6vw, 4.5rem);
             font-weight: 900;
             color: #FFD600;
             font-family: 'Poppins', sans-serif;
-            letter-spacing: clamp(2px, 0.4vw, 4px);
+            letter-spacing: clamp(3px, 0.6vw, 5px);
             line-height: 1.4;
         }
 
         .motto-banner .motto-sub {
             color: #ccc;
-            font-size: clamp(1rem, 1.6vw, 1.4rem);
+            font-size: clamp(1.4rem, 2vw, 1.8rem);
             margin-top: 14px;
             font-weight: 500;
             letter-spacing: 3px;
         }
 
-        /* ═══════════════════════════════════════
-           ── CHAT ──
-           ═══════════════════════════════════════ */
+        /* ── Chat ── */
         .chat-container {
             background: #0b0f1f;
             border-radius: 30px;
-            padding: clamp(20px, 3vw, 35px);
+            padding: clamp(25px, 4vw, 40px);
             margin-top: 45px;
             border: 2px solid #FFD600;
             max-width: 1000px;
@@ -1218,15 +1195,15 @@
         }
 
         .chat-container h3 {
-            font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
             font-weight: 800;
         }
 
         .chat-messages {
-            height: clamp(220px, 30vh, 300px);
+            height: clamp(250px, 35vh, 350px);
             overflow-y: auto;
             background: #121836;
-            padding: clamp(16px, 2vw, 25px);
+            padding: clamp(18px, 2.5vw, 28px);
             border-radius: 18px;
             margin-bottom: 25px;
         }
@@ -1234,7 +1211,7 @@
         .chat-messages p {
             margin-bottom: 12px;
             font-weight: 500;
-            font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem);
         }
 
         .chat-input-area {
@@ -1244,12 +1221,12 @@
 
         .chat-input-area input {
             flex: 1;
-            padding: clamp(12px, 1.5vw, 18px) clamp(16px, 2vw, 26px);
+            padding: clamp(14px, 1.8vw, 20px) clamp(18px, 2.5vw, 30px);
             border-radius: 30px;
             border: none;
             background: #1e2245;
             color: white;
-            font-size: clamp(0.95rem, 1.2vw, 1.2rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem);
             font-weight: 500;
         }
 
@@ -1261,11 +1238,11 @@
             background: #FFD600;
             border: none;
             border-radius: 30px;
-            padding: 0 clamp(20px, 3vw, 45px);
+            padding: 0 clamp(25px, 4vw, 50px);
             font-weight: 800;
             cursor: pointer;
             color: #1A237E;
-            font-size: clamp(1rem, 1.4vw, 1.4rem);
+            font-size: clamp(1.4rem, 1.8vw, 1.8rem);
             transition: all 0.3s ease;
         }
 
@@ -1279,104 +1256,205 @@
         /* ═══════════════════════════════════════
            ── ANTHEM SECTION ──
            ═══════════════════════════════════════ */
-        .anthem-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: rgba(18, 24, 54, 0.7);
-            border-radius: 30px;
-            padding: clamp(30px, 5vw, 60px) clamp(22px, 4vw, 70px);
-            border: 2px solid rgba(255, 214, 0, 0.2);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+
+        .anthem-section {
+            padding: clamp(60px, 10vw, 120px) 20px;
+            background: linear-gradient(135deg, #0a0f24, #121836);
+            border-top: 5px solid #FFD600;
+            border-bottom: 5px solid #FFD600;
             position: relative;
             overflow: hidden;
         }
 
-        .anthem-container::before {
-            content: "♫";
-            font-size: clamp(8rem, 18vw, 18rem);
+        .anthem-section::before {
+            content: "♫ ♪ ♬ ♩ ♪ ♫ ♬ ♪ ♩ ♫ ♪ ♬ ♩ ♪ ♫";
             position: absolute;
-            right: -30px;
-            bottom: -50px;
-            color: rgba(255, 214, 0, 0.04);
-            font-family: serif;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: clamp(8rem, 18vw, 18rem);
+            color: rgba(255, 214, 0, 0.03);
+            letter-spacing: clamp(20px, 5vw, 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             pointer-events: none;
+            line-height: 1.4;
+            font-family: serif;
+            animation: floatNotes 20s linear infinite;
+        }
+
+        @keyframes floatNotes {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(-30px, -20px) rotate(2deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        .anthem-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            background: rgba(18, 24, 54, 0.75);
+            border-radius: 30px;
+            padding: clamp(45px, 7vw, 80px) clamp(30px, 6vw, 75px);
+            border: 2px solid rgba(255, 214, 0, 0.2);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4), inset 0 0 80px rgba(255, 214, 0, 0.03);
+            backdrop-filter: blur(8px);
+        }
+
+        .anthem-container .anthem-title-main {
+            text-align: center;
+            font-size: clamp(4rem, 8vw, 6rem);
+            font-weight: 900;
+            color: #FFD600;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: clamp(3px, 0.6vw, 6px);
+            text-transform: uppercase;
+            text-shadow: 0 0 40px rgba(255, 214, 0, 0.15);
+            margin-bottom: 4px;
+            line-height: 1.1;
+        }
+
+        .anthem-container .anthem-subtitle {
+            text-align: center;
+            color: #ccc;
+            font-style: italic;
+            font-size: clamp(1.5rem, 2.2vw, 2rem);
+            letter-spacing: clamp(3px, 0.5vw, 5px);
+            margin-bottom: clamp(30px, 5vw, 50px);
+            font-weight: 400;
+            border-bottom: 2px solid rgba(255, 214, 0, 0.08);
+            padding-bottom: 20px;
         }
 
         .anthem-content {
-            color: #e0e0e0;
-            position: relative;
-            z-index: 2;
+            color: #e8e8e8;
         }
 
-        .anthem-content .verse,
-        .anthem-content .chorus,
-        .anthem-content .outro {
-            margin-bottom: 35px;
-            padding-bottom: 30px;
+        .anthem-content .verse-block,
+        .anthem-content .chorus-block {
+            margin-bottom: clamp(30px, 4vw, 45px);
+            padding-bottom: clamp(25px, 3vw, 35px);
             border-bottom: 1px solid rgba(255, 214, 0, 0.08);
         }
 
-        .anthem-content .verse:last-of-type,
-        .anthem-content .chorus:last-of-type,
-        .anthem-content .outro:last-of-type {
+        .anthem-content .verse-block:last-of-type,
+        .anthem-content .chorus-block:last-of-type {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
 
-        .anthem-content p {
-            font-size: clamp(1.1rem, 1.8vw, 1.4rem);
-            line-height: 2.2;
-            margin-bottom: 4px;
-            font-weight: 500;
-        }
-
-        .anthem-content p strong {
-            color: #FFD600;
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
-            font-weight: 800;
-            letter-spacing: 2px;
+        .anthem-content .verse-label {
             display: inline-block;
+            font-size: clamp(1.5rem, 2.2vw, 2rem);
+            font-weight: 800;
+            color: #FFD600;
+            letter-spacing: clamp(2px, 0.4vw, 4px);
+            text-transform: uppercase;
+            background: rgba(255, 214, 0, 0.08);
+            padding: clamp(6px, 0.8vw, 10px) clamp(18px, 2.5vw, 32px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 214, 0, 0.15);
+            margin-bottom: clamp(12px, 1.5vw, 18px);
+        }
+
+        .anthem-content .verse-text {
+            font-size: clamp(1.8rem, 3.2vw, 2.6rem) !important;
+            font-weight: 600 !important;
+            line-height: 2.2 !important;
+            color: #f0f0f0 !important;
             margin-bottom: 4px;
+            padding-left: clamp(10px, 2vw, 30px);
         }
 
-        .anthem-content .chorus p {
+        .anthem-content .verse-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .anthem-content .chorus-block .verse-label {
+            background: linear-gradient(135deg, rgba(255, 214, 0, 0.2), rgba(255, 214, 0, 0.05));
+            border-color: #FFD600;
             color: #FFD600;
-            font-weight: 600;
+            font-size: clamp(1.8rem, 2.5vw, 2.2rem);
         }
 
-        .anthem-content .chorus p strong {
-            color: #fff;
+        .anthem-content .chorus-block .verse-text {
+            color: #FFD600 !important;
+            font-weight: 700 !important;
+            font-size: clamp(2.2rem, 4vw, 3rem) !important;
+            text-shadow: 0 0 30px rgba(255, 214, 0, 0.06);
+            padding-left: clamp(10px, 2vw, 30px);
+        }
+
+        .anthem-content .outro-block {
+            text-align: center;
+            margin-top: clamp(25px, 3vw, 40px);
+            padding-top: clamp(25px, 3vw, 35px);
+            border-top: 2px solid rgba(255, 214, 0, 0.15);
+        }
+
+        .anthem-content .outro-block .verse-label {
+            font-size: clamp(1.5rem, 2.2vw, 2rem);
             font-weight: 800;
-        }
-
-        .anthem-content .outro p {
-            font-size: clamp(1.3rem, 2.2vw, 1.8rem);
-            font-weight: 700;
             color: #FFD600;
-            text-align: center;
-            letter-spacing: 4px;
+            letter-spacing: clamp(2px, 0.4vw, 4px);
+            text-transform: uppercase;
+            background: rgba(255, 214, 0, 0.08);
+            padding: clamp(6px, 0.8vw, 10px) clamp(18px, 2.5vw, 32px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 214, 0, 0.15);
+            display: inline-block;
+            margin-bottom: clamp(12px, 1.5vw, 18px);
         }
 
-        .anthem-content .outro p strong {
-            color: #fff;
-            font-weight: 800;
+        .anthem-content .outro-block .verse-text {
+            font-size: clamp(2.5rem, 4.5vw, 3.5rem) !important;
+            font-weight: 800 !important;
+            color: #FFD600 !important;
+            text-align: center;
+            letter-spacing: clamp(3px, 0.6vw, 6px);
+            line-height: 1.6 !important;
+            text-shadow: 0 0 40px rgba(255, 214, 0, 0.08);
+            padding-left: 0;
         }
 
-        .anthem-title-sub {
-            text-align: center;
-            color: #ccc;
-            font-style: italic;
-            margin-bottom: 40px;
-            font-size: clamp(1rem, 1.6vw, 1.4rem);
-            letter-spacing: 3px;
+        .anthem-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(12px, 2vw, 25px);
+            margin: clamp(20px, 3vw, 35px) 0;
+            opacity: 0.3;
+        }
+
+        .anthem-divider .line {
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #FFD600, transparent);
+            max-width: clamp(80px, 15vw, 200px);
+        }
+
+        .anthem-divider .note {
+            color: #FFD600;
+            font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+            font-family: serif;
         }
 
         /* ═══════════════════════════════════════
            ── HEAD COACH SECTION ──
            ═══════════════════════════════════════ */
         .coach-section {
-            padding: clamp(50px, 8vw, 90px) 20px;
+            padding: clamp(60px, 10vw, 100px) 20px;
             background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
             color: #ffffff;
             text-align: center;
@@ -1385,7 +1463,7 @@
         }
 
         .coach-card {
-            max-width: clamp(350px, 45vw, 600px);
+            max-width: clamp(380px, 50vw, 650px);
             margin: 40px auto;
             background: #ffffff;
             color: #111111;
@@ -1404,7 +1482,7 @@
         .coach-img-wrapper {
             position: relative;
             width: 100%;
-            height: clamp(350px, 50vh, 550px);
+            height: clamp(380px, 55vh, 600px);
             overflow: hidden;
         }
 
@@ -1426,32 +1504,32 @@
             background: #d4af37;
             color: #0a192f;
             font-weight: 800;
-            padding: clamp(6px, 0.8vw, 10px) clamp(14px, 1.8vw, 26px);
+            padding: clamp(8px, 1vw, 12px) clamp(16px, 2vw, 28px);
             border-radius: 25px;
-            font-size: clamp(0.85rem, 1.2vw, 1.2rem);
+            font-size: clamp(1rem, 1.4vw, 1.4rem);
             letter-spacing: 2px;
         }
 
         .coach-details {
-            padding: clamp(20px, 3vw, 35px) clamp(18px, 2.5vw, 30px);
+            padding: clamp(22px, 3.5vw, 40px) clamp(20px, 3vw, 35px);
         }
 
         .coach-details h3 {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(3rem, 5vw, 4rem);
             font-weight: 900;
             margin-bottom: 6px;
             color: #0a192f;
         }
 
         .coach-details .role {
-            font-size: clamp(1rem, 1.6vw, 1.4rem);
+            font-size: clamp(1.5rem, 2vw, 2rem);
             font-weight: 700;
             color: #d4af37;
             margin-bottom: 20px;
         }
 
         .coach-details .bio {
-            font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+            font-size: clamp(1.2rem, 1.8vw, 1.6rem);
             color: #555555;
             line-height: 1.8;
         }
@@ -1461,7 +1539,7 @@
            ═══════════════════════════════════════ */
         .rori-squad {
             position: relative;
-            padding: clamp(50px, 8vw, 100px) 20px;
+            padding: clamp(60px, 10vw, 120px) 20px;
             overflow: hidden;
             background: radial-gradient(circle at 50% 0%, rgba(245, 197, 66, 0.16), transparent 40%), #050b14;
             color: white;
@@ -1472,19 +1550,19 @@
 
         .squad-heading {
             text-align: center;
-            margin-bottom: clamp(40px, 6vw, 70px);
+            margin-bottom: clamp(45px, 7vw, 80px);
         }
 
         .squad-heading span {
             color: #f5c542;
-            font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+            font-size: clamp(1rem, 1.4vw, 1.3rem);
             letter-spacing: clamp(4px, 0.7vw, 8px);
             font-weight: 900;
         }
 
         .squad-heading h2 {
             margin: 14px 0;
-            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            font-size: clamp(3.5rem, 9vw, 6.5rem);
             font-weight: 1000;
             letter-spacing: -2px;
             color: #fff;
@@ -1493,7 +1571,7 @@
         .squad-heading p {
             color: #9da8b7;
             letter-spacing: clamp(3px, 0.5vw, 5px);
-            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem);
         }
 
         .hero-players {
@@ -1501,12 +1579,12 @@
             margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: clamp(15px, 2.5vw, 30px);
+            gap: clamp(20px, 3vw, 35px);
         }
 
         .hero-player {
             position: relative;
-            height: clamp(420px, 60vh, 620px);
+            height: clamp(460px, 65vh, 680px);
             border-radius: 35px;
             overflow: hidden;
             transform-style: preserve-3d;
@@ -1536,8 +1614,8 @@
 
         .hero-glow {
             position: absolute;
-            width: clamp(200px, 30vw, 350px);
-            height: clamp(200px, 30vw, 350px);
+            width: clamp(250px, 35vw, 400px);
+            height: clamp(250px, 35vw, 400px);
             left: 50%;
             top: 35%;
             transform: translate(-50%, -50%);
@@ -1561,14 +1639,14 @@
 
         .hero-badge {
             position: absolute;
-            top: clamp(14px, 1.8vw, 22px);
-            left: clamp(14px, 1.8vw, 22px);
+            top: clamp(16px, 2vw, 24px);
+            left: clamp(16px, 2vw, 24px);
             z-index: 20;
-            padding: clamp(6px, 0.8vw, 10px) clamp(12px, 1.5vw, 18px);
+            padding: clamp(8px, 1vw, 12px) clamp(14px, 1.8vw, 22px);
             border-radius: 50px;
             background: #f5c542;
             color: #050b14;
-            font-size: clamp(0.6rem, 0.8vw, 0.85rem);
+            font-size: clamp(0.9rem, 1.2vw, 1.2rem);
             font-weight: 1000;
             letter-spacing: 1px;
             transform: translateZ(100px);
@@ -1580,9 +1658,9 @@
 
         .hero-number {
             position: absolute;
-            right: clamp(10px, 1.5vw, 18px);
+            right: clamp(12px, 1.8vw, 22px);
             top: 5px;
-            font-size: clamp(80px, 15vw, 210px);
+            font-size: clamp(100px, 18vw, 240px);
             line-height: 1;
             font-weight: 1000;
             color: rgba(255, 255, 255, 0.08);
@@ -1598,10 +1676,10 @@
         .hero-image {
             position: absolute;
             left: 50%;
-            bottom: clamp(50px, 8vh, 80px);
+            bottom: clamp(60px, 10vh, 100px);
             width: 90%;
-            max-width: 420px;
-            height: clamp(280px, 40vh, 460px);
+            max-width: 480px;
+            height: clamp(320px, 45vh, 520px);
             object-fit: contain;
             transform: translateX(-50%) translateZ(100px);
             filter: drop-shadow(0 30px 25px rgba(0, 0, 0, 0.65));
@@ -1623,7 +1701,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            padding: clamp(18px, 2.5vw, 28px);
+            padding: clamp(22px, 3vw, 32px);
             z-index: 30;
             background: linear-gradient(transparent, rgba(2, 7, 13, 0.98));
             transform: translateZ(120px);
@@ -1631,50 +1709,48 @@
 
         .hero-info small {
             color: #f5c542;
-            font-size: clamp(0.65rem, 0.85vw, 0.85rem);
+            font-size: clamp(0.9rem, 1.2vw, 1.2rem);
             font-weight: 900;
             letter-spacing: 2px;
         }
 
         .hero-info h3 {
             margin: 6px 0;
-            font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
             font-weight: 1000;
             color: #fff;
         }
 
         .hero-info strong {
-            font-size: clamp(1rem, 1.4vw, 1.3rem);
+            font-size: clamp(1.4rem, 1.8vw, 1.8rem);
             color: #f5c542;
         }
 
         .players-title {
             width: min(1300px, 100%);
-            margin: clamp(60px, 10vw, 110px) auto 40px;
+            margin: clamp(70px, 12vw, 130px) auto 40px;
         }
 
         .players-title h2 {
-            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
             margin-bottom: 18px;
             color: #fff;
             font-weight: 900;
         }
 
         .players-title div {
-            width: clamp(60px, 8vw, 90px);
+            width: clamp(70px, 9vw, 100px);
             height: 4px;
             background: #f5c542;
             border-radius: 2px;
         }
 
-        /* ═══════════════════════════════════════
-           ── GLASSMORPHISM PLAYER CARDS ──
-           ═══════════════════════════════════════ */
+        /* ── GLASSMORPHISM PLAYER CARDS ── */
         #playersGrid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(clamp(160px, 18vw, 280px), 1fr));
-            gap: clamp(12px, 1.8vw, 20px);
-            padding: clamp(12px, 1.5vw, 20px);
+            grid-template-columns: repeat(auto-fill, minmax(clamp(180px, 20vw, 300px), 1fr));
+            gap: clamp(15px, 2vw, 25px);
+            padding: clamp(15px, 2vw, 25px);
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -1691,12 +1767,12 @@
             background: linear-gradient(145deg, rgba(30, 41, 91, 0.85), rgba(11, 19, 41, 0.9)) !important;
             backdrop-filter: blur(12px) !important;
             -webkit-backdrop-filter: blur(12px) !important;
-            padding: clamp(12px, 1.5vw, 20px);
+            padding: clamp(14px, 1.8vw, 24px);
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.12) !important;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-            height: clamp(240px, 30vh, 340px);
+            height: clamp(270px, 35vh, 380px);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1712,9 +1788,9 @@
 
         .player-number {
             position: absolute;
-            top: clamp(5px, 0.6vw, 10px);
-            right: clamp(10px, 1.2vw, 20px);
-            font-size: clamp(2.5rem, 4.5vw, 4rem);
+            top: clamp(6px, 0.8vw, 12px);
+            right: clamp(12px, 1.5vw, 22px);
+            font-size: clamp(3rem, 5vw, 4.5rem);
             font-weight: 900;
             color: rgba(255, 255, 255, 0.06);
             pointer-events: none;
@@ -1723,7 +1799,7 @@
 
         .player-inner .player-img {
             width: 85%;
-            height: clamp(140px, 18vh, 200px);
+            height: clamp(160px, 20vh, 230px);
             object-fit: contain;
             display: block;
             margin: 0 auto;
@@ -1737,28 +1813,28 @@
 
         .player-name {
             color: #ffffff !important;
-            font-size: clamp(1.1rem, 1.6vw, 1.4rem) !important;
+            font-size: clamp(1.6rem, 2.2vw, 2rem) !important;
             margin: 8px 0 2px;
-            font-weight: 700 !important;
+            font-weight: 800 !important;
             text-align: center;
         }
 
         .player-role {
             color: #ffd700 !important;
-            font-size: clamp(0.9rem, 1.2vw, 1rem) !important;
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-weight: 600 !important;
+            font-weight: 700 !important;
             text-align: center;
         }
 
         .player-badge {
             background: #ffd700 !important;
             color: #000 !important;
-            padding: 3px 12px;
+            padding: 4px 14px;
             border-radius: 5px;
             font-weight: bold !important;
-            font-size: clamp(0.7rem, 0.9vw, 0.85rem) !important;
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem) !important;
             display: inline-block;
             margin-top: 4px;
             text-transform: uppercase;
@@ -1772,17 +1848,17 @@
 
         .staff-section {
             width: min(1000px, 100%);
-            margin: clamp(50px, 8vw, 90px) auto 0;
+            margin: clamp(60px, 10vw, 100px) auto 0;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: clamp(15px, 2vw, 25px);
+            gap: clamp(18px, 2.5vw, 28px);
         }
 
         .staff-card {
             display: flex;
             align-items: center;
-            gap: clamp(16px, 2vw, 25px);
-            padding: clamp(18px, 2.5vw, 28px) clamp(20px, 3vw, 35px);
+            gap: clamp(18px, 2.5vw, 28px);
+            padding: clamp(20px, 3vw, 32px) clamp(22px, 3.5vw, 40px);
             border-radius: 25px;
             background: linear-gradient(135deg, #1e295b 0%, #0f172a 100%);
             border: 2px solid rgba(255, 215, 0, 0.3);
@@ -1807,20 +1883,20 @@
         }
 
         .staff-icon {
-            font-size: clamp(2rem, 3vw, 3.2rem);
+            font-size: clamp(3rem, 4.5vw, 4.5rem);
             transform: translateZ(50px);
         }
 
         .staff-card small {
             color: #f5c542;
-            font-size: clamp(0.65rem, 0.85vw, 0.8rem);
+            font-size: clamp(0.9rem, 1.2vw, 1.2rem);
             font-weight: 900;
             letter-spacing: 1px;
         }
 
         .staff-card h3 {
             margin: 6px 0 0;
-            font-size: clamp(1rem, 1.4vw, 1.4rem);
+            font-size: clamp(1.6rem, 2vw, 2rem);
             font-weight: 700;
             color: #fff;
         }
@@ -1837,10 +1913,11 @@
         }
 
         /* ═══════════════════════════════════════
-           ── GALLERY ──
+           ── GALLERY SECTION ──
            ═══════════════════════════════════════ */
+
         .gallery-section {
-            padding: clamp(40px, 6vw, 80px) 20px;
+            padding: clamp(50px, 8vw, 90px) 20px;
             background: linear-gradient(135deg, #0a0f24, #121836);
             text-align: center;
             border-top: 4px solid #FFD600;
@@ -1850,7 +1927,7 @@
         .gallery-section .section-title {
             text-align: center;
             color: #ffffff;
-            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-size: clamp(2.5rem, 4.5vw, 3.5rem);
             margin-bottom: 40px;
             font-weight: 800;
             letter-spacing: 2px;
@@ -1858,12 +1935,13 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 28vw, 320px), 1fr));
-            gap: clamp(16px, 2vw, 25px);
+            grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 30vw, 350px), 1fr));
+            gap: clamp(18px, 2.5vw, 28px);
             max-width: 1200px;
             margin: 0 auto;
         }
 
+        /* ── Gallery Item ── */
         .gallery-item {
             position: relative;
             border-radius: 16px;
@@ -1899,10 +1977,16 @@
         .gallery-item:nth-child(8) {
             animation-delay: 0.45s;
         }
+        .gallery-item:nth-child(9) {
+            animation-delay: 0.5s;
+        }
+        .gallery-item:nth-child(10) {
+            animation-delay: 0.55s;
+        }
 
         .gallery-item img {
             width: 100%;
-            height: clamp(180px, 25vh, 250px);
+            height: clamp(200px, 28vh, 280px);
             object-fit: cover;
             display: block;
             transition: transform 0.5s ease;
@@ -1924,7 +2008,7 @@
             left: 0;
             right: 0;
             background: linear-gradient(to top, rgba(11, 19, 41, 0.95), transparent);
-            padding: clamp(12px, 1.5vw, 20px);
+            padding: clamp(14px, 1.8vw, 22px);
             transform: translateY(100%);
             transition: transform 0.4s ease;
         }
@@ -1935,14 +2019,14 @@
 
         .gallery-overlay h3 {
             color: #ffd700;
-            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            font-size: clamp(1.5rem, 2vw, 1.8rem);
             margin-bottom: 5px;
             font-weight: 700;
         }
 
         .gallery-overlay p {
             color: #ffffff;
-            font-size: clamp(0.8rem, 1vw, 0.95rem);
+            font-size: clamp(1rem, 1.4vw, 1.2rem);
             font-weight: 400;
         }
 
@@ -1951,12 +2035,12 @@
            ═══════════════════════════════════════ */
         footer {
             text-align: center;
-            padding: clamp(28px, 4vw, 50px);
+            padding: clamp(32px, 5vw, 55px);
             background: #0a0f24;
             border-top: 4px solid #FFD600;
             margin-top: 70px;
             font-weight: 500;
-            font-size: clamp(0.95rem, 1.2vw, 1.3rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem);
         }
 
         /* ═══════════════════════════════════════
@@ -1965,7 +2049,7 @@
         .cafe-section {
             background: #2b1b14;
             color: #f5f1ea;
-            padding: 0 20px clamp(40px, 8vw, 90px);
+            padding: 0 20px clamp(50px, 10vw, 100px);
             font-family: 'Inter', 'Poppins', 'Open Sans', sans-serif;
         }
 
@@ -1978,13 +2062,13 @@
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(212, 175, 55, 0.2);
             border-radius: 25px;
-            padding: clamp(30px, 5vw, 50px) clamp(20px, 4vw, 40px);
+            padding: clamp(35px, 6vw, 55px) clamp(25px, 5vw, 45px);
             margin-bottom: 60px;
             text-align: center;
         }
 
         .partner-section .partner-label {
-            font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+            font-size: clamp(1rem, 1.4vw, 1.4rem);
             text-transform: uppercase;
             letter-spacing: clamp(6px, 1vw, 10px);
             color: #d4af37;
@@ -2006,14 +2090,14 @@
         .partner-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: clamp(15px, 2vw, 28px);
+            gap: clamp(18px, 2.5vw, 30px);
         }
 
         .partner-card {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(212, 175, 55, 0.15);
             border-radius: 18px;
-            padding: clamp(16px, 2vw, 28px) clamp(12px, 1.5vw, 20px);
+            padding: clamp(18px, 2.5vw, 30px) clamp(14px, 2vw, 22px);
             transition: all 0.3s ease;
             text-align: center;
         }
@@ -2026,7 +2110,7 @@
         }
 
         .partner-card .variant-tag {
-            font-size: clamp(0.55rem, 0.7vw, 0.8rem);
+            font-size: clamp(0.7rem, 0.9vw, 0.9rem);
             text-transform: uppercase;
             letter-spacing: 4px;
             color: #d4af37;
@@ -2037,7 +2121,7 @@
 
         .partner-card .variant-text {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1rem, 1.4vw, 1.4rem);
+            font-size: clamp(1.4rem, 1.8vw, 1.8rem);
             color: #f5f1ea;
             line-height: 1.6;
         }
@@ -2048,7 +2132,7 @@
         }
 
         .partner-card .variant-text .icon {
-            font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+            font-size: clamp(1.5rem, 2vw, 2rem);
             margin: 0 4px;
         }
 
@@ -2064,7 +2148,7 @@
             position: relative;
             background: linear-gradient(135deg, rgba(43, 27, 20, 0.85), rgba(20, 12, 8, 0.95)),
                 url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&h=800&fit=crop&crop=center&q=80') center / cover no-repeat;
-            padding: clamp(60px, 12vw, 140px) 20px clamp(50px, 8vw, 90px);
+            padding: clamp(70px, 14vw, 150px) 20px clamp(60px, 10vw, 100px);
             text-align: center;
             border-radius: 0 0 60px 60px;
             margin-bottom: 70px;
@@ -2074,17 +2158,17 @@
 
         .cafe-hero::after {
             content: "☕";
-            font-size: clamp(3rem, 6vw, 6rem);
+            font-size: clamp(4rem, 7vw, 6.5rem);
             position: absolute;
-            bottom: clamp(-30px, -4vw, -45px);
+            bottom: clamp(-35px, -5vw, -50px);
             left: 50%;
             transform: translateX(-50%);
             background: #2b1b14;
             padding: 0 30px;
             border: 4px solid #d4af37;
             border-radius: 50%;
-            width: clamp(60px, 10vw, 110px);
-            height: clamp(60px, 10vw, 110px);
+            width: clamp(70px, 12vw, 120px);
+            height: clamp(70px, 12vw, 120px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2093,7 +2177,7 @@
 
         .cafe-hero h2 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.8rem, 6vw, 6rem);
+            font-size: clamp(4rem, 8vw, 7rem);
             color: #f5f1ea;
             font-weight: 700;
             letter-spacing: 3px;
@@ -2107,17 +2191,17 @@
         }
 
         .cafe-hero p {
-            font-size: clamp(1rem, 1.8vw, 1.8rem);
+            font-size: clamp(1.5rem, 2.2vw, 2.2rem);
             color: #f5f1ea;
             opacity: 0.9;
             font-weight: 300;
-            letter-spacing: clamp(4px, 0.8vw, 8px);
+            letter-spacing: clamp(5px, 1vw, 10px);
             text-transform: uppercase;
             font-family: 'Inter', 'Poppins', sans-serif;
         }
 
         .cafe-hero .gold-line {
-            width: clamp(100px, 15vw, 180px);
+            width: clamp(120px, 18vw, 200px);
             height: 5px;
             background: #d4af37;
             margin: 22px auto 0;
@@ -2126,7 +2210,7 @@
 
         .cafe-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+            font-size: clamp(3rem, 6vw, 5rem);
             color: #f5f1ea;
             text-align: center;
             margin-bottom: 45px;
@@ -2141,7 +2225,7 @@
         .cafe-title::after {
             content: "";
             display: block;
-            width: clamp(80px, 12vw, 140px);
+            width: clamp(100px, 14vw, 160px);
             height: 5px;
             background: #d4af37;
             margin: 20px auto;
@@ -2150,7 +2234,7 @@
 
         .cafe-category-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
             color: #d4af37;
             margin: 60px 0 32px;
             padding-bottom: 16px;
@@ -2162,20 +2246,20 @@
         }
 
         .cafe-category-title .icon {
-            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
         }
 
         .cafe-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 22vw, 280px), 1fr));
-            gap: clamp(16px, 2.5vw, 35px);
+            grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 25vw, 300px), 1fr));
+            gap: clamp(18px, 2.5vw, 35px);
         }
 
         .cafe-card {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(212, 175, 55, 0.2);
             border-radius: 20px;
-            padding: clamp(20px, 3vw, 36px) clamp(16px, 2.5vw, 28px);
+            padding: clamp(22px, 3.5vw, 40px) clamp(18px, 3vw, 32px);
             text-align: center;
             transition: all 0.3s ease;
             backdrop-filter: blur(4px);
@@ -2189,21 +2273,21 @@
         }
 
         .cafe-card .emoji {
-            font-size: clamp(2.6rem, 4.5vw, 4.2rem);
+            font-size: clamp(3rem, 5vw, 4.5rem);
             margin-bottom: 16px;
             display: block;
         }
 
         .cafe-card h4 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.3rem, 2vw, 1.8rem);
+            font-size: clamp(1.8rem, 2.5vw, 2.2rem);
             color: #f5f1ea;
             margin-bottom: 12px;
             font-weight: 700;
         }
 
         .cafe-card p {
-            font-size: clamp(0.9rem, 1.2vw, 1.15rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem);
             color: #d4c5b5;
             line-height: 1.5;
             margin-bottom: 0;
@@ -2222,9 +2306,9 @@
         .cafe-card.special .badge {
             background: #d4af37;
             color: #2b1b14;
-            font-size: clamp(0.7rem, 0.9vw, 0.9rem);
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
             font-weight: 700;
-            padding: 5px 18px;
+            padding: 6px 20px;
             border-radius: 18px;
             display: inline-block;
             margin-bottom: 14px;
@@ -2238,8 +2322,8 @@
             color: #2b1b14;
             font-family: 'Inter', 'Poppins', sans-serif;
             font-weight: 700;
-            font-size: clamp(1.2rem, 1.8vw, 1.8rem);
-            padding: clamp(16px, 2vw, 24px) clamp(35px, 5vw, 70px);
+            font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+            padding: clamp(20px, 2.5vw, 30px) clamp(40px, 6vw, 80px);
             border-radius: 50px;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -2260,7 +2344,7 @@
             margin-top: 70px;
             padding-top: 45px;
             border-top: 1px solid rgba(212, 175, 55, 0.2);
-            font-size: clamp(1rem, 1.4vw, 1.3rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem);
             color: #d4c5b5;
             letter-spacing: 3px;
             font-weight: 500;
@@ -2269,7 +2353,7 @@
         .cafe-footer-note strong {
             color: #d4af37;
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+            font-size: clamp(1.4rem, 1.8vw, 1.8rem);
         }
 
         /* ═══════════════════════════════════════
@@ -2292,7 +2376,7 @@
         .fixtures-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: clamp(1rem, 1.4vw, 1.3rem);
+            font-size: clamp(1.3rem, 1.8vw, 1.8rem);
         }
 
         .fixtures-table thead {
@@ -2301,11 +2385,11 @@
         }
 
         .fixtures-table thead th {
-            padding: clamp(14px, 1.5vw, 20px) clamp(16px, 2vw, 28px);
+            padding: clamp(16px, 1.8vw, 24px) clamp(18px, 2.5vw, 32px);
             text-align: left;
             color: #FFD600;
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+            font-size: clamp(1.5rem, 2vw, 2rem);
             font-weight: 700;
             letter-spacing: 1px;
         }
@@ -2329,10 +2413,10 @@
         }
 
         .fixtures-table tbody td {
-            padding: clamp(12px, 1.5vw, 18px) clamp(16px, 2vw, 28px);
+            padding: clamp(14px, 1.8vw, 22px) clamp(18px, 2.5vw, 32px);
             color: #e0e0e0;
             font-weight: 500;
-            font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem);
         }
 
         .fixtures-table tbody td:first-child {
@@ -2345,9 +2429,9 @@
             display: inline-block;
             background: rgba(255, 214, 0, 0.12);
             color: #FFD600;
-            padding: clamp(4px, 0.5vw, 6px) clamp(12px, 1.5vw, 20px);
+            padding: clamp(5px, 0.6vw, 8px) clamp(14px, 1.8vw, 22px);
             border-radius: 18px;
-            font-size: clamp(0.8rem, 1vw, 1rem);
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
             font-weight: 700;
             border: 1px solid rgba(255, 214, 0, 0.2);
         }
@@ -2359,7 +2443,7 @@
             max-width: 750px;
             margin: 0 auto;
             background: #121836;
-            padding: clamp(25px, 4vw, 50px);
+            padding: clamp(30px, 5vw, 55px);
             border-radius: 30px;
             border: 2px solid rgba(255, 214, 0, 0.15);
             box-shadow: 0 6px 40px rgba(0, 0, 0, 0.25);
@@ -2369,8 +2453,8 @@
             display: block;
             font-weight: 700;
             margin-top: 22px;
-            color: #ccc;
-            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            color: #ddd;
+            font-size: clamp(1.3rem, 1.8vw, 1.6rem);
         }
 
         .registration-form label:first-of-type {
@@ -2380,13 +2464,13 @@
         .registration-form input,
         .registration-form select {
             width: 100%;
-            padding: clamp(14px, 1.8vw, 18px) clamp(16px, 2vw, 24px);
+            padding: clamp(16px, 2vw, 22px) clamp(20px, 2.5vw, 28px);
             margin-top: 8px;
             background: #1e2245;
             border: 2px solid #2a3480;
             border-radius: 30px;
             color: white;
-            font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem);
             font-weight: 500;
             transition: border-color 0.3s ease;
         }
@@ -2411,7 +2495,7 @@
             right: 40px;
             background: #FFD600;
             color: #1A237E;
-            padding: clamp(16px, 2vw, 24px) clamp(22px, 3vw, 42px);
+            padding: clamp(18px, 2.5vw, 28px) clamp(25px, 3.5vw, 45px);
             border-radius: 30px;
             font-weight: 800;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
@@ -2419,7 +2503,7 @@
             display: none;
             max-width: 600px;
             animation: slideUp 0.5s ease-out;
-            font-size: clamp(0.95rem, 1.2vw, 1.2rem);
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem);
         }
 
         .toast.show {
@@ -2449,1025 +2533,826 @@
         }
 
         /* ═══════════════════════════════════════
-           ── RESPONSIVE ──
+           ── RESPONSIVE REFINEMENTS ──
            ═══════════════════════════════════════ */
-
-        /* Tablets */
         @media (max-width: 992px) {
             .partner-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 20px;
             }
-
             .hero-players {
                 grid-template-columns: repeat(2, 1fr);
             }
-
             .hero-player:last-child {
                 grid-column: span 2;
                 max-width: 50%;
                 margin: 0 auto;
             }
-
             .coach-img-wrapper {
-                height: clamp(300px, 40vh, 450px);
+                height: clamp(350px, 45vh, 480px);
             }
-
             #playersGrid {
-                grid-template-columns: repeat(auto-fill, minmax(clamp(140px, 20vw, 200px), 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(clamp(160px, 22vw, 220px), 1fr));
             }
-
             .staff-section {
                 grid-template-columns: 1fr;
                 gap: 18px;
             }
         }
 
-        /* Mobile */
         @media (max-width: 768px) {
             .hero-players {
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
-
             .hero-player:last-child {
                 grid-column: span 1;
                 max-width: 100%;
             }
-
             .hero-player {
-                height: clamp(380px, 55vh, 500px);
+                height: clamp(400px, 60vh, 520px);
             }
-
             .regulations-grid {
                 grid-template-columns: 1fr;
                 gap: 35px;
             }
-
             #playersGrid {
-                grid-template-columns: repeat(auto-fill, minmax(clamp(130px, 30vw, 160px), 1fr));
-                gap: 12px;
-                padding: 12px;
+                grid-template-columns: repeat(auto-fill, minmax(clamp(140px, 35vw, 180px), 1fr));
+                gap: 14px;
+                padding: 14px;
             }
-
             .player-inner {
-                height: clamp(200px, 30vh, 270px);
-                padding: 12px;
+                height: clamp(220px, 32vh, 290px);
+                padding: 14px;
             }
-
             .player-inner .player-img {
-                height: clamp(120px, 18vh, 160px);
+                height: clamp(140px, 20vh, 180px);
             }
-
             .player-name {
-                font-size: clamp(0.95rem, 2.5vw, 1.1rem) !important;
+                font-size: clamp(1.3rem, 3vw, 1.6rem) !important;
             }
-
             .player-role {
-                font-size: clamp(0.75rem, 1.8vw, 0.85rem) !important;
+                font-size: clamp(1rem, 2.2vw, 1.2rem) !important;
             }
-
             .hero-number {
-                font-size: clamp(60px, 12vw, 120px);
+                font-size: clamp(70px, 14vw, 130px);
             }
-
             .hero-image {
-                height: clamp(220px, 35vh, 340px);
-                bottom: clamp(40px, 6vh, 60px);
+                height: clamp(240px, 38vh, 360px);
+                bottom: clamp(45px, 7vh, 65px);
             }
-
             .hero-info h3 {
-                font-size: clamp(1.2rem, 4vw, 1.6rem);
+                font-size: clamp(1.8rem, 5vw, 2.2rem);
             }
-
             .staff-section {
                 grid-template-columns: 1fr;
                 gap: 15px;
             }
-
             .staff-card {
-                padding: clamp(16px, 2.5vw, 22px) clamp(18px, 3vw, 28px);
+                padding: clamp(18px, 3vw, 25px) clamp(20px, 3.5vw, 30px);
             }
-
             .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(clamp(160px, 40vw, 250px), 1fr));
-                gap: 14px;
+                grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 45vw, 260px), 1fr));
+                gap: 16px;
             }
-
             .gallery-item img {
-                height: clamp(150px, 25vh, 200px);
+                height: clamp(170px, 28vh, 220px);
             }
-
             .partner-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 14px;
             }
-
             .cafe-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 14px;
             }
-
             .cafe-hero h2 {
-                font-size: clamp(2.2rem, 7vw, 3.5rem);
+                font-size: clamp(2.8rem, 8vw, 4rem);
             }
-
             .cafe-hero p {
-                font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+                font-size: clamp(1.1rem, 2.5vw, 1.4rem);
                 letter-spacing: 4px;
             }
-
             .cafe-hero::after {
-                width: clamp(50px, 12vw, 80px);
-                height: clamp(50px, 12vw, 80px);
-                font-size: clamp(2rem, 5vw, 3.2rem);
-                bottom: clamp(-25px, -4vw, -35px);
+                width: clamp(55px, 14vw, 85px);
+                height: clamp(55px, 14vw, 85px);
+                font-size: clamp(2.5rem, 6vw, 3.5rem);
+                bottom: clamp(-28px, -5vw, -38px);
             }
-
             .card-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: 16px;
+                gap: 18px;
             }
-
             .card {
-                padding: clamp(16px, 3vw, 22px) clamp(14px, 2.5vw, 18px);
+                padding: clamp(18px, 3.5vw, 25px) clamp(16px, 3vw, 22px);
             }
-
             .card h3 {
-                font-size: clamp(1.3rem, 4vw, 1.6rem);
+                font-size: clamp(1.8rem, 5vw, 2.2rem);
             }
-
             .card p {
-                font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+                font-size: clamp(1.2rem, 3vw, 1.4rem);
             }
-
             .nav-links {
                 gap: 12px;
                 justify-content: center;
             }
-
             .nav-links a {
-                font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+                font-size: clamp(0.85rem, 1.8vw, 1rem);
             }
-
             nav {
                 padding: 12px 20px;
                 justify-content: center;
             }
-
             .nav-logo img {
-                height: 50px;
-                width: 50px;
+                height: 55px;
+                width: 55px;
             }
-
             .rori-logo {
-                width: clamp(130px, 30vw, 170px);
-                height: clamp(130px, 30vw, 170px);
+                width: clamp(150px, 35vw, 200px);
+                height: clamp(150px, 35vw, 200px);
             }
-
             .rori-profile h1 {
-                font-size: clamp(2.2rem, 7vw, 3.2rem);
+                font-size: clamp(2.8rem, 8vw, 4rem);
                 letter-spacing: 2px;
             }
-
             .rori-profile p {
-                font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+                font-size: clamp(1.2rem, 3vw, 1.6rem);
                 letter-spacing: 4px;
             }
-
             .stat-number {
-                font-size: clamp(2rem, 6vw, 2.8rem);
+                font-size: clamp(2.8rem, 7vw, 3.5rem);
             }
-
             .stat-item {
-                padding: clamp(12px, 2vw, 16px) clamp(16px, 3vw, 25px);
+                padding: clamp(14px, 2.5vw, 20px) clamp(18px, 3.5vw, 28px);
             }
-
             .stats-bar {
-                gap: clamp(12px, 3vw, 20px);
+                gap: clamp(14px, 3vw, 22px);
             }
-
             .btn {
-                font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-                padding: clamp(12px, 2vw, 16px) clamp(20px, 4vw, 32px);
+                font-size: clamp(1.2rem, 3vw, 1.4rem);
+                padding: clamp(14px, 2.5vw, 18px) clamp(24px, 5vw, 36px);
             }
-
             .section-title {
-                font-size: clamp(1.8rem, 5vw, 2.4rem);
+                font-size: clamp(2.2rem, 6vw, 2.8rem);
                 margin-bottom: 40px;
             }
-
             .welcome-content {
-                padding: clamp(20px, 4vw, 30px) clamp(16px, 3vw, 25px);
+                padding: clamp(22px, 5vw, 35px) clamp(18px, 4vw, 28px);
             }
-
             .welcome-content p {
-                font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+                font-size: clamp(1.3rem, 3vw, 1.6rem);
                 line-height: 1.8;
             }
-
             .welcome-content .greeting-highlight {
-                font-size: clamp(1.1rem, 3vw, 1.4rem);
+                font-size: clamp(1.6rem, 4vw, 2rem);
             }
-
             .welcome-content .closing {
-                font-size: clamp(1rem, 2.8vw, 1.3rem);
+                font-size: clamp(1.4rem, 3.5vw, 1.8rem);
             }
-
             .welcome-content .closing .amharic {
-                font-size: clamp(1.1rem, 3vw, 1.4rem);
+                font-size: clamp(1.4rem, 3.8vw, 1.8rem);
             }
-
             .motto-banner .motto-text {
-                font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+                font-size: clamp(2rem, 5vw, 2.8rem);
             }
-
             .motto-banner .motto-sub {
-                font-size: clamp(0.9rem, 2vw, 1.1rem);
+                font-size: clamp(1rem, 2.5vw, 1.3rem);
             }
-
             .bank-details .account-number {
-                font-size: clamp(1.4rem, 4vw, 1.8rem);
+                font-size: clamp(1.8rem, 5vw, 2.5rem);
                 letter-spacing: 2px;
             }
-
             .bank-details .account-name {
-                font-size: clamp(1rem, 2.5vw, 1.2rem);
+                font-size: clamp(1.3rem, 3vw, 1.6rem);
             }
-
             .bank-details .telebirr {
-                font-size: clamp(1.1rem, 3vw, 1.4rem);
+                font-size: clamp(1.4rem, 3.5vw, 1.8rem);
             }
-
             .fund-description {
-                padding: clamp(18px, 3vw, 25px) clamp(16px, 2.5vw, 22px);
-                font-size: clamp(0.95rem, 2vw, 1.1rem);
+                padding: clamp(20px, 4vw, 30px) clamp(18px, 3.5vw, 26px);
+                font-size: clamp(1.2rem, 2.5vw, 1.4rem);
             }
-
             .fund-benefits {
                 grid-template-columns: 1fr 1fr;
-                gap: 14px;
+                gap: 16px;
             }
-
             .fund-benefits .benefit-item {
-                font-size: clamp(0.9rem, 2vw, 1rem);
-                padding: clamp(14px, 2vw, 18px) clamp(12px, 1.5vw, 16px);
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
+                padding: clamp(16px, 2.5vw, 22px) clamp(14px, 2vw, 18px);
             }
-
             .contributions-table-wrapper {
                 overflow-x: auto;
             }
-
             .contributions-table {
-                font-size: clamp(0.85rem, 2vw, 1rem);
-                min-width: 500px;
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
+                min-width: 550px;
             }
-
             .contributions-table thead th,
             .contributions-table tbody td {
-                padding: clamp(10px, 1.5vw, 14px) clamp(12px, 2vw, 16px);
+                padding: clamp(12px, 1.8vw, 16px) clamp(14px, 2.2vw, 20px);
             }
-
             .contributions-table .highlight-row td {
-                font-size: clamp(0.95rem, 2vw, 1.1rem);
-                padding: clamp(12px, 1.5vw, 16px) clamp(12px, 2vw, 16px);
+                font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+                padding: clamp(14px, 2vw, 18px) clamp(14px, 2.2vw, 20px);
             }
-
             .contributions-thanks {
-                padding: clamp(18px, 3vw, 25px) clamp(16px, 2.5vw, 22px);
-                font-size: clamp(0.95rem, 2vw, 1.05rem);
+                padding: clamp(20px, 4vw, 30px) clamp(18px, 3.5vw, 26px);
+                font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             }
-
             .fixtures-table-wrapper {
                 overflow-x: auto;
             }
-
             .fixtures-table {
-                font-size: clamp(0.85rem, 2vw, 1rem);
-                min-width: 500px;
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
+                min-width: 550px;
             }
-
             .fixtures-table thead th,
             .fixtures-table tbody td {
-                padding: clamp(10px, 1.5vw, 14px) clamp(12px, 2vw, 16px);
+                padding: clamp(12px, 1.8vw, 16px) clamp(14px, 2.2vw, 20px);
             }
-
             .anthem-container {
-                padding: clamp(20px, 4vw, 30px) clamp(16px, 3vw, 25px);
+                padding: clamp(25px, 5vw, 40px) clamp(18px, 4vw, 30px);
             }
-
-            .anthem-content p {
-                font-size: clamp(0.95rem, 2vw, 1.1rem);
-                line-height: 2;
+            .anthem-content .verse-text {
+                font-size: clamp(1.3rem, 3vw, 1.6rem) !important;
             }
-
-            .anthem-content .outro p {
-                font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            .anthem-content .chorus-block .verse-text {
+                font-size: clamp(1.6rem, 4vw, 2rem) !important;
             }
-
-            .anthem-container::before {
-                font-size: clamp(5rem, 15vw, 7rem);
-                right: -10px;
-                bottom: -25px;
+            .anthem-content .outro-block .verse-text {
+                font-size: clamp(1.8rem, 4.5vw, 2.5rem) !important;
             }
-
+            .anthem-container .anthem-title-main {
+                font-size: clamp(2.8rem, 8vw, 4rem);
+            }
             .chat-container {
-                padding: clamp(14px, 2.5vw, 20px);
+                padding: clamp(16px, 3vw, 24px);
             }
-
             .chat-container h3 {
-                font-size: clamp(1.2rem, 3vw, 1.5rem);
+                font-size: clamp(1.6rem, 3.5vw, 2rem);
             }
-
             .chat-messages {
-                height: clamp(180px, 30vh, 220px);
-                padding: clamp(12px, 2vw, 16px);
+                height: clamp(180px, 30vh, 240px);
+                padding: clamp(14px, 2vw, 20px);
             }
-
             .chat-messages p {
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
+                font-size: clamp(1rem, 2vw, 1.2rem);
             }
-
             .chat-input-area input {
-                padding: clamp(10px, 1.5vw, 14px) clamp(14px, 2vw, 18px);
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
+                padding: clamp(12px, 1.8vw, 16px) clamp(16px, 2.5vw, 22px);
+                font-size: clamp(1rem, 2vw, 1.2rem);
             }
-
             .chat-input-area button {
-                padding: 0 clamp(16px, 3vw, 24px);
-                font-size: clamp(0.85rem, 2vw, 1rem);
-            }
-
-            .registration-form {
-                padding: clamp(18px, 3vw, 25px) clamp(14px, 2.5vw, 20px);
-            }
-
-            .registration-form label {
-                font-size: clamp(0.9rem, 2vw, 1rem);
-            }
-
-            .registration-form input {
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
-                padding: clamp(10px, 1.5vw, 14px) clamp(14px, 2vw, 18px);
-            }
-
-            .about-profile {
-                padding: clamp(18px, 3vw, 25px) clamp(16px, 2.5vw, 22px);
-                font-size: clamp(0.95rem, 2vw, 1.1rem);
-            }
-
-            .about-profile .motto-highlight {
+                padding: 0 clamp(18px, 3.5vw, 28px);
                 font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             }
-
-            .coach-img-wrapper {
-                height: clamp(250px, 35vh, 350px);
+            .registration-form {
+                padding: clamp(20px, 4vw, 30px) clamp(16px, 3.5vw, 24px);
             }
-
+            .registration-form label {
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
+            }
+            .registration-form input {
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
+                padding: clamp(14px, 2vw, 18px) clamp(16px, 2.5vw, 22px);
+            }
+            .about-profile {
+                padding: clamp(20px, 4vw, 30px) clamp(18px, 3.5vw, 26px);
+                font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            }
+            .about-profile .motto-highlight {
+                font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+            }
+            .coach-img-wrapper {
+                height: clamp(280px, 40vh, 380px);
+            }
             .coach-card {
                 max-width: 100%;
                 margin: 20px 10px;
             }
-
             .coach-details h3 {
-                font-size: clamp(1.6rem, 4vw, 2rem);
+                font-size: clamp(2rem, 5vw, 2.6rem);
             }
-
             .coach-details .role {
+                font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            }
+            .coach-details .bio {
                 font-size: clamp(0.9rem, 2vw, 1.1rem);
             }
-
-            .coach-details .bio {
-                font-size: clamp(0.85rem, 1.8vw, 0.95rem);
-            }
-
             .badge-tag {
-                font-size: clamp(0.7rem, 1.5vw, 0.85rem);
-                padding: clamp(4px, 0.6vw, 6px) clamp(12px, 1.5vw, 16px);
+                font-size: clamp(0.85rem, 1.8vw, 1rem);
+                padding: clamp(6px, 0.8vw, 8px) clamp(14px, 1.8vw, 20px);
             }
-
             .gallery-section .section-title {
-                font-size: clamp(1.6rem, 4vw, 2rem);
+                font-size: clamp(1.8rem, 4.5vw, 2.4rem);
             }
-
             .toast {
                 left: 16px;
                 right: 16px;
                 bottom: 16px;
                 max-width: none;
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
-                padding: clamp(14px, 2vw, 18px) clamp(18px, 2.5vw, 24px);
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
+                padding: clamp(16px, 2.5vw, 22px) clamp(20px, 3.5vw, 28px);
             }
-
             footer {
-                font-size: clamp(0.85rem, 1.8vw, 0.95rem);
-                padding: clamp(20px, 3vw, 28px) 16px;
+                font-size: clamp(1rem, 2vw, 1.2rem);
+                padding: clamp(24px, 4vw, 32px) 16px;
             }
-
             section {
-                padding: clamp(30px, 5vw, 50px) 12px;
+                padding: clamp(40px, 6vw, 60px) 12px;
             }
-
             .hero {
                 min-height: 60vh;
                 padding: 40px 12px 30px;
             }
-
             .squad-heading h2 {
-                font-size: clamp(2rem, 6vw, 2.8rem);
+                font-size: clamp(2.5rem, 7vw, 3.5rem);
             }
-
             .squad-heading span {
-                font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+                font-size: clamp(0.8rem, 1.5vw, 1rem);
                 letter-spacing: 4px;
             }
         }
 
-        /* Very small phones */
+        /* ── Very small phones ── */
         @media (max-width: 480px) {
             #playersGrid {
-                grid-template-columns: repeat(auto-fill, minmax(clamp(110px, 40vw, 140px), 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(clamp(120px, 45vw, 150px), 1fr));
                 gap: 10px;
                 padding: 10px;
             }
-
             .player-inner {
-                height: clamp(180px, 35vh, 220px);
+                height: clamp(190px, 35vh, 240px);
                 padding: 10px;
                 border-radius: 16px;
             }
-
             .player-inner .player-img {
-                height: clamp(100px, 18vh, 130px);
+                height: clamp(110px, 20vh, 140px);
             }
-
             .player-number {
-                font-size: clamp(1.8rem, 5vw, 2.2rem);
+                font-size: clamp(2rem, 6vw, 2.8rem);
                 top: 4px;
                 right: 10px;
             }
-
             .player-name {
-                font-size: clamp(0.85rem, 2.5vw, 0.95rem) !important;
+                font-size: clamp(1.1rem, 3vw, 1.3rem) !important;
             }
-
             .player-role {
-                font-size: clamp(0.7rem, 1.8vw, 0.75rem) !important;
+                font-size: clamp(0.9rem, 2.2vw, 1rem) !important;
             }
-
             .player-badge {
-                font-size: clamp(0.55rem, 1.2vw, 0.65rem) !important;
-                padding: 2px 8px;
+                font-size: clamp(0.7rem, 1.5vw, 0.8rem) !important;
+                padding: 2px 10px;
             }
-
             .cafe-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 12px;
             }
-
             .cafe-card {
-                padding: clamp(14px, 3vw, 18px) clamp(12px, 2vw, 16px);
+                padding: clamp(16px, 3.5vw, 22px) clamp(14px, 2.5vw, 18px);
             }
-
             .cafe-card .emoji {
-                font-size: clamp(2rem, 5vw, 2.6rem);
+                font-size: clamp(2.2rem, 6vw, 2.8rem);
             }
-
             .cafe-card h4 {
-                font-size: clamp(1rem, 2.5vw, 1.1rem);
+                font-size: clamp(1.2rem, 3vw, 1.4rem);
             }
-
             .cafe-card p {
-                font-size: clamp(0.8rem, 2vw, 0.85rem);
+                font-size: clamp(0.9rem, 2.2vw, 1rem);
             }
-
             .partner-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 10px;
             }
-
             .partner-card {
-                padding: clamp(12px, 2vw, 16px) clamp(10px, 1.5vw, 12px);
+                padding: clamp(14px, 2.5vw, 18px) clamp(12px, 2vw, 14px);
             }
-
             .partner-card .variant-text {
-                font-size: clamp(0.8rem, 2vw, 0.9rem);
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
             }
-
             .partner-card .variant-tag {
-                font-size: clamp(0.45rem, 1vw, 0.55rem);
+                font-size: clamp(0.6rem, 1.2vw, 0.7rem);
                 letter-spacing: 2px;
             }
-
             .card-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: 12px;
+                gap: 14px;
             }
-
             .card {
-                padding: clamp(14px, 2.5vw, 16px) clamp(12px, 2vw, 14px);
+                padding: clamp(16px, 3vw, 20px) clamp(14px, 2.5vw, 18px);
                 border-radius: 16px;
             }
-
             .card h3 {
-                font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+                font-size: clamp(1.4rem, 4.5vw, 1.8rem);
                 margin: 12px 0 8px;
             }
-
             .card p {
-                font-size: clamp(0.85rem, 2.5vw, 0.9rem);
+                font-size: clamp(1rem, 2.8vw, 1.2rem);
             }
-
             .fund-benefits {
                 grid-template-columns: 1fr;
                 gap: 12px;
             }
-
             .gallery-grid {
                 grid-template-columns: 1fr;
                 gap: 14px;
             }
-
             .gallery-item img {
-                height: clamp(160px, 30vh, 200px);
+                height: clamp(170px, 30vh, 210px);
             }
-
             .hero-player {
-                height: clamp(320px, 50vh, 400px);
+                height: clamp(340px, 55vh, 430px);
                 border-radius: 24px;
             }
-
             .hero-number {
-                font-size: clamp(50px, 12vw, 80px);
+                font-size: clamp(55px, 14vw, 85px);
                 right: 12px;
             }
-
             .hero-image {
-                height: clamp(180px, 30vh, 260px);
-                bottom: clamp(30px, 5vh, 50px);
+                height: clamp(200px, 35vh, 280px);
+                bottom: clamp(35px, 6vh, 55px);
             }
-
             .hero-info h3 {
-                font-size: clamp(1rem, 3.5vw, 1.3rem);
+                font-size: clamp(1.4rem, 4.5vw, 1.8rem);
             }
-
             .hero-info small {
-                font-size: clamp(0.55rem, 1.5vw, 0.65rem);
+                font-size: clamp(0.7rem, 1.8vw, 0.85rem);
             }
-
             .hero-info strong {
-                font-size: clamp(0.85rem, 2vw, 1rem);
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
             }
-
             .hero-badge {
-                font-size: clamp(0.5rem, 1.2vw, 0.65rem);
-                padding: clamp(4px, 0.6vw, 6px) clamp(8px, 1.2vw, 12px);
-                top: clamp(10px, 1.5vw, 14px);
-                left: clamp(10px, 1.5vw, 14px);
+                font-size: clamp(0.6rem, 1.5vw, 0.75rem);
+                padding: clamp(5px, 0.8vw, 8px) clamp(10px, 1.5vw, 14px);
+                top: clamp(12px, 2vw, 16px);
+                left: clamp(12px, 2vw, 16px);
             }
-
             .rori-logo {
-                width: clamp(100px, 25vw, 130px);
-                height: clamp(100px, 25vw, 130px);
+                width: clamp(110px, 28vw, 140px);
+                height: clamp(110px, 28vw, 140px);
                 margin-bottom: 16px;
             }
-
             .rori-profile h1 {
-                font-size: clamp(1.8rem, 6vw, 2.4rem);
+                font-size: clamp(2.2rem, 7vw, 2.8rem);
             }
-
             .rori-profile p {
-                font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+                font-size: clamp(1rem, 3vw, 1.2rem);
                 letter-spacing: 2px;
             }
-
             .stat-number {
-                font-size: clamp(1.8rem, 5vw, 2.2rem);
+                font-size: clamp(2rem, 6vw, 2.6rem);
             }
-
             .stat-item {
-                padding: clamp(10px, 2vw, 14px) clamp(14px, 3vw, 18px);
+                padding: clamp(12px, 2.5vw, 16px) clamp(16px, 3.5vw, 22px);
                 border-radius: 14px;
             }
-
             .stats-bar {
                 gap: 10px;
             }
-
             .btn {
-                font-size: clamp(0.85rem, 2.5vw, 0.95rem);
-                padding: clamp(10px, 2vw, 14px) clamp(18px, 4vw, 24px);
+                font-size: clamp(1rem, 3vw, 1.1rem);
+                padding: clamp(12px, 2.5vw, 16px) clamp(20px, 5vw, 28px);
                 border-radius: 30px;
                 margin: 0 6px;
             }
-
             .section-title {
-                font-size: clamp(1.6rem, 4.5vw, 2rem);
+                font-size: clamp(1.8rem, 5vw, 2.2rem);
                 margin-bottom: 30px;
             }
-
             .section-title::after {
-                width: clamp(50px, 10vw, 70px);
+                width: clamp(60px, 12vw, 80px);
                 height: 4px;
             }
-
             .welcome-content::before {
-                font-size: clamp(2.5rem, 8vw, 4rem);
+                font-size: clamp(3rem, 10vw, 4.5rem);
                 left: 12px;
             }
-
             .welcome-content p {
-                font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+                font-size: clamp(1.1rem, 3vw, 1.3rem);
                 line-height: 1.7;
             }
-
             .welcome-content .greeting-highlight {
-                font-size: clamp(1rem, 3vw, 1.2rem);
+                font-size: clamp(1.3rem, 4vw, 1.6rem);
             }
-
             .welcome-content .closing {
-                font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+                font-size: clamp(1.2rem, 3.5vw, 1.5rem);
                 margin-top: 20px;
                 padding-top: 20px;
             }
-
             .welcome-content .closing .amharic {
-                font-size: clamp(1rem, 3vw, 1.2rem);
+                font-size: clamp(1.2rem, 4vw, 1.5rem);
             }
-
             .motto-banner {
-                padding: clamp(20px, 4vw, 28px) clamp(16px, 3vw, 20px);
+                padding: clamp(22px, 5vw, 30px) clamp(18px, 4vw, 24px);
                 border-radius: 20px;
             }
-
             .motto-banner .motto-text {
-                font-size: clamp(1.4rem, 4vw, 1.8rem);
+                font-size: clamp(1.6rem, 5vw, 2.2rem);
                 letter-spacing: 2px;
             }
-
             .motto-banner .motto-sub {
-                font-size: clamp(0.8rem, 2vw, 0.9rem);
+                font-size: clamp(0.9rem, 2.5vw, 1.1rem);
                 letter-spacing: 2px;
             }
-
             .bank-details {
-                padding: clamp(16px, 3vw, 22px) clamp(14px, 2.5vw, 18px);
+                padding: clamp(18px, 4vw, 26px) clamp(16px, 3vw, 22px);
                 border-width: 3px;
                 border-radius: 18px;
             }
-
             .bank-details .account-number {
-                font-size: clamp(1.2rem, 4vw, 1.4rem);
+                font-size: clamp(1.5rem, 5vw, 2rem);
                 letter-spacing: 2px;
             }
-
             .bank-details .copy-btn {
-                font-size: clamp(0.75rem, 1.8vw, 0.85rem);
-                padding: clamp(6px, 1vw, 8px) clamp(14px, 2.5vw, 18px);
+                font-size: clamp(0.9rem, 2vw, 1rem);
+                padding: clamp(8px, 1.2vw, 10px) clamp(16px, 2.5vw, 22px);
             }
-
             .fund-description {
-                padding: clamp(16px, 3vw, 20px) clamp(14px, 2.5vw, 18px);
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
+                padding: clamp(18px, 4vw, 24px) clamp(16px, 3vw, 20px);
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
                 border-radius: 18px;
             }
-
             .about-profile {
-                padding: clamp(16px, 3vw, 20px) clamp(14px, 2.5vw, 18px);
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
+                padding: clamp(18px, 4vw, 24px) clamp(16px, 3vw, 20px);
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
                 border-left-width: 6px;
                 border-radius: 16px;
             }
-
             .about-profile .motto-highlight {
-                font-size: clamp(1rem, 2.5vw, 1.1rem);
+                font-size: clamp(1.2rem, 3.5vw, 1.5rem);
             }
-
             .contributions-thanks {
-                padding: clamp(16px, 3vw, 20px) clamp(14px, 2.5vw, 18px);
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
+                padding: clamp(18px, 4vw, 24px) clamp(16px, 3vw, 20px);
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
                 border-left-width: 6px;
             }
-
             .anthem-container {
-                padding: clamp(16px, 3vw, 22px) clamp(14px, 2.5vw, 18px);
+                padding: clamp(18px, 4vw, 26px) clamp(16px, 3vw, 22px);
                 border-radius: 20px;
             }
-
-            .anthem-content p {
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
-                line-height: 1.8;
+            .anthem-content .verse-text {
+                font-size: clamp(1.1rem, 3vw, 1.3rem) !important;
+                padding-left: 10px;
             }
-
-            .anthem-content .outro p {
-                font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            .anthem-content .chorus-block .verse-text {
+                font-size: clamp(1.3rem, 4vw, 1.6rem) !important;
             }
-
-            .anthem-title-sub {
-                font-size: clamp(0.8rem, 2vw, 0.9rem);
+            .anthem-content .outro-block .verse-text {
+                font-size: clamp(1.5rem, 5vw, 2rem) !important;
+            }
+            .anthem-content .verse-label {
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
+                padding: clamp(4px, 0.8vw, 6px) clamp(12px, 2vw, 16px);
+            }
+            .anthem-container .anthem-title-main {
+                font-size: clamp(2.2rem, 8vw, 3rem);
+            }
+            .anthem-container .anthem-subtitle {
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
                 margin-bottom: 20px;
                 letter-spacing: 2px;
             }
-
             .cafe-hero {
-                padding: clamp(40px, 10vw, 60px) 16px clamp(30px, 6vw, 50px);
+                padding: clamp(45px, 12vw, 70px) 16px clamp(35px, 8vw, 55px);
                 border-radius: 0 0 40px 40px;
                 margin-bottom: 50px;
             }
-
             .cafe-hero h2 {
-                font-size: clamp(1.8rem, 6vw, 2.4rem);
+                font-size: clamp(2rem, 7vw, 2.8rem);
             }
-
             .cafe-hero p {
-                font-size: clamp(0.75rem, 2vw, 0.85rem);
+                font-size: clamp(0.9rem, 2.5vw, 1.1rem);
                 letter-spacing: 3px;
             }
-
             .cafe-hero .gold-line {
-                width: clamp(60px, 12vw, 80px);
+                width: clamp(70px, 14vw, 90px);
                 height: 4px;
                 margin-top: 16px;
             }
-
             .cafe-title {
-                font-size: clamp(1.6rem, 4.5vw, 2rem);
+                font-size: clamp(1.8rem, 5vw, 2.4rem);
                 margin-bottom: 30px;
             }
-
             .cafe-title::after {
-                width: clamp(60px, 10vw, 80px);
+                width: clamp(70px, 12vw, 90px);
                 height: 4px;
             }
-
             .cafe-category-title {
-                font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+                font-size: clamp(1.5rem, 4vw, 1.9rem);
                 margin: 30px 0 18px;
                 gap: 12px;
             }
-
             .cafe-category-title .icon {
-                font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+                font-size: clamp(1.5rem, 4vw, 1.9rem);
             }
-
             .cafe-order-btn {
-                font-size: clamp(0.9rem, 2.5vw, 1.05rem);
-                padding: clamp(12px, 2.5vw, 16px) clamp(24px, 5vw, 32px);
+                font-size: clamp(1rem, 3vw, 1.2rem);
+                padding: clamp(14px, 3vw, 18px) clamp(28px, 6vw, 38px);
                 border-radius: 30px;
                 border-width: 2px;
                 letter-spacing: 2px;
             }
-
             .cafe-footer-note {
-                font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+                font-size: clamp(0.9rem, 2vw, 1.05rem);
                 margin-top: 40px;
                 padding-top: 25px;
                 letter-spacing: 2px;
             }
-
             .cafe-footer-note strong {
-                font-size: clamp(0.9rem, 2vw, 1rem);
+                font-size: clamp(1rem, 2.2vw, 1.2rem);
             }
-
             .partner-section {
-                padding: clamp(20px, 4vw, 28px) clamp(14px, 2.5vw, 20px);
+                padding: clamp(22px, 5vw, 30px) clamp(16px, 3.5vw, 24px);
                 border-radius: 18px;
                 margin-bottom: 40px;
             }
-
             .partner-section .partner-label {
-                font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+                font-size: clamp(0.8rem, 2vw, 0.95rem);
                 letter-spacing: 4px;
                 margin-bottom: 16px;
             }
-
             .coach-img-wrapper {
-                height: clamp(200px, 30vh, 280px);
+                height: clamp(220px, 35vh, 300px);
             }
-
             .coach-card {
                 border-radius: 18px;
                 border-width: 4px;
                 margin: 16px 8px;
             }
-
             .coach-details {
-                padding: clamp(16px, 2.5vw, 20px) clamp(14px, 2vw, 18px);
+                padding: clamp(18px, 3vw, 24px) clamp(16px, 2.5vw, 20px);
             }
-
             .coach-details h3 {
-                font-size: clamp(1.4rem, 4vw, 1.8rem);
+                font-size: clamp(1.6rem, 5vw, 2.2rem);
             }
-
             .coach-details .role {
-                font-size: clamp(0.8rem, 2vw, 0.95rem);
+                font-size: clamp(0.95rem, 2.5vw, 1.2rem);
             }
-
             .coach-details .bio {
-                font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+                font-size: clamp(0.85rem, 2vw, 1rem);
                 line-height: 1.6;
             }
-
             .badge-tag {
-                font-size: clamp(0.6rem, 1.2vw, 0.7rem);
-                padding: clamp(4px, 0.6vw, 6px) clamp(10px, 1.5vw, 14px);
+                font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+                padding: clamp(5px, 0.8vw, 7px) clamp(12px, 1.8vw, 16px);
                 bottom: 14px;
                 left: 14px;
                 border-radius: 16px;
             }
-
             .staff-card {
-                padding: clamp(14px, 2.5vw, 18px) clamp(16px, 3vw, 20px);
+                padding: clamp(16px, 3vw, 22px) clamp(18px, 3.5vw, 24px);
                 border-radius: 18px;
                 gap: 14px;
             }
-
             .staff-icon {
-                font-size: clamp(1.6rem, 4vw, 2.2rem);
+                font-size: clamp(1.8rem, 4.5vw, 2.5rem);
             }
-
             .staff-card small {
-                font-size: clamp(0.55rem, 1.2vw, 0.65rem);
+                font-size: clamp(0.7rem, 1.5vw, 0.85rem);
             }
-
             .staff-card h3 {
-                font-size: clamp(0.9rem, 2vw, 1rem);
+                font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             }
-
             .gallery-section {
-                padding: clamp(25px, 4vw, 35px) 12px;
+                padding: clamp(28px, 5vw, 40px) 12px;
             }
-
             .gallery-section .section-title {
-                font-size: clamp(1.4rem, 4vw, 1.8rem);
+                font-size: clamp(1.6rem, 4.5vw, 2rem);
                 margin-bottom: 25px;
             }
-
             .gallery-item {
                 border-radius: 12px;
             }
-
             .gallery-overlay {
-                padding: clamp(10px, 1.5vw, 14px);
+                padding: clamp(12px, 1.8vw, 16px);
             }
-
             .gallery-overlay h3 {
-                font-size: clamp(0.85rem, 2vw, 1rem);
+                font-size: clamp(1rem, 2.5vw, 1.2rem);
             }
-
             .gallery-overlay p {
-                font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+                font-size: clamp(0.8rem, 1.8vw, 0.9rem);
             }
-
             .registration-form {
                 border-radius: 20px;
-                padding: clamp(16px, 3vw, 20px) clamp(14px, 2.5vw, 18px);
+                padding: clamp(18px, 4vw, 24px) clamp(16px, 3vw, 22px);
             }
-
             .registration-form label {
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
+                font-size: clamp(0.95rem, 2.5vw, 1.1rem);
                 margin-top: 16px;
             }
-
             .registration-form input {
-                font-size: clamp(0.8rem, 2vw, 0.85rem);
-                padding: clamp(10px, 1.5vw, 12px) clamp(12px, 2vw, 16px);
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+                padding: clamp(12px, 2vw, 16px) clamp(14px, 2.5vw, 20px);
                 border-radius: 20px;
                 border-width: 1.5px;
             }
-
             .registration-form .btn {
                 margin-top: 20px;
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
-                padding: clamp(12px, 2vw, 16px) clamp(20px, 4vw, 28px);
+                font-size: clamp(1rem, 2.5vw, 1.1rem);
+                padding: clamp(14px, 2.5vw, 18px) clamp(24px, 5vw, 32px);
             }
-
             .chat-container {
-                padding: clamp(12px, 2vw, 16px);
+                padding: clamp(14px, 3vw, 20px);
                 border-radius: 20px;
                 border-width: 2px;
             }
-
             .chat-messages {
-                height: clamp(160px, 25vh, 200px);
-                padding: clamp(10px, 1.5vw, 14px);
+                height: clamp(170px, 28vh, 210px);
+                padding: clamp(12px, 1.8vw, 16px);
                 border-radius: 14px;
             }
-
             .chat-messages p {
-                font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+                font-size: clamp(0.9rem, 2vw, 1rem);
             }
-
             .chat-input-area input {
-                padding: clamp(8px, 1.2vw, 12px) clamp(12px, 1.8vw, 16px);
-                font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+                padding: clamp(10px, 1.5vw, 14px) clamp(14px, 2vw, 18px);
+                font-size: clamp(0.9rem, 2vw, 1rem);
                 border-radius: 20px;
             }
-
             .chat-input-area button {
-                padding: 0 clamp(14px, 2.5vw, 20px);
-                font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+                padding: 0 clamp(16px, 3vw, 22px);
+                font-size: clamp(0.9rem, 2.5vw, 1.05rem);
                 border-radius: 20px;
             }
-
             .contributions-table {
-                font-size: clamp(0.75rem, 1.8vw, 0.85rem);
-                min-width: 380px;
+                font-size: clamp(0.85rem, 2vw, 1rem);
+                min-width: 400px;
             }
-
             .contributions-table thead th,
             .contributions-table tbody td {
-                padding: clamp(8px, 1.2vw, 10px) clamp(10px, 1.5vw, 12px);
+                padding: clamp(10px, 1.5vw, 14px) clamp(12px, 2vw, 16px);
             }
-
             .contributions-table .highlight-row td {
-                font-size: clamp(0.8rem, 1.8vw, 0.9rem);
-                padding: clamp(10px, 1.2vw, 12px) clamp(10px, 1.5vw, 12px);
+                font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+                padding: clamp(12px, 1.8vw, 16px) clamp(12px, 2vw, 16px);
             }
-
             .fixtures-table {
-                font-size: clamp(0.75rem, 1.8vw, 0.85rem);
-                min-width: 380px;
+                font-size: clamp(0.85rem, 2vw, 1rem);
+                min-width: 400px;
             }
-
             .fixtures-table thead th,
             .fixtures-table tbody td {
-                padding: clamp(8px, 1.2vw, 10px) clamp(10px, 1.5vw, 12px);
+                padding: clamp(10px, 1.5vw, 14px) clamp(12px, 2vw, 16px);
             }
-
             .fixtures-table .category-badge {
-                font-size: clamp(0.6rem, 1.2vw, 0.7rem);
-                padding: clamp(3px, 0.5vw, 4px) clamp(8px, 1.2vw, 12px);
+                font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+                padding: clamp(4px, 0.6vw, 6px) clamp(10px, 1.5vw, 14px);
             }
-
             .regulations-grid .card ul li {
-                font-size: clamp(0.85rem, 2vw, 0.95rem);
+                font-size: clamp(0.95rem, 2.2vw, 1.1rem);
                 padding: 10px 0;
                 gap: 12px;
             }
-
             .regulations-grid .card ul li::before {
                 font-size: 1.2rem;
             }
-
             footer {
-                font-size: clamp(0.75rem, 1.8vw, 0.85rem);
-                padding: clamp(18px, 3vw, 24px) 16px;
+                font-size: clamp(0.85rem, 2vw, 1rem);
+                padding: clamp(20px, 3.5vw, 26px) 16px;
                 border-top-width: 3px;
                 margin-top: 40px;
             }
-
             .toast {
-                padding: clamp(12px, 2vw, 16px) clamp(16px, 2.5vw, 20px);
-                font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+                padding: clamp(14px, 2.5vw, 20px) clamp(18px, 3vw, 24px);
+                font-size: clamp(0.9rem, 2vw, 1.05rem);
                 border-radius: 20px;
                 bottom: 12px;
                 right: 12px;
                 left: 12px;
             }
-
             .toast .toast-close {
                 font-size: 1.4rem;
                 margin-left: 12px;
             }
-
             .nav-links a {
-                font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+                font-size: clamp(0.7rem, 1.8vw, 0.85rem);
                 padding: 2px 4px;
             }
-
             nav {
                 padding: 10px 14px;
                 gap: 8px;
             }
-
             .nav-logo img {
-                height: clamp(40px, 8vw, 48px);
-                width: clamp(40px, 8vw, 48px);
+                height: clamp(45px, 9vw, 55px);
+                width: clamp(45px, 9vw, 55px);
                 border-width: 2px;
             }
-
             .nav-links {
                 gap: 8px;
             }
-
             section {
-                padding: clamp(25px, 4vw, 35px) 10px;
+                padding: clamp(28px, 5vw, 40px) 10px;
             }
-
             .hero {
                 min-height: 50vh;
                 padding: 30px 10px 20px;
             }
-
             .rori-profile {
                 padding: 8px 10px;
             }
-
             .cta-buttons {
                 margin-top: 20px;
             }
-
             .btn {
                 display: inline-block;
                 margin: 4px 6px;
@@ -3480,7 +3365,7 @@
     <!-- ─── Navigation ─── -->
     <nav aria-label="Main navigation">
         <div class="nav-logo">
-            <img id="navLogo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230d1137' stroke='%23FFD600' stroke-width='4'/%3E%3Ctext x='50' y='52' font-family='Bebas Neue, cursive' font-size='22' fill='%23FFD600' text-anchor='middle' dominant-baseline='central'%3ERFC%3C/text%3E%3C/svg%3E" alt="Rori Community FC Logo" />
+            <img id="navLogo" src="file_00000000f08882439925d3d288d1870f.png" alt="Rori Community FC Logo" />
         </div>
         <div class="nav-links">
             <a href="#home">Home</a>
@@ -3507,7 +3392,7 @@
     <section class="hero" id="home">
         <div class="rori-profile">
             <img
-                src="rori-fc-logo.png"
+                src="file_00000000f08882439925d3d288d1870f.png"
                 alt="RORI Community FC Logo"
                 class="rori-logo"
             />
@@ -3529,7 +3414,7 @@
     <!-- ─── Welcome Section ─── -->
     <section class="welcome-section" id="welcome">
         <div class="welcome-container">
-            <h2 class="section-title">Welcome | ዳኤ ቡሹ <span style="font-size:clamp(1.8rem, 3vw, 2.4rem); color:#fff;">(Da'e Bushu)</span></h2>
+            <h2 class="section-title">Welcome | ዳኤ ቡሹ <span style="font-size:clamp(2rem, 4vw, 2.8rem); color:#fff;">(Da'e Bushu)</span></h2>
             <div class="welcome-content">
                 <p>Welcome to Rori Community FC &amp; Rori Health Team official website.</p>
                 <p><span class="greeting-highlight">ዳኤ ቡሹ (Da'e Bushu)</span> is a traditional Sidama greeting that means "Welcome" and carries a deep sense of respect, warmth, and unity within the community.</p>
@@ -3550,7 +3435,7 @@
         <div class="about-profile">
             <p>ሮሪ ሆቴል ኤፍሲ በሀዋሳ ከተማ መሀል የሚገኝ ሲሆን፣ ሙያዊ እግር ኳስን ከማህበረሰብ ተሳትፎ እና ከጤና ጋር የሚያገናኝ ቡድን ነው። እ.ኤ.አ. በ2024 የተመሠረተው ክለባችን ወጣቶችን ችሎታ ማጎልበት፣ ጤናማ የአኗኗር ልምድ ማስፋፋት እና በክብር ለመወዳደር ቁርጠኛ ነው።</p>
             <span class="motto-highlight">"ተሰጥኦን እናበቃለን፤ ሻምፒዮኖችን እንፈጥራለን!"</span>
-            <p style="margin-top:20px; font-size:clamp(0.95rem, 1.4vw, 1.15rem); color:#ccc; font-weight:500;">በቡድን መንፈስ፣ በትጋት እና በተግሣጽ የተገነባው ሮሪ ሆቴል ኤፍሲ፣ ለአትሌቶች እንዲሁም ለደጋፊዎች ሁለተኛ ቤት መሆንን ያለም ያምናል።</p>
+            <p style="margin-top:20px; font-size:clamp(1.1rem, 1.8vw, 1.4rem); color:#ccc; font-weight:500;">በቡድን መንፈስ፣ በትጋት እና በተግሣጽ የተገነባው ሮሪ ሆቴል ኤፍሲ፣ ለአትሌቶች እንዲሁም ለደጋፊዎች ሁለተኛ ቤት መሆንን ያለም ያምናል።</p>
         </div>
         <div class="card-grid">
             <div class="card"><h3>👁️ Vision</h3><p>To be a leading community football club in Ethiopia, inspiring through sport and wellness.</p></div>
@@ -3621,7 +3506,7 @@
             <div></div>
         </div>
 
-        <!-- FIXED: All 49 players will be rendered here -->
+        <!-- All 49 players rendered here -->
         <div id="playersGrid"></div>
 
         <!-- STAFF -->
@@ -3685,21 +3570,21 @@
     <!-- ─── Gym ─── -->
     <section id="gym">
         <h2 class="section-title">የጂም አባላት ጥሪ</h2>
-        <div style="max-width:1100px; margin:0 auto 45px; text-align:center; font-size:clamp(1.2rem, 1.8vw, 1.5rem); font-weight:500;">
+        <div style="max-width:1100px; margin:0 auto 45px; text-align:center; font-size:clamp(1.4rem, 2.2vw, 1.8rem); font-weight:500;">
             <p>ሮሪ ጤና ቡድን አዳዲስ የጂም አባላትን በደስታ ይቀበላል!</p>
             <p style="margin-top:12px;">ጤናማ አኗኗር የሚወዱ፣ የአካል ብቃታቸውን ማሻሻል የሚፈልጉ እና ከቡድን ጋር በትብብር ለመስራት ፈቃደኛ የሆኑ ሁሉ እንዲቀላቀሉን እንጋብዛለን።</p>
         </div>
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:clamp(25px, 4vw, 40px); max-width:1200px; margin:0 auto;">
             <div class="card" style="text-align:left;">
-                <h3 style="text-align:center; font-size:clamp(1.8rem, 3vw, 2.4rem);">መስፈርቶች</h3>
+                <h3 style="text-align:center; font-size:clamp(2rem, 3.5vw, 2.8rem);">መስፈርቶች</h3>
                 <ul><li>ለጤና እና ለስፖርት ፍላጎት ያለው</li><li>የቡድን መንፈስ ያለው</li><li>ስልጠናን በመደበኛነት ለመከታተል ፈቃደኛ</li><li>የሮሪ ሆቴል ሰራተኛ ወይም በቡድኑ የሚፈቀድ አባል</li></ul>
             </div>
             <div class="card" style="text-align:left;">
-                <h3 style="text-align:center; font-size:clamp(1.8rem, 3vw, 2.4rem);">የምዝገባ ጥቅሞች</h3>
+                <h3 style="text-align:center; font-size:clamp(2rem, 3.5vw, 2.8rem);">የምዝገባ ጥቅሞች</h3>
                 <ul><li>የመደበኛ የጂም ስልጠና</li><li>የጤና እና የአካል ብቃት ምክር</li><li>የስፖርት እና የጤና ፕሮግራሞች</li><li>ከአባላት ጋር የትብብር እና የወዳጅነት አካባቢ</li></ul>
             </div>
         </div>
-        <div style="text-align:center; margin-top:45px; font-size:clamp(1.6rem, 2.8vw, 2.2rem); font-weight:900; color:#FFD600; letter-spacing:3px;">"ጤናማ ሰው፣ ጠንካራ ቡድን፣ የተሻለ ውጤት!"</div>
+        <div style="text-align:center; margin-top:45px; font-size:clamp(1.8rem, 3vw, 2.6rem); font-weight:900; color:#FFD600; letter-spacing:3px;">"ጤናማ ሰው፣ ጠንካራ ቡድን፣ የተሻለ ውጤት!"</div>
     </section>
 
     <!-- ─── Fund ─── -->
@@ -3711,7 +3596,7 @@
                 <p>The program was formed through the collaboration of the club's leadership, coaching staff, gym members, and employees, with a shared vision of building a stronger, healthier, and more disciplined sports community.</p>
                 <p>Our goal is simple: to support players and members with proper training equipment, fitness development programs, medical support, nutrition guidance, and structured wellness activities. We believe that strong health builds strong performance, both on and off the field.</p>
             </div>
-            <h3 style="color:#FFD600; text-align:center; font-size:clamp(2rem, 3.5vw, 2.6rem); font-weight:800; margin-bottom:28px;">Through this fundraiser, we aim to raise funds to support:</h3>
+            <h3 style="color:#FFD600; text-align:center; font-size:clamp(2.5rem, 4.5vw, 3.2rem); font-weight:800; margin-bottom:28px;">Through this fundraiser, we aim to raise funds to support:</h3>
             <div class="fund-benefits">
                 <div class="benefit-item"><span class="icon">🏋️</span> Sports &amp; gym equipment for training</div>
                 <div class="benefit-item"><span class="icon">🩺</span> Health &amp; medical support for players</div>
@@ -3721,7 +3606,7 @@
             </div>
             <div class="fund-description" style="border:3px solid #FFD600;">
                 <p><em>Every contribution will directly help improve the quality of training and create better opportunities for young players who are committed to developing their talent and discipline.</em></p>
-                <p style="font-weight:800; color:#FFD600; font-size:clamp(1.2rem, 2vw, 1.6rem); margin-top:18px;">This is more than just a football project. It is a movement to build healthier lives, stronger teamwork, and a brighter future for our community.</p>
+                <p style="font-weight:800; color:#FFD600; font-size:clamp(1.6rem, 2.5vw, 2.2rem); margin-top:18px;">This is more than just a football project. It is a movement to build healthier lives, stronger teamwork, and a brighter future for our community.</p>
                 <p style="margin-top:18px; font-weight:600;">Thank you for your support and belief in our vision.</p>
             </div>
             <div class="bank-details">
@@ -3730,7 +3615,7 @@
                 <button class="copy-btn" onclick="copyAccount()">📋 Copy Account Number</button>
                 <div class="account-name">👤 Account Name: <strong>RORI FC</strong></div>
                 <div class="telebirr">📱 Telebirr: 0926523487</div>
-                <p style="font-size:clamp(1rem, 1.4vw, 1.3rem); color:#aaa; margin-top:18px; font-weight:500;">🙏 Your support helps RORI FC grow and develop the community through football. ❤️⚽</p>
+                <p style="font-size:clamp(1.2rem, 1.6vw, 1.6rem); color:#aaa; margin-top:18px; font-weight:500;">🙏 Your support helps RORI FC grow and develop the community through football. ❤️⚽</p>
             </div>
         </div>
     </section>
@@ -3802,75 +3687,112 @@
     </section>
 
     <!-- ─── Anthem Section ─── -->
-    <section id="anthem">
-        <h2 class="section-title">🎵 Club Anthem</h2>
-        <div class="anthem-container">
-            <div class="anthem-content">
-                <h3 style="color: #FFD600; font-size:clamp(2.2rem, 4vw, 3rem); text-align: center; margin-bottom: 6px; font-weight: 900; letter-spacing: 4px;">RORI Forever</h3>
-                <p class="anthem-title-sub">(Rori Community FC Anthem)</p>
+    <section class="anthem-section" id="anthem">
+        <div class="container">
+            <div class="anthem-container">
+                <h2 class="anthem-title-main">RORI Forever</h2>
+                <p class="anthem-subtitle">(Rori Community FC Anthem)</p>
 
-                <div class="verse">
-                    <p><strong>Verse 1</strong></p>
-                    <p>As I walk down the Hawassa road,<br>
-                    A stone's throw from the pitch,<br>
-                    I see the spirit of the pride,<br>
-                    That never loses its itch.<br>
-                    Through the gates of our home ground,<br>
-                    I hear the fans all cheer,<br>
-                    I see the faces of the boys,<br>
-                    As the kick-off time is near.</p>
-                </div>
+                <div class="anthem-content">
 
-                <div class="verse">
-                    <p><strong>Verse 2</strong></p>
-                    <p>And the roar of the Rori stands,<br>
-                    Where we gather side by side,<br>
-                    We're shouting out our name,<br>
-                    We're shouting out our name!</p>
-                </div>
+                    <!-- Verse 1 -->
+                    <div class="verse-block">
+                        <div class="verse-label">Verse 1</div>
+                        <p class="verse-text">As I walk down the Hawassa road,<br>
+                        A stone's throw from the pitch,<br>
+                        I see the spirit of the pride,<br>
+                        That never loses its itch.<br>
+                        Through the gates of our home ground,<br>
+                        I hear the fans all cheer,<br>
+                        I see the faces of the boys,<br>
+                        As the kick-off time is near.</p>
+                    </div>
 
-                <div class="chorus">
-                    <p><strong>Chorus</strong></p>
-                    <p>RORI forever,<br>
-                    Whatever the weather,<br>
-                    These streets are our own,<br>
-                    And my heart will leave here never.<br>
-                    My blood runs the colors,<br>
-                    Of the gold and the blue,<br>
-                    And the lion on my chest,<br>
-                    Is the badge that is true.<br>
-                    RORI forever,<br>
-                    RORI forever!</p>
-                </div>
+                    <div class="anthem-divider">
+                        <span class="line"></span>
+                        <span class="note">♪</span>
+                        <span class="line"></span>
+                    </div>
 
-                <div class="verse">
-                    <p><strong>Verse 3</strong></p>
-                    <p>And the gym on the corner,<br>
-                    Is packed to the brim,<br>
-                    With the Rori community,<br>
-                    Working hard, looking trim.<br>
-                    With the young ones making promises,<br>
-                    They know they'll always keep.</p>
-                </div>
+                    <!-- Verse 2 -->
+                    <div class="verse-block">
+                        <div class="verse-label">Verse 2</div>
+                        <p class="verse-text">And the roar of the Rori stands,<br>
+                        Where we gather side by side,<br>
+                        We're shouting out our name,<br>
+                        We're shouting out our name!</p>
+                    </div>
 
-                <div class="chorus">
-                    <p><strong>Chorus</strong></p>
-                    <p>RORI forever,<br>
-                    Whatever the weather,<br>
-                    These streets are our own,<br>
-                    And my heart will leave here never.<br>
-                    My blood runs the colors,<br>
-                    Of the gold and the blue,<br>
-                    And the lion on my chest,<br>
-                    Is the badge that is true.<br>
-                    RORI forever,<br>
-                    RORI forever!</p>
-                </div>
+                    <div class="anthem-divider">
+                        <span class="line"></span>
+                        <span class="note">♫</span>
+                        <span class="line"></span>
+                    </div>
 
-                <div class="outro">
-                    <p><strong>Outro</strong></p>
-                    <p>RORI forever,<br>
-                    RORI forever!</p>
+                    <!-- Chorus -->
+                    <div class="chorus-block">
+                        <div class="verse-label">Chorus</div>
+                        <p class="verse-text">RORI forever,<br>
+                        Whatever the weather,<br>
+                        These streets are our own,<br>
+                        And my heart will leave here never.<br>
+                        My blood runs the colors,<br>
+                        Of the gold and the blue,<br>
+                        And the lion on my chest,<br>
+                        Is the badge that is true.<br>
+                        RORI forever,<br>
+                        RORI forever!</p>
+                    </div>
+
+                    <div class="anthem-divider">
+                        <span class="line"></span>
+                        <span class="note">♪</span>
+                        <span class="line"></span>
+                    </div>
+
+                    <!-- Verse 3 -->
+                    <div class="verse-block">
+                        <div class="verse-label">Verse 3</div>
+                        <p class="verse-text">And the gym on the corner,<br>
+                        Is packed to the brim,<br>
+                        With the Rori community,<br>
+                        Working hard, looking trim.</p>
+                    </div>
+
+                    <div class="anthem-divider">
+                        <span class="line"></span>
+                        <span class="note">♬</span>
+                        <span class="line"></span>
+                    </div>
+
+                    <!-- Chorus (reprise) -->
+                    <div class="chorus-block">
+                        <div class="verse-label">Chorus</div>
+                        <p class="verse-text">RORI forever,<br>
+                        Whatever the weather,<br>
+                        These streets are our own,<br>
+                        And my heart will leave here never.<br>
+                        My blood runs the colors,<br>
+                        Of the gold and the blue,<br>
+                        And the lion on my chest,<br>
+                        Is the badge that is true.<br>
+                        RORI forever,<br>
+                        RORI forever!</p>
+                    </div>
+
+                    <div class="anthem-divider">
+                        <span class="line"></span>
+                        <span class="note">♩</span>
+                        <span class="line"></span>
+                    </div>
+
+                    <!-- Outro -->
+                    <div class="outro-block">
+                        <div class="verse-label">Outro</div>
+                        <p class="verse-text">RORI forever,<br>
+                        RORI forever!</p>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -3924,7 +3846,7 @@
                     </tbody>
                 </table>
             </div>
-            <p style="text-align:center; color:#aaa; font-size:clamp(1rem, 1.4vw, 1.3rem); font-weight:500;">Upcoming matches – stay tuned for dates and venues.</p>
+            <p style="text-align:center; color:#aaa; font-size:clamp(1.2rem, 1.8vw, 1.6rem); font-weight:500;">Upcoming matches – stay tuned for dates and venues.</p>
         </div>
     </section>
 
@@ -3937,7 +3859,7 @@
                     <div class="partner-card"><div class="variant-tag">Variant 1</div><div class="variant-text"><span class="icon">☕</span><br />Official Partner: <span class="gold">Silla Coffee</span> 🏨</div><div class="variant-divider"></div></div>
                     <div class="partner-card"><div class="variant-tag">Variant 2</div><div class="variant-text"><span class="icon">⚡</span><br />Powered by <span class="gold">Silla Coffee</span></div><div class="variant-divider"></div></div>
                     <div class="partner-card"><div class="variant-tag">Variant 3</div><div class="variant-text"><span class="icon">🔥</span><br />Fuel Partner: <span class="gold">Silla Coffee</span> ☕</div><div class="variant-divider"></div></div>
-                    <div class="partner-card"><div class="variant-tag">Variant 4</div><div class="variant-text"><span class="gold">Silla Coffee</span><br /><span style="font-size:clamp(0.9rem, 1.2vw, 1.15rem); color:#d4c5b5;">— Official Club Supporter</span></div><div class="variant-divider"></div></div>
+                    <div class="partner-card"><div class="variant-tag">Variant 4</div><div class="variant-text"><span class="gold">Silla Coffee</span><br /><span style="font-size:clamp(1rem, 1.4vw, 1.4rem); color:#d4c5b5;">— Official Club Supporter</span></div><div class="variant-divider"></div></div>
                 </div>
             </div>
             <div class="cafe-hero">
@@ -3972,7 +3894,7 @@
             </div>
             <div style="text-align:center; margin-top:55px;">
                 <a href="#contact" class="cafe-order-btn">📞 Order Now</a>
-                <p style="color:#d4c5b5; margin-top:18px; font-size:clamp(0.95rem, 1.2vw, 1.15rem); font-weight:400;">Visit us inside Rori Hotel · Hawassa</p>
+                <p style="color:#d4c5b5; margin-top:18px; font-size:clamp(1.1rem, 1.5vw, 1.4rem); font-weight:400;">Visit us inside Rori Hotel · Hawassa</p>
             </div>
             <div class="cafe-footer-note"><strong>☕ Silla Coffee Shop</strong> — A proud part of <strong>Rori Hotel</strong></div>
         </div>
@@ -3999,12 +3921,30 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════ -->
-    <!-- ─── ዘመናዊ ጋለሪ ሴክሽን ─── -->
+    <!-- ─── GALLERY SECTION ─── -->
     <!-- ════════════════════════════════════════════════════ -->
     <section class="gallery-section" id="gallery">
         <div class="container">
             <h2 class="section-title">📸 Our Gallery</h2>
             <div class="gallery-grid">
+
+                <!-- NEW: RORI Community FC Logo -->
+                <div class="gallery-item">
+                    <img src="rori-community-fc-logo.png" alt="RORI Community FC Logo">
+                    <div class="gallery-overlay">
+                        <h3>⚽ RORI COMMUNITY FC</h3>
+                        <p>Official Club Logo</p>
+                    </div>
+                </div>
+
+                <!-- NEW: RORI FC Flag -->
+                <div class="gallery-item">
+                    <img src="rori-fc-flag.png" alt="RORI Community FC Flag">
+                    <div class="gallery-overlay">
+                        <h3>🇪🇹 RORI FC FLAG</h3>
+                        <p>Official RORI Community FC Flag</p>
+                    </div>
+                </div>
 
                 <!-- Fitness Zone / Rori Health Club -->
                 <div class="gallery-item">
@@ -4015,7 +3955,7 @@
                     </div>
                 </div>
 
-                <!-- ካርድ 1 -->
+                <!-- ካርድ 1 (RORI HOTEL Logo) -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop&crop=center&q=80" alt="RORI HOTEL Logo">
                     <div class="gallery-overlay">
@@ -4024,7 +3964,7 @@
                     </div>
                 </div>
 
-                <!-- ካርድ 2 -->
+                <!-- ካርድ 2 (RORI HOTEL Banner) -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=600&fit=crop&crop=center&q=80" alt="RORI HOTEL Banner">
                     <div class="gallery-overlay">
@@ -4033,7 +3973,7 @@
                     </div>
                 </div>
 
-                <!-- ካርድ 3 -->
+                <!-- ካርድ 3 (Hawassa Sunshine School) -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=600&fit=crop&crop=center&q=80" alt="Hawassa Sunshine School">
                     <div class="gallery-overlay">
@@ -4042,7 +3982,7 @@
                     </div>
                 </div>
 
-                <!-- ካርድ 4 -->
+                <!-- Messi 4K #1 -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Action">
                     <div class="gallery-overlay">
@@ -4051,7 +3991,7 @@
                     </div>
                 </div>
 
-                <!-- ካርድ 5 -->
+                <!-- Messi 4K #2 -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Celebration">
                     <div class="gallery-overlay">
@@ -4060,7 +4000,7 @@
                     </div>
                 </div>
 
-                <!-- ካርድ 6 -->
+                <!-- Messi 4K #3 -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Portrait">
                     <div class="gallery-overlay">
@@ -4069,7 +4009,7 @@
                     </div>
                 </div>
 
-                <!-- ካርድ 7 -->
+                <!-- CR7 4K #1 -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&h=600&fit=crop&crop=center&q=80" alt="CR7 4K Action">
                     <div class="gallery-overlay">
@@ -4078,7 +4018,7 @@
                     </div>
                 </div>
 
-                <!-- ካርድ 8 -->
+                <!-- CR7 4K #2 -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&h=600&fit=crop&crop=center&q=80" alt="CR7 4K Celebration">
                     <div class="gallery-overlay">
@@ -4106,7 +4046,7 @@
             <label for="regPhone">Phone *</label>
             <input type="tel" id="regPhone" name="phone" placeholder="+251 9XXXXXXXX" required />
             <button type="submit" class="btn">Register</button>
-            <p style="font-size:clamp(0.85rem, 1vw, 1.05rem); color:#aaa; margin-top:18px; text-align:center; font-weight:500;">* Required fields. Your data is sent securely.</p>
+            <p style="font-size:clamp(1rem, 1.4vw, 1.2rem); color:#aaa; margin-top:18px; text-align:center; font-weight:500;">* Required fields. Your data is sent securely.</p>
         </form>
         <div class="toast" id="welcomeToast" role="alert">
             <span id="toastMessage">🎉 Welcome! Registration received.</span>
@@ -4140,16 +4080,14 @@
     <!-- ─── JavaScript ─── -->
     <script>
         // ════════════════════════════════════════════════════
-        // FIXED: All 49 players with correct numbering
-        // Player #8 is now properly assigned to Bahilu B
+        // ALL 49 PLAYERS WITH CORRECT NUMBERING
         // ════════════════════════════════════════════════════
 
-        // Complete roster of 49 players (matching the hero players: #1, #7, #10)
         const players = [
             // Hero players
-            { no: 1, name: "Keper Hizkela" }, // 🥅 GOALKEEPER
-            { no: 7, name: "Tare" }, // 👑 CAPTAIN
-            { no: 10, name: "Amir A" }, // ⚡ ATTACKER
+            { no: 1, name: "Keper Hizkela" },
+            { no: 7, name: "Tare" },
+            { no: 10, name: "Amir A" },
 
             // Full roster
             { no: 2, name: "Edom adinew" },
@@ -4157,10 +4095,8 @@
             { no: 4, name: "Bahilu F B" },
             { no: 5, name: "Gm Mule Ro" },
             { no: 6, name: "Tata Mu" },
-            // #8 is now Bahilu B (FIXED: previously missing or incorrectly numbered)
-            { no: 8, name: "Bahilu B" },
+            { no: 8, name: "Bahilu B" }, // FIXED: player #8
             { no: 9, name: "Amanu" },
-            // #10 is Amir A (already listed above)
             { no: 11, name: "Nati" },
             { no: 12, name: "Yido Tim" },
             { no: 13, name: "Yohannes Yosef" },
@@ -4203,20 +4139,15 @@
         ];
 
         const grid = document.getElementById("playersGrid");
-        // Clear any existing content
         grid.innerHTML = '';
 
-        // FIXED: Clean forEach loop that renders ALL 49 players
-        // Using a standard forEach with explicit handling for every player
         players.forEach((player, index) => {
             const card = document.createElement("div");
             card.className = "player-card";
-            // Staggered animation delay
             card.style.animationDelay = (0.05 + index * 0.03) + 's';
 
-            // Determine role and badge based on player number
-            let role = "Player";
-            let badge = "";
+            let role = "Player",
+                badge = "";
             if (player.no === 7) { role = "Captain";
                 badge = "👑"; } else if (player.no === 1) { role = "Goalkeeper";
                 badge = "🧤"; } else if (player.no === 10 || player.no === 9) { role = "Attacker";
@@ -4224,7 +4155,6 @@
                 badge = "🛡️"; } else if (player.no === 5 || player.no === 6 || player.no === 8) { role = "Midfielder";
                 badge = "🎯"; }
 
-            // Build the card HTML
             card.innerHTML = `
                     <div class="player-inner">
                         <div class="player-number">${String(player.no).padStart(2, "0")}</div>
@@ -4236,18 +4166,12 @@
                         </div>
                     </div>
                 `;
-
-            // Append to grid
             grid.appendChild(card);
-
-            // Verify all players are being added
-            console.log(`✅ Added player #${player.no}: ${player.name}`);
         });
 
-        // Log the total number of players rendered
-        console.log(`🏆 Total players rendered: ${players.length} (should be 49)`);
+        console.log(`🏆 Total players rendered: ${players.length}`);
 
-        // ── 3D MOUSE / TOUCH EFFECT ──
+        // ── 3D TILT EFFECT ──
         document.querySelectorAll("[data-tilt]").forEach(card => {
             card.addEventListener("mousemove", event => {
                 const rect = card.getBoundingClientRect();
@@ -4265,7 +4189,7 @@
             });
         });
 
-        // ── AI Chatbot ──
+        // ── AI CHATBOT ──
         function sendMessage() {
             const input = document.getElementById('userQuestion');
             const question = input.value.trim();
@@ -4302,15 +4226,15 @@
                 'instagram': "Instagram is coming soon. Stay tuned!",
                 'tiktok': "Follow us on TikTok: https://www.tiktok.com/@rorihotel",
                 'health': "Rori FC follows a holistic health program: fitness, nutrition, physio, mental health, medical & sleep.",
-                'doctor': "Our team doctor is Dr. Yonas Tadesse. He oversees all player health matters.",
-                'coach': "Our head coach is Nebiyu Yonas. He leads the team with dedication.",
-                'welcome': "ዳኤ ቡሹ (Da'e Bushu) – Welcome! We're glad you're here.",
-                'bushu': "ዳኤ ቡሹ (Da'e Bushu) means 'Welcome' in Sidama. It carries respect, warmth, and unity.",
-                'owner': "The owner of Rori Community FC is Tesfaye Y.",
-                'coffee': "Visit Silla Coffee Shop inside Rori Hotel! We serve Ethiopian Bunna, Macchiato, Espresso, teas, and Rori FC special blends.",
-                'menu': "Our café menu includes Hot Coffee, Tea & Drinks, Snacks, and Rori FC Special blends. Check out the Café section!",
-                'cafe': "Silla Coffee Shop is inside Rori Hotel. We have Ethiopian Bunna, macchiato, espresso, teas, fresh bread, cakes, and our Team Special Blend!",
-                'anthem': "Here are the lyrics to our club anthem, RORI Forever! 🎵 Check the Anthem section for the full song."
+                'doctor': "Our team doctor is Dr. Yonas Tadesse.",
+                'coach': "Our head coach is Nebiyu Yonas.",
+                'welcome': "ዳኤ ቡሹ (Da'e Bushu) – Welcome!",
+                'bushu': "ዳኤ ቡሹ means 'Welcome' in Sidama.",
+                'owner': "The owner is Tesfaye Y.",
+                'coffee': "Visit Silla Coffee Shop inside Rori Hotel!",
+                'menu': "Our café menu includes Hot Coffee, Tea & Drinks, Snacks, and Rori FC Special blends.",
+                'cafe': "Silla Coffee Shop is inside Rori Hotel.",
+                'anthem': "Here are the lyrics to our club anthem, RORI Forever! 🎵"
             };
             for (const [key, reply] of Object.entries(responses)) {
                 if (q.includes(key)) return reply;
@@ -4322,7 +4246,7 @@
             if (e.key === 'Enter') sendMessage();
         });
 
-        // ── Toast ──
+        // ── TOAST ──
         function showToast(message) {
             const toast = document.getElementById('welcomeToast');
             document.getElementById('toastMessage').textContent = message;
@@ -4339,7 +4263,7 @@
             if (window.toastTimer) clearTimeout(window.toastTimer);
         }
 
-        // ── Copy account number ──
+        // ── COPY ACCOUNT ──
         function copyAccount() {
             const accountText = document.getElementById('accountNumber').textContent;
             navigator.clipboard.writeText(accountText).then(() => {
@@ -4355,7 +4279,7 @@
             });
         }
 
-        // ── Form handling ──
+        // ── FORM HANDLING ──
         const form = document.getElementById('registrationForm');
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -4414,11 +4338,7 @@
             }
         });
 
-        console.log('🏆 Rori Community FC website updated with large, bold typography!');
-        console.log('✅ All 49 players rendered (including #8 Bahilu B)');
-        console.log('✅ Responsive typography using clamp() across all text');
-        console.log('✅ Welcome section text is now large and readable on mobile');
-        console.log('✅ Player cards have 1.1rem names and 0.9rem roles on mobile');
+        console.log('🏆 Rori Community FC website updated with new gallery items!');
     </script>
 </body>
-</html>።። 
+</html>

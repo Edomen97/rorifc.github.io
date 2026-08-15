@@ -7,7 +7,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <style>
         /* ── Reset & Base ── */
         * {
@@ -16,9 +16,9 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #0a0f24;
-            color: #e0e0e0;
-            font-family: 'Poppins', 'Open Sans', sans-serif;
+            background-color: #0b1329;
+            color: #ffffff;
+            font-family: 'Inter', 'Poppins', 'Open Sans', sans-serif;
             font-size: 22px;
             font-weight: 500;
             line-height: 1.8;
@@ -93,7 +93,7 @@
             background:
                 linear-gradient(135deg, rgba(26, 35, 126, 0.80), rgba(10, 15, 36, 0.88)),
                 url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1920&h=1080&fit=crop&crop=center&q=80') center / cover no-repeat;
-            background-color: #0a0f24;
+            background-color: #0b1329;
             padding: 100px 20px 70px;
             text-align: center;
             overflow: hidden;
@@ -926,7 +926,7 @@
             overflow: hidden;
             background: radial-gradient(circle at 50% 0%, rgba(245, 197, 66, 0.16), transparent 40%), #050b14;
             color: white;
-            font-family: 'Poppins', 'Arial', sans-serif;
+            font-family: 'Inter', 'Poppins', 'Arial', sans-serif;
             border-top: 4px solid #f5c542;
             border-bottom: 4px solid #f5c542;
         }
@@ -971,15 +971,22 @@
             border-radius: 35px;
             overflow: hidden;
             transform-style: preserve-3d;
-            background: linear-gradient(145deg, #172b43, #060d18);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.5);
-            transition: transform 0.15s ease, box-shadow 0.4s ease;
+            background: linear-gradient(135deg, #1e295b 0%, #0f172a 100%);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 215, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
+            animation: fadeInUp 0.6s ease forwards;
         }
 
+        .hero-player:nth-child(1) { animation-delay: 0.1s; }
+        .hero-player:nth-child(2) { animation-delay: 0.2s; }
+        .hero-player:nth-child(3) { animation-delay: 0.3s; }
+
         .hero-player:hover {
-            box-shadow: 0 45px 100px rgba(0, 0, 0, 0.7), 0 0 45px rgba(245, 197, 66, 0.15);
+            transform: translateY(-8px) scale(1.02);
+            border-color: #ffd700;
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.25), 0 0 25px rgba(255, 215, 0, 0.2);
         }
 
         .hero-glow {
@@ -996,15 +1003,8 @@
         }
 
         @keyframes glowPulse {
-            0%,
-            100% {
-                opacity: 0.5;
-                transform: translate(-50%, -50%) scale(1);
-            }
-            50% {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1.2);
-            }
+            0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
         }
 
         .hero-badge {
@@ -1033,9 +1033,14 @@
             font-size: 210px;
             line-height: 1;
             font-weight: 1000;
-            color: rgba(255, 255, 255, 0.055);
+            color: rgba(255, 255, 255, 0.08);
             z-index: 1;
             transform: translateZ(20px);
+            transition: color 0.3s ease;
+        }
+
+        .hero-player:hover .hero-number {
+            color: rgba(255, 215, 0, 0.2);
         }
 
         .hero-image {
@@ -1052,13 +1057,8 @@
         }
 
         @keyframes playerFloat {
-            0%,
-            100% {
-                transform: translateX(-50%) translateY(0) translateZ(100px);
-            }
-            50% {
-                transform: translateX(-50%) translateY(-18px) translateZ(130px);
-            }
+            0%, 100% { transform: translateX(-50%) translateY(0) translateZ(100px); }
+            50% { transform: translateX(-50%) translateY(-18px) translateZ(130px); }
         }
 
         .hero-info {
@@ -1124,14 +1124,18 @@
             border-radius: 25px;
             overflow: hidden;
             transform-style: preserve-3d;
-            background: linear-gradient(145deg, #14283f, #07101c);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.15s ease;
+            background: linear-gradient(135deg, #1e295b 0%, #0f172a 100%);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 215, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
+            animation: fadeInUp 0.6s ease forwards;
         }
 
         .player-card:hover {
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+            transform: translateY(-8px) scale(1.02);
+            border-color: #ffd700;
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.25), 0 0 25px rgba(255, 215, 0, 0.2);
         }
 
         .player-card-number {
@@ -1140,7 +1144,12 @@
             top: 0;
             font-size: 100px;
             font-weight: 1000;
-            color: rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.08);
+            transition: color 0.3s ease;
+        }
+
+        .player-card:hover .player-card-number {
+            color: rgba(255, 215, 0, 0.2);
         }
 
         .player-card img {
@@ -1156,13 +1165,8 @@
         }
 
         @keyframes smallFloat {
-            0%,
-            100% {
-                transform: translateX(-50%) translateY(0) translateZ(70px);
-            }
-            50% {
-                transform: translateX(-50%) translateY(-10px) translateZ(90px);
-            }
+            0%, 100% { transform: translateX(-50%) translateY(0) translateZ(70px); }
+            50% { transform: translateX(-50%) translateY(-10px) translateZ(90px); }
         }
 
         .player-card-info {
@@ -1203,15 +1207,22 @@
             gap: 25px;
             padding: 28px 35px;
             border-radius: 25px;
-            background: linear-gradient(145deg, #172a40, #07111e);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, #1e295b 0%, #0f172a 100%);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 215, 0, 0.1);
             transform-style: preserve-3d;
-            transition: transform 0.15s ease, box-shadow 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
+            animation: fadeInUp 0.6s ease forwards;
         }
 
+        .staff-card:nth-child(1) { animation-delay: 0.4s; }
+        .staff-card:nth-child(2) { animation-delay: 0.5s; }
+
         .staff-card:hover {
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            transform: translateY(-8px) scale(1.02);
+            border-color: #ffd700;
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.25), 0 0 25px rgba(255, 215, 0, 0.2);
         }
 
         .staff-icon {
@@ -1233,84 +1244,107 @@
             color: #fff;
         }
 
-        /* ── Gallery ── */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* ── ዘመናዊ ጋለሪ ሴክሽን ── */
+        /* ═══════════════════════════════════════ */
+
         .gallery-section {
-            padding: 90px 20px;
-            background: linear-gradient(135deg, #0a0f24, #121836);
+            padding: 60px 20px;
+            background-color: #0b1329;
+        }
+
+        .gallery-section .section-title {
             text-align: center;
-            border-top: 4px solid #FFD600;
-            border-bottom: 4px solid #FFD600;
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 800;
+            letter-spacing: 2px;
         }
-        .gallery-title {
-            font-size: 4rem;
-            font-weight: 900;
-            color: #FFD600;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-family: 'Poppins', sans-serif;
-        }
-        .gallery-subtitle {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #e0e0e0;
-            margin-bottom: 60px;
-            letter-spacing: 3px;
-        }
-        .gallery-subtitle span {
-            color: #FFD600;
-        }
+
         .gallery-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 35px;
-            justify-content: center;
-            max-width: 1500px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
             margin: 0 auto;
         }
-        .gallery-card {
-            width: 380px;
-            border-radius: 22px;
+
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
-            background: #121836;
-            border: 2px solid rgba(255, 214, 0, 0.1);
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                        box-shadow 0.4s ease,
-                        border-color 0.4s ease;
+            background: #1e295b;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 215, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 0.6s ease forwards;
         }
-        .gallery-card:hover {
-            transform: translateY(-16px) scale(1.02);
-            box-shadow: 0 25px 60px rgba(255, 214, 0, 0.15);
-            border-color: #FFD600;
-        }
-        .gallery-img {
+
+        .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.15s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.25s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.35s; }
+        .gallery-item:nth-child(7) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(8) { animation-delay: 0.45s; }
+
+        .gallery-item img {
             width: 100%;
-            height: 330px;
+            height: 250px;
             object-fit: cover;
             display: block;
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: transform 0.5s ease;
         }
-        .gallery-card:hover .gallery-img {
-            transform: scale(1.08);
+
+        .gallery-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: #ffd700;
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.3), 0 0 25px rgba(255, 215, 0, 0.2);
         }
-        .img-caption {
-            font-size: 1.5rem;
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(11, 19, 41, 0.95), transparent);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
             font-weight: 700;
-            padding: 22px 24px 24px;
-            color: #FFD600;
-            background: #121836;
-            text-align: left;
-            font-family: 'Poppins', sans-serif;
-            border-top: 1px solid rgba(255, 214, 0, 0.06);
         }
-        .img-caption small {
-            display: block;
-            font-size: 1.05rem;
-            font-weight: 500;
-            color: #b0b0b0;
-            margin-top: 4px;
-            letter-spacing: 0.5px;
+
+        .gallery-overlay p {
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 400;
         }
 
         /* ── Footer ── */
@@ -1329,7 +1363,7 @@
             background: #2b1b14;
             color: #f5f1ea;
             padding: 0 20px 90px;
-            font-family: 'Poppins', 'Open Sans', sans-serif;
+            font-family: 'Inter', 'Poppins', 'Open Sans', sans-serif;
         }
         .cafe-section .container {
             max-width: 1500px;
@@ -1351,7 +1385,7 @@
             opacity: 0.7;
             margin-bottom: 28px;
             font-weight: 700;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', 'Poppins', sans-serif;
         }
         .partner-section .partner-label::before {
             content: "✦ ";
@@ -1460,7 +1494,7 @@
             font-weight: 300;
             letter-spacing: 8px;
             text-transform: uppercase;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', 'Poppins', sans-serif;
         }
         .cafe-hero .gold-line {
             width: 180px;
@@ -1571,7 +1605,7 @@
             display: inline-block;
             background: #d4af37;
             color: #2b1b14;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', 'Poppins', sans-serif;
             font-weight: 700;
             font-size: 1.8rem;
             padding: 24px 70px;
@@ -1746,719 +1780,213 @@
             padding: 0 6px;
         }
         @keyframes slideUp {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         /* ── Responsive ── */
         @media (max-width: 992px) {
-            .partner-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-            }
-            .gallery-grid {
-                gap: 28px;
-            }
-            .gallery-card {
-                width: 340px;
-            }
-            .gallery-img {
-                height: 290px;
-            }
-            .hero-players {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .hero-player:last-child {
-                grid-column: span 2;
-                max-width: 50%;
-                margin: 0 auto;
-            }
-            .coach-img-wrapper {
-                height: 450px;
-            }
-            .rori-logo {
-                width: 220px;
-                height: 220px;
-            }
-            .rori-profile h1 {
-                font-size: 4.5rem;
-            }
-            .rori-profile p {
-                font-size: 1.6rem;
-                letter-spacing: 6px;
-            }
-            .stat-number {
-                font-size: 3.5rem;
-            }
-            .stats-bar {
-                gap: 40px;
-            }
-            .stat-item {
-                padding: 22px 35px;
-            }
-            .section-title {
-                font-size: 3.2rem;
-            }
-            .welcome-content {
-                padding: 45px 40px;
-            }
-            .welcome-content p {
-                font-size: 1.3rem;
-            }
-            .bank-details .account-number {
-                font-size: 2.8rem;
-            }
-            .cafe-hero h2 {
-                font-size: 4.5rem;
-            }
-            .cafe-hero p {
-                font-size: 1.4rem;
-            }
-            .cafe-title {
-                font-size: 3.2rem;
-            }
-            .cafe-grid {
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-                gap: 22px;
-            }
-            .cafe-hero::after {
-                width: 90px;
-                height: 90px;
-                font-size: 3.8rem;
-                bottom: -38px;
-            }
-            .gallery-title {
-                font-size: 3.2rem;
-            }
-            .gallery-subtitle {
-                font-size: 1.3rem;
-            }
-            .anthem-container {
-                padding: 45px 40px;
-            }
-            .anthem-content p {
-                font-size: 1.2rem;
-            }
-            .players-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .staff-section {
-                grid-template-columns: 1fr;
-                gap: 18px;
-            }
+            .partner-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+            .hero-players { grid-template-columns: repeat(2, 1fr); }
+            .hero-player:last-child { grid-column: span 2; max-width: 50%; margin: 0 auto; }
+            .coach-img-wrapper { height: 450px; }
+            .rori-logo { width: 220px; height: 220px; }
+            .rori-profile h1 { font-size: 4.5rem; }
+            .rori-profile p { font-size: 1.6rem; letter-spacing: 6px; }
+            .stat-number { font-size: 3.5rem; }
+            .stats-bar { gap: 40px; }
+            .stat-item { padding: 22px 35px; }
+            .section-title { font-size: 3.2rem; }
+            .welcome-content { padding: 45px 40px; }
+            .welcome-content p { font-size: 1.3rem; }
+            .bank-details .account-number { font-size: 2.8rem; }
+            .cafe-hero h2 { font-size: 4.5rem; }
+            .cafe-hero p { font-size: 1.4rem; }
+            .cafe-title { font-size: 3.2rem; }
+            .cafe-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; }
+            .cafe-hero::after { width: 90px; height: 90px; font-size: 3.8rem; bottom: -38px; }
+            .gallery-title { font-size: 3.2rem; }
+            .gallery-subtitle { font-size: 1.3rem; }
+            .anthem-container { padding: 45px 40px; }
+            .anthem-content p { font-size: 1.2rem; }
+            .players-grid { grid-template-columns: repeat(2, 1fr); }
+            .staff-section { grid-template-columns: 1fr; gap: 18px; }
         }
         @media (max-width: 768px) {
-            body {
-                font-size: 18px;
-            }
-            .rori-profile h1 {
-                font-size: 3.5rem;
-                letter-spacing: 2px;
-            }
-            .rori-logo {
-                width: 170px;
-                height: 170px;
-            }
-            .rori-profile p {
-                font-size: 1.3rem;
-                letter-spacing: 4px;
-            }
-            .nav-links {
-                gap: 12px;
-                justify-content: center;
-            }
-            .nav-links a {
-                font-size: 0.9rem;
-            }
-            nav {
-                padding: 12px 20px;
-                justify-content: center;
-            }
-            .nav-logo img {
-                height: 50px;
-                width: 50px;
-            }
-            .stats-bar {
-                gap: 20px;
-            }
-            .stat-item {
-                padding: 16px 25px;
-            }
-            .stat-number {
-                font-size: 2.8rem;
-            }
-            .stat-item .stat-label {
-                font-size: 1rem;
-            }
-            .regulations-grid {
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-            .motto-banner .motto-text {
-                font-size: 2.4rem;
-            }
-            .motto-banner .motto-sub {
-                font-size: 1.1rem;
-            }
-            .about-profile {
-                padding: 30px 25px;
-                font-size: 1.15rem;
-            }
-            .about-profile .motto-highlight {
-                font-size: 1.5rem;
-            }
-            .bank-details .account-number {
-                font-size: 1.8rem;
-            }
-            .fund-description {
-                padding: 30px 25px;
-                font-size: 1.1rem;
-            }
-            .fund-benefits {
-                grid-template-columns: 1fr 1fr;
-                gap: 16px;
-            }
-            .contributions-table-wrapper {
-                overflow-x: auto;
-            }
-            .contributions-table {
-                font-size: 1rem;
-                min-width: 600px;
-            }
-            .contributions-table thead th,
-            .contributions-table tbody td {
-                padding: 12px 16px;
-            }
-            .contributions-table .highlight-row td {
-                font-size: 1.1rem;
-                padding: 14px 16px;
-            }
-            .welcome-content {
-                padding: 35px 28px;
-            }
-            .welcome-content p {
-                font-size: 1.15rem;
-            }
-            .welcome-content .closing .amharic {
-                font-size: 1.3rem;
-            }
-            .cafe-hero h2 {
-                font-size: 3.5rem;
-            }
-            .cafe-hero p {
-                font-size: 1.1rem;
-                letter-spacing: 4px;
-            }
-            .cafe-title {
-                font-size: 2.6rem;
-            }
-            .cafe-category-title {
-                font-size: 2rem;
-            }
-            .cafe-grid {
-                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-                gap: 18px;
-            }
-            .cafe-hero::after {
-                width: 80px;
-                height: 80px;
-                font-size: 3.2rem;
-                bottom: -35px;
-            }
-            .partner-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 15px;
-            }
-            .partner-card .variant-text {
-                font-size: 1.1rem;
-            }
-            .fixtures-table-wrapper {
-                overflow-x: auto;
-            }
-            .fixtures-table {
-                font-size: 1rem;
-                min-width: 600px;
-            }
-            .fixtures-table thead th,
-            .fixtures-table tbody td {
-                padding: 12px 16px;
-            }
-            .section-title {
-                font-size: 2.6rem;
-            }
-            .hero {
-                min-height: 70vh;
-                padding: 50px 16px 35px;
-            }
-            .btn {
-                font-size: 1.2rem;
-                padding: 16px 32px;
-            }
-            section {
-                padding: 60px 16px;
-            }
-            .gallery-grid {
-                gap: 22px;
-            }
-            .gallery-card {
-                width: 320px;
-            }
-            .gallery-img {
-                height: 260px;
-            }
-            .gallery-title {
-                font-size: 2.6rem;
-            }
-            .gallery-subtitle {
-                font-size: 1.1rem;
-            }
-            .anthem-container {
-                padding: 35px 30px;
-            }
-            .anthem-content p {
-                font-size: 1.1rem;
-            }
-            .anthem-content .outro p {
-                font-size: 1.3rem;
-            }
-            .coach-img-wrapper {
-                height: 380px;
-            }
-            .coach-card {
-                max-width: 400px;
-            }
-            .coach-details h3 {
-                font-size: 2.2rem;
-            }
-            .coach-details .bio {
-                font-size: 1rem;
-            }
-            .chat-container {
-                padding: 22px;
-            }
-            .chat-container h3 {
-                font-size: 1.6rem;
-            }
-            .chat-messages {
-                height: 240px;
-                padding: 18px;
-            }
-            .chat-messages p {
-                font-size: 1rem;
-            }
-            .chat-input-area input {
-                padding: 14px 20px;
-                font-size: 1rem;
-            }
-            .chat-input-area button {
-                padding: 0 30px;
-                font-size: 1.1rem;
-            }
-            .registration-form {
-                padding: 32px 25px;
-            }
-            .registration-form input {
-                padding: 14px 18px;
-                font-size: 1rem;
-            }
-            .bank-details {
-                padding: 28px 25px;
-            }
-            .bank-details .telebirr {
-                font-size: 1.5rem;
-            }
-            .card-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 22px;
-            }
-            .card {
-                padding: 25px 20px;
-            }
-            .card h3 {
-                font-size: 1.8rem;
-            }
-            .card p {
-                font-size: 1.05rem;
-            }
-            .hero-players {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            .hero-player {
-                height: 540px;
-            }
-            .hero-player:last-child {
-                grid-column: span 1;
-                max-width: 100%;
-            }
-            .players-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .staff-section {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            .staff-card {
-                padding: 22px 28px;
-            }
-            .squad-heading h2 {
-                font-size: 2.8rem;
-            }
-            .squad-heading span {
-                font-size: 0.9rem;
-                letter-spacing: 5px;
-            }
-            .hero-number {
-                font-size: 140px;
-            }
-            .hero-image {
-                height: 380px;
-                bottom: 70px;
-            }
-            .hero-info h3 {
-                font-size: 1.8rem;
-            }
-            .player-card {
-                height: 300px;
-            }
-            .player-card img {
-                height: 210px;
-                bottom: 45px;
-            }
-            .player-card-number {
-                font-size: 80px;
-            }
-            .coach-img-wrapper {
-                height: 420px;
-            }
+            body { font-size: 18px; }
+            .rori-profile h1 { font-size: 3.5rem; letter-spacing: 2px; }
+            .rori-logo { width: 170px; height: 170px; }
+            .rori-profile p { font-size: 1.3rem; letter-spacing: 4px; }
+            .nav-links { gap: 12px; justify-content: center; }
+            .nav-links a { font-size: 0.9rem; }
+            nav { padding: 12px 20px; justify-content: center; }
+            .nav-logo img { height: 50px; width: 50px; }
+            .stats-bar { gap: 20px; }
+            .stat-item { padding: 16px 25px; }
+            .stat-number { font-size: 2.8rem; }
+            .stat-item .stat-label { font-size: 1rem; }
+            .regulations-grid { grid-template-columns: 1fr; gap: 35px; }
+            .motto-banner .motto-text { font-size: 2.4rem; }
+            .motto-banner .motto-sub { font-size: 1.1rem; }
+            .about-profile { padding: 30px 25px; font-size: 1.15rem; }
+            .about-profile .motto-highlight { font-size: 1.5rem; }
+            .bank-details .account-number { font-size: 1.8rem; }
+            .fund-description { padding: 30px 25px; font-size: 1.1rem; }
+            .fund-benefits { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .contributions-table-wrapper { overflow-x: auto; }
+            .contributions-table { font-size: 1rem; min-width: 600px; }
+            .contributions-table thead th, .contributions-table tbody td { padding: 12px 16px; }
+            .contributions-table .highlight-row td { font-size: 1.1rem; padding: 14px 16px; }
+            .welcome-content { padding: 35px 28px; }
+            .welcome-content p { font-size: 1.15rem; }
+            .welcome-content .closing .amharic { font-size: 1.3rem; }
+            .cafe-hero h2 { font-size: 3.5rem; }
+            .cafe-hero p { font-size: 1.1rem; letter-spacing: 4px; }
+            .cafe-title { font-size: 2.6rem; }
+            .cafe-category-title { font-size: 2rem; }
+            .cafe-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; }
+            .cafe-hero::after { width: 80px; height: 80px; font-size: 3.2rem; bottom: -35px; }
+            .partner-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+            .partner-card .variant-text { font-size: 1.1rem; }
+            .fixtures-table-wrapper { overflow-x: auto; }
+            .fixtures-table { font-size: 1rem; min-width: 600px; }
+            .fixtures-table thead th, .fixtures-table tbody td { padding: 12px 16px; }
+            .section-title { font-size: 2.6rem; }
+            .hero { min-height: 70vh; padding: 50px 16px 35px; }
+            .btn { font-size: 1.2rem; padding: 16px 32px; }
+            section { padding: 60px 16px; }
+            .anthem-container { padding: 35px 30px; }
+            .anthem-content p { font-size: 1.1rem; }
+            .anthem-content .outro p { font-size: 1.3rem; }
+            .coach-img-wrapper { height: 380px; }
+            .coach-card { max-width: 400px; }
+            .coach-details h3 { font-size: 2.2rem; }
+            .coach-details .bio { font-size: 1rem; }
+            .chat-container { padding: 22px; }
+            .chat-container h3 { font-size: 1.6rem; }
+            .chat-messages { height: 240px; padding: 18px; }
+            .chat-messages p { font-size: 1rem; }
+            .chat-input-area input { padding: 14px 20px; font-size: 1rem; }
+            .chat-input-area button { padding: 0 30px; font-size: 1.1rem; }
+            .registration-form { padding: 32px 25px; }
+            .registration-form input { padding: 14px 18px; font-size: 1rem; }
+            .bank-details { padding: 28px 25px; }
+            .bank-details .telebirr { font-size: 1.5rem; }
+            .card-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
+            .card { padding: 25px 20px; }
+            .card h3 { font-size: 1.8rem; }
+            .card p { font-size: 1.05rem; }
+            .hero-players { grid-template-columns: 1fr; gap: 25px; }
+            .hero-player { height: 540px; }
+            .hero-player:last-child { grid-column: span 1; max-width: 100%; }
+            .players-grid { grid-template-columns: repeat(2, 1fr); }
+            .staff-section { grid-template-columns: 1fr; gap: 15px; }
+            .staff-card { padding: 22px 28px; }
+            .squad-heading h2 { font-size: 2.8rem; }
+            .squad-heading span { font-size: 0.9rem; letter-spacing: 5px; }
+            .hero-number { font-size: 140px; }
+            .hero-image { height: 380px; bottom: 70px; }
+            .hero-info h3 { font-size: 1.8rem; }
+            .player-card { height: 300px; }
+            .player-card img { height: 210px; bottom: 45px; }
+            .player-card-number { font-size: 80px; }
+            .coach-img-wrapper { height: 420px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+            .gallery-item img { height: 200px; }
+            .gallery-section .section-title { font-size: 2.2rem; }
         }
         @media (max-width: 480px) {
-            body {
-                font-size: 16px;
-            }
-            .rori-profile h1 {
-                font-size: 2.6rem;
-                letter-spacing: 1px;
-            }
-            .rori-logo {
-                width: 130px;
-                height: 130px;
-            }
-            .rori-profile p {
-                font-size: 1rem;
-                letter-spacing: 3px;
-            }
-            .btn {
-                font-size: 1rem;
-                padding: 14px 28px;
-            }
-            .section-title {
-                font-size: 2.2rem;
-            }
-            .nav-links a {
-                font-size: 0.75rem;
-            }
-            .motto-banner .motto-text {
-                font-size: 1.8rem;
-            }
-            .motto-banner {
-                padding: 30px 20px;
-            }
-            .fund-benefits {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-            .bank-details .account-number {
-                font-size: 1.4rem;
-                letter-spacing: 2px;
-            }
-            .bank-details {
-                padding: 22px 18px;
-            }
-            .bank-details .telebirr {
-                font-size: 1.2rem;
-            }
-            .bank-details .account-name {
-                font-size: 1.2rem;
-            }
-            .welcome-content::before {
-                font-size: 4rem;
-                left: 15px;
-            }
-            .cafe-hero h2 {
-                font-size: 2.6rem;
-            }
-            .cafe-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 14px;
-            }
-            .cafe-card .emoji {
-                font-size: 2.6rem;
-            }
-            .cafe-card h4 {
-                font-size: 1.1rem;
-            }
-            .cafe-card p {
-                font-size: 0.9rem;
-            }
-            .cafe-order-btn {
-                font-size: 1.1rem;
-                padding: 16px 35px;
-            }
-            .partner-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
-            .partner-card {
-                padding: 16px 12px;
-            }
-            .partner-card .variant-text {
-                font-size: 0.95rem;
-            }
-            .partner-card .variant-tag {
-                font-size: 0.55rem;
-            }
-            .hero {
-                min-height: 60vh;
-                padding: 35px 12px 25px;
-            }
-            .stat-number {
-                font-size: 2.2rem;
-            }
-            .stat-item {
-                padding: 12px 18px;
-            }
-            .stats-bar {
-                gap: 12px;
-            }
-            section {
-                padding: 45px 12px;
-            }
-            .card-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 16px;
-            }
-            .card {
-                padding: 18px 14px;
-            }
-            .card h3 {
-                font-size: 1.5rem;
-                margin: 14px 0 10px;
-            }
-            .card p {
-                font-size: 0.95rem;
-            }
-            .chat-container {
-                padding: 16px;
-            }
-            .chat-container h3 {
-                font-size: 1.2rem;
-            }
-            .chat-input-area input {
-                padding: 12px 16px;
-                font-size: 0.9rem;
-            }
-            .chat-input-area button {
-                padding: 0 20px;
-                font-size: 0.9rem;
-            }
-            .registration-form {
-                padding: 22px 18px;
-            }
-            .registration-form input {
-                padding: 12px 16px;
-                font-size: 0.9rem;
-            }
-            .registration-form label {
-                font-size: 1rem;
-            }
-            .contributions-table {
-                font-size: 0.85rem;
-                min-width: 450px;
-            }
-            .contributions-table thead th,
-            .contributions-table tbody td {
-                padding: 10px 12px;
-            }
-            .contributions-table .highlight-row td {
-                font-size: 0.95rem;
-                padding: 12px 12px;
-            }
-            .contributions-thanks {
-                padding: 22px 18px;
-                font-size: 1.05rem;
-            }
-            .fixtures-table {
-                font-size: 0.85rem;
-                min-width: 450px;
-            }
-            .fixtures-table thead th,
-            .fixtures-table tbody td {
-                padding: 10px 12px;
-            }
-            .about-profile {
-                padding: 22px 16px;
-                font-size: 1rem;
-            }
-            .about-profile .motto-highlight {
-                font-size: 1.2rem;
-            }
-            .fund-description {
-                padding: 22px 16px;
-                font-size: 0.95rem;
-            }
-            .welcome-content {
-                padding: 22px 16px;
-            }
-            .welcome-content p {
-                font-size: 1rem;
-            }
-            .welcome-content .greeting-highlight {
-                font-size: 1.2rem;
-            }
-            .welcome-content .closing {
-                font-size: 1.1rem;
-            }
-            .welcome-content .closing .amharic {
-                font-size: 1.1rem;
-            }
-            .cafe-hero {
-                padding: 70px 16px 55px;
-            }
-            .cafe-hero::after {
-                width: 70px;
-                height: 70px;
-                font-size: 2.6rem;
-                bottom: -30px;
-            }
-            .cafe-category-title {
-                font-size: 1.5rem;
-                margin: 35px 0 18px;
-            }
-            .cafe-category-title .icon {
-                font-size: 1.8rem;
-            }
-            .cafe-title {
-                font-size: 2.2rem;
-            }
-            .toast {
-                left: 16px;
-                right: 16px;
-                bottom: 16px;
-                max-width: none;
-                font-size: 1rem;
-                padding: 16px 22px;
-            }
-            footer {
-                font-size: 0.95rem;
-                padding: 28px 16px;
-            }
-            .anthem-container {
-                padding: 25px 18px;
-            }
-            .anthem-content p {
-                font-size: 0.95rem;
-            }
-            .anthem-content .outro p {
-                font-size: 1.1rem;
-            }
-            .anthem-container::before {
-                font-size: 7rem;
-                right: -10px;
-                bottom: -25px;
-            }
-            .gallery-grid {
-                gap: 16px;
-            }
-            .gallery-card {
-                width: 100%;
-                max-width: 400px;
-            }
-            .gallery-img {
-                height: 220px;
-            }
-            .gallery-title {
-                font-size: 2rem;
-            }
-            .gallery-subtitle {
-                font-size: 1rem;
-            }
-            .img-caption {
-                font-size: 1.1rem;
-                padding: 16px 18px 18px;
-            }
-            .img-caption small {
-                font-size: 0.85rem;
-            }
-            .coach-img-wrapper {
-                height: 300px;
-            }
-            .coach-card {
-                max-width: 100%;
-                margin: 20px 10px;
-            }
-            .coach-details h3 {
-                font-size: 1.8rem;
-            }
-            .coach-details .role {
-                font-size: 1rem;
-            }
-            .coach-details .bio {
-                font-size: 0.9rem;
-            }
-            .badge-tag {
-                font-size: 0.85rem;
-                padding: 6px 16px;
-            }
-            .hero-player {
-                height: 440px;
-            }
-            .hero-number {
-                font-size: 120px;
-            }
-            .hero-image {
-                height: 340px;
-                bottom: 60px;
-            }
-            .hero-info h3 {
-                font-size: 1.6rem;
-            }
-            .players-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 14px;
-            }
-            .player-card {
-                height: 270px;
-            }
-            .player-card img {
-                height: 190px;
-                bottom: 40px;
-            }
-            .player-card-number {
-                font-size: 70px;
-            }
-            .squad-heading h2 {
-                font-size: 2.2rem;
-            }
-            .staff-section {
-                gap: 12px;
-            }
-            .staff-card {
-                padding: 16px 20px;
-                gap: 14px;
-            }
-            .staff-icon {
-                font-size: 2rem;
-            }
-            .staff-card h3 {
-                font-size: 1rem;
-            }
+            body { font-size: 16px; }
+            .rori-profile h1 { font-size: 2.6rem; letter-spacing: 1px; }
+            .rori-logo { width: 130px; height: 130px; }
+            .rori-profile p { font-size: 1rem; letter-spacing: 3px; }
+            .btn { font-size: 1rem; padding: 14px 28px; }
+            .section-title { font-size: 2.2rem; }
+            .nav-links a { font-size: 0.75rem; }
+            .motto-banner .motto-text { font-size: 1.8rem; }
+            .motto-banner { padding: 30px 20px; }
+            .fund-benefits { grid-template-columns: 1fr; gap: 14px; }
+            .bank-details .account-number { font-size: 1.4rem; letter-spacing: 2px; }
+            .bank-details { padding: 22px 18px; }
+            .bank-details .telebirr { font-size: 1.2rem; }
+            .bank-details .account-name { font-size: 1.2rem; }
+            .welcome-content::before { font-size: 4rem; left: 15px; }
+            .cafe-hero h2 { font-size: 2.6rem; }
+            .cafe-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+            .cafe-card .emoji { font-size: 2.6rem; }
+            .cafe-card h4 { font-size: 1.1rem; }
+            .cafe-card p { font-size: 0.9rem; }
+            .cafe-order-btn { font-size: 1.1rem; padding: 16px 35px; }
+            .partner-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .partner-card { padding: 16px 12px; }
+            .partner-card .variant-text { font-size: 0.95rem; }
+            .partner-card .variant-tag { font-size: 0.55rem; }
+            .hero { min-height: 60vh; padding: 35px 12px 25px; }
+            .stat-number { font-size: 2.2rem; }
+            .stat-item { padding: 12px 18px; }
+            .stats-bar { gap: 12px; }
+            section { padding: 45px 12px; }
+            .card-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .card { padding: 18px 14px; }
+            .card h3 { font-size: 1.5rem; margin: 14px 0 10px; }
+            .card p { font-size: 0.95rem; }
+            .chat-container { padding: 16px; }
+            .chat-container h3 { font-size: 1.2rem; }
+            .chat-input-area input { padding: 12px 16px; font-size: 0.9rem; }
+            .chat-input-area button { padding: 0 20px; font-size: 0.9rem; }
+            .registration-form { padding: 22px 18px; }
+            .registration-form input { padding: 12px 16px; font-size: 0.9rem; }
+            .registration-form label { font-size: 1rem; }
+            .contributions-table { font-size: 0.85rem; min-width: 450px; }
+            .contributions-table thead th, .contributions-table tbody td { padding: 10px 12px; }
+            .contributions-table .highlight-row td { font-size: 0.95rem; padding: 12px 12px; }
+            .contributions-thanks { padding: 22px 18px; font-size: 1.05rem; }
+            .fixtures-table { font-size: 0.85rem; min-width: 450px; }
+            .fixtures-table thead th, .fixtures-table tbody td { padding: 10px 12px; }
+            .about-profile { padding: 22px 16px; font-size: 1rem; }
+            .about-profile .motto-highlight { font-size: 1.2rem; }
+            .fund-description { padding: 22px 16px; font-size: 0.95rem; }
+            .welcome-content { padding: 22px 16px; }
+            .welcome-content p { font-size: 1rem; }
+            .welcome-content .greeting-highlight { font-size: 1.2rem; }
+            .welcome-content .closing { font-size: 1.1rem; }
+            .welcome-content .closing .amharic { font-size: 1.1rem; }
+            .cafe-hero { padding: 70px 16px 55px; }
+            .cafe-hero::after { width: 70px; height: 70px; font-size: 2.6rem; bottom: -30px; }
+            .cafe-category-title { font-size: 1.5rem; margin: 35px 0 18px; }
+            .cafe-category-title .icon { font-size: 1.8rem; }
+            .cafe-title { font-size: 2.2rem; }
+            .toast { left: 16px; right: 16px; bottom: 16px; max-width: none; font-size: 1rem; padding: 16px 22px; }
+            footer { font-size: 0.95rem; padding: 28px 16px; }
+            .anthem-container { padding: 25px 18px; }
+            .anthem-content p { font-size: 0.95rem; }
+            .anthem-content .outro p { font-size: 1.1rem; }
+            .anthem-container::before { font-size: 7rem; right: -10px; bottom: -25px; }
+            .coach-img-wrapper { height: 300px; }
+            .coach-card { max-width: 100%; margin: 20px 10px; }
+            .coach-details h3 { font-size: 1.8rem; }
+            .coach-details .role { font-size: 1rem; }
+            .coach-details .bio { font-size: 0.9rem; }
+            .badge-tag { font-size: 0.85rem; padding: 6px 16px; }
+            .hero-player { height: 440px; }
+            .hero-number { font-size: 120px; }
+            .hero-image { height: 340px; bottom: 60px; }
+            .hero-info h3 { font-size: 1.6rem; }
+            .players-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+            .player-card { height: 270px; }
+            .player-card img { height: 190px; bottom: 40px; }
+            .player-card-number { font-size: 70px; }
+            .squad-heading h2 { font-size: 2.2rem; }
+            .staff-section { gap: 12px; }
+            .staff-card { padding: 16px 20px; gap: 14px; }
+            .staff-icon { font-size: 2rem; }
+            .staff-card h3 { font-size: 1rem; }
+            .gallery-grid { grid-template-columns: 1fr; gap: 18px; }
+            .gallery-item img { height: 200px; }
+            .gallery-section .section-title { font-size: 1.8rem; }
+            .gallery-overlay h3 { font-size: 1rem; }
+            .gallery-overlay p { font-size: 0.8rem; }
+            .gallery-overlay { padding: 14px; }
         }
     </style>
 </head>
@@ -2985,93 +2513,91 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════ -->
-    <!-- ─── ጋለሪ ሴክሽን ─── -->
+    <!-- ─── ዘመናዊ ጋለሪ ሴክሽን ─── -->
     <!-- ════════════════════════════════════════════════════ -->
     <section class="gallery-section" id="gallery">
         <div class="container">
-            <h2 class="gallery-title">📸 Our Gallery</h2>
-            <p class="gallery-subtitle">Moments captured from <span>RORI Community FC</span></p>
-
+            <h2 class="section-title">📸 Our Gallery</h2>
             <div class="gallery-grid">
 
                 <!-- Fitness Zone / Rori Health Club -->
-                <div class="gallery-card">
-                    <img class="gallery-img" src="images/gym1.jpg" alt="Rori Hotel Fitness Center" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=800&fit=crop&crop=center&q=80'">
-                    <div class="img-caption">
-                        Fitness Zone
-                        <small>Rori Health Club</small>
+                <div class="gallery-item">
+                    <img src="images/gym1.jpg" alt="Rori Hotel Fitness Center" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop&crop=center&q=80'">
+                    <div class="gallery-overlay">
+                        <h3>Fitness Zone</h3>
+                        <p>Rori Health Club</p>
                     </div>
                 </div>
 
                 <!-- ካርድ 1 -->
-                <div class="gallery-card">
-                    <img class="gallery-img" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=800&fit=crop&crop=center&q=80" alt="RORI HOTEL Logo">
-                    <div class="img-caption">
-                        🏨 RORI HOTEL
-                        <small>Official Club Logo</small>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop&crop=center&q=80" alt="RORI HOTEL Logo">
+                    <div class="gallery-overlay">
+                        <h3>🏨 RORI HOTEL</h3>
+                        <p>Official Club Logo</p>
                     </div>
                 </div>
 
                 <!-- ካርድ 2 -->
-                <div class="gallery-card">
-                    <img class="gallery-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=800&fit=crop&crop=center&q=80" alt="RORI HOTEL Banner">
-                    <div class="img-caption">
-                        🏨 RORI HOTEL
-                        <small>Premium Hotel Banner</small>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=600&fit=crop&crop=center&q=80" alt="RORI HOTEL Banner">
+                    <div class="gallery-overlay">
+                        <h3>🏨 RORI HOTEL</h3>
+                        <p>Premium Hotel Banner</p>
                     </div>
                 </div>
 
                 <!-- ካርድ 3 -->
-                <div class="gallery-card">
-                    <img class="gallery-img" src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=800&fit=crop&crop=center&q=80" alt="Hawassa Sunshine School">
-                    <div class="img-caption">
-                        📍 Hawassa
-                        <small>Sunshine School</small>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=600&fit=crop&crop=center&q=80" alt="Hawassa Sunshine School">
+                    <div class="gallery-overlay">
+                        <h3>📍 Hawassa</h3>
+                        <p>Sunshine School</p>
                     </div>
                 </div>
 
                 <!-- ካርድ 4 -->
-                <div class="gallery-card">
-                    <img class="gallery-img" src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&h=800&fit=crop&crop=center&q=80" alt="Messi 4K Action">
-                    <div class="img-caption">
-                        🐐 Messi 4K
-                        <small>#1 • Magic on the pitch</small>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Action">
+                    <div class="gallery-overlay">
+                        <h3>🐐 Messi 4K</h3>
+                        <p>#1 • Magic on the pitch</p>
                     </div>
                 </div>
 
                 <!-- ካርድ 5 -->
-                <div class="gallery-card">
-                    <img class="gallery-img" src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=800&fit=crop&crop=center&q=80" alt="Messi 4K Celebration">
-                    <div class="img-caption">
-                        🐐 Messi 4K
-                        <small>#2 • Celebration moment</small>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Celebration">
+                    <div class="gallery-overlay">
+                        <h3>🐐 Messi 4K</h3>
+                        <p>#2 • Celebration moment</p>
                     </div>
                 </div>
 
                 <!-- ካርድ 6 -->
-                <div class="gallery-card">
-                    <img class="gallery-img" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=800&fit=crop&crop=center&q=80" alt="Messi 4K Portrait">
-                    <div class="img-caption">
-                        🐐 Messi 4K
-                        <small>#3 • Portrait of a legend</small>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Portrait">
+                    <div class="gallery-overlay">
+                        <h3>🐐 Messi 4K</h3>
+                        <p>#3 • Portrait of a legend</p>
                     </div>
                 </div>
 
                 <!-- ካርድ 7 -->
-                <div class="gallery-card">
-                    <img class="gallery-img" src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&h=800&fit=crop&crop=center&q=80" alt="CR7 4K Action">
-                    <div class="img-caption">
-                        🐐 CR7 4K
-                        <small>#1 • Power and precision</small>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&h=600&fit=crop&crop=center&q=80" alt="CR7 4K Action">
+                    <div class="gallery-overlay">
+                        <h3>🐐 CR7 4K</h3>
+                        <p>#1 • Power and precision</p>
                     </div>
                 </div>
 
                 <!-- ካርድ 8 -->
-                <div class="gallery-card">
-                    <img class="gallery-img" src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&h=800&fit=crop&crop=center&q=80" alt="CR7 4K Celebration">
-                    <div class="img-caption">
-                        🐐 CR7 4K
-                        <small>#2 • Siuuu! Celebration</small>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&h=600&fit=crop&crop=center&q=80" alt="CR7 4K Celebration">
+                    <div class="gallery-overlay">
+                        <h3>🐐 CR7 4K</h3>
+                        <p>#2 • Siuuu! Celebration</p>
                     </div>
                 </div>
 
@@ -3173,10 +2699,11 @@
 
         const grid = document.getElementById("playersGrid");
 
-        players.forEach(player => {
+        players.forEach((player, index) => {
             const card = document.createElement("article");
             card.className = "player-card";
             card.setAttribute("data-tilt", "");
+            card.style.animationDelay = (0.1 + index * 0.04) + 's';
 
             card.innerHTML = `
                 <div class="player-card-number">${String(player.no).padStart(2, "0")}</div>
@@ -3356,7 +2883,7 @@
             }
         });
 
-        console.log('🏆 Rori Community FC website updated with bold, prominent design!');
+        console.log('🏆 Rori Community FC website updated with vibrant gallery design!');
     </script>
 </body>
 </html>

@@ -965,6 +965,7 @@
             gap: 30px;
         }
 
+        /* ── HERO PLAYER ── */
         .hero-player {
             position: relative;
             height: 620px;
@@ -1007,6 +1008,7 @@
             50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
         }
 
+        /* ── HERO BADGE ── */
         .hero-badge {
             position: absolute;
             top: 22px;
@@ -1026,6 +1028,7 @@
             background: linear-gradient(135deg, #f5c542, #fff1a8);
         }
 
+        /* ── HERO NUMBER ── */
         .hero-number {
             position: absolute;
             right: 18px;
@@ -1043,6 +1046,7 @@
             color: rgba(255, 215, 0, 0.2);
         }
 
+        /* ── HERO IMAGE ── */
         .hero-image {
             position: absolute;
             left: 50%;
@@ -1061,6 +1065,7 @@
             50% { transform: translateX(-50%) translateY(-18px) translateZ(130px); }
         }
 
+        /* ── HERO INFO ── */
         .hero-info {
             position: absolute;
             left: 0;
@@ -1110,87 +1115,106 @@
             border-radius: 2px;
         }
 
-        .players-grid {
-            width: min(1300px, 100%);
-            margin: auto;
+        /* ═══════════════════════════════════════ */
+        /* ── ዘመናዊ የተጫዋች ካርድ ስታይል ── */
+        /* ═══════════════════════════════════════ */
+
+        #playersGrid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .player-card {
-            position: relative;
-            height: 340px;
-            border-radius: 25px;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            background: linear-gradient(135deg, #1e295b 0%, #0f172a 100%);
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 215, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .player-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            border-color: #ffd700;
-            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.25), 0 0 25px rgba(255, 215, 0, 0.2);
-        }
-
-        .player-card-number {
-            position: absolute;
-            right: 12px;
-            top: 0;
-            font-size: 100px;
-            font-weight: 1000;
-            color: rgba(255, 255, 255, 0.08);
-            transition: color 0.3s ease;
-        }
-
-        .player-card:hover .player-card-number {
-            color: rgba(255, 215, 0, 0.2);
-        }
-
-        .player-card img {
-            position: absolute;
-            left: 50%;
-            bottom: 55px;
-            width: 85%;
-            height: 250px;
-            object-fit: contain;
-            transform: translateX(-50%) translateZ(70px);
-            filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.6));
-            animation: smallFloat 4s infinite ease-in-out;
-        }
-
-        @keyframes smallFloat {
-            0%, 100% { transform: translateX(-50%) translateY(0) translateZ(70px); }
-            50% { transform: translateX(-50%) translateY(-10px) translateZ(90px); }
-        }
-
-        .player-card-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 18px;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
-            z-index: 5;
-            transform: translateZ(80px);
-        }
-
-        .player-card-info h3 {
+            perspective: 1000px;
             margin: 0;
-            font-size: 1.1rem;
-            color: #fff;
-            font-weight: 700;
+            border-radius: 20px;
         }
 
-        .player-card-info span {
-            color: #f5c542;
-            font-size: 0.8rem;
+        .player-inner {
+            position: relative;
+            background: linear-gradient(145deg, #1e295b, #0b1329);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            height: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .player-card:hover .player-inner {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            border: 1px solid rgba(255, 215, 0, 0.5);
+            transform: scale(1.02);
+        }
+
+        .player-number {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 4rem;
             font-weight: 900;
+            color: rgba(255, 255, 255, 0.05);
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .player-inner .player-img {
+            width: 85%;
+            height: 200px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+            transition: transform 0.4s ease;
+        }
+
+        .player-card:hover .player-inner .player-img {
+            transform: scale(1.05);
+        }
+
+        .player-name {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin: 8px 0 2px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .player-role {
+            color: #ffd700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .player-badge {
+            background: #ffd700;
+            color: #000;
+            padding: 3px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .player-info-bottom {
+            text-align: center;
+            margin-top: 4px;
         }
 
         .staff-section {
@@ -1809,7 +1833,7 @@
             .gallery-subtitle { font-size: 1.3rem; }
             .anthem-container { padding: 45px 40px; }
             .anthem-content p { font-size: 1.2rem; }
-            .players-grid { grid-template-columns: repeat(2, 1fr); }
+            #playersGrid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
             .staff-section { grid-template-columns: 1fr; gap: 18px; }
         }
         @media (max-width: 768px) {
@@ -1879,7 +1903,7 @@
             .hero-players { grid-template-columns: 1fr; gap: 25px; }
             .hero-player { height: 540px; }
             .hero-player:last-child { grid-column: span 1; max-width: 100%; }
-            .players-grid { grid-template-columns: repeat(2, 1fr); }
+            #playersGrid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; padding: 15px; }
             .staff-section { grid-template-columns: 1fr; gap: 15px; }
             .staff-card { padding: 22px 28px; }
             .squad-heading h2 { font-size: 2.8rem; }
@@ -1887,9 +1911,9 @@
             .hero-number { font-size: 140px; }
             .hero-image { height: 380px; bottom: 70px; }
             .hero-info h3 { font-size: 1.8rem; }
-            .player-card { height: 300px; }
-            .player-card img { height: 210px; bottom: 45px; }
-            .player-card-number { font-size: 80px; }
+            .player-inner { height: 300px; }
+            .player-inner .player-img { height: 180px; }
+            .player-number { font-size: 3rem; }
             .coach-img-wrapper { height: 420px; }
             .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
             .gallery-item img { height: 200px; }
@@ -1972,11 +1996,13 @@
             .hero-number { font-size: 120px; }
             .hero-image { height: 340px; bottom: 60px; }
             .hero-info h3 { font-size: 1.6rem; }
-            .players-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-            .player-card { height: 270px; }
-            .player-card img { height: 190px; bottom: 40px; }
-            .player-card-number { font-size: 70px; }
-            .squad-heading h2 { font-size: 2.2rem; }
+            #playersGrid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; padding: 12px; }
+            .player-inner { height: 270px; padding: 14px; }
+            .player-inner .player-img { height: 160px; }
+            .player-number { font-size: 2.5rem; top: 5px; right: 12px; }
+            .player-name { font-size: 1rem; }
+            .player-role { font-size: 0.7rem; }
+            .player-badge { font-size: 0.6rem; padding: 2px 8px; }
             .staff-section { gap: 12px; }
             .staff-card { padding: 16px 20px; gap: 14px; }
             .staff-icon { font-size: 2rem; }
@@ -2089,10 +2115,11 @@
         <!-- HERO PLAYERS -->
         <div class="hero-players">
 
-            <!-- AMIR A -->
+            <!-- ═══ AMIR A — ATTACKER ═══ -->
             <article class="hero-player attacker" data-tilt>
                 <div class="hero-glow"></div>
-                <div class="hero-badge">⚡ ATTACKER</div>
+                <!-- Badge: ⚡ ATTACKER ⚡ with two lightning bolts -->
+                <div class="hero-badge">⚡ ATTACKER ⚡</div>
                 <div class="hero-number">10</div>
                 <img src="images/player-10.png" class="hero-image" alt="Amir A" onerror="this.style.opacity='0'">
                 <div class="hero-info">
@@ -2102,7 +2129,7 @@
                 </div>
             </article>
 
-            <!-- TARE -->
+            <!-- ═══ TARE — CAPTAIN ═══ -->
             <article class="hero-player captain" data-tilt>
                 <div class="hero-glow"></div>
                 <div class="hero-badge captain-badge">👑 CAPTAIN</div>
@@ -2115,7 +2142,7 @@
                 </div>
             </article>
 
-            <!-- GOALKEEPER -->
+            <!-- ═══ GOALKEEPER ═══ -->
             <article class="hero-player goalkeeper" data-tilt>
                 <div class="hero-glow"></div>
                 <div class="hero-badge">🥅 GOALKEEPER</div>
@@ -2136,7 +2163,7 @@
             <div></div>
         </div>
 
-        <div class="players-grid" id="playersGrid"></div>
+        <div id="playersGrid"></div>
 
         <!-- STAFF -->
         <div class="staff-section">
@@ -2656,7 +2683,7 @@
         // ── RORI HOTEL FC PLAYERS ──
         const players = [
             { no: 2, name: "Amir A" },
-            { no: 3, name: "Gm Mule Ro" },
+            { no: 3, name: "Bahilu B" },
             { no: 4, name: "Tata Mu" },
             { no: 5, name: "Amanu" },
             { no: 9, name: "Nati" },
@@ -2700,17 +2727,27 @@
         const grid = document.getElementById("playersGrid");
 
         players.forEach((player, index) => {
-            const card = document.createElement("article");
+            const card = document.createElement("div");
             card.className = "player-card";
-            card.setAttribute("data-tilt", "");
             card.style.animationDelay = (0.1 + index * 0.04) + 's';
 
+            let role = "Player";
+            let badge = "";
+            if (player.no === 7) { role = "Captain"; badge = "👑"; }
+            else if (player.no === 1 || player.no === 48) { role = "Goalkeeper"; badge = "🧤"; }
+            else if (player.no === 10 || player.no === 9) { role = "Attacker"; badge = "⚡"; }
+            else if (player.no === 2 || player.no === 3 || player.no === 4) { role = "Defender"; badge = "🛡️"; }
+            else if (player.no === 5 || player.no === 6 || player.no === 8) { role = "Midfielder"; badge = "🎯"; }
+
             card.innerHTML = `
-                <div class="player-card-number">${String(player.no).padStart(2, "0")}</div>
-                <img src="images/player-${player.no}.png" alt="${player.name}" onerror="this.style.opacity='0'">
-                <div class="player-card-info">
-                    <h3>${player.name}</h3>
-                    <span>#${player.no} · RORI HOTEL FC</span>
+                <div class="player-inner">
+                    <div class="player-number">${String(player.no).padStart(2, "0")}</div>
+                    <img src="images/player-${player.no}.png" alt="${player.name}" class="player-img" onerror="this.style.opacity='0'">
+                    <div class="player-info-bottom">
+                        <div class="player-name">${player.name}</div>
+                        <div class="player-role">${role} ${badge}</div>
+                        ${badge ? `<span class="player-badge">${badge} ${role}</span>` : ''}
+                    </div>
                 </div>
             `;
             grid.appendChild(card);
@@ -2883,7 +2920,7 @@
             }
         });
 
-        console.log('🏆 Rori Community FC website updated with vibrant gallery design!');
+        console.log('🏆 Rori Community FC website updated: AMIR A (ATTACKER) and TARE (CAPTAIN) hero cards updated.');
     </script>
 </body>
 </html>

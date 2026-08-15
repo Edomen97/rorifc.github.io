@@ -7,7 +7,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <style>
         /* ── Reset & Base ── */
         * {
@@ -18,15 +18,17 @@
         body {
             background-color: #0a0f24;
             color: #e0e0e0;
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
+            font-family: 'Poppins', 'Open Sans', sans-serif;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1.8;
             scroll-behavior: smooth;
         }
         h1,
         h2,
         h3,
         .bebas {
-            font-family: 'Bebas Neue', cursive;
+            font-family: 'Poppins', 'Bebas Neue', cursive;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -34,9 +36,9 @@
             color: #FFD600;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 30px;
         }
 
         /* ── Navbar ── */
@@ -44,37 +46,38 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 30px;
+            padding: 18px 40px;
             background: #0d1137;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
             flex-wrap: wrap;
-            gap: 8px 12px;
+            gap: 12px 18px;
         }
         .nav-logo img {
-            height: 50px;
-            width: 50px;
+            height: 70px;
+            width: 70px;
             border-radius: 50%;
-            border: 2px solid #FFD600;
+            border: 3px solid #FFD600;
             object-fit: cover;
             background: #0d1137;
             display: block;
         }
         .nav-links {
             display: flex;
-            gap: 16px;
+            gap: 22px;
             flex-wrap: wrap;
             align-items: center;
         }
         .nav-links a {
             color: #ddd;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
+            font-weight: 700;
+            font-size: 1.15rem;
             transition: color 0.3s;
             white-space: nowrap;
+            padding: 4px 6px;
         }
         .nav-links a:hover,
         .nav-links a:focus-visible {
@@ -88,13 +91,13 @@
         .hero {
             position: relative;
             background:
-                linear-gradient(135deg, rgba(26, 35, 126, 0.88), rgba(10, 15, 36, 0.92)),
-                url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1400&h=600&fit=crop&crop=center&q=80') center / cover no-repeat;
+                linear-gradient(135deg, rgba(26, 35, 126, 0.80), rgba(10, 15, 36, 0.88)),
+                url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1920&h=1080&fit=crop&crop=center&q=80') center / cover no-repeat;
             background-color: #0a0f24;
-            padding: 60px 20px 40px;
+            padding: 100px 20px 70px;
             text-align: center;
             overflow: hidden;
-            min-height: 480px;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -106,10 +109,10 @@
             top: 0;
             left: -50%;
             width: 200%;
-            height: 4px;
-            background: repeating-linear-gradient(90deg, #FFD600 0px, #FFD600 10px, transparent 10px, transparent 20px);
-            animation: scanline 3s linear infinite;
-            opacity: 0.3;
+            height: 5px;
+            background: repeating-linear-gradient(90deg, #FFD600 0px, #FFD600 15px, transparent 15px, transparent 30px);
+            animation: scanline 4s linear infinite;
+            opacity: 0.4;
             pointer-events: none;
         }
         @keyframes scanline {
@@ -121,24 +124,24 @@
             }
         }
 
-        /* ── RORI Profile Logo (User's custom block) ── */
+        /* ── RORI Profile Logo ── */
         .rori-profile {
             text-align: center;
-            padding: 10px 15px;
+            padding: 15px 20px;
             position: relative;
             z-index: 2;
         }
 
         .rori-logo {
-            width: 180px;
-            height: 180px;
+            width: 280px;
+            height: 280px;
             object-fit: cover;
             border-radius: 50%;
             display: block;
-            margin: 0 auto 18px;
-            box-shadow: 0 0 35px rgba(212, 166, 45, 0.55);
-            border: 3px solid #FFD600;
-            animation: floatBadge 3s ease-in-out infinite;
+            margin: 0 auto 30px;
+            box-shadow: 0 0 80px rgba(212, 166, 45, 0.6);
+            border: 6px solid #FFD600;
+            animation: floatBadge 3.5s ease-in-out infinite;
             background: #0d1137;
         }
 
@@ -147,7 +150,7 @@
                 transform: translateY(0px);
             }
             50% {
-                transform: translateY(-12px);
+                transform: translateY(-18px);
             }
             100% {
                 transform: translateY(0px);
@@ -156,49 +159,63 @@
 
         .rori-profile h1 {
             margin: 0;
-            font-size: 4rem;
-            font-weight: 800;
-            letter-spacing: 2px;
+            font-size: 6rem;
+            font-weight: 900;
+            letter-spacing: 5px;
             color: #FFD600;
-            text-shadow: 3px 3px 0 #1A237E;
-            font-family: 'Bebas Neue', cursive;
+            text-shadow: 6px 6px 0 #1A237E, 0 0 50px rgba(255, 214, 0, 0.25);
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            line-height: 1.1;
         }
 
         .rori-profile p {
-            margin-top: 8px;
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            color: #eee;
-            max-width: 600px;
+            margin-top: 18px;
+            font-size: 2rem;
+            letter-spacing: 10px;
+            color: #fff;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 300;
+            font-weight: 700;
+            text-shadow: 0 2px 25px rgba(0, 0, 0, 0.7);
         }
 
         /* ── Stats & CTA ── */
         .stats-bar {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin: 30px 0 20px;
+            gap: 70px;
+            margin: 45px 0 35px;
             flex-wrap: wrap;
             position: relative;
             z-index: 2;
         }
         .stat-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 15px 25px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 214, 0, 0.15);
+            background: rgba(255, 255, 255, 0.08);
+            padding: 28px 50px;
+            border-radius: 22px;
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 214, 0, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .stat-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 214, 0, 0.12);
         }
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 4.5rem;
             color: #FFD600;
-            font-weight: bold;
+            font-weight: 900;
+        }
+        .stat-item .stat-label {
+            font-size: 1.3rem;
+            color: #ccc;
+            font-weight: 600;
+            letter-spacing: 2px;
         }
         .cta-buttons {
-            margin-top: 15px;
+            margin-top: 30px;
             position: relative;
             z-index: 2;
         }
@@ -208,162 +225,182 @@
             display: inline-block;
             background: #FFD600;
             color: #1A237E;
-            font-weight: bold;
-            padding: 12px 28px;
-            border-radius: 30px;
+            font-weight: 800;
+            padding: 22px 55px;
+            border-radius: 50px;
             text-decoration: none;
-            margin: 0 8px;
-            transition: 0.3s;
+            margin: 0 14px;
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 35px rgba(255, 214, 0, 0.35);
         }
         .btn-outline {
             background: transparent;
-            border: 2px solid #FFD600;
+            border: 3px solid #FFD600;
             color: #FFD600;
+            box-shadow: none;
         }
         .btn:hover,
         .btn:focus-visible {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #FFD600;
+            transform: scale(1.08) translateY(-4px);
+            box-shadow: 0 10px 50px rgba(255, 214, 0, 0.45);
             outline: 2px solid #FFD600;
-            outline-offset: 2px;
+            outline-offset: 4px;
+        }
+        .btn-outline:hover {
+            background: rgba(255, 214, 0, 0.1);
+            box-shadow: 0 0 40px rgba(255, 214, 0, 0.25);
         }
 
         /* ── Sections ── */
         section {
-            padding: 60px 20px;
+            padding: 100px 20px;
         }
         .section-title {
-            font-size: 2.8rem;
+            font-size: 4rem;
             color: #FFD600;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+            font-weight: 900;
             position: relative;
+            letter-spacing: 4px;
         }
         .section-title::after {
             content: "";
             display: block;
-            width: 80px;
-            height: 3px;
+            width: 140px;
+            height: 6px;
             background: #FFD600;
-            margin: 10px auto;
+            margin: 20px auto 0;
+            border-radius: 4px;
         }
 
         /* ── Welcome Section ── */
         .welcome-section {
             background: linear-gradient(135deg, #0d1137, #121836);
-            border-top: 3px solid #FFD600;
-            border-bottom: 3px solid #FFD600;
+            border-top: 5px solid #FFD600;
+            border-bottom: 5px solid #FFD600;
         }
         .welcome-container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
             text-align: center;
         }
         .welcome-content {
             background: rgba(18, 24, 54, 0.6);
-            border-radius: 20px;
-            padding: 35px 40px;
-            border: 1px solid rgba(255, 214, 0, 0.15);
+            border-radius: 30px;
+            padding: 60px 70px;
+            border: 2px solid rgba(255, 214, 0, 0.15);
             position: relative;
+            backdrop-filter: blur(8px);
         }
         .welcome-content::before {
             content: "“";
-            font-size: 5rem;
+            font-size: 8rem;
             color: #FFD600;
-            opacity: 0.15;
+            opacity: 0.1;
             position: absolute;
             top: -10px;
-            left: 20px;
+            left: 35px;
             font-family: serif;
         }
         .welcome-content p {
-            font-size: 1.1rem;
-            line-height: 1.9;
-            margin-bottom: 16px;
+            font-size: 1.5rem;
+            line-height: 2.2;
+            margin-bottom: 22px;
             color: #e8e8e8;
+            font-weight: 500;
         }
         .welcome-content p:last-of-type {
             margin-bottom: 0;
         }
         .welcome-content .greeting-highlight {
             color: #FFD600;
-            font-weight: 700;
-            font-size: 1.3rem;
-            font-family: 'Bebas Neue', cursive;
+            font-weight: 800;
+            font-size: 2rem;
+            font-family: 'Poppins', sans-serif;
             letter-spacing: 2px;
         }
         .welcome-content .closing {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 2px solid rgba(255, 214, 0, 0.2);
-            font-size: 1.2rem;
-            font-weight: 600;
+            margin-top: 35px;
+            padding-top: 35px;
+            border-top: 3px solid rgba(255, 214, 0, 0.25);
+            font-size: 1.8rem;
+            font-weight: 700;
             color: #FFD600;
         }
         .welcome-content .closing .amharic {
             display: block;
-            font-size: 1.4rem;
-            margin-top: 6px;
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 1px;
+            font-size: 2rem;
+            margin-top: 12px;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 2px;
         }
 
         /* ── About ── */
         .about-profile {
-            max-width: 900px;
-            margin: 0 auto 40px;
+            max-width: 1100px;
+            margin: 0 auto 60px;
             background: rgba(18, 24, 54, 0.7);
-            border-left: 4px solid #FFD600;
-            padding: 30px 35px;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            line-height: 1.8;
+            border-left: 12px solid #FFD600;
+            padding: 50px 60px;
+            border-radius: 22px;
+            font-size: 1.5rem;
+            line-height: 2.2;
             text-align: center;
             color: #e8e8e8;
+            font-weight: 500;
         }
         .about-profile .motto-highlight {
             color: #FFD600;
-            font-weight: 700;
-            font-size: 1.2rem;
+            font-weight: 800;
+            font-size: 2rem;
             display: block;
-            margin-top: 12px;
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 1px;
+            margin-top: 20px;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 2px;
         }
 
         /* ── Cards ── */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 35px;
         }
         .card {
             background: #121836;
-            border-radius: 15px;
-            padding: 25px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(255, 214, 0, 0.2);
+            border-radius: 25px;
+            padding: 40px 35px;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 2px solid rgba(255, 214, 0, 0.15);
             text-align: center;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
         }
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 25px rgba(255, 214, 0, 0.15);
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(255, 214, 0, 0.12);
             border-color: #FFD600;
         }
         .card h3 {
             color: #FFD600;
-            margin: 15px 0 10px;
-            font-size: 1.8rem;
+            margin: 22px 0 16px;
+            font-size: 2.6rem;
+            font-weight: 800;
+        }
+        .card p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #d0d0d0;
         }
         .card a {
             color: #FFD600;
             text-decoration: none;
+            font-weight: 600;
         }
         .card a:hover {
             text-decoration: underline;
@@ -374,8 +411,10 @@
             text-align: left;
         }
         .card ul li {
-            padding: 6px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            font-weight: 500;
+            font-size: 1.2rem;
         }
         .card ul li:last-child {
             border-bottom: none;
@@ -383,140 +422,150 @@
 
         /* ── Fund section ── */
         .fund-section {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         .fund-description {
             background: rgba(18, 24, 54, 0.7);
-            border-radius: 15px;
-            padding: 30px 35px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(255, 214, 0, 0.2);
-            font-size: 1.05rem;
-            line-height: 1.8;
+            border-radius: 25px;
+            padding: 50px 60px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(255, 214, 0, 0.15);
+            font-size: 1.4rem;
+            line-height: 2.2;
             text-align: center;
+            font-weight: 500;
         }
         .fund-description p {
-            margin-bottom: 12px;
+            margin-bottom: 18px;
         }
         .fund-description p:last-child {
             margin-bottom: 0;
         }
         .fund-benefits {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin: 35px 0 45px;
         }
         .fund-benefits .benefit-item {
             background: #1A237E;
-            padding: 15px 12px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 214, 0, 0.3);
-            font-weight: 600;
-            font-size: 0.95rem;
+            padding: 28px 22px;
+            border-radius: 18px;
+            border: 2px solid rgba(255, 214, 0, 0.25);
+            font-weight: 700;
+            font-size: 1.2rem;
             text-align: center;
-            transition: 0.3s;
+            transition: all 0.3s ease;
         }
         .fund-benefits .benefit-item:hover {
             border-color: #FFD600;
-            transform: scale(1.03);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 214, 0, 0.12);
         }
         .fund-benefits .benefit-item .icon {
             display: block;
-            font-size: 1.8rem;
-            margin-bottom: 6px;
+            font-size: 3.2rem;
+            margin-bottom: 12px;
         }
         .bank-details {
             background: linear-gradient(135deg, #1A237E, #0d1137);
-            border: 2px solid #FFD600;
-            border-radius: 15px;
-            padding: 25px 30px;
+            border: 4px solid #FFD600;
+            border-radius: 25px;
+            padding: 40px 50px;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 25px;
+            box-shadow: 0 0 60px rgba(255, 214, 0, 0.06);
         }
         .bank-details .bank-label {
-            font-size: 1rem;
+            font-size: 1.4rem;
             color: #ccc;
-            margin-bottom: 6px;
+            margin-bottom: 12px;
+            font-weight: 600;
         }
         .bank-details .account-number {
-            font-size: 2rem;
-            font-weight: bold;
+            font-size: 3.5rem;
+            font-weight: 900;
             color: #FFD600;
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 3px;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 5px;
             word-break: break-all;
         }
         .bank-details .copy-btn {
             background: transparent;
-            border: 1px solid #FFD600;
+            border: 2px solid #FFD600;
             color: #FFD600;
-            padding: 6px 18px;
-            border-radius: 20px;
+            padding: 12px 35px;
+            border-radius: 30px;
             cursor: pointer;
-            font-size: 0.85rem;
-            margin-top: 8px;
-            transition: 0.3s;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 14px;
+            transition: all 0.3s ease;
         }
         .bank-details .copy-btn:hover {
             background: #FFD600;
             color: #1A237E;
+            transform: scale(1.06);
         }
         .bank-details .account-name {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             color: #fff;
-            margin-top: 8px;
-            font-weight: 600;
+            margin-top: 14px;
+            font-weight: 700;
         }
         .bank-details .telebirr {
-            font-size: 1.5rem;
+            font-size: 2.2rem;
             color: #FFD600;
-            margin-top: 6px;
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 2px;
+            margin-top: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            letter-spacing: 3px;
         }
 
         /* ── Contributions Table ── */
         .contributions-section {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         .contributions-intro {
             text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
+            font-size: 1.5rem;
+            margin-bottom: 35px;
             color: #ccc;
+            font-weight: 500;
         }
         .contributions-table-wrapper {
             background: #121836;
-            border-radius: 15px;
+            border-radius: 25px;
             overflow: hidden;
-            border: 1px solid rgba(255, 214, 0, 0.2);
-            margin-bottom: 25px;
+            border: 2px solid rgba(255, 214, 0, 0.15);
+            margin-bottom: 35px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
         }
         .contributions-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 1rem;
+            font-size: 1.3rem;
         }
         .contributions-table thead {
             background: #1A237E;
-            border-bottom: 2px solid #FFD600;
+            border-bottom: 4px solid #FFD600;
         }
         .contributions-table thead th {
-            padding: 14px 18px;
+            padding: 20px 28px;
             text-align: left;
             color: #FFD600;
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
             letter-spacing: 1px;
         }
         .contributions-table thead th:last-child {
             text-align: right;
         }
         .contributions-table tbody tr {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             transition: background 0.3s;
         }
         .contributions-table tbody tr:hover {
@@ -526,56 +575,59 @@
             border-bottom: none;
         }
         .contributions-table tbody td {
-            padding: 12px 18px;
+            padding: 18px 28px;
             color: #e0e0e0;
+            font-weight: 500;
+            font-size: 1.2rem;
         }
         .contributions-table tbody td:first-child {
-            font-weight: 600;
+            font-weight: 700;
             color: #FFD600;
-            width: 60px;
+            width: 70px;
             text-align: center;
         }
         .contributions-table tbody td:last-child {
             text-align: right;
-            font-weight: 600;
+            font-weight: 700;
             color: #FFD600;
         }
         .contributions-table .highlight-row {
             background: rgba(255, 214, 0, 0.08);
-            border-top: 2px solid #FFD600;
-            border-bottom: 2px solid #FFD600;
+            border-top: 4px solid #FFD600;
+            border-bottom: 4px solid #FFD600;
         }
         .contributions-table .highlight-row td {
-            font-weight: 700;
-            font-size: 1.1rem;
+            font-weight: 800;
+            font-size: 1.5rem;
             color: #FFD600;
-            padding: 16px 18px;
+            padding: 24px 28px;
         }
         .contributions-table .highlight-row td:last-child {
-            font-size: 1.3rem;
+            font-size: 1.8rem;
         }
         .contributions-thanks {
             background: rgba(18, 24, 54, 0.7);
-            border-left: 4px solid #FFD600;
-            border-radius: 12px;
-            padding: 25px 30px;
+            border-left: 12px solid #FFD600;
+            border-radius: 22px;
+            padding: 40px 50px;
             text-align: center;
-            font-size: 1.05rem;
-            line-height: 1.8;
+            font-size: 1.4rem;
+            line-height: 2.2;
             color: #e8e8e8;
+            font-weight: 500;
         }
         .contributions-thanks .thanks-icon {
-            font-size: 2.5rem;
+            font-size: 4rem;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 14px;
         }
 
         /* ── Regulations ── */
         .regulations-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            max-width: 1100px;
+            gap: 45px;
+            max-width: 1300px;
             margin: 0 auto;
         }
         .regulations-grid .card {
@@ -583,19 +635,23 @@
         }
         .regulations-grid .card h3 {
             text-align: center;
+            font-size: 2.6rem;
         }
         .regulations-grid .card ul li {
-            padding: 8px 0;
+            padding: 14px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             display: flex;
             align-items: flex-start;
-            gap: 10px;
+            gap: 16px;
+            font-weight: 500;
+            font-size: 1.2rem;
         }
         .regulations-grid .card ul li::before {
             content: "▸";
             color: #FFD600;
             font-weight: bold;
             flex-shrink: 0;
+            font-size: 1.5rem;
         }
         .regulations-grid .card ul li:last-child {
             border-bottom: none;
@@ -604,86 +660,72 @@
         /* ── Motto banner ── */
         .motto-banner {
             background: linear-gradient(135deg, #1A237E, #0d1137);
-            border: 2px solid #FFD600;
-            border-radius: 20px;
-            padding: 35px 30px;
-            margin: 40px auto 0;
-            max-width: 850px;
+            border: 4px solid #FFD600;
+            border-radius: 30px;
+            padding: 60px 50px;
+            margin: 60px auto 0;
+            max-width: 1050px;
             text-align: center;
-            box-shadow: 0 0 30px rgba(255, 214, 0, 0.1);
+            box-shadow: 0 0 70px rgba(255, 214, 0, 0.08);
         }
         .motto-banner .motto-text {
-            font-size: 2.2rem;
-            font-weight: bold;
+            font-size: 3.5rem;
+            font-weight: 900;
             color: #FFD600;
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 3px;
-            line-height: 1.3;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 4px;
+            line-height: 1.5;
         }
         .motto-banner .motto-sub {
             color: #ccc;
-            font-size: 1rem;
-            margin-top: 8px;
-            letter-spacing: 1px;
-        }
-
-        /* ── Squad ── */
-        .squad-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 20px;
-        }
-        .player-card {
-            background: #1A237E;
-            border-radius: 12px;
-            padding: 15px 10px;
-            text-align: center;
-            transition: 0.3s;
-            border: 1px solid #2a3480;
-        }
-        .player-card:hover {
-            border-color: #FFD600;
-            transform: scale(1.03);
-        }
-        .jersey-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #FFD600;
+            font-size: 1.4rem;
+            margin-top: 14px;
+            font-weight: 500;
+            letter-spacing: 3px;
         }
 
         /* ── Chat ── */
         .chat-container {
             background: #0b0f1f;
-            border-radius: 20px;
-            padding: 20px;
-            margin-top: 30px;
-            border: 1px solid #FFD600;
-            max-width: 800px;
+            border-radius: 30px;
+            padding: 35px;
+            margin-top: 45px;
+            border: 2px solid #FFD600;
+            max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
+            box-shadow: 0 6px 40px rgba(0, 0, 0, 0.35);
+        }
+        .chat-container h3 {
+            font-size: 2.2rem;
+            font-weight: 800;
         }
         .chat-messages {
-            height: 200px;
+            height: 300px;
             overflow-y: auto;
             background: #121836;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            padding: 25px;
+            border-radius: 18px;
+            margin-bottom: 25px;
         }
         .chat-messages p {
-            margin-bottom: 6px;
+            margin-bottom: 12px;
+            font-weight: 500;
+            font-size: 1.15rem;
         }
         .chat-input-area {
             display: flex;
-            gap: 10px;
+            gap: 15px;
         }
         .chat-input-area input {
             flex: 1;
-            padding: 12px;
+            padding: 18px 26px;
             border-radius: 30px;
             border: none;
             background: #1e2245;
             color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
         }
         .chat-input-area input:focus-visible {
             outline: 2px solid #FFD600;
@@ -692,124 +734,624 @@
             background: #FFD600;
             border: none;
             border-radius: 30px;
-            padding: 0 25px;
-            font-weight: bold;
+            padding: 0 45px;
+            font-weight: 800;
             cursor: pointer;
             color: #1A237E;
-            font-size: 1rem;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
         }
         .chat-input-area button:hover,
         .chat-input-area button:focus-visible {
             outline: 2px solid #FFD600;
-            outline-offset: 2px;
+            outline-offset: 3px;
+            transform: scale(1.05);
+        }
+
+        /* ── Anthem Section ── */
+        .anthem-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(18, 24, 54, 0.7);
+            border-radius: 30px;
+            padding: 60px 70px;
+            border: 2px solid rgba(255, 214, 0, 0.2);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+        .anthem-container::before {
+            content: "♫";
+            font-size: 18rem;
+            position: absolute;
+            right: -30px;
+            bottom: -50px;
+            color: rgba(255, 214, 0, 0.04);
+            font-family: serif;
+            pointer-events: none;
+        }
+        .anthem-content {
+            color: #e0e0e0;
+            position: relative;
+            z-index: 2;
+        }
+        .anthem-content .verse,
+        .anthem-content .chorus,
+        .anthem-content .outro {
+            margin-bottom: 35px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 214, 0, 0.08);
+        }
+        .anthem-content .verse:last-of-type,
+        .anthem-content .chorus:last-of-type,
+        .anthem-content .outro:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .anthem-content p {
+            font-size: 1.4rem;
+            line-height: 2.2;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        .anthem-content p strong {
+            color: #FFD600;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        .anthem-content .chorus p {
+            color: #FFD600;
+            font-weight: 600;
+        }
+        .anthem-content .chorus p strong {
+            color: #fff;
+            font-weight: 800;
+        }
+        .anthem-content .outro p {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #FFD600;
+            text-align: center;
+            letter-spacing: 4px;
+        }
+        .anthem-content .outro p strong {
+            color: #fff;
+            font-weight: 800;
+        }
+        .anthem-title-sub {
+            text-align: center;
+            color: #ccc;
+            font-style: italic;
+            margin-bottom: 40px;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
         }
 
         /* ═══════════════════════════════════════ */
-        /* ── PREMIUM GALLERY ── */
+        /* ── HEAD COACH SECTION ── */
         /* ═══════════════════════════════════════ */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            max-width: 1200px;
-            margin: 0 auto;
+
+        .coach-section {
+            padding: 90px 20px;
+            background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+            color: #ffffff;
+            text-align: center;
+            border-top: 4px solid #d4af37;
+            border-bottom: 4px solid #d4af37;
         }
-        .gallery-item {
-            position: relative;
+
+        .coach-card {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            color: #111111;
+            border-radius: 25px;
             overflow: hidden;
-            border-radius: 16px;
-            background: #0d1137;
-            border: 1px solid rgba(255, 214, 0, 0.1);
-            aspect-ratio: 1 / 1;
-            cursor: pointer;
-            transition: border-color 0.4s ease;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+            border: 5px solid #d4af37;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
         }
-        .gallery-item:hover {
-            border-color: #FFD600;
+
+        .coach-card:hover {
+            transform: translateY(-16px) scale(1.03);
+            box-shadow: 0 30px 60px rgba(212, 175, 55, 0.4);
         }
-        .gallery-item img {
+
+        .coach-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 550px;
+            overflow: hidden;
+        }
+
+        .coach-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: transform 0.6s ease;
         }
-        .gallery-item:hover img {
-            transform: scale(1.08);
+
+        .coach-card:hover .coach-img {
+            transform: scale(1.1);
         }
-        .gallery-item .overlay {
+
+        .badge-tag {
+            position: absolute;
+            bottom: 22px;
+            left: 22px;
+            background: #d4af37;
+            color: #0a192f;
+            font-weight: 800;
+            padding: 10px 26px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .coach-details {
+            padding: 35px 30px;
+        }
+
+        .coach-details h3 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 6px;
+            color: #0a192f;
+        }
+
+        .coach-details .role {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .coach-details .bio {
+            font-size: 1.2rem;
+            color: #555555;
+            line-height: 1.8;
+        }
+
+        /* ═══════════════════════════════════════ */
+        /* ── RORI HOTEL FC 3D SQUAD ── */
+        /* ═══════════════════════════════════════ */
+
+        .rori-squad {
+            position: relative;
+            padding: 100px 20px;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 0%, rgba(245, 197, 66, 0.16), transparent 40%), #050b14;
+            color: white;
+            font-family: 'Poppins', 'Arial', sans-serif;
+            border-top: 4px solid #f5c542;
+            border-bottom: 4px solid #f5c542;
+        }
+
+        .squad-heading {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .squad-heading span {
+            color: #f5c542;
+            font-size: 1.1rem;
+            letter-spacing: 8px;
+            font-weight: 900;
+        }
+
+        .squad-heading h2 {
+            margin: 14px 0;
+            font-size: clamp(48px, 10vw, 90px);
+            font-weight: 1000;
+            letter-spacing: -2px;
+            color: #fff;
+        }
+
+        .squad-heading p {
+            color: #9da8b7;
+            letter-spacing: 5px;
+            font-size: 1.2rem;
+        }
+
+        .hero-players {
+            width: min(1350px, 100%);
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .hero-player {
+            position: relative;
+            height: 620px;
+            border-radius: 35px;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            background: linear-gradient(145deg, #172b43, #060d18);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.5);
+            transition: transform 0.15s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        .hero-player:hover {
+            box-shadow: 0 45px 100px rgba(0, 0, 0, 0.7), 0 0 45px rgba(245, 197, 66, 0.15);
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            left: 50%;
+            top: 35%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(245, 197, 66, 0.28), transparent 65%);
+            filter: blur(20px);
+            animation: glowPulse 3s infinite ease-in-out;
+        }
+
+        @keyframes glowPulse {
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+        }
+
+        .hero-badge {
+            position: absolute;
+            top: 22px;
+            left: 22px;
+            z-index: 20;
+            padding: 10px 18px;
+            border-radius: 50px;
+            background: #f5c542;
+            color: #050b14;
+            font-size: 0.85rem;
+            font-weight: 1000;
+            letter-spacing: 1px;
+            transform: translateZ(100px);
+        }
+
+        .captain-badge {
+            background: linear-gradient(135deg, #f5c542, #fff1a8);
+        }
+
+        .hero-number {
+            position: absolute;
+            right: 18px;
+            top: 5px;
+            font-size: 210px;
+            line-height: 1;
+            font-weight: 1000;
+            color: rgba(255, 255, 255, 0.055);
+            z-index: 1;
+            transform: translateZ(20px);
+        }
+
+        .hero-image {
+            position: absolute;
+            left: 50%;
+            bottom: 80px;
+            width: 90%;
+            max-width: 420px;
+            height: 460px;
+            object-fit: contain;
+            transform: translateX(-50%) translateZ(100px);
+            filter: drop-shadow(0 30px 25px rgba(0, 0, 0, 0.65));
+            animation: playerFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes playerFloat {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0) translateZ(100px);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-18px) translateZ(130px);
+            }
+        }
+
+        .hero-info {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 28px;
+            z-index: 30;
+            background: linear-gradient(transparent, rgba(2, 7, 13, 0.98));
+            transform: translateZ(120px);
+        }
+
+        .hero-info small {
+            color: #f5c542;
+            font-size: 0.85rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .hero-info h3 {
+            margin: 6px 0;
+            font-size: 2.2rem;
+            font-weight: 1000;
+            color: #fff;
+        }
+
+        .hero-info strong {
+            font-size: 1.3rem;
+            color: #f5c542;
+        }
+
+        .players-title {
+            width: min(1300px, 100%);
+            margin: 110px auto 40px;
+        }
+
+        .players-title h2 {
+            font-size: 2.6rem;
+            margin-bottom: 18px;
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .players-title div {
+            width: 90px;
+            height: 4px;
+            background: #f5c542;
+            border-radius: 2px;
+        }
+
+        .players-grid {
+            width: min(1300px, 100%);
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .player-card {
+            position: relative;
+            height: 340px;
+            border-radius: 25px;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            background: linear-gradient(145deg, #14283f, #07101c);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.15s ease;
+            cursor: pointer;
+        }
+
+        .player-card:hover {
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+        }
+
+        .player-card-number {
+            position: absolute;
+            right: 12px;
+            top: 0;
+            font-size: 100px;
+            font-weight: 1000;
+            color: rgba(255, 255, 255, 0.06);
+        }
+
+        .player-card img {
+            position: absolute;
+            left: 50%;
+            bottom: 55px;
+            width: 85%;
+            height: 250px;
+            object-fit: contain;
+            transform: translateX(-50%) translateZ(70px);
+            filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.6));
+            animation: smallFloat 4s infinite ease-in-out;
+        }
+
+        @keyframes smallFloat {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0) translateZ(70px);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-10px) translateZ(90px);
+            }
+        }
+
+        .player-card-info {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 16px 20px;
-            background: linear-gradient(transparent, rgba(10, 15, 36, 0.92));
+            padding: 18px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+            z-index: 5;
+            transform: translateZ(80px);
+        }
+
+        .player-card-info h3 {
+            margin: 0;
+            font-size: 1.1rem;
             color: #fff;
-            transform: translateY(30%);
-            opacity: 0;
-            transition: all 0.4s ease;
-            font-family: 'Bebas Neue', cursive;
+            font-weight: 700;
+        }
+
+        .player-card-info span {
+            color: #f5c542;
+            font-size: 0.8rem;
+            font-weight: 900;
+        }
+
+        .staff-section {
+            width: min(1000px, 100%);
+            margin: 90px auto 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .staff-card {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 28px 35px;
+            border-radius: 25px;
+            background: linear-gradient(145deg, #172a40, #07111e);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform-style: preserve-3d;
+            transition: transform 0.15s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .staff-card:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .staff-icon {
+            font-size: 3.2rem;
+            transform: translateZ(50px);
+        }
+
+        .staff-card small {
+            color: #f5c542;
+            font-size: 0.8rem;
+            font-weight: 900;
             letter-spacing: 1px;
         }
-        .gallery-item .overlay .label {
-            font-size: 1.1rem;
+
+        .staff-card h3 {
+            margin: 6px 0 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        /* ── Gallery ── */
+        .gallery-section {
+            padding: 90px 20px;
+            background: linear-gradient(135deg, #0a0f24, #121836);
+            text-align: center;
+            border-top: 4px solid #FFD600;
+            border-bottom: 4px solid #FFD600;
+        }
+        .gallery-title {
+            font-size: 4rem;
+            font-weight: 900;
             color: #FFD600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .gallery-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #e0e0e0;
+            margin-bottom: 60px;
+            letter-spacing: 3px;
+        }
+        .gallery-subtitle span {
+            color: #FFD600;
+        }
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            justify-content: center;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        .gallery-card {
+            width: 380px;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+            background: #121836;
+            border: 2px solid rgba(255, 214, 0, 0.1);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        box-shadow 0.4s ease,
+                        border-color 0.4s ease;
+        }
+        .gallery-card:hover {
+            transform: translateY(-16px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(255, 214, 0, 0.15);
+            border-color: #FFD600;
+        }
+        .gallery-img {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
             display: block;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .gallery-item .overlay .sub {
-            font-size: 0.8rem;
-            color: #ccc;
-            font-family: 'Open Sans', sans-serif;
-            letter-spacing: 0;
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.08);
         }
-        .gallery-item:hover .overlay {
-            transform: translateY(0);
-            opacity: 1;
+        .img-caption {
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 22px 24px 24px;
+            color: #FFD600;
+            background: #121836;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            border-top: 1px solid rgba(255, 214, 0, 0.06);
         }
-        .gallery-item.span-2 {
-            grid-column: span 2;
-        }
-        .gallery-item.tall {
-            grid-row: span 2;
-            aspect-ratio: auto;
+        .img-caption small {
+            display: block;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #b0b0b0;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
         }
 
         /* ── Footer ── */
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 50px;
             background: #0a0f24;
-            border-top: 1px solid #FFD600;
-            margin-top: 40px;
+            border-top: 4px solid #FFD600;
+            margin-top: 70px;
+            font-weight: 500;
+            font-size: 1.3rem;
         }
 
         /* ── SILLA COFFEE SHOP ── */
         .cafe-section {
             background: #2b1b14;
             color: #f5f1ea;
-            padding: 0 20px 60px;
-            font-family: 'Open Sans', sans-serif;
+            padding: 0 20px 90px;
+            font-family: 'Poppins', 'Open Sans', sans-serif;
         }
         .cafe-section .container {
-            max-width: 1200px;
+            max-width: 1500px;
             margin: 0 auto;
         }
         .partner-section {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 16px;
-            padding: 30px 25px 25px;
-            margin-bottom: 40px;
+            border-radius: 25px;
+            padding: 50px 40px 40px;
+            margin-bottom: 60px;
             text-align: center;
         }
         .partner-section .partner-label {
-            font-size: 0.75rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 10px;
             color: #d4af37;
             opacity: 0.7;
-            margin-bottom: 18px;
+            margin-bottom: 28px;
             font-weight: 700;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         .partner-section .partner-label::before {
             content: "✦ ";
@@ -822,76 +1364,77 @@
         .partner-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 28px;
         }
         .partner-card {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: 12px;
-            padding: 18px 14px;
+            border-radius: 18px;
+            padding: 28px 20px;
             transition: all 0.3s ease;
             text-align: center;
         }
         .partner-card:hover {
             border-color: #d4af37;
             background: rgba(255, 255, 255, 0.08);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
         }
         .partner-card .variant-tag {
-            font-size: 0.6rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
             color: #d4af37;
             opacity: 0.5;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 12px;
         }
         .partner-card .variant-text {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             color: #f5f1ea;
-            line-height: 1.5;
+            line-height: 1.6;
         }
         .partner-card .variant-text .gold {
             color: #d4af37;
             font-weight: 700;
         }
         .partner-card .variant-text .icon {
-            font-size: 1.2rem;
-            margin: 0 2px;
+            font-size: 1.8rem;
+            margin: 0 4px;
         }
         .partner-card .variant-divider {
-            width: 30px;
+            width: 50px;
             height: 2px;
             background: #d4af37;
-            margin: 8px auto 6px;
+            margin: 14px auto 12px;
             opacity: 0.3;
         }
+
         .cafe-hero {
             position: relative;
             background: linear-gradient(135deg, rgba(43, 27, 20, 0.85), rgba(20, 12, 8, 0.95)),
-                url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400&h=400&fit=crop&crop=center&q=80') center / cover no-repeat;
-            padding: 80px 20px 60px;
+                url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&h=800&fit=crop&crop=center&q=80') center / cover no-repeat;
+            padding: 140px 20px 90px;
             text-align: center;
-            border-radius: 0 0 40px 40px;
-            margin-bottom: 50px;
-            border-bottom: 4px solid #d4af37;
+            border-radius: 0 0 60px 60px;
+            margin-bottom: 70px;
+            border-bottom: 5px solid #d4af37;
             position: relative;
         }
         .cafe-hero::after {
             content: "☕";
-            font-size: 4rem;
+            font-size: 6rem;
             position: absolute;
-            bottom: -30px;
+            bottom: -45px;
             left: 50%;
             transform: translateX(-50%);
             background: #2b1b14;
-            padding: 0 20px;
-            border: 3px solid #d4af37;
+            padding: 0 30px;
+            border: 4px solid #d4af37;
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
+            width: 110px;
+            height: 110px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -899,38 +1442,40 @@
         }
         .cafe-hero h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
+            font-size: 6rem;
             color: #f5f1ea;
             font-weight: 700;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+            margin-bottom: 18px;
         }
         .cafe-hero h2 span {
             color: #d4af37;
             font-style: italic;
         }
         .cafe-hero p {
-            font-size: 1.3rem;
+            font-size: 1.8rem;
             color: #f5f1ea;
             opacity: 0.9;
             font-weight: 300;
-            letter-spacing: 4px;
+            letter-spacing: 8px;
             text-transform: uppercase;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         .cafe-hero .gold-line {
-            width: 120px;
-            height: 3px;
+            width: 180px;
+            height: 5px;
             background: #d4af37;
-            margin: 15px auto 0;
+            margin: 22px auto 0;
+            border-radius: 4px;
         }
+
         .cafe-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 4.2rem;
             color: #f5f1ea;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 45px;
             font-weight: 700;
         }
         .cafe-title span {
@@ -940,62 +1485,67 @@
         .cafe-title::after {
             content: "";
             display: block;
-            width: 80px;
-            height: 3px;
+            width: 140px;
+            height: 5px;
             background: #d4af37;
-            margin: 12px auto;
+            margin: 20px auto;
+            border-radius: 4px;
         }
+
         .cafe-category-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 2.8rem;
             color: #d4af37;
-            margin: 40px 0 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+            margin: 60px 0 32px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid rgba(212, 175, 55, 0.3);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 20px;
+            font-weight: 700;
         }
         .cafe-category-title .icon {
-            font-size: 2rem;
+            font-size: 2.8rem;
         }
+
         .cafe-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
         }
         .cafe-card {
             background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            border-radius: 16px;
-            padding: 25px 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 36px 28px;
             text-align: center;
             transition: all 0.3s ease;
             backdrop-filter: blur(4px);
         }
         .cafe-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-12px);
             border-color: #d4af37;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
             background: rgba(255, 255, 255, 0.08);
         }
         .cafe-card .emoji {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
+            font-size: 4.2rem;
+            margin-bottom: 16px;
             display: block;
         }
         .cafe-card h4 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
+            font-size: 1.8rem;
             color: #f5f1ea;
-            margin-bottom: 6px;
+            margin-bottom: 12px;
             font-weight: 700;
         }
         .cafe-card p {
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             color: #d4c5b5;
-            line-height: 1.4;
+            line-height: 1.5;
             margin-bottom: 0;
+            font-weight: 400;
         }
         .cafe-card.special {
             border-color: #d4af37;
@@ -1007,86 +1557,91 @@
         .cafe-card.special .badge {
             background: #d4af37;
             color: #2b1b14;
-            font-size: 0.7rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            padding: 2px 12px;
-            border-radius: 12px;
+            padding: 6px 22px;
+            border-radius: 18px;
             display: inline-block;
-            margin-bottom: 8px;
+            margin-bottom: 14px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
         .cafe-order-btn {
             display: inline-block;
             background: #d4af37;
             color: #2b1b14;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            font-size: 1.4rem;
-            padding: 16px 50px;
+            font-size: 1.8rem;
+            padding: 24px 70px;
             border-radius: 50px;
             text-decoration: none;
             transition: all 0.3s ease;
             border: 2px solid #d4af37;
-            margin-top: 20px;
-            letter-spacing: 2px;
+            margin-top: 35px;
+            letter-spacing: 3px;
         }
         .cafe-order-btn:hover {
             background: transparent;
             color: #d4af37;
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
-            transform: scale(1.03);
+            box-shadow: 0 0 45px rgba(212, 175, 55, 0.35);
+            transform: scale(1.06);
         }
+
         .cafe-footer-note {
             text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
+            margin-top: 70px;
+            padding-top: 45px;
             border-top: 1px solid rgba(212, 175, 55, 0.2);
-            font-size: 1rem;
+            font-size: 1.3rem;
             color: #d4c5b5;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            font-weight: 500;
         }
         .cafe-footer-note strong {
             color: #d4af37;
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
         }
 
         /* ── Fixtures Table ── */
         .fixtures-section {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         .fixtures-table-wrapper {
             background: #121836;
-            border-radius: 15px;
+            border-radius: 25px;
             overflow: hidden;
-            border: 1px solid rgba(255, 214, 0, 0.2);
-            margin-bottom: 25px;
+            border: 2px solid rgba(255, 214, 0, 0.15);
+            margin-bottom: 35px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
         }
         .fixtures-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 1rem;
+            font-size: 1.3rem;
         }
         .fixtures-table thead {
             background: #1A237E;
-            border-bottom: 2px solid #FFD600;
+            border-bottom: 4px solid #FFD600;
         }
         .fixtures-table thead th {
-            padding: 14px 18px;
+            padding: 20px 28px;
             text-align: left;
             color: #FFD600;
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
             letter-spacing: 1px;
         }
         .fixtures-table thead th:first-child {
-            width: 60px;
+            width: 70px;
             text-align: center;
         }
         .fixtures-table tbody tr {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             transition: background 0.3s;
         }
         .fixtures-table tbody tr:hover {
@@ -1096,39 +1651,43 @@
             border-bottom: none;
         }
         .fixtures-table tbody td {
-            padding: 12px 18px;
+            padding: 18px 28px;
             color: #e0e0e0;
+            font-weight: 500;
+            font-size: 1.2rem;
         }
         .fixtures-table tbody td:first-child {
-            font-weight: 600;
+            font-weight: 700;
             color: #FFD600;
             text-align: center;
         }
         .fixtures-table .category-badge {
             display: inline-block;
-            background: rgba(255, 214, 0, 0.15);
+            background: rgba(255, 214, 0, 0.12);
             color: #FFD600;
-            padding: 2px 12px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border: 1px solid rgba(255, 214, 0, 0.3);
+            padding: 6px 20px;
+            border-radius: 18px;
+            font-size: 1rem;
+            font-weight: 700;
+            border: 1px solid rgba(255, 214, 0, 0.2);
         }
 
         /* ── Registration Form ── */
         .registration-form {
-            max-width: 600px;
+            max-width: 750px;
             margin: 0 auto;
             background: #121836;
-            padding: 30px;
-            border-radius: 20px;
+            padding: 50px;
+            border-radius: 30px;
+            border: 2px solid rgba(255, 214, 0, 0.15);
+            box-shadow: 0 6px 40px rgba(0, 0, 0, 0.25);
         }
         .registration-form label {
             display: block;
-            font-weight: 600;
-            margin-top: 12px;
+            font-weight: 700;
+            margin-top: 22px;
             color: #ccc;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
         }
         .registration-form label:first-of-type {
             margin-top: 0;
@@ -1136,39 +1695,42 @@
         .registration-form input,
         .registration-form select {
             width: 100%;
-            padding: 12px;
-            margin-top: 4px;
+            padding: 18px 24px;
+            margin-top: 8px;
             background: #1e2245;
-            border: 1px solid #2a3480;
+            border: 2px solid #2a3480;
             border-radius: 30px;
             color: white;
-            font-size: 1rem;
+            font-size: 1.15rem;
+            font-weight: 500;
+            transition: border-color 0.3s ease;
         }
         .registration-form input:focus-visible,
         .registration-form select:focus-visible {
-            outline: 2px solid #FFD600;
+            outline: none;
             border-color: #FFD600;
         }
         .registration-form .btn {
             width: 100%;
-            margin-top: 20px;
+            margin-top: 32px;
         }
 
         /* ── Toast ── */
         .toast {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 40px;
+            right: 40px;
             background: #FFD600;
             color: #1A237E;
-            padding: 15px 25px;
+            padding: 24px 42px;
             border-radius: 30px;
-            font-weight: bold;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            font-weight: 800;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
             z-index: 999;
             display: none;
-            max-width: 400px;
-            animation: slideUp 0.4s ease-out;
+            max-width: 600px;
+            animation: slideUp 0.5s ease-out;
+            font-size: 1.2rem;
         }
         .toast.show {
             display: block;
@@ -1177,16 +1739,16 @@
             background: none;
             border: none;
             color: #1A237E;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            margin-left: 12px;
+            margin-left: 20px;
             cursor: pointer;
-            padding: 0 4px;
+            padding: 0 6px;
         }
         @keyframes slideUp {
             0% {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(50px);
             }
             100% {
                 opacity: 1;
@@ -1195,300 +1757,707 @@
         }
 
         /* ── Responsive ── */
-        @media (max-width: 768px) {
-            .rori-profile h1 {
-                font-size: 2.8rem;
+        @media (max-width: 992px) {
+            .partner-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            .gallery-grid {
+                gap: 28px;
+            }
+            .gallery-card {
+                width: 340px;
+            }
+            .gallery-img {
+                height: 290px;
+            }
+            .hero-players {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-player:last-child {
+                grid-column: span 2;
+                max-width: 50%;
+                margin: 0 auto;
+            }
+            .coach-img-wrapper {
+                height: 450px;
             }
             .rori-logo {
-                width: 140px;
-                height: 140px;
+                width: 220px;
+                height: 220px;
+            }
+            .rori-profile h1 {
+                font-size: 4.5rem;
+            }
+            .rori-profile p {
+                font-size: 1.6rem;
+                letter-spacing: 6px;
+            }
+            .stat-number {
+                font-size: 3.5rem;
+            }
+            .stats-bar {
+                gap: 40px;
+            }
+            .stat-item {
+                padding: 22px 35px;
+            }
+            .section-title {
+                font-size: 3.2rem;
+            }
+            .welcome-content {
+                padding: 45px 40px;
+            }
+            .welcome-content p {
+                font-size: 1.3rem;
+            }
+            .bank-details .account-number {
+                font-size: 2.8rem;
+            }
+            .cafe-hero h2 {
+                font-size: 4.5rem;
+            }
+            .cafe-hero p {
+                font-size: 1.4rem;
+            }
+            .cafe-title {
+                font-size: 3.2rem;
+            }
+            .cafe-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 22px;
+            }
+            .cafe-hero::after {
+                width: 90px;
+                height: 90px;
+                font-size: 3.8rem;
+                bottom: -38px;
+            }
+            .gallery-title {
+                font-size: 3.2rem;
+            }
+            .gallery-subtitle {
+                font-size: 1.3rem;
+            }
+            .anthem-container {
+                padding: 45px 40px;
+            }
+            .anthem-content p {
+                font-size: 1.2rem;
+            }
+            .players-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .staff-section {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+            .rori-profile h1 {
+                font-size: 3.5rem;
+                letter-spacing: 2px;
+            }
+            .rori-logo {
+                width: 170px;
+                height: 170px;
+            }
+            .rori-profile p {
+                font-size: 1.3rem;
+                letter-spacing: 4px;
             }
             .nav-links {
-                gap: 10px;
+                gap: 12px;
                 justify-content: center;
             }
             .nav-links a {
-                font-size: 0.75rem;
+                font-size: 0.9rem;
             }
             nav {
-                padding: 10px 16px;
+                padding: 12px 20px;
                 justify-content: center;
             }
             .nav-logo img {
-                height: 40px;
-                width: 40px;
+                height: 50px;
+                width: 50px;
             }
             .stats-bar {
                 gap: 20px;
             }
             .stat-item {
-                padding: 10px 18px;
+                padding: 16px 25px;
             }
             .stat-number {
-                font-size: 2rem;
+                font-size: 2.8rem;
             }
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-            .gallery-item.span-2 {
-                grid-column: span 2;
-            }
-            .gallery-item.tall {
-                grid-row: span 1;
-                aspect-ratio: 1 / 1;
+            .stat-item .stat-label {
+                font-size: 1rem;
             }
             .regulations-grid {
                 grid-template-columns: 1fr;
+                gap: 35px;
             }
             .motto-banner .motto-text {
-                font-size: 1.6rem;
+                font-size: 2.4rem;
+            }
+            .motto-banner .motto-sub {
+                font-size: 1.1rem;
             }
             .about-profile {
-                padding: 20px 18px;
-                font-size: 1rem;
+                padding: 30px 25px;
+                font-size: 1.15rem;
+            }
+            .about-profile .motto-highlight {
+                font-size: 1.5rem;
             }
             .bank-details .account-number {
-                font-size: 1.4rem;
+                font-size: 1.8rem;
             }
             .fund-description {
-                padding: 20px;
-                font-size: 0.95rem;
+                padding: 30px 25px;
+                font-size: 1.1rem;
             }
             .fund-benefits {
                 grid-template-columns: 1fr 1fr;
+                gap: 16px;
             }
             .contributions-table-wrapper {
                 overflow-x: auto;
             }
             .contributions-table {
-                font-size: 0.85rem;
-                min-width: 500px;
+                font-size: 1rem;
+                min-width: 600px;
             }
             .contributions-table thead th,
             .contributions-table tbody td {
-                padding: 10px 12px;
+                padding: 12px 16px;
             }
             .contributions-table .highlight-row td {
-                font-size: 1rem;
+                font-size: 1.1rem;
+                padding: 14px 16px;
             }
             .welcome-content {
-                padding: 25px 20px;
+                padding: 35px 28px;
             }
             .welcome-content p {
-                font-size: 1rem;
+                font-size: 1.15rem;
             }
             .welcome-content .closing .amharic {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
             .cafe-hero h2 {
-                font-size: 2.8rem;
+                font-size: 3.5rem;
             }
             .cafe-hero p {
-                font-size: 1rem;
-                letter-spacing: 2px;
+                font-size: 1.1rem;
+                letter-spacing: 4px;
             }
             .cafe-title {
-                font-size: 2rem;
+                font-size: 2.6rem;
             }
             .cafe-category-title {
-                font-size: 1.6rem;
+                font-size: 2rem;
             }
             .cafe-grid {
-                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 18px;
             }
             .cafe-hero::after {
-                width: 60px;
-                height: 60px;
-                font-size: 2.5rem;
-                bottom: -25px;
+                width: 80px;
+                height: 80px;
+                font-size: 3.2rem;
+                bottom: -35px;
             }
             .partner-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: 12px;
+                gap: 15px;
             }
             .partner-card .variant-text {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             .fixtures-table-wrapper {
                 overflow-x: auto;
             }
             .fixtures-table {
-                font-size: 0.85rem;
-                min-width: 500px;
+                font-size: 1rem;
+                min-width: 600px;
             }
             .fixtures-table thead th,
             .fixtures-table tbody td {
-                padding: 10px 12px;
+                padding: 12px 16px;
+            }
+            .section-title {
+                font-size: 2.6rem;
+            }
+            .hero {
+                min-height: 70vh;
+                padding: 50px 16px 35px;
+            }
+            .btn {
+                font-size: 1.2rem;
+                padding: 16px 32px;
+            }
+            section {
+                padding: 60px 16px;
+            }
+            .gallery-grid {
+                gap: 22px;
+            }
+            .gallery-card {
+                width: 320px;
+            }
+            .gallery-img {
+                height: 260px;
+            }
+            .gallery-title {
+                font-size: 2.6rem;
+            }
+            .gallery-subtitle {
+                font-size: 1.1rem;
+            }
+            .anthem-container {
+                padding: 35px 30px;
+            }
+            .anthem-content p {
+                font-size: 1.1rem;
+            }
+            .anthem-content .outro p {
+                font-size: 1.3rem;
+            }
+            .coach-img-wrapper {
+                height: 380px;
+            }
+            .coach-card {
+                max-width: 400px;
+            }
+            .coach-details h3 {
+                font-size: 2.2rem;
+            }
+            .coach-details .bio {
+                font-size: 1rem;
+            }
+            .chat-container {
+                padding: 22px;
+            }
+            .chat-container h3 {
+                font-size: 1.6rem;
+            }
+            .chat-messages {
+                height: 240px;
+                padding: 18px;
+            }
+            .chat-messages p {
+                font-size: 1rem;
+            }
+            .chat-input-area input {
+                padding: 14px 20px;
+                font-size: 1rem;
+            }
+            .chat-input-area button {
+                padding: 0 30px;
+                font-size: 1.1rem;
+            }
+            .registration-form {
+                padding: 32px 25px;
+            }
+            .registration-form input {
+                padding: 14px 18px;
+                font-size: 1rem;
+            }
+            .bank-details {
+                padding: 28px 25px;
+            }
+            .bank-details .telebirr {
+                font-size: 1.5rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 22px;
+            }
+            .card {
+                padding: 25px 20px;
+            }
+            .card h3 {
+                font-size: 1.8rem;
+            }
+            .card p {
+                font-size: 1.05rem;
+            }
+            .hero-players {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .hero-player {
+                height: 540px;
+            }
+            .hero-player:last-child {
+                grid-column: span 1;
+                max-width: 100%;
+            }
+            .players-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .staff-section {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .staff-card {
+                padding: 22px 28px;
+            }
+            .squad-heading h2 {
+                font-size: 2.8rem;
+            }
+            .squad-heading span {
+                font-size: 0.9rem;
+                letter-spacing: 5px;
+            }
+            .hero-number {
+                font-size: 140px;
+            }
+            .hero-image {
+                height: 380px;
+                bottom: 70px;
+            }
+            .hero-info h3 {
+                font-size: 1.8rem;
+            }
+            .player-card {
+                height: 300px;
+            }
+            .player-card img {
+                height: 210px;
+                bottom: 45px;
+            }
+            .player-card-number {
+                font-size: 80px;
+            }
+            .coach-img-wrapper {
+                height: 420px;
             }
         }
         @media (max-width: 480px) {
+            body {
+                font-size: 16px;
+            }
             .rori-profile h1 {
-                font-size: 2.2rem;
+                font-size: 2.6rem;
+                letter-spacing: 1px;
             }
             .rori-logo {
-                width: 120px;
-                height: 120px;
+                width: 130px;
+                height: 130px;
             }
             .rori-profile p {
-                font-size: 0.9rem;
-                letter-spacing: 2px;
+                font-size: 1rem;
+                letter-spacing: 3px;
             }
             .btn {
                 font-size: 1rem;
-                padding: 10px 20px;
+                padding: 14px 28px;
             }
             .section-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             .nav-links a {
-                font-size: 0.7rem;
+                font-size: 0.75rem;
             }
             .motto-banner .motto-text {
-                font-size: 1.2rem;
+                font-size: 1.8rem;
             }
             .motto-banner {
-                padding: 20px 16px;
+                padding: 30px 20px;
             }
             .fund-benefits {
                 grid-template-columns: 1fr;
+                gap: 14px;
             }
             .bank-details .account-number {
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+            }
+            .bank-details {
+                padding: 22px 18px;
+            }
+            .bank-details .telebirr {
+                font-size: 1.2rem;
+            }
+            .bank-details .account-name {
                 font-size: 1.2rem;
             }
             .welcome-content::before {
-                font-size: 3rem;
-                left: 10px;
+                font-size: 4rem;
+                left: 15px;
             }
             .cafe-hero h2 {
-                font-size: 2rem;
+                font-size: 2.6rem;
             }
             .cafe-grid {
                 grid-template-columns: 1fr 1fr;
+                gap: 14px;
             }
             .cafe-card .emoji {
-                font-size: 2rem;
+                font-size: 2.6rem;
             }
             .cafe-card h4 {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             .cafe-card p {
-                font-size: 0.8rem;
+                font-size: 0.9rem;
             }
             .cafe-order-btn {
-                font-size: 1rem;
-                padding: 14px 30px;
+                font-size: 1.1rem;
+                padding: 16px 35px;
             }
             .partner-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: 10px;
+                gap: 12px;
             }
             .partner-card {
-                padding: 14px 10px;
+                padding: 16px 12px;
             }
             .partner-card .variant-text {
-                font-size: 0.85rem;
+                font-size: 0.95rem;
             }
             .partner-card .variant-tag {
-                font-size: 0.5rem;
+                font-size: 0.55rem;
             }
             .hero {
-                min-height: 400px;
-                padding: 40px 16px 30px;
+                min-height: 60vh;
+                padding: 35px 12px 25px;
             }
             .stat-number {
-                font-size: 1.6rem;
+                font-size: 2.2rem;
             }
             .stat-item {
-                padding: 8px 14px;
+                padding: 12px 18px;
             }
             .stats-bar {
                 gap: 12px;
             }
             section {
-                padding: 40px 12px;
+                padding: 45px 12px;
             }
             .card-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: 14px;
+                gap: 16px;
             }
             .card {
-                padding: 16px 12px;
+                padding: 18px 14px;
             }
             .card h3 {
-                font-size: 1.3rem;
-                margin: 10px 0 6px;
+                font-size: 1.5rem;
+                margin: 14px 0 10px;
             }
-            .squad-grid {
-                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-                gap: 12px;
-            }
-            .player-card {
-                padding: 10px 6px;
-            }
-            .jersey-number {
-                font-size: 1.4rem;
+            .card p {
+                font-size: 0.95rem;
             }
             .chat-container {
-                padding: 14px;
+                padding: 16px;
+            }
+            .chat-container h3 {
+                font-size: 1.2rem;
             }
             .chat-input-area input {
-                padding: 10px;
+                padding: 12px 16px;
                 font-size: 0.9rem;
             }
             .chat-input-area button {
-                padding: 0 16px;
-                font-size: 0.85rem;
-            }
-            .registration-form {
-                padding: 20px;
-            }
-            .registration-form input {
-                padding: 10px;
+                padding: 0 20px;
                 font-size: 0.9rem;
             }
-            .bank-details {
-                padding: 18px 16px;
+            .registration-form {
+                padding: 22px 18px;
             }
-            .bank-details .account-number {
-                font-size: 1.1rem;
+            .registration-form input {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+            .registration-form label {
+                font-size: 1rem;
             }
             .contributions-table {
-                font-size: 0.75rem;
-                min-width: 400px;
+                font-size: 0.85rem;
+                min-width: 450px;
             }
             .contributions-table thead th,
             .contributions-table tbody td {
-                padding: 8px 10px;
+                padding: 10px 12px;
             }
             .contributions-table .highlight-row td {
-                font-size: 0.9rem;
-                padding: 12px 10px;
+                font-size: 0.95rem;
+                padding: 12px 12px;
             }
             .contributions-thanks {
-                padding: 18px 16px;
-                font-size: 0.95rem;
+                padding: 22px 18px;
+                font-size: 1.05rem;
             }
             .fixtures-table {
-                font-size: 0.75rem;
-                min-width: 400px;
+                font-size: 0.85rem;
+                min-width: 450px;
             }
             .fixtures-table thead th,
             .fixtures-table tbody td {
-                padding: 8px 10px;
+                padding: 10px 12px;
+            }
+            .about-profile {
+                padding: 22px 16px;
+                font-size: 1rem;
+            }
+            .about-profile .motto-highlight {
+                font-size: 1.2rem;
+            }
+            .fund-description {
+                padding: 22px 16px;
+                font-size: 0.95rem;
+            }
+            .welcome-content {
+                padding: 22px 16px;
+            }
+            .welcome-content p {
+                font-size: 1rem;
+            }
+            .welcome-content .greeting-highlight {
+                font-size: 1.2rem;
+            }
+            .welcome-content .closing {
+                font-size: 1.1rem;
+            }
+            .welcome-content .closing .amharic {
+                font-size: 1.1rem;
+            }
+            .cafe-hero {
+                padding: 70px 16px 55px;
+            }
+            .cafe-hero::after {
+                width: 70px;
+                height: 70px;
+                font-size: 2.6rem;
+                bottom: -30px;
+            }
+            .cafe-category-title {
+                font-size: 1.5rem;
+                margin: 35px 0 18px;
+            }
+            .cafe-category-title .icon {
+                font-size: 1.8rem;
+            }
+            .cafe-title {
+                font-size: 2.2rem;
+            }
+            .toast {
+                left: 16px;
+                right: 16px;
+                bottom: 16px;
+                max-width: none;
+                font-size: 1rem;
+                padding: 16px 22px;
+            }
+            footer {
+                font-size: 0.95rem;
+                padding: 28px 16px;
+            }
+            .anthem-container {
+                padding: 25px 18px;
+            }
+            .anthem-content p {
+                font-size: 0.95rem;
+            }
+            .anthem-content .outro p {
+                font-size: 1.1rem;
+            }
+            .anthem-container::before {
+                font-size: 7rem;
+                right: -10px;
+                bottom: -25px;
             }
             .gallery-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
+                gap: 16px;
             }
-            .gallery-item.span-2 {
-                grid-column: span 2;
+            .gallery-card {
+                width: 100%;
+                max-width: 400px;
             }
-            .gallery-item .overlay .label {
+            .gallery-img {
+                height: 220px;
+            }
+            .gallery-title {
+                font-size: 2rem;
+            }
+            .gallery-subtitle {
+                font-size: 1rem;
+            }
+            .img-caption {
+                font-size: 1.1rem;
+                padding: 16px 18px 18px;
+            }
+            .img-caption small {
                 font-size: 0.85rem;
             }
-            .gallery-item .overlay .sub {
-                font-size: 0.65rem;
+            .coach-img-wrapper {
+                height: 300px;
+            }
+            .coach-card {
+                max-width: 100%;
+                margin: 20px 10px;
+            }
+            .coach-details h3 {
+                font-size: 1.8rem;
+            }
+            .coach-details .role {
+                font-size: 1rem;
+            }
+            .coach-details .bio {
+                font-size: 0.9rem;
+            }
+            .badge-tag {
+                font-size: 0.85rem;
+                padding: 6px 16px;
+            }
+            .hero-player {
+                height: 440px;
+            }
+            .hero-number {
+                font-size: 120px;
+            }
+            .hero-image {
+                height: 340px;
+                bottom: 60px;
+            }
+            .hero-info h3 {
+                font-size: 1.6rem;
+            }
+            .players-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+            .player-card {
+                height: 270px;
+            }
+            .player-card img {
+                height: 190px;
+                bottom: 40px;
+            }
+            .player-card-number {
+                font-size: 70px;
+            }
+            .squad-heading h2 {
+                font-size: 2.2rem;
+            }
+            .staff-section {
+                gap: 12px;
+            }
+            .staff-card {
+                padding: 16px 20px;
+                gap: 14px;
+            }
+            .staff-icon {
+                font-size: 2rem;
+            }
+            .staff-card h3 {
+                font-size: 1rem;
             }
         }
     </style>
@@ -1504,12 +2473,14 @@
             <a href="#home">Home</a>
             <a href="#welcome">Welcome</a>
             <a href="#about">About</a>
-            <a href="#team">Team</a>
+            <a href="#rori-squad">Squad</a>
+            <a href="#coach">Coach</a>
             <a href="#health">Health</a>
             <a href="#gym">Gym</a>
             <a href="#fund">Fund</a>
             <a href="#contributions">Contributions</a>
             <a href="#regulations">Regulations</a>
+            <a href="#anthem">Anthem</a>
             <a href="#fixtures">Fixtures</a>
             <a href="#cafe">Café</a>
             <a href="#news">News</a>
@@ -1521,13 +2492,7 @@
 
     <!-- ─── Hero ─── -->
     <section class="hero" id="home">
-        <!-- RORI FC Profile Logo -->
         <div class="rori-profile">
-            <!-- 
-                ⚠️ REPLACE `rori-fc-logo.png` WITH YOUR ACTUAL LOGO FILE.
-                Place the logo file in the same folder as this HTML file.
-                You can also use a full URL if hosted online.
-            -->
             <img
                 src="rori-fc-logo.png"
                 alt="RORI Community FC Logo"
@@ -1538,9 +2503,9 @@
         </div>
 
         <div class="stats-bar">
-            <div class="stat-item"><span class="stat-number">44</span><br />Members</div>
-            <div class="stat-item"><span class="stat-number">2</span><br />Training Days</div>
-            <div class="stat-item"><span class="stat-number">2024</span><br />Est.</div>
+            <div class="stat-item"><span class="stat-number">42</span><br /><span class="stat-label">Players</span></div>
+            <div class="stat-item"><span class="stat-number">2</span><br /><span class="stat-label">Training Days</span></div>
+            <div class="stat-item"><span class="stat-number">2024</span><br /><span class="stat-label">Est.</span></div>
         </div>
         <div class="cta-buttons">
             <a href="#register" class="btn">Join Us</a>
@@ -1551,10 +2516,10 @@
     <!-- ─── Welcome Section ─── -->
     <section class="welcome-section" id="welcome">
         <div class="welcome-container">
-            <h2 class="section-title">Welcome | ዳኤ ቡሹ <span style="font-size:1.5rem; color:#fff;">(Da’e Bushu)</span></h2>
+            <h2 class="section-title">Welcome | ዳኤ ቡሹ <span style="font-size:2.4rem; color:#fff;">(Da'e Bushu)</span></h2>
             <div class="welcome-content">
                 <p>Welcome to Rori Community FC &amp; Rori Health Team official website.</p>
-                <p><span class="greeting-highlight">ዳኤ ቡሹ (Da’e Bushu)</span> is a traditional Sidama greeting that means "Welcome" and carries a deep sense of respect, warmth, and unity within the community.</p>
+                <p><span class="greeting-highlight">ዳኤ ቡሹ (Da'e Bushu)</span> is a traditional Sidama greeting that means "Welcome" and carries a deep sense of respect, warmth, and unity within the community.</p>
                 <p>We are proud to share this space with our players, staff, and supporters who are building a strong culture of football, health, discipline, and teamwork in Hawassa.</p>
                 <p>At Rori Community FC, we believe in more than just football. We believe in growth, wellness, and community spirit. This platform brings together our club updates, health programs, training schedules, and development projects.</p>
                 <p>Step inside, explore, and be part of our journey.</p>
@@ -1572,7 +2537,7 @@
         <div class="about-profile">
             <p>ሮሪ ሆቴል ኤፍሲ በሀዋሳ ከተማ መሀል የሚገኝ ሲሆን፣ ሙያዊ እግር ኳስን ከማህበረሰብ ተሳትፎ እና ከጤና ጋር የሚያገናኝ ቡድን ነው። እ.ኤ.አ. በ2024 የተመሠረተው ክለባችን ወጣቶችን ችሎታ ማጎልበት፣ ጤናማ የአኗኗር ልምድ ማስፋፋት እና በክብር ለመወዳደር ቁርጠኛ ነው።</p>
             <span class="motto-highlight">"ተሰጥኦን እናበቃለን፤ ሻምፒዮኖችን እንፈጥራለን!"</span>
-            <p style="margin-top:12px; font-size:0.95rem; color:#ccc;">በቡድን መንፈስ፣ በትጋት እና በተግሣጽ የተገነባው ሮሪ ሆቴል ኤፍሲ፣ ለአትሌቶች እንዲሁም ለደጋፊዎች ሁለተኛ ቤት መሆንን ያለም ያምናል።</p>
+            <p style="margin-top:20px; font-size:1.15rem; color:#ccc; font-weight:500;">በቡድን መንፈስ፣ በትጋት እና በተግሣጽ የተገነባው ሮሪ ሆቴል ኤፍሲ፣ ለአትሌቶች እንዲሁም ለደጋፊዎች ሁለተኛ ቤት መሆንን ያለም ያምናል።</p>
         </div>
         <div class="card-grid">
             <div class="card"><h3>👁️ Vision</h3><p>To be a leading community football club in Ethiopia, inspiring through sport and wellness.</p></div>
@@ -1582,17 +2547,111 @@
         </div>
     </section>
 
-    <!-- ─── Team ─── -->
-    <section id="team">
-        <h2 class="section-title">Members &amp; Staff</h2>
-        <h3 style="color:#FFD600; text-align:center; margin-bottom:20px;">Full Roster (44 Members)</h3>
-        <div class="squad-grid" id="squadContainer"></div>
-        <h3 style="color:#FFD600; text-align:center; margin:40px 0 20px;">Coaching &amp; Management</h3>
-        <div class="card-grid">
-            <div class="card"><h3>🧢 Head Coach</h3><p><strong>Nebiyu Yonas</strong></p></div>
-            <div class="card"><h3>🩺 Team Doctor</h3><p><strong>Dr. Yonas Tadesse</strong></p></div>
-            <div class="card"><h3>💪 S&amp;C Coach</h3><p><strong>Coach Yedidiya</strong></p></div>
-            <div class="card"><h3>👑 Owner</h3><p><strong>Fishe Ro</strong></p></div>
+    <!-- ════════════════════════════════════════════════════ -->
+    <!-- ─── RORI HOTEL FC 3D SQUAD ─── -->
+    <!-- ════════════════════════════════════════════════════ -->
+    <section class="rori-squad" id="rori-squad">
+
+        <div class="squad-heading">
+            <span>⚽ RORI HOTEL FC</span>
+            <h2>THE SQUAD</h2>
+            <p>UNITY · HEALTH · COMMUNITY</p>
+        </div>
+
+        <!-- HERO PLAYERS -->
+        <div class="hero-players">
+
+            <!-- AMIR A -->
+            <article class="hero-player attacker" data-tilt>
+                <div class="hero-glow"></div>
+                <div class="hero-badge">⚡ ATTACKER</div>
+                <div class="hero-number">10</div>
+                <img src="images/player-10.png" class="hero-image" alt="Amir A" onerror="this.style.opacity='0'">
+                <div class="hero-info">
+                    <small>RORI HOTEL FC</small>
+                    <h3>AMIR A</h3>
+                    <strong>#10</strong>
+                </div>
+            </article>
+
+            <!-- TARE -->
+            <article class="hero-player captain" data-tilt>
+                <div class="hero-glow"></div>
+                <div class="hero-badge captain-badge">👑 CAPTAIN</div>
+                <div class="hero-number">07</div>
+                <img src="images/player-7.png" class="hero-image" alt="Tare" onerror="this.style.opacity='0'">
+                <div class="hero-info">
+                    <small>TEAM CAPTAIN</small>
+                    <h3>TARE</h3>
+                    <strong>#7</strong>
+                </div>
+            </article>
+
+            <!-- GOALKEEPER -->
+            <article class="hero-player goalkeeper" data-tilt>
+                <div class="hero-glow"></div>
+                <div class="hero-badge">🥅 GOALKEEPER</div>
+                <div class="hero-number">01</div>
+                <img src="images/player-1.png" class="hero-image" alt="Keper Hizkela" onerror="this.style.opacity='0'">
+                <div class="hero-info">
+                    <small>GOALKEEPER</small>
+                    <h3>KEPER HIZKELA</h3>
+                    <strong>#1</strong>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- OTHER PLAYERS -->
+        <div class="players-title">
+            <h2>OUR PLAYERS</h2>
+            <div></div>
+        </div>
+
+        <div class="players-grid" id="playersGrid"></div>
+
+        <!-- STAFF -->
+        <div class="staff-section">
+
+            <article class="staff-card" data-tilt>
+                <div class="staff-icon">🏆</div>
+                <div>
+                    <small>HEAD COACH</small>
+                    <h3>Nebiyu Yonas</h3>
+                </div>
+            </article>
+
+            <article class="staff-card" data-tilt>
+                <div class="staff-icon">👤</div>
+                <div>
+                    <small>OWNER</small>
+                    <h3>Tesfaye Y</h3>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- ─── Head Coach Section ─── -->
+    <section class="coach-section" id="coach">
+        <div class="container">
+            <h2 class="section-title">👨‍🏫 Head Coach</h2>
+            <div class="coach-card">
+                <div class="coach-img-wrapper">
+                    <img class="coach-img" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=1000&fit=crop&crop=center&q=80" alt="Nebiyu Yonas - Head Coach">
+                    <span class="badge-tag">Head Coach</span>
+                </div>
+                <div class="coach-details">
+                    <h3>Nebiyu Yonas</h3>
+                    <p class="role">⚽ Head Coach • RORI Community FC</p>
+                    <p class="bio">
+                        Nebiyu Yonas is a passionate and experienced football coach dedicated to developing young talent.
+                        With a strong emphasis on discipline, teamwork, and tactical awareness, he leads RORI Community FC
+                        with a vision of building a competitive and united team that represents the spirit of Hawassa.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1612,21 +2671,21 @@
     <!-- ─── Gym ─── -->
     <section id="gym">
         <h2 class="section-title">የጂም አባላት ጥሪ</h2>
-        <div style="max-width:900px; margin:0 auto 30px; text-align:center; font-size:1.2rem;">
+        <div style="max-width:1100px; margin:0 auto 45px; text-align:center; font-size:1.5rem; font-weight:500;">
             <p>ሮሪ ጤና ቡድን አዳዲስ የጂም አባላትን በደስታ ይቀበላል!</p>
-            <p>ጤናማ አኗኗር የሚወዱ፣ የአካል ብቃታቸውን ማሻሻል የሚፈልጉ እና ከቡድን ጋር በትብብር ለመስራት ፈቃደኛ የሆኑ ሁሉ እንዲቀላቀሉን እንጋብዛለን።</p>
+            <p style="margin-top:12px;">ጤናማ አኗኗር የሚወዱ፣ የአካል ብቃታቸውን ማሻሻል የሚፈልጉ እና ከቡድን ጋር በትብብር ለመስራት ፈቃደኛ የሆኑ ሁሉ እንዲቀላቀሉን እንጋብዛለን።</p>
         </div>
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:30px; max-width:1000px; margin:0 auto;">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:40px; max-width:1200px; margin:0 auto;">
             <div class="card" style="text-align:left;">
-                <h3 style="text-align:center;">መስፈርቶች</h3>
+                <h3 style="text-align:center; font-size:2.4rem;">መስፈርቶች</h3>
                 <ul><li>ለጤና እና ለስፖርት ፍላጎት ያለው</li><li>የቡድን መንፈስ ያለው</li><li>ስልጠናን በመደበኛነት ለመከታተል ፈቃደኛ</li><li>የሮሪ ሆቴል ሰራተኛ ወይም በቡድኑ የሚፈቀድ አባል</li></ul>
             </div>
             <div class="card" style="text-align:left;">
-                <h3 style="text-align:center;">የምዝገባ ጥቅሞች</h3>
+                <h3 style="text-align:center; font-size:2.4rem;">የምዝገባ ጥቅሞች</h3>
                 <ul><li>የመደበኛ የጂም ስልጠና</li><li>የጤና እና የአካል ብቃት ምክር</li><li>የስፖርት እና የጤና ፕሮግራሞች</li><li>ከአባላት ጋር የትብብር እና የወዳጅነት አካባቢ</li></ul>
             </div>
         </div>
-        <div style="text-align:center; margin-top:30px; font-size:1.4rem; font-weight:bold; color:#FFD600;">"ጤናማ ሰው፣ ጠንካራ ቡድን፣ የተሻለ ውጤት!"</div>
+        <div style="text-align:center; margin-top:45px; font-size:2.2rem; font-weight:900; color:#FFD600; letter-spacing:3px;">"ጤናማ ሰው፣ ጠንካራ ቡድን፣ የተሻለ ውጤት!"</div>
     </section>
 
     <!-- ─── Fund ─── -->
@@ -1638,7 +2697,7 @@
                 <p>The program was formed through the collaboration of the club's leadership, coaching staff, gym members, and employees, with a shared vision of building a stronger, healthier, and more disciplined sports community.</p>
                 <p>Our goal is simple: to support players and members with proper training equipment, fitness development programs, medical support, nutrition guidance, and structured wellness activities. We believe that strong health builds strong performance, both on and off the field.</p>
             </div>
-            <h3 style="color:#FFD600; text-align:center; font-size:1.8rem; margin-bottom:15px;">Through this fundraiser, we aim to raise funds to support:</h3>
+            <h3 style="color:#FFD600; text-align:center; font-size:2.6rem; font-weight:800; margin-bottom:28px;">Through this fundraiser, we aim to raise funds to support:</h3>
             <div class="fund-benefits">
                 <div class="benefit-item"><span class="icon">🏋️</span> Sports &amp; gym equipment for training</div>
                 <div class="benefit-item"><span class="icon">🩺</span> Health &amp; medical support for players</div>
@@ -1646,10 +2705,10 @@
                 <div class="benefit-item"><span class="icon">🏆</span> Team development &amp; local competitions</div>
                 <div class="benefit-item"><span class="icon">⚽</span> Youth football growth &amp; community engagement</div>
             </div>
-            <div class="fund-description" style="border-color:#FFD600;">
+            <div class="fund-description" style="border:3px solid #FFD600;">
                 <p><em>Every contribution will directly help improve the quality of training and create better opportunities for young players who are committed to developing their talent and discipline.</em></p>
-                <p style="font-weight:600; color:#FFD600; font-size:1.1rem; margin-top:10px;">This is more than just a football project. It is a movement to build healthier lives, stronger teamwork, and a brighter future for our community.</p>
-                <p style="margin-top:10px;">Thank you for your support and belief in our vision.</p>
+                <p style="font-weight:800; color:#FFD600; font-size:1.6rem; margin-top:18px;">This is more than just a football project. It is a movement to build healthier lives, stronger teamwork, and a brighter future for our community.</p>
+                <p style="margin-top:18px; font-weight:600;">Thank you for your support and belief in our vision.</p>
             </div>
             <div class="bank-details">
                 <div class="bank-label">🏦 Bank Account</div>
@@ -1657,7 +2716,7 @@
                 <button class="copy-btn" onclick="copyAccount()">📋 Copy Account Number</button>
                 <div class="account-name">👤 Account Name: <strong>RORI FC</strong></div>
                 <div class="telebirr">📱 Telebirr: 0926523487</div>
-                <p style="font-size:0.9rem; color:#aaa; margin-top:12px;">🙏 Your support helps RORI FC grow and develop the community through football. ❤️⚽</p>
+                <p style="font-size:1.3rem; color:#aaa; margin-top:18px; font-weight:500;">🙏 Your support helps RORI FC grow and develop the community through football. ❤️⚽</p>
             </div>
         </div>
     </section>
@@ -1728,6 +2787,81 @@
         </div>
     </section>
 
+    <!-- ─── Anthem Section ─── -->
+    <section id="anthem">
+        <h2 class="section-title">🎵 Club Anthem</h2>
+        <div class="anthem-container">
+            <div class="anthem-content">
+                <h3 style="color: #FFD600; font-size: 3rem; text-align: center; margin-bottom: 6px; font-weight: 900; letter-spacing: 4px;">RORI Forever</h3>
+                <p class="anthem-title-sub">(Rori Community FC Anthem)</p>
+
+                <div class="verse">
+                    <p><strong>Verse 1</strong></p>
+                    <p>As I walk down the Hawassa road,<br>
+                    A stone's throw from the pitch,<br>
+                    I see the spirit of the pride,<br>
+                    That never loses its itch.<br>
+                    Through the gates of our home ground,<br>
+                    I hear the fans all cheer,<br>
+                    I see the faces of the boys,<br>
+                    As the kick-off time is near.</p>
+                </div>
+
+                <div class="verse">
+                    <p><strong>Verse 2</strong></p>
+                    <p>And the roar of the Rori stands,<br>
+                    Where we gather side by side,<br>
+                    We're shouting out our name,<br>
+                    We're shouting out our name!</p>
+                </div>
+
+                <div class="chorus">
+                    <p><strong>Chorus</strong></p>
+                    <p>RORI forever,<br>
+                    Whatever the weather,<br>
+                    These streets are our own,<br>
+                    And my heart will leave here never.<br>
+                    My blood runs the colors,<br>
+                    Of the gold and the blue,<br>
+                    And the lion on my chest,<br>
+                    Is the badge that is true.<br>
+                    RORI forever,<br>
+                    RORI forever!</p>
+                </div>
+
+                <div class="verse">
+                    <p><strong>Verse 3</strong></p>
+                    <p>And the gym on the corner,<br>
+                    Is packed to the brim,<br>
+                    With the Rori community,<br>
+                    Working hard, looking trim.<br>
+                    With the young ones making promises,<br>
+                    They know they'll always keep.</p>
+                </div>
+
+                <div class="chorus">
+                    <p><strong>Chorus</strong></p>
+                    <p>RORI forever,<br>
+                    Whatever the weather,<br>
+                    These streets are our own,<br>
+                    And my heart will leave here never.<br>
+                    My blood runs the colors,<br>
+                    Of the gold and the blue,<br>
+                    And the lion on my chest,<br>
+                    Is the badge that is true.<br>
+                    RORI forever,<br>
+                    RORI forever!</p>
+                </div>
+
+                <div class="outro">
+                    <p><strong>Outro</strong></p>
+                    <p>RORI forever,<br>
+                    RORI forever!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ─── Fixtures / Match Schedule ─── -->
     <section id="fixtures">
         <h2 class="section-title">⚽ Match Schedule / Fixtures</h2>
@@ -1776,7 +2910,7 @@
                     </tbody>
                 </table>
             </div>
-            <p style="text-align:center; color:#aaa; font-size:0.95rem;">Upcoming matches – stay tuned for dates and venues.</p>
+            <p style="text-align:center; color:#aaa; font-size:1.3rem; font-weight:500;">Upcoming matches – stay tuned for dates and venues.</p>
         </div>
     </section>
 
@@ -1789,7 +2923,7 @@
                     <div class="partner-card"><div class="variant-tag">Variant 1</div><div class="variant-text"><span class="icon">☕</span><br />Official Partner: <span class="gold">Silla Coffee</span> 🏨</div><div class="variant-divider"></div></div>
                     <div class="partner-card"><div class="variant-tag">Variant 2</div><div class="variant-text"><span class="icon">⚡</span><br />Powered by <span class="gold">Silla Coffee</span></div><div class="variant-divider"></div></div>
                     <div class="partner-card"><div class="variant-tag">Variant 3</div><div class="variant-text"><span class="icon">🔥</span><br />Fuel Partner: <span class="gold">Silla Coffee</span> ☕</div><div class="variant-divider"></div></div>
-                    <div class="partner-card"><div class="variant-tag">Variant 4</div><div class="variant-text"><span class="gold">Silla Coffee</span><br /><span style="font-size:0.9rem; color:#d4c5b5;">— Official Club Supporter</span></div><div class="variant-divider"></div></div>
+                    <div class="partner-card"><div class="variant-tag">Variant 4</div><div class="variant-text"><span class="gold">Silla Coffee</span><br /><span style="font-size:1.15rem; color:#d4c5b5;">— Official Club Supporter</span></div><div class="variant-divider"></div></div>
                 </div>
             </div>
             <div class="cafe-hero">
@@ -1822,9 +2956,9 @@
                 <div class="cafe-card special"><span class="badge">🛡️ Recovery</span><span class="emoji">💪</span><h4>Recovery Coffee</h4><p>After match relaxation</p></div>
                 <div class="cafe-card special"><span class="badge">🏆 Captain's Pick</span><span class="emoji">☕</span><h4>Team Special Blend</h4><p>Honoring our champions</p></div>
             </div>
-            <div style="text-align:center; margin-top:40px;">
+            <div style="text-align:center; margin-top:55px;">
                 <a href="#contact" class="cafe-order-btn">📞 Order Now</a>
-                <p style="color:#d4c5b5; margin-top:12px; font-size:0.9rem;">Visit us inside Rori Hotel · Hawassa</p>
+                <p style="color:#d4c5b5; margin-top:18px; font-size:1.15rem; font-weight:400;">Visit us inside Rori Hotel · Hawassa</p>
             </div>
             <div class="cafe-footer-note"><strong>☕ Silla Coffee Shop</strong> — A proud part of <strong>Rori Hotel</strong></div>
         </div>
@@ -1839,7 +2973,7 @@
             <div class="card"><h3>🎓 Youth Trial</h3><p>Open trials for U-17 next month. Register below.</p></div>
         </div>
         <div class="chat-container">
-            <h3 style="color:#FFD600; margin-bottom:10px;">🤖 Ask Rori FC Anything</h3>
+            <h3 style="color:#FFD600; margin-bottom:16px;">🤖 Ask Rori FC Anything</h3>
             <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
                 <p><strong>Bot:</strong> Hello! Ask me about training, squad, Telegram, or anything Rori FC.</p>
             </div>
@@ -1851,69 +2985,96 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════ -->
-    <!-- ─── PREMIUM GALLERY ─── -->
+    <!-- ─── ጋለሪ ሴክሽን ─── -->
     <!-- ════════════════════════════════════════════════════ -->
-    <section id="gallery">
-        <h2 class="section-title">📸 Gallery</h2>
-        <!--
-            ⚠️ REPLACE THE `src` ATTRIBUTES BELOW WITH YOUR OWN 4K IMAGES:
-            - RORI HOTEL Logo (square)
-            - RORI HOTEL Banner (wide)
-            - Hawassa Sunshine School (square)
-            - 3 Messi 4K images (action/celebration)
-            - 2 CR7 4K images (action/celebration)
-        -->
-        <div class="gallery-grid">
-            <!-- 1. RORI HOTEL Logo -->
-            <div class="gallery-item">
-                <img
-    src="IMG_20260627_235932_107.jpg"
-    alt="RORI Community FC Logo"
-    class="rori-logo"
-/>
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="gallery-title">📸 Our Gallery</h2>
+            <p class="gallery-subtitle">Moments captured from <span>RORI Community FC</span></p>
 
-            </div>
+            <div class="gallery-grid">
 
-            <!-- 2. Large RORI HOTEL Banner (spans 2 columns) -->
-            <div class="gallery-item span-2">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=600&fit=crop&crop=center&q=80" alt="RORI HOTEL Banner" loading="lazy" />
-                <div class="overlay"><span class="label">🏨 RORI HOTEL</span><span class="sub">Premium Banner</span></div>
-            </div>
+                <!-- Fitness Zone / Rori Health Club -->
+                <div class="gallery-card">
+                    <img class="gallery-img" src="images/gym1.jpg" alt="Rori Hotel Fitness Center" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=800&fit=crop&crop=center&q=80'">
+                    <div class="img-caption">
+                        Fitness Zone
+                        <small>Rori Health Club</small>
+                    </div>
+                </div>
 
-            <!-- 3. Hawassa Sunshine School -->
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=600&fit=crop&crop=center&q=80" alt="Hawassa Sunshine School" loading="lazy" />
-                <div class="overlay"><span class="label">📍 Hawassa</span><span class="sub">Sunshine School</span></div>
-            </div>
+                <!-- ካርድ 1 -->
+                <div class="gallery-card">
+                    <img class="gallery-img" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=800&fit=crop&crop=center&q=80" alt="RORI HOTEL Logo">
+                    <div class="img-caption">
+                        🏨 RORI HOTEL
+                        <small>Official Club Logo</small>
+                    </div>
+                </div>
 
-            <!-- 4. Messi 4K #1 (tall, spans 2 rows) -->
-            <div class="gallery-item tall">
-                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&h=800&fit=crop&crop=center&q=80" alt="Messi 4K Action" loading="lazy" />
-                <div class="overlay"><span class="label">🐐 Messi 4K</span><span class="sub">#1 • Magic</span></div>
-            </div>
+                <!-- ካርድ 2 -->
+                <div class="gallery-card">
+                    <img class="gallery-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=800&fit=crop&crop=center&q=80" alt="RORI HOTEL Banner">
+                    <div class="img-caption">
+                        🏨 RORI HOTEL
+                        <small>Premium Hotel Banner</small>
+                    </div>
+                </div>
 
-            <!-- 5. Messi 4K #2 -->
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Celebration" loading="lazy" />
-                <div class="overlay"><span class="label">🐐 Messi 4K</span><span class="sub">#2 • Celebration</span></div>
-            </div>
+                <!-- ካርድ 3 -->
+                <div class="gallery-card">
+                    <img class="gallery-img" src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=800&fit=crop&crop=center&q=80" alt="Hawassa Sunshine School">
+                    <div class="img-caption">
+                        📍 Hawassa
+                        <small>Sunshine School</small>
+                    </div>
+                </div>
 
-            <!-- 6. Messi 4K #3 -->
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Portrait" loading="lazy" />
-                <div class="overlay"><span class="label">🐐 Messi 4K</span><span class="sub">#3 • Portrait</span></div>
-            </div>
+                <!-- ካርድ 4 -->
+                <div class="gallery-card">
+                    <img class="gallery-img" src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&h=800&fit=crop&crop=center&q=80" alt="Messi 4K Action">
+                    <div class="img-caption">
+                        🐐 Messi 4K
+                        <small>#1 • Magic on the pitch</small>
+                    </div>
+                </div>
 
-            <!-- 7. CR7 4K #1 -->
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=600&h=600&fit=crop&crop=center&q=80" alt="CR7 4K Action" loading="lazy" />
-                <div class="overlay"><span class="label">🐐 CR7 4K</span><span class="sub">#1 • Power</span></div>
-            </div>
+                <!-- ካርድ 5 -->
+                <div class="gallery-card">
+                    <img class="gallery-img" src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=800&fit=crop&crop=center&q=80" alt="Messi 4K Celebration">
+                    <div class="img-caption">
+                        🐐 Messi 4K
+                        <small>#2 • Celebration moment</small>
+                    </div>
+                </div>
 
-            <!-- 8. CR7 4K #2 -->
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&h=600&fit=crop&crop=center&q=80" alt="CR7 4K Celebration" loading="lazy" />
-                <div class="overlay"><span class="label">🐐 CR7 4K</span><span class="sub">#2 • Siuuu</span></div>
+                <!-- ካርድ 6 -->
+                <div class="gallery-card">
+                    <img class="gallery-img" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=800&fit=crop&crop=center&q=80" alt="Messi 4K Portrait">
+                    <div class="img-caption">
+                        🐐 Messi 4K
+                        <small>#3 • Portrait of a legend</small>
+                    </div>
+                </div>
+
+                <!-- ካርድ 7 -->
+                <div class="gallery-card">
+                    <img class="gallery-img" src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&h=800&fit=crop&crop=center&q=80" alt="CR7 4K Action">
+                    <div class="img-caption">
+                        🐐 CR7 4K
+                        <small>#1 • Power and precision</small>
+                    </div>
+                </div>
+
+                <!-- ካርድ 8 -->
+                <div class="gallery-card">
+                    <img class="gallery-img" src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&h=800&fit=crop&crop=center&q=80" alt="CR7 4K Celebration">
+                    <div class="img-caption">
+                        🐐 CR7 4K
+                        <small>#2 • Siuuu! Celebration</small>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1933,7 +3094,7 @@
             <label for="regPhone">Phone *</label>
             <input type="tel" id="regPhone" name="phone" placeholder="+251 9XXXXXXXX" required />
             <button type="submit" class="btn">Register</button>
-            <p style="font-size:0.8rem; color:#aaa; margin-top:12px; text-align:center;">* Required fields. Your data is sent securely.</p>
+            <p style="font-size:1.05rem; color:#aaa; margin-top:18px; text-align:center; font-weight:500;">* Required fields. Your data is sent securely.</p>
         </form>
         <div class="toast" id="welcomeToast" role="alert">
             <span id="toastMessage">🎉 Welcome! Registration received.</span>
@@ -1954,7 +3115,7 @@
             <div class="card"><h3>📱 TikTok</h3><p><a href="https://www.tiktok.com/@rorihotel" target="_blank" rel="noopener">@rorihotel</a></p></div>
             <div class="card"><h3>📱 Telegram Group</h3><p><a href="https://t.me/+hq9-Z1AsY-g2OTk0" target="_blank" rel="noopener">Join Rori FC Telegram Group</a></p></div>
         </div>
-        <div style="text-align:center; margin-top:30px;">
+        <div style="text-align:center; margin-top:45px;">
             <a href="https://t.me/+hq9-Z1AsY-g2OTk0" target="_blank" rel="noopener" class="btn">Join Telegram Group</a>
         </div>
     </section>
@@ -1966,61 +3127,84 @@
 
     <!-- ─── JavaScript ─── -->
     <script>
-        // ── Full 44‑member roster (including staff; coach & owner handled separately) ──
-        const fullRoster = [
-            "Edom adinew 🐍",
-            "Amir Rori",
-            "Bahilu F B",
-            "Gm Mule Ro",
-            "Tata Mu",
-            "Amanu",
-            "Nati",
-            "Yido Tim",
-            "Yohannes Yosef",
-            "Abiy Ase",
-            "A.B Ye.....",
-            "ⒶⓂⓊ💸🌿",
-            "Tare",
-            "Amir",
-            "Gezer",
-            "hayimi kahinu Haymiyekiyu",
-            "Itachi Uchiha",
-            "Mohammed Husan",
-            "Alelign Molla",
-            "Gado G",
-            "Gedion Mark",
-            "orent",
-            "Yared Ro",
-            "Abebayew Ro",
-            "ትንሳኤ ❤️",
-            "Nebiyu yonas", // Head Coach – shown in staff
-            "filagot",
-            "Abay@1221 Teshome",
-            "Abel",
-            "Yitbarek Berakaa",
-            "Hope Car Market",
-            "Gech",
-            "Dany Tere",
-            "Mesud David",
-            "Nehemiya",
-            "Tedy",
-            "ወንድዬ @21",
-            "tesfa mike",
-            "Asgedom Mehari",
-            "Tesfu Ro",
-            "Dave",
-            "Fishe Ro (Owner)", // Owner – shown in staff
-            "Tsegaye",
-            "melese"
+        // ── RORI HOTEL FC PLAYERS ──
+        const players = [
+            { no: 2, name: "Amir A" },
+            { no: 3, name: "Gm Mule Ro" },
+            { no: 4, name: "Tata Mu" },
+            { no: 5, name: "Amanu" },
+            { no: 9, name: "Nati" },
+            { no: 12, name: "Yido Tim" },
+            { no: 13, name: "Abiy Ase" },
+            { no: 15, name: "A.B Ye....." },
+            { no: 16, name: "ⒶⓂⓊ💸🌿" },
+            { no: 17, name: "Gezer" },
+            { no: 18, name: "hayimi kahinu Haymiyekiyu" },
+            { no: 19, name: "Itachi Uchiha" },
+            { no: 21, name: "Mohammed Husan" },
+            { no: 22, name: "Alelign Molla" },
+            { no: 23, name: "Gado G" },
+            { no: 24, name: "Gedion Mark" },
+            { no: 25, name: "orent" },
+            { no: 26, name: "Abebayew Ro" },
+            { no: 27, name: "ትንሳኤ" },
+            { no: 29, name: "Filagot" },
+            { no: 30, name: "Abay@1221 Teshome" },
+            { no: 31, name: "Yitbarek Berakaa" },
+            { no: 32, name: "Hope Car Market" },
+            { no: 33, name: "Gech" },
+            { no: 34, name: "Dany Tere" },
+            { no: 35, name: "Mesud David" },
+            { no: 36, name: "Nehemiya" },
+            { no: 37, name: "Tedy" },
+            { no: 38, name: "ወንድዬ @21" },
+            { no: 39, name: "Tesfa Mike" },
+            { no: 40, name: "Asgedom Mehari" },
+            { no: 41, name: "Dave" },
+            { no: 43, name: "Tsegaye" },
+            { no: 44, name: "Melese" },
+            { no: 45, name: "Cherent A" },
+            { no: 46, name: "Alet" },
+            { no: 47, name: "Sheferw" },
+            { no: 48, name: "Keper Hizkela" },
+            { no: 49, name: "Gadisa G" },
+            { no: 14, name: "Abel" }
         ];
 
-        // Build squad grid with numbers 1..44
-        const squadContainer = document.getElementById('squadContainer');
-        fullRoster.forEach((name, index) => {
-            const div = document.createElement('div');
-            div.className = 'player-card';
-            div.innerHTML = `<div class="jersey-number">#${index + 1}</div><div>${name}</div>`;
-            squadContainer.appendChild(div);
+        const grid = document.getElementById("playersGrid");
+
+        players.forEach(player => {
+            const card = document.createElement("article");
+            card.className = "player-card";
+            card.setAttribute("data-tilt", "");
+
+            card.innerHTML = `
+                <div class="player-card-number">${String(player.no).padStart(2, "0")}</div>
+                <img src="images/player-${player.no}.png" alt="${player.name}" onerror="this.style.opacity='0'">
+                <div class="player-card-info">
+                    <h3>${player.name}</h3>
+                    <span>#${player.no} · RORI HOTEL FC</span>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+
+        // ── 3D MOUSE / TOUCH EFFECT ──
+        document.querySelectorAll("[data-tilt]").forEach(card => {
+            card.addEventListener("mousemove", event => {
+                const rect = card.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateY = ((x - centerX) / centerX) * 12;
+                const rotateX = ((y - centerY) / centerY) * -12;
+                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.025)`;
+            });
+
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+            });
         });
 
         // ── AI Chatbot ──
@@ -2052,11 +3236,11 @@
                 'training schedule': "Training is every Tuesday & Saturday from 12:00 to 2:30 PM. Be on time!",
                 'telegram': "Join our Telegram group: https://t.me/+hq9-Z1AsY-g2OTk0",
                 'telegram group': "Join our Telegram group: https://t.me/+hq9-Z1AsY-g2OTk0",
-                'captain': "Our captain is Anbel Bahilu. He leads with passion and discipline.",
+                'captain': "Our captain is Tare (#7). He leads with passion and discipline.",
                 'facebook': "Follow us on Facebook: https://www.facebook.com/rorihotel",
-                'squad': "We have 44 members in our roster. Check the Members section!",
-                'players': "We have 44 members in our roster. Check the Members section!",
-                'members': "We have 44 members in our roster. Check the Members section!",
+                'squad': "We have 42 players in our squad. Check the Squad section!",
+                'players': "We have 42 players in our squad. Check the Squad section!",
+                'members': "We have 42 players in our squad. Check the Squad section!",
                 'instagram': "Instagram is coming soon. Stay tuned!",
                 'tiktok': "Follow us on TikTok: https://www.tiktok.com/@rorihotel",
                 'health': "Rori FC follows a holistic health program: fitness, nutrition, physio, mental health, medical & sleep.",
@@ -2064,15 +3248,16 @@
                 'coach': "Our head coach is Nebiyu Yonas. He leads the team with dedication.",
                 'welcome': "ዳኤ ቡሹ (Da'e Bushu) – Welcome! We're glad you're here.",
                 'bushu': "ዳኤ ቡሹ (Da'e Bushu) means 'Welcome' in Sidama. It carries respect, warmth, and unity.",
-                'owner': "The owner of Rori Hotel FC is Fishe Ro.",
+                'owner': "The owner of Rori Community FC is Tesfaye Y.",
                 'coffee': "Visit Silla Coffee Shop inside Rori Hotel! We serve Ethiopian Bunna, Macchiato, Espresso, teas, and Rori FC special blends.",
                 'menu': "Our café menu includes Hot Coffee, Tea & Drinks, Snacks, and Rori FC Special blends. Check out the Café section!",
-                'cafe': "Silla Coffee Shop is inside Rori Hotel. We have Ethiopian Bunna, macchiato, espresso, teas, fresh bread, cakes, and our Team Special Blend!"
+                'cafe': "Silla Coffee Shop is inside Rori Hotel. We have Ethiopian Bunna, macchiato, espresso, teas, fresh bread, cakes, and our Team Special Blend!",
+                'anthem': "Here are the lyrics to our club anthem, RORI Forever! 🎵 Check the Anthem section for the full song."
             };
             for (const [key, reply] of Object.entries(responses)) {
                 if (q.includes(key)) return reply;
             }
-            return "I'm Rori FC AI assistant. Ask me about training, squad, Telegram, our café menu, or health programs!";
+            return "I'm Rori FC AI assistant. Ask me about training, squad, Telegram, our café menu, anthem, or health programs!";
         }
 
         document.getElementById('userQuestion').addEventListener('keypress', function(e) {
@@ -2171,7 +3356,7 @@
             }
         });
 
-        console.log('🏆 Rori Community FC website loaded successfully with profile logo!');
+        console.log('🏆 Rori Community FC website updated with bold, prominent design!');
     </script>
 </body>
 </html>

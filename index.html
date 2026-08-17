@@ -1951,34 +1951,40 @@
         }
 
         .gallery-item:nth-child(1) {
-            animation-delay: 0.1s;
+            animation-delay: 0.05s;
         }
         .gallery-item:nth-child(2) {
-            animation-delay: 0.15s;
+            animation-delay: 0.1s;
         }
         .gallery-item:nth-child(3) {
-            animation-delay: 0.2s;
+            animation-delay: 0.15s;
         }
         .gallery-item:nth-child(4) {
-            animation-delay: 0.25s;
+            animation-delay: 0.2s;
         }
         .gallery-item:nth-child(5) {
-            animation-delay: 0.3s;
+            animation-delay: 0.25s;
         }
         .gallery-item:nth-child(6) {
-            animation-delay: 0.35s;
+            animation-delay: 0.3s;
         }
         .gallery-item:nth-child(7) {
-            animation-delay: 0.4s;
+            animation-delay: 0.35s;
         }
         .gallery-item:nth-child(8) {
-            animation-delay: 0.45s;
+            animation-delay: 0.4s;
         }
         .gallery-item:nth-child(9) {
-            animation-delay: 0.5s;
+            animation-delay: 0.45s;
         }
         .gallery-item:nth-child(10) {
+            animation-delay: 0.5s;
+        }
+        .gallery-item:nth-child(11) {
             animation-delay: 0.55s;
+        }
+        .gallery-item:nth-child(12) {
+            animation-delay: 0.6s;
         }
 
         .gallery-item img {
@@ -3918,12 +3924,24 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════ -->
-    <!-- ─── GALLERY SECTION (FIXED) ─── -->
+    <!-- ─── GALLERY SECTION (with new glalare image) ─── -->
     <!-- ════════════════════════════════════════════════════ -->
     <section class="gallery-section" id="gallery">
         <div class="container">
             <h2 class="section-title">📸 Our Gallery</h2>
             <div class="gallery-grid">
+
+                <!-- NEW: glalare image -->
+                <div class="gallery-item">
+                    <img src="images/1786737924092.png"
+                         alt="RORI Community FC"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+FC+%E2%80%A2+glalare'">
+                    <div class="gallery-overlay">
+                        <h3>⚽ RORI Community FC</h3>
+                        <p>glalare • RORI FC</p>
+                    </div>
+                </div>
 
                 <!-- Flag -->
                 <div class="gallery-item">
@@ -4347,7 +4365,7 @@
             }
         });
 
-        console.log('🏆 Rori Community FC website updated with fixed gallery images!');
+        console.log('🏆 Rori Community FC website updated with glalare gallery image!');
     </script>
 </body>
 </html>

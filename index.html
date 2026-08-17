@@ -140,27 +140,115 @@
             color: #FFD600 !important;
         }
 
-        /* ── Player Cards ── */
-        .player-name {
-            font-size: clamp(1.6rem, 2.2vw, 2rem) !important;
-            font-weight: 800 !important;
+        /* ── Player Cards (NEW) ── */
+        .player-card {
+            perspective: 1000px;
+            margin: 0;
+            border-radius: 20px;
+            animation: fadeInUp 0.6s ease forwards;
+            background: linear-gradient(145deg, rgba(30, 41, 91, 0.85), rgba(11, 19, 41, 0.9));
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            position: relative;
+            height: clamp(270px, 35vh, 380px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .player-card:hover {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.45), 0 0 60px rgba(255, 215, 0, 0.15);
+            border: 1px solid rgba(255, 215, 0, 0.6);
+            transform: scale(1.04);
+        }
+
+        .player-card .player-photo {
+            width: 85%;
+            height: clamp(160px, 20vh, 230px);
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+            transition: transform 0.4s ease;
+        }
+
+        .player-card:hover .player-photo {
+            transform: scale(1.06);
+        }
+
+        .player-card .player-number {
+            position: absolute;
+            top: clamp(6px, 0.8vw, 12px);
+            right: clamp(12px, 1.5vw, 22px);
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.06);
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .player-card .player-info {
+            text-align: center;
+            margin-top: 4px;
+            padding: 0 clamp(8px, 1vw, 16px);
+            width: 100%;
+        }
+
+        .player-card .player-name {
             color: #ffffff !important;
+            font-size: clamp(1.6rem, 2.2vw, 2rem) !important;
+            margin: 8px 0 2px;
+            font-weight: 800 !important;
+            text-align: center;
         }
 
-        .player-role {
-            font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
-            font-weight: 700 !important;
+        .player-card .player-position {
             color: #ffd700 !important;
-        }
-
-        .player-badge {
-            font-size: clamp(0.9rem, 1.2vw, 1.1rem) !important;
+            font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             font-weight: 700 !important;
+            text-align: center;
         }
 
-        .player-number {
-            font-size: clamp(4rem, 7vw, 5.5rem) !important;
-            font-weight: 900 !important;
+        .player-card .player-badge {
+            background: #ffd700 !important;
+            color: #000 !important;
+            padding: 4px 14px;
+            border-radius: 5px;
+            font-weight: bold !important;
+            font-size: clamp(0.9rem, 1.2vw, 1.1rem) !important;
+            display: inline-block;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .player-card.captain {
+            border-color: rgba(255, 215, 0, 0.6);
+        }
+
+        .player-card.captain .player-badge {
+            background: linear-gradient(135deg, #f5c542, #fff1a8) !important;
+        }
+
+        .player-card.star {
+            border-color: rgba(255, 100, 50, 0.5);
+        }
+
+        .player-card.star .player-badge {
+            background: linear-gradient(135deg, #ff6b35, #ff4500) !important;
+            color: #fff !important;
+        }
+
+        .player-card .fallback {
+            object-fit: contain;
+            padding: 10px;
         }
 
         /* ── Hero Player Info ── */
@@ -1745,7 +1833,7 @@
             border-radius: 2px;
         }
 
-        /* ── GLASSMORPHISM PLAYER CARDS ── */
+        /* ── GLASSMORPHISM PLAYER CARDS (NEW) ── */
         #playersGrid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(clamp(180px, 20vw, 300px), 1fr));
@@ -1753,97 +1841,6 @@
             padding: clamp(15px, 2vw, 25px);
             max-width: 1400px;
             margin: 0 auto;
-        }
-
-        .player-card {
-            perspective: 1000px;
-            margin: 0;
-            border-radius: 20px;
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .player-inner {
-            position: relative;
-            background: linear-gradient(145deg, rgba(30, 41, 91, 0.85), rgba(11, 19, 41, 0.9)) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
-            padding: clamp(14px, 1.8vw, 24px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.12) !important;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-            height: clamp(270px, 35vh, 380px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .player-card:hover .player-inner {
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.45), 0 0 60px rgba(255, 215, 0, 0.15) !important;
-            border: 1px solid rgba(255, 215, 0, 0.6) !important;
-            transform: scale(1.04) !important;
-        }
-
-        .player-number {
-            position: absolute;
-            top: clamp(6px, 0.8vw, 12px);
-            right: clamp(12px, 1.5vw, 22px);
-            font-size: clamp(3rem, 5vw, 4.5rem);
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.06);
-            pointer-events: none;
-            line-height: 1;
-        }
-
-        .player-inner .player-img {
-            width: 85%;
-            height: clamp(160px, 20vh, 230px);
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
-            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
-            transition: transform 0.4s ease;
-        }
-
-        .player-card:hover .player-inner .player-img {
-            transform: scale(1.06);
-        }
-
-        .player-name {
-            color: #ffffff !important;
-            font-size: clamp(1.6rem, 2.2vw, 2rem) !important;
-            margin: 8px 0 2px;
-            font-weight: 800 !important;
-            text-align: center;
-        }
-
-        .player-role {
-            color: #ffd700 !important;
-            font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700 !important;
-            text-align: center;
-        }
-
-        .player-badge {
-            background: #ffd700 !important;
-            color: #000 !important;
-            padding: 4px 14px;
-            border-radius: 5px;
-            font-weight: bold !important;
-            font-size: clamp(0.9rem, 1.2vw, 1.1rem) !important;
-            display: inline-block;
-            margin-top: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .player-info-bottom {
-            text-align: center;
-            margin-top: 4px;
         }
 
         .staff-section {
@@ -2581,17 +2578,17 @@
                 gap: 14px;
                 padding: 14px;
             }
-            .player-inner {
+            .player-card {
                 height: clamp(220px, 32vh, 290px);
                 padding: 14px;
             }
-            .player-inner .player-img {
+            .player-card .player-photo {
                 height: clamp(140px, 20vh, 180px);
             }
-            .player-name {
+            .player-card .player-name {
                 font-size: clamp(1.3rem, 3vw, 1.6rem) !important;
             }
-            .player-role {
+            .player-card .player-position {
                 font-size: clamp(1rem, 2.2vw, 1.2rem) !important;
             }
             .hero-number {
@@ -2881,26 +2878,26 @@
                 gap: 10px;
                 padding: 10px;
             }
-            .player-inner {
+            .player-card {
                 height: clamp(190px, 35vh, 240px);
                 padding: 10px;
                 border-radius: 16px;
             }
-            .player-inner .player-img {
+            .player-card .player-photo {
                 height: clamp(110px, 20vh, 140px);
             }
-            .player-number {
+            .player-card .player-number {
                 font-size: clamp(2rem, 6vw, 2.8rem);
                 top: 4px;
                 right: 10px;
             }
-            .player-name {
+            .player-card .player-name {
                 font-size: clamp(1.1rem, 3vw, 1.3rem) !important;
             }
-            .player-role {
+            .player-card .player-position {
                 font-size: clamp(0.9rem, 2.2vw, 1rem) !important;
             }
-            .player-badge {
+            .player-card .player-badge {
                 font-size: clamp(0.7rem, 1.5vw, 0.8rem) !important;
                 padding: 2px 10px;
             }
@@ -3506,7 +3503,7 @@
             <div></div>
         </div>
 
-        <!-- All 49 players rendered here -->
+        <!-- All players rendered here (NEW data) -->
         <div id="playersGrid"></div>
 
         <!-- STAFF -->
@@ -4080,94 +4077,114 @@
     <!-- ─── JavaScript ─── -->
     <script>
         // ════════════════════════════════════════════════════
-        // ALL 49 PLAYERS WITH CORRECT NUMBERING
+        // PLAYER DATA — UPDATED WITH NEW ROSTER
         // ════════════════════════════════════════════════════
 
         const players = [
-            // Hero players
-            { no: 1, name: "Keper Hizkela" },
-            { no: 7, name: "Tare" },
-            { no: 10, name: "Amir A" },
-
-            // Full roster
-            { no: 2, name: "Edom adinew" },
-            { no: 3, name: "Amir Rori" },
-            { no: 4, name: "Bahilu F B" },
-            { no: 5, name: "Gm Mule Ro" },
-            { no: 6, name: "Tata Mu" },
-            { no: 8, name: "Bahilu B" }, // FIXED: player #8
-            { no: 9, name: "Amanu" },
-            { no: 11, name: "Nati" },
-            { no: 12, name: "Yido Tim" },
-            { no: 13, name: "Yohannes Yosef" },
-            { no: 14, name: "Abiy Ase" },
-            { no: 15, name: "A.B Ye....." },
-            { no: 16, name: "ⒶⓂⓊ💸🌿" },
-            { no: 17, name: "Gezer" },
-            { no: 18, name: "hayimi kahinu Haymiyekiyu" },
-            { no: 19, name: "Itachi Uchiha" },
-            { no: 20, name: "Mohammed Husan" },
-            { no: 21, name: "Alelign Molla" },
-            { no: 22, name: "Gado G" },
-            { no: 23, name: "Gedion Mark" },
-            { no: 24, name: "orent" },
-            { no: 25, name: "Yared Ro" },
-            { no: 26, name: "Abebayew Ro" },
-            { no: 27, name: "ትንሳኤ ❤️" },
-            { no: 28, name: "Nebiyu yonas" },
-            { no: 29, name: "filagot" },
-            { no: 30, name: "Abay@1221 Teshome" },
-            { no: 31, name: "Abel" },
-            { no: 32, name: "Yitbarek Berakaa" },
-            { no: 33, name: "Hope Car Market" },
-            { no: 34, name: "Gech" },
-            { no: 35, name: "Dany Tere" },
-            { no: 36, name: "Mesud David" },
-            { no: 37, name: "Nehemiya" },
-            { no: 38, name: "Tedy" },
-            { no: 39, name: "ወንድዬ @21" },
-            { no: 40, name: "tesfa mike" },
-            { no: 41, name: "Asgedom Mehari" },
-            { no: 42, name: "Tesfu Ro" },
-            { no: 43, name: "Dave" },
-            { no: 44, name: "Tsegaye" },
-            { no: 45, name: "melese" },
-            { no: 46, name: "Tesfaye ⚡" },
-            { no: 47, name: "Tesfahun 🌟" },
-            { no: 48, name: "Chernet 🔥" },
-            { no: 49, name: "Gadisa G" }
+            { name: "Dr. Daniel Tefera", number: "14", position: "Wing Forward", image: "images/player-01.jpg" },
+            { name: "Tareqegn Hafamo", number: "11", position: "Captain", image: "images/player-02.jpg", captain: true },
+            { name: "Dawit Belayneh", number: "3", position: "Player", image: "images/player-03.jpg" },
+            { name: "Getachew Mamo", number: "4", position: "Player", image: "images/player-04.jpg" },
+            { name: "Yitbarek Tilahun", number: "5", position: "Player", image: "images/player-05.jpg" },
+            { name: "Alemayehu Mamo", number: "6", position: "Player", image: "images/player-06.jpg" },
+            { name: "Yohannes Yesuf", number: "7", position: "Player", image: "images/player-07.jpg" },
+            { name: "Melaku Dawit", number: "8", position: "Player", image: "images/player-08.jpg" },
+            { name: "Arion Solomon", number: "9", position: "Player", image: "images/player-09.jpg" },
+            { name: "Ashenafi Demse", number: "10", position: "Player", image: "images/player-10.jpg" },
+            { name: "Tesfaye Meles", number: "12", position: "Player", image: "images/player-11.jpg" },
+            { name: "Amir Awel", number: "10", position: "Best Attacker", image: "images/player-12.jpg", star: true },
+            { name: "Behaylu Boja", number: "15", position: "Wing Forward", image: "images/player-13.jpg" },
+            { name: "Tesfaye Yohannes", number: "16", position: "Player", image: "images/player-14.jpg" },
+            { name: "Tesfahun Negash", number: "17", position: "Player", image: "images/player-15.jpg" },
+            { name: "Haile Getachew", number: "18", position: "Player", image: "images/player-16.jpg" },
+            { name: "Chernet Amogne", number: "19", position: "Midfielder", image: "images/player-17.jpg" },
+            { name: "Abebew Kifle", number: "20", position: "Player", image: "images/player-18.jpg" },
+            { name: "Meles Kebede", number: "21", position: "Player", image: "images/player-19.jpg" },
+            { name: "Yared Takele", number: "42", position: "Defender", image: "images/player-20.jpg" },
+            { name: "Wendwesen Derese", number: "22", position: "Player", image: "images/player-21.jpg" },
+            { name: "Yididiya Timotheos", number: "23", position: "Player", image: "images/player-22.jpg" },
+            { name: "Natnael Afework", number: "24", position: "Player", image: "images/player-23.jpg" },
+            { name: "Frezer Zegeye", number: "25", position: "Left Back", image: "images/player-24.jpg" },
+            { name: "Belay Deribe", number: "26", position: "Player", image: "images/player-25.jpg" },
+            { name: "Humeid Abdulqadir", number: "27", position: "Player", image: "images/player-26.jpg" },
+            { name: "Tesfamikael Bayele", number: "28", position: "Player", image: "images/player-27.jpg" },
+            { name: "Abera Filipos", number: "29", position: "Player", image: "images/player-28.jpg" },
+            { name: "Abraham Tasew", number: "30", position: "Player", image: "images/player-29.jpg" },
+            { name: "Haymanot Haylu", number: "31", position: "Player", image: "images/player-30.jpg" },
+            { name: "Tsegaye Gobeze", number: "32", position: "Player", image: "images/player-31.jpg" },
+            { name: "Alemu Jemal", number: "33", position: "Player", image: "images/player-32.jpg" },
+            { name: "Edom Adinew", number: "34", position: "Player", image: "images/player-33.jpg" },
+            { name: "Muluken Gedafu", number: "35", position: "Player", image: "images/player-34.jpg" },
+            { name: "Nebiyu Yonas", number: "36", position: "Head Coach", image: "images/player-35.jpg" },
+            { name: "Abay Teshome", number: "37", position: "Player", image: "images/player-36.jpg" },
+            { name: "Alet", number: "38", position: "Player", image: "images/player-37.jpg" },
+            { name: "Hezekiel", number: "39", position: "Goalkeeper", image: "images/player-38.jpg" },
+            { name: "Tesfahun Tennekere", number: "40", position: "Player", image: "images/player-39.jpg" },
+            { name: "Abel", number: "41", position: "Player", image: "images/player-40.jpg" },
+            { name: "Teddy", number: "42", position: "Player", image: "images/player-41.jpg" },
+            { name: "Gadisa Getachew", number: "43", position: "Player", image: "images/player-42.jpg" },
+            { name: "Shiferaw", number: "44", position: "Player", image: "images/player-43.jpg" },
+            { name: "Nehemiah", number: "45", position: "Player", image: "images/player-44.jpg" },
+            { name: "Asgedom Mehari", number: "46", position: "Player", image: "images/player-45.jpg" }
         ];
 
+        // ════════════════════════════════════════════════════
+        // RENDER PLAYER CARDS
+        // ════════════════════════════════════════════════════
+
         const grid = document.getElementById("playersGrid");
-        grid.innerHTML = '';
 
-        players.forEach((player, index) => {
-            const card = document.createElement("div");
-            card.className = "player-card";
-            card.style.animationDelay = (0.05 + index * 0.03) + 's';
+        if (grid) {
+            grid.innerHTML = "";
 
-            let role = "Player",
-                badge = "";
-            if (player.no === 7) { role = "Captain";
-                badge = "👑"; } else if (player.no === 1) { role = "Goalkeeper";
-                badge = "🧤"; } else if (player.no === 10 || player.no === 9) { role = "Attacker";
-                badge = "⚡"; } else if (player.no === 2 || player.no === 3 || player.no === 4) { role = "Defender";
-                badge = "🛡️"; } else if (player.no === 5 || player.no === 6 || player.no === 8) { role = "Midfielder";
-                badge = "🎯"; }
+            players.forEach((player) => {
+                const card = document.createElement("article");
 
-            card.innerHTML = `
-                    <div class="player-inner">
-                        <div class="player-number">${String(player.no).padStart(2, "0")}</div>
-                        <img src="images/player-${player.no}.png" alt="${player.name}" class="player-img" onerror="this.style.opacity='0'">
-                        <div class="player-info-bottom">
-                            <div class="player-name">${player.name}</div>
-                            <div class="player-role">${role} ${badge}</div>
-                            ${badge ? `<span class="player-badge">${badge} ${role}</span>` : ''}
+                card.className =
+                    "player-card" +
+                    (player.captain ? " captain" : "") +
+                    (player.star ? " star" : "");
+
+                const badge =
+                    player.captain ?
+                    `<span class="player-badge">⭐ CAPTAIN</span>` :
+                    player.star ?
+                    `<span class="player-badge">🔥 BEST ATTACKER</span>` :
+                    "";
+
+                card.innerHTML = `
+                        <img
+                            class="player-photo"
+                            src="${player.image}"
+                            alt="${player.name}"
+                            loading="lazy"
+                            onerror="
+                                this.onerror=null;
+                                this.src='https://placehold.co/800x1000/102d50/d4af37?text=RORI+FC';
+                                this.classList.add('fallback');
+                            "
+                        >
+
+                        <div class="player-number">
+                            ${player.number}
                         </div>
-                    </div>
-                `;
-            grid.appendChild(card);
-        });
+
+                        <div class="player-info">
+                            ${badge}
+
+                            <h3 class="player-name">
+                                ${player.name}
+                            </h3>
+
+                            <div class="player-position">
+                                ${player.position}
+                            </div>
+                        </div>
+                    `;
+
+                grid.appendChild(card);
+            });
+        }
 
         console.log(`🏆 Total players rendered: ${players.length}`);
 
@@ -4338,7 +4355,7 @@
             }
         });
 
-        console.log('🏆 Rori Community FC website updated with new gallery items!');
+        console.log('🏆 Rori Community FC website updated with new player data!');
     </script>
 </body>
 </html>

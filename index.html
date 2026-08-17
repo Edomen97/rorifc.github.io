@@ -21,7 +21,6 @@ body {
 background-color: #0b1329;
 color: #ffffff;
 font-family: 'Inter', 'Poppins', 'Open Sans', sans-serif;
-/* LARGEST FONT SIZES */
 font-size: clamp(22px, 2.5vw, 34px) !important;
 font-weight: 600;
 line-height: 1.8;
@@ -125,21 +124,21 @@ color: #FFD600 !important;
 }
 /* ── Player Cards ── */
 .player-name {
-font-size: clamp(1.6rem, 2.2vw, 2rem) !important;
+font-size: clamp(1.4rem, 2.2vw, 1.8rem) !important;
 font-weight: 800 !important;
 color: #ffffff !important;
 }
-.player-role {
-font-size: clamp(1.2rem, 1.6vw, 1.5rem) !important;
-font-weight: 700 !important;
+.player-position {
+font-size: clamp(1rem, 1.5vw, 1.2rem) !important;
+font-weight: 600 !important;
 color: #ffd700 !important;
 }
 .player-badge {
-font-size: clamp(0.9rem, 1.2vw, 1.1rem) !important;
+font-size: clamp(0.8rem, 1.2vw, 1rem) !important;
 font-weight: 700 !important;
 }
 .player-number {
-font-size: clamp(4rem, 7vw, 5.5rem) !important;
+font-size: clamp(3.5rem, 6vw, 5rem) !important;
 font-weight: 900 !important;
 }
 /* ── Hero Player Info ── */
@@ -164,7 +163,7 @@ font-size: clamp(0.9rem, 1.2vw, 1.2rem) !important;
 font-weight: 1000 !important;
 letter-spacing: 1px !important;
 }
-/* ── Stats ── */
+/* ── Stats ─ */
 .stat-number {
 font-size: clamp(4rem, 8vw, 6rem) !important;
 font-weight: 900 !important;
@@ -286,7 +285,7 @@ font-weight: 500 !important;
 color: #555555 !important;
 line-height: 1.8 !important;
 }
-/* ── Tables ── */
+/* ── Tables ─ */
 .contributions-table,
 .fixtures-table {
 font-size: clamp(1.3rem, 1.8vw, 1.8rem) !important;
@@ -391,7 +390,7 @@ padding: clamp(20px, 2.5vw, 30px) clamp(40px, 6vw, 80px) !important;
 font-size: clamp(1.4rem, 1.8vw, 1.8rem) !important;
 }
 /* ═══════════════════════════════════════
-── REST OF THE STYLES (unchanged) ──
+── REST OF THE STYLES ──
 ═══════════════════════════════════════ */
 /* ── Navbar ── */
 nav {
@@ -562,7 +561,7 @@ margin-top: 30px;
 position: relative;
 z-index: 2;
 }
-/* ── Buttons ── */
+/* ── Buttons ─ */
 .btn {
 display: inline-block;
 background: #FFD600;
@@ -1018,7 +1017,7 @@ margin-top: 14px;
 font-weight: 500;
 letter-spacing: 3px;
 }
-/* ── Chat ── */
+/* ── Chat ─ */
 .chat-container {
 background: #0b0f1f;
 border-radius: 30px;
@@ -1082,7 +1081,7 @@ outline-offset: 3px;
 transform: scale(1.05);
 }
 /* ═══════════════════════════════════════
-── ANTHEM SECTION (UPDATED: LARGE TEXT) ──
+── ANTHEM SECTION ──
 ═══════════════════════════════════════ */
 .anthem-section {
 padding: clamp(60px, 10vw, 120px) 20px;
@@ -1517,7 +1516,7 @@ height: 4px;
 background: #f5c542;
 border-radius: 2px;
 }
-/* ── GLASSMORPHISM PLAYER CARDS (UPDATED FOR NEW HTML) ── */
+/* ── GLASSMORPHISM PLAYER CARDS (NEW ROSTER) ── */
 #playersGrid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 20vw, 280px), 1fr));
@@ -1625,7 +1624,6 @@ color: #FFD600;
 text-transform: uppercase;
 letter-spacing: 1.5px;
 }
-
 .staff-section {
 width: min(1000px, 100%);
 margin: clamp(60px, 10vw, 100px) auto 0;
@@ -1743,6 +1741,12 @@ animation-delay: 0.4s;
 .gallery-item:nth-child(8) {
 animation-delay: 0.45s;
 }
+.gallery-item:nth-child(9) {
+animation-delay: 0.5s;
+}
+.gallery-item:nth-child(10) {
+animation-delay: 0.55s;
+}
 .gallery-item img {
 width: 100%;
 height: clamp(200px, 28vh, 280px);
@@ -1795,7 +1799,7 @@ font-weight: 500;
 font-size: clamp(1.2rem, 1.6vw, 1.6rem);
 }
 /* ═══════════════════════════════════════
-── SILLA COFFEE SHOP (compressed for brevity) ──
+── SILLA COFFEE SHOP ──
 ═══════════════════════════════════════ */
 .cafe-section {
 background: #2b1b14;
@@ -1891,7 +1895,6 @@ text-align: center;
 border-radius: 0 0 60px 60px;
 margin-bottom: 70px;
 border-bottom: 5px solid #d4af37;
-position: relative;
 }
 .cafe-hero::after {
 content: "☕";
@@ -2275,15 +2278,15 @@ gap: 15px;
 height: 360px;
 }
 .player-number {
-font-size: 3rem;
+font-size: 3rem !important;
 top: 10px;
 right: 15px;
 }
 .player-name {
-font-size: 1.3rem;
+font-size: 1.3rem !important;
 }
 .player-position {
-font-size: 0.9rem;
+font-size: 0.9rem !important;
 }
 .hero-number {
 font-size: clamp(70px, 14vw, 130px);
@@ -2577,17 +2580,17 @@ height: 320px;
 height: 60%;
 }
 .player-number {
-font-size: 2.5rem;
+font-size: 2.5rem !important;
 }
 .player-name {
-font-size: 1.1rem;
+font-size: 1.1rem !important;
 }
 .player-position {
-font-size: 0.8rem;
+font-size: 0.8rem !important;
 letter-spacing: 1px;
 }
 .player-badge {
-font-size: 0.7rem;
+font-size: 0.7rem !important;
 padding: 4px 10px;
 }
 .cafe-grid {
@@ -2992,7 +2995,7 @@ gap: 12px;
 .regulations-grid .card ul li::before {
 font-size: 1.2rem;
 }
-.footer {
+footer {
 font-size: clamp(0.85rem, 2vw, 1rem);
 padding: clamp(20px, 3.5vw, 26px) 16px;
 border-top-width: 3px;
@@ -3047,10 +3050,10 @@ margin: 4px 6px;
 </style>
 </head>
 <body>
-<!-- ─── Navigation ─── -->
+<!-- ─── Navigation ── -->
 <nav aria-label="Main navigation">
 <div class="nav-logo">
-<img id="navLogo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230d1137' stroke='%23FFD600' stroke-width='4'/%3E%3Ctext x='50' y='52' font-family='Bebas Neue, cursive' font-size='22' fill='%23FFD600' text-anchor='middle' dominant-baseline='central'%3ERFC%3C/text%3E%3C/svg%3E" alt="Rori Community FC Logo" />
+<img id="navLogo" src="rori-fc-logo.png" alt="Rori Community FC Logo" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2748%27 fill=%27%230d1137%27 stroke=%27%23FFD600%27 stroke-width=%274%27/%3E%3Ctext x=%2750%27 y=%2752%27 font-family=%27Arial%27 font-size=%2722%27 fill=%27%23FFD600%27 text-anchor=%27middle%27 dominant-baseline=%27central%27%3ERFC%3C/text%3E%3C/svg%3E';" />
 </div>
 <div class="nav-links">
 <a href="#home">Home</a>
@@ -3079,6 +3082,7 @@ margin: 4px 6px;
 src="rori-fc-logo.png"
 alt="RORI Community FC Logo"
 class="rori-logo"
+onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20200%20200%27%3E%3Ccircle%20cx=%27100%27%20cy=%27100%27%20r=%2796%27%20fill=%27%230d1137%27%20stroke=%27%23FFD600%27%20stroke-width=%278%27/%3E%3Ccircle%20cx=%27100%27%20cy=%27100%27%20r=%2780%27%20fill=%27none%27%20stroke=%27%23FFD600%27%20stroke-width=%272%27%20opacity=%270.4%27/%3E%3Ctext%20x=%27100%27%20y=%2792%27%20font-family=%27Arial%27%20font-size=%2744%27%20font-weight=%27bold%27%20fill=%27%23FFD600%27%20text-anchor=%27middle%27%3ERORI%3C/text%3E%3Ctext%20x=%27100%27%20y=%27130%27%20font-family=%27Arial%27%20font-size=%2730%27%20font-weight=%27bold%27%20fill=%27%23ffffff%27%20text-anchor=%27middle%27%3EFC%3C/text%3E%3Ccircle%20cx=%27100%27%20cy=%27155%27%20r=%2710%27%20fill=%27%23ffffff%27/%3E%3Ccircle%20cx=%27100%27%20cy=%27155%27%20r=%274%27%20fill=%27%230d1137%27/%3E%3C/svg%3E';"
 />
 <h1>RORI COMMUNITY FC</h1>
 <p>HAWASSA • UNITY • HEALTH • COMMUNITY</p>
@@ -3099,12 +3103,12 @@ class="rori-logo"
 <h2 class="section-title">Welcome | ዳኤ ቡሹ <span style="font-size:clamp(2rem, 4vw, 2.8rem); color:#fff;">(Da'e Bushu)</span></h2>
 <div class="welcome-content">
 <p>Welcome to Rori Community FC &amp; Rori Health Team official website.</p>
-<p><span class="greeting-highlight">ዳኤ ቡሹ (Da'e Bushu)</span> is a traditional Sidama greeting that means "Welcome" and carries a deep sense of respect, warmth, and unity within the community.</p>
+<p><span class="greeting-highlight">ዳኤ ሹ (Da'e Bushu)</span> is a traditional Sidama greeting that means "Welcome" and carries a deep sense of respect, warmth, and unity within the community.</p>
 <p>We are proud to share this space with our players, staff, and supporters who are building a strong culture of football, health, discipline, and teamwork in Hawassa.</p>
 <p>At Rori Community FC, we believe in more than just football. We believe in growth, wellness, and community spirit. This platform brings together our club updates, health programs, training schedules, and development projects.</p>
 <p>Step inside, explore, and be part of our journey.</p>
 <div class="closing">
-<span class="greeting-highlight">ዳኤ ቡሹ</span> — ለቤታችን እንኳን ደህና መጡ!
+<span class="greeting-highlight">ዳኤ ቡ</span> — ለቤታችን እንኳን ደህና መጡ!
 <span class="amharic">(Welcome to our home!)</span>
 </div>
 </div>
@@ -3112,11 +3116,11 @@ class="rori-logo"
 </section>
 <!-- ─── About ─── -->
 <section id="about">
-<h2 class="section-title">ስለ ሮሪ ኤፍሲ</h2>
+<h2 class="section-title">ስለ ሮሪ ኤሲ</h2>
 <div class="about-profile">
-<p>ሮሪ ሆቴል ኤፍሲ በሀዋሳ ከተማ መሀል የሚገኝ ሲሆን፣ ሙያዊ እግር ኳስን ከማህበረሰብ ተሳትፎ እና ከጤና ጋር የሚያገናኝ ቡድን ነው። እ.ኤ.አ. በ2024 የተመሠረተው ክለባችን ወጣቶችን ችሎታ ማጎልበት፣ ጤናማ የአኗኗር ልምድ ማስፋፋት እና በክብር ለመወዳደር ቁርጠኛ ነው።</p>
+<p>ሮሪ ሆቴል ኤፍ በሀዋሳ ከተማ መሀል የሚገኝ ሲን፣ ያዊ እግር ስን ከማህበረሰብ ተትፎ እና ከጤና ጋር የሚያገናኝ ቡድን ነው። እ.ኤ.አ. በ2024 የተመሠረተው ክለባችን ጣቶችን ችሎታ ማጎልበት፣ ጤናማ የአኗኗር ልምድ ማስፋፋት እና በክብር ለመወዳደር ቁርኛ ነው።</p>
 <span class="motto-highlight">"ተሰጥኦን እናበቃለን፤ ሻምፒዮኖችን እንፈጥራለን!"</span>
-<p style="margin-top:20px; font-size:clamp(1.1rem, 1.8vw, 1.4rem); color:#ccc; font-weight:500;">በቡድን መንፈስ፣ በትጋት እና በተግሣጽ የተገነባው ሮሪ ሆቴል ኤፍሲ፣ ለአትሌቶች እንዲሁም ለደጋፊዎች ሁለተኛ ቤት መሆንን ያለም ያምናል።</p>
+<p style="margin-top:20px; font-size:clamp(1.1rem, 1.8vw, 1.4rem); color:#ccc; font-weight:500;">በቡድን መንፈስ፣ በትጋት እና በተግሣጽ የተነባው ሮሪ ቴል ኤሲ ለአትሌቶች እንዲሁም ደፊች ሁለተኛ ት መሆንን ያለም ያምናል።</p>
 </div>
 <div class="card-grid">
 <div class="card"><h3>👁️ Vision</h3><p>To be a leading community football club in Ethiopia, inspiring through sport and wellness.</p></div>
@@ -3233,22 +3237,22 @@ with a vision of building a competitive and united team that represents the spir
 </section>
 <!-- ─── Gym ─── -->
 <section id="gym">
-<h2 class="section-title">የጂም አባላት ጥሪ</h2>
+<h2 class="section-title">የጂም አላት ጥሪ</h2>
 <div style="max-width:1100px; margin:0 auto 45px; text-align:center; font-size:clamp(1.4rem, 2.2vw, 1.8rem); font-weight:500;">
 <p>ሮሪ ጤና ቡድን አዳዲስ የጂም አባላትን በደስታ ይቀበላል!</p>
-<p style="margin-top:12px;">ጤናማ አኗኗር የሚወዱ፣ የአካል ብቃታቸውን ማሻሻል የሚፈልጉ እና ከቡድን ጋር በትብብር ለመስራት ፈቃደኛ የሆኑ ሁሉ እንዲቀላቀሉን እንጋብዛለን።</p>
+<p style="margin-top:12px;">ጤናማ አኗኗር የሚወዱ፣ የአካል ብቃታቸውን ማሻል የሚልጉ እና ከቡድን ጋር በትብብር ለመስራት ፈቃደ የሆኑ ሁሉ እንዲቀላሉን እንብዛለን።</p>
 </div>
 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:clamp(25px, 4vw, 40px); max-width:1200px; margin:0 auto;">
 <div class="card" style="text-align:left;">
 <h3 style="text-align:center; font-size:clamp(2rem, 3.5vw, 2.8rem);">መስፈርቶች</h3>
-<ul><li>ለጤና እና ለስፖርት ፍላጎት ያለው</li><li>የቡድን መንፈስ ያለው</li><li>ስልጠናን በመደበኛነት ለመከታተል ፈቃደኛ</li><li>የሮሪ ሆቴል ሰራተኛ ወይም በቡድኑ የሚፈቀድ አባል</li></ul>
+<ul><li>ለጤና እና ለስፖርት ፍላጎት ያለው</li><li>የቡድን መንፈስ ያለው</li><li>ስልጠናን በመደበኛነት ለመከታተል ፈቃደ</li><li>የሮሪ ሆቴል ራተኛ ወይም በቡድ የሚቀድ አባል</li></ul>
 </div>
 <div class="card" style="text-align:left;">
 <h3 style="text-align:center; font-size:clamp(2rem, 3.5vw, 2.8rem);">የምዝገባ ጥቅሞች</h3>
-<ul><li>የመደበኛ የጂም ስልጠና</li><li>የጤና እና የአካል ብቃት ምክር</li><li>የስፖርት እና የጤና ፕሮግራሞች</li><li>ከአባላት ጋር የትብብር እና የወዳጅነት አካባቢ</li></ul>
+<ul><li>የመደበኛ የጂም ልጠና</li><li>የጤና እና የአካል ብቃት ምክር</li><li>የስፖርት እና የጤና ፕሮግራሞች</li><li>ከአባላት ጋር የትብብር እና የወዳጅነት አካባቢ</li></ul>
 </div>
 </div>
-<div style="text-align:center; margin-top:45px; font-size:clamp(1.8rem, 3vw, 2.6rem); font-weight:900; color:#FFD600; letter-spacing:3px;">"ጤናማ ሰው፣ ጠንካራ ቡድን፣ የተሻለ ውጤት!"</div>
+<div style="text-align:center; margin-top:45px; font-size:clamp(1.8rem, 3vw, 2.6rem); font-weight:900; color:#FFD600; letter-spacing:3px;">"ጤናማ ው ጠንካ ቡድን፣ የተሻለ ውጤት!"</div>
 </section>
 <!-- ─── Fund ─── -->
 <section id="fund">
@@ -3284,24 +3288,24 @@ with a vision of building a competitive and united team that represents the spir
 </section>
 <!-- ─── Contributions ─── -->
 <section id="contributions">
-<h2 class="section-title">የቡድኑ አባላት የድጋፍ አስተዋጽኦ ዝርዝር</h2>
+<h2 class="section-title">የቡድኑ አባላት የድጋ አስተጽኦ ርዝር</h2>
 <div class="contributions-section">
-<p class="contributions-intro">እስከአሁን ድረስ ለሮሪ ጤና ቡድን እና ለክለቡ ልማት በብር የተደረገ ድጋፍ ዝርዝር፦</p>
+<p class="contributions-intro">እስከአሁን ድረስ ለሮሪ ጤና ቡድን እና ለክለቡ ማት በብር የተደረገ ጋ ዝርዝር፦</p>
 <div class="contributions-table-wrapper">
 <table class="contributions-table">
 <thead><tr><th>#</th><th>ስም</th><th>የብር መጠን</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>በሀይሉ ቦጃ</td><td>1,000 ብር</td></tr>
 <tr><td>2</td><td>ዳዊት ሰለሞን</td><td>5,000 ብር</td></tr>
-<tr><td>3</td><td>ተስፋሁን ነከረ</td><td>1,000 ብር</td></tr>
+<tr><td>3</td><td>ተስፋሁን ነከ</td><td>1,000 ብር</td></tr>
 <tr><td>4</td><td>አበባየሁ ክፍሌ</td><td>1,000 ብር</td></tr>
 <tr><td>5</td><td>ኦርዮን ሰለሞን</td><td>2,000 ብር</td></tr>
 <tr><td>6</td><td>አብዮት</td><td>1,000 ብር</td></tr>
 <tr><td>7</td><td>አበበ ተሾመ</td><td>1,000 ብር</td></tr>
 <tr><td>8</td><td>ፍላጎት አሰሙ</td><td>1,000 ብር</td></tr>
-<tr><td>9</td><td>ታረቀኝ ህፋሞ</td><td>2,000 ብር</td></tr>
-<tr><td>10</td><td>ሙሉቀን ጋደፈው</td><td>5,000 ብር</td></tr>
-<tr><td>11</td><td>አሸነፈ ደምሴ</td><td>3,000 ብር</td></tr>
+<tr><td>9</td><td>ታረቀ ህሞ</td><td>2,000 ብር</td></tr>
+<tr><td>10</td><td>ሙሉን ጋደፈው</td><td>5,000 ብር</td></tr>
+<tr><td>11</td><td>አሸነፈ ምሴ</td><td>3,000 ብር</td></tr>
 <tr><td>12</td><td>መስፍን ራሪቲ</td><td>2,100 ብር</td></tr>
 <tr class="highlight-row"><td colspan="2"><strong>አጠቃላይ አስተዋጽኦ</strong></td><td><strong>25,100 ብር</strong></td></tr>
 </tbody>
@@ -3310,7 +3314,7 @@ with a vision of building a competitive and united team that represents the spir
 <div class="contributions-thanks">
 <span class="thanks-icon">🙏</span>
 <p><strong>ምስጋና</strong></p>
-<p>ለሁሉም የቡድኑ አባላት ለሰጡት ድጋፍ ከልብ እናመሰግናለን። ይህ አስተዋጽኦ ለቡድኑ እድገት፣ ለስልጠና መሻሻል እና ለወጣቶች የተሻለ የስፖርት እድል ለመፍጠር ትልቅ አስተዋጽኦ ነው።</p>
+<p>ለሁሉም የቡድኑ አባላት ለሰጡት ድጋ ከልብ እናመሰግናለን። ይህ አስተዋጽኦ ለቡድኑ እድገት፣ ስልና መሻሻል እና ለወጣቶች የተሻለ የስፖርት እድል ለመፍጠር ትልቅ አስተዋጽኦ ነው።</p>
 </div>
 </div>
 </section>
@@ -3322,12 +3326,12 @@ with a vision of building a competitive and united team that represents the spir
 <h3>📋 ደንቦች</h3>
 <ul>
 <li>ሁሉም ተጫዋቾች በሰዓታቸው ለልምምድ መገኘት አለባቸው።</li>
-<li>የአሰልጣኞችን መመሪያ ማክበር ግዴታ ነው።</li>
-<li>ተጫዋቾች ለቡድን አባላት፣ አሰልጣኞች እና ተቀናቃኞች ክብር ማሳየት አለባቸው።</li>
-<li>ማንኛውም ዓይነት ጸብ፣ ስድብ ወይም አድሎ አይፈቀድም።</li>
-<li>የክለቡን ንብረት በኃላፊነት መጠቀም አለባቸው።</li>
-<li>ተጫዋቾች የስፖርት ልብሳቸውን በሚገባ መጠቀም አለባቸው።</li>
-<li>ከክለቡ ስም እና ክብር ጋር የሚጋጩ ተግባራት አይፈቀዱም።</li>
+<li>የአሰልጣኞችን መመሪያ ማክበር ግዴ ነው</li>
+<li>ተጫዋች ለቡድን አባላት፣ አሰልጣኞች እና ተቀናቃኞች ክር ማየት አለባው።</li>
+<li>ማንኛውም ዓይነት ጸብ ስድ ወይም አድሎ አይፈቀድም።</li>
+<li>የክለቡን ንብረት በኃላነት መቀም አለባቸው።</li>
+<li>ተጫዋቾች የስፖርት ልሳቸውን በሚገባ መጠቀም አለባቸው።</li>
+<li>ከክለቡ ም እና ክብር ጋር የሚጋጩ ተግባት አይቀዱም።</li>
 </ul>
 </div>
 <div class="card">
@@ -3342,7 +3346,7 @@ with a vision of building a competitive and united team that represents the spir
 </div>
 </div>
 <div class="motto-banner">
-<div class="motto-text">"ተሰጥኦን እናበቃለን፤ ሻምፒዮኖችን እንፈጥራለን!"</div>
+<div class="motto-text">"ተሰጥኦን እናበቃለን፤ ምፒዮኖችን እንፈጥራለን!"</div>
 <div class="motto-sub">⚽🏆 ሮሪ ሆቴል ኤፍሲ – ሻምፒዮናችን እንገነባለን!</div>
 </div>
 </section>
@@ -3515,7 +3519,7 @@ RORI forever!</p>
 <h2 class="cafe-title">Our <span>Menu</span></h2>
 <h3 class="cafe-category-title"><span class="icon">☕</span> Hot Coffee</h3>
 <div class="cafe-grid">
-<div class="cafe-card"><span class="emoji">🇪🇹</span><h4>Ethiopian Bunna</h4><p>Traditional fresh coffee</p></div>
+<div class="cafe-card"><span class="emoji">🇪</span><h4>Ethiopian Bunna</h4><p>Traditional fresh coffee</p></div>
 <div class="cafe-card"><span class="emoji">🥛</span><h4>Macchiato</h4><p>Strong espresso with milk</p></div>
 <div class="cafe-card"><span class="emoji">⚡</span><h4>Espresso</h4><p>Pure strong coffee shot</p></div>
 </div>
@@ -3564,12 +3568,20 @@ RORI forever!</p>
 </div>
 </section>
 <!-- ════════════════════════════════════════════════════ -->
-<!-- ─── GALLERY ─── -->
+<!-- ─── GALLERY (with Rori Flag) ─── -->
 <!-- ════════════════════════════════════════════════════ -->
 <section class="gallery-section" id="gallery">
 <div class="container">
 <h2 class="section-title">📸 Our Gallery</h2>
 <div class="gallery-grid">
+<!-- Rori FC Flag -->
+<div class="gallery-item">
+<img src="images/rori-flag.jpg" alt="Rori Community FC Flag" onerror="this.src='https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop&crop=center&q=80'">
+<div class="gallery-overlay">
+<h3>🚩 Rori FC Flag</h3>
+<p>Unity • Health • Community</p>
+</div>
+</div>
 <!-- Fitness Zone / Rori Health Club -->
 <div class="gallery-item">
 <img src="images/gym1.jpg" alt="Rori Hotel Fitness Center" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop&crop=center&q=80'">
@@ -3849,7 +3861,7 @@ const responses = {
 'health': "Rori FC follows a holistic health program: fitness, nutrition, physio, mental health, medical & sleep.",
 'doctor': "Our team doctor is Dr. Yonas Tadesse.",
 'coach': "Our head coach is Nebiyu Yonas.",
-'welcome': "ዳኤ ቡሹ (Da'e Bushu) – Welcome!",
+'welcome': "ዳኤ ሹ (Da'e Bushu) – Welcome!",
 'bushu': "ዳኤ ቡሹ means 'Welcome' in Sidama.",
 'owner': "The owner is Tesfaye Y.",
 'coffee': "Visit Silla Coffee Shop inside Rori Hotel!",

@@ -1950,42 +1950,69 @@
             animation: fadeInUp 0.6s ease forwards;
         }
 
-        .gallery-item:nth-child(1) {
-            animation-delay: 0.05s;
+        /* ── 3D Flag specific styles ── */
+        .rori-flag-3d {
+            grid-column: 1 / -1 !important;
+            height: 850px !important;
+            min-height: 850px !important;
+            perspective: 1400px;
+            overflow: hidden !important;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
         }
-        .gallery-item:nth-child(2) {
-            animation-delay: 0.1s;
+
+        .rori-flag-3d .flag-3d-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .gallery-item:nth-child(3) {
-            animation-delay: 0.15s;
+
+        .rori-flag-3d img {
+            height: 90% !important;
+            width: auto !important;
+            max-width: 90% !important;
+            object-fit: contain !important;
+            border-radius: 18px;
+            cursor: grab;
+            transform-style: preserve-3d;
+            transition: transform 0.15s ease;
+            box-shadow: 0 30px 60px rgba(0,0,0,.45);
         }
-        .gallery-item:nth-child(4) {
-            animation-delay: 0.2s;
+
+        @media (max-width: 768px) {
+            .rori-flag-3d {
+                height: 650px !important;
+                min-height: 650px !important;
+            }
+
+            .rori-flag-3d img {
+                height: 88% !important;
+                max-width: 94% !important;
+            }
         }
-        .gallery-item:nth-child(5) {
-            animation-delay: 0.25s;
+
+        /* ── Other gallery items ── */
+        .gallery-item:not(.rori-flag-3d) {
+            animation: fadeInUp 0.6s ease forwards;
         }
-        .gallery-item:nth-child(6) {
-            animation-delay: 0.3s;
-        }
-        .gallery-item:nth-child(7) {
-            animation-delay: 0.35s;
-        }
-        .gallery-item:nth-child(8) {
-            animation-delay: 0.4s;
-        }
-        .gallery-item:nth-child(9) {
-            animation-delay: 0.45s;
-        }
-        .gallery-item:nth-child(10) {
-            animation-delay: 0.5s;
-        }
-        .gallery-item:nth-child(11) {
-            animation-delay: 0.55s;
-        }
-        .gallery-item:nth-child(12) {
-            animation-delay: 0.6s;
-        }
+
+        .gallery-item:not(.rori-flag-3d):nth-child(1) { animation-delay: 0.1s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(2) { animation-delay: 0.15s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(3) { animation-delay: 0.2s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(4) { animation-delay: 0.25s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(5) { animation-delay: 0.3s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(6) { animation-delay: 0.35s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(7) { animation-delay: 0.4s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(8) { animation-delay: 0.45s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(9) { animation-delay: 0.5s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(10) { animation-delay: 0.55s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(11) { animation-delay: 0.6s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(12) { animation-delay: 0.65s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(13) { animation-delay: 0.7s; }
+        .gallery-item:not(.rori-flag-3d):nth-child(14) { animation-delay: 0.75s; }
 
         .gallery-item img {
             width: 100%;
@@ -1995,13 +2022,13 @@
             transition: transform 0.5s ease;
         }
 
-        .gallery-item:hover {
+        .gallery-item:not(.rori-flag-3d):hover {
             transform: translateY(-8px) scale(1.02);
             border-color: #ffd700;
             box-shadow: 0 12px 40px rgba(255, 215, 0, 0.3), 0 0 25px rgba(255, 215, 0, 0.2);
         }
 
-        .gallery-item:hover img {
+        .gallery-item:not(.rori-flag-3d):hover img {
             transform: scale(1.1);
         }
 
@@ -3924,26 +3951,28 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════ -->
-    <!-- ─── GALLERY SECTION (with new glalare image) ─── -->
+    <!-- ─── GALLERY SECTION (with 3D flag) ─── -->
     <!-- ════════════════════════════════════════════════════ -->
     <section class="gallery-section" id="gallery">
         <div class="container">
             <h2 class="section-title">📸 Our Gallery</h2>
             <div class="gallery-grid">
 
-                <!-- NEW: glalare image -->
-                <div class="gallery-item">
-                    <img src="images/1786737924092.png"
-                         alt="RORI Community FC"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+FC+%E2%80%A2+glalare'">
+                <!-- 3D FLAG - full width -->
+                <div class="gallery-item rori-flag-3d">
+                    <div class="flag-3d-container">
+                        <img src="images/1786737924092.png"
+                             alt="RORI Community FC Flag"
+                             loading="lazy"
+                             onerror="this.src='https://placehold.co/1200x800/102d50/d4af37?text=RORI+FC+FLAG'">
+                    </div>
                     <div class="gallery-overlay">
-                        <h3>⚽ RORI Community FC</h3>
-                        <p>glalare • RORI FC</p>
+                        <h3>🚩 RORI Community FC</h3>
+                        <p>Official RORI FC Flag • Hawassa</p>
                     </div>
                 </div>
 
-                <!-- Flag -->
+                <!-- Flag (small) -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="RORI Community FC Flag"
@@ -3967,7 +3996,7 @@
                     </div>
                 </div>
 
-                <!-- Fitness Zone / Rori Health Club -->
+                <!-- Fitness Zone -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="Rori Hotel Fitness Center"
@@ -4203,7 +4232,7 @@
         }
         console.log(`🏆 Total players rendered: ${players.length}`);
 
-        // ── 3D TILT ──
+        // ── 3D TILT for cards ──
         document.querySelectorAll("[data-tilt]").forEach(card => {
             card.addEventListener("mousemove", event => {
                 const rect = card.getBoundingClientRect();
@@ -4219,6 +4248,25 @@
                 card.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
             });
         });
+
+        // ── 3D FLAG TILT ──
+        const flagImage = document.querySelector('.rori-flag-3d img');
+        if (flagImage) {
+            const container = flagImage.closest('.flag-3d-container');
+            container.addEventListener('mousemove', (event) => {
+                const rect = container.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateY = ((x - centerX) / centerX) * 12;
+                const rotateX = ((y - centerY) / centerY) * -12;
+                flagImage.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            container.addEventListener('mouseleave', () => {
+                flagImage.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            });
+        }
 
         // ── AI CHAT ──
         function sendMessage() {
@@ -4365,7 +4413,7 @@
             }
         });
 
-        console.log('🏆 Rori Community FC website updated with glalare gallery image!');
+        console.log('🏆 Rori Community FC website updated with 3D flag gallery item!');
     </script>
 </body>
 </html>

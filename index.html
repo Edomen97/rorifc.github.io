@@ -1631,60 +1631,45 @@
             }
         }
 
-        /* VERY LARGE GALLERY IMAGE */
-        .gallery-item.gallery-large {
-            grid-column: 1 / -1 !important;
-            height: 900px !important;
-            min-height: 900px !important;
-        }
-
-        .gallery-item.gallery-large img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: contain !important;
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .gallery-item.gallery-large {
-                height: 700px !important;
-                min-height: 700px !important;
-            }
-        }
-
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large) {
+        .gallery-item:not(.rori-flag-3d) {
             animation: fadeInUp 0.6s ease forwards;
         }
 
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):nth-child(1) {
+        .gallery-item:not(.rori-flag-3d):nth-child(1) {
             animation-delay: 0.1s;
         }
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):nth-child(2) {
+        .gallery-item:not(.rori-flag-3d):nth-child(2) {
             animation-delay: 0.15s;
         }
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):nth-child(3) {
+        .gallery-item:not(.rori-flag-3d):nth-child(3) {
             animation-delay: 0.2s;
         }
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):nth-child(4) {
+        .gallery-item:not(.rori-flag-3d):nth-child(4) {
             animation-delay: 0.25s;
         }
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):nth-child(5) {
+        .gallery-item:not(.rori-flag-3d):nth-child(5) {
             animation-delay: 0.3s;
         }
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):nth-child(6) {
+        .gallery-item:not(.rori-flag-3d):nth-child(6) {
             animation-delay: 0.35s;
         }
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):nth-child(7) {
+        .gallery-item:not(.rori-flag-3d):nth-child(7) {
             animation-delay: 0.4s;
         }
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):nth-child(8) {
+        .gallery-item:not(.rori-flag-3d):nth-child(8) {
             animation-delay: 0.45s;
         }
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):nth-child(9) {
+        .gallery-item:not(.rori-flag-3d):nth-child(9) {
             animation-delay: 0.5s;
         }
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):nth-child(10) {
+        .gallery-item:not(.rori-flag-3d):nth-child(10) {
             animation-delay: 0.55s;
+        }
+        .gallery-item:not(.rori-flag-3d):nth-child(11) {
+            animation-delay: 0.6s;
+        }
+        .gallery-item:not(.rori-flag-3d):nth-child(12) {
+            animation-delay: 0.65s;
         }
 
         .gallery-item img {
@@ -1695,13 +1680,13 @@
             transition: transform 0.5s ease;
         }
 
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):hover {
+        .gallery-item:not(.rori-flag-3d):hover {
             transform: translateY(-8px) scale(1.02);
             border-color: #ffd700;
             box-shadow: 0 12px 40px rgba(255, 215, 0, 0.3), 0 0 25px rgba(255, 215, 0, 0.2);
         }
 
-        .gallery-item:not(.rori-flag-3d):not(.gallery-large):hover img {
+        .gallery-item:not(.rori-flag-3d):hover img {
             transform: scale(1.1);
         }
 
@@ -3479,7 +3464,7 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════ -->
-    <!-- ─── GALLERY SECTION (3D flag + large image) ─── -->
+    <!-- ─── GALLERY SECTION (with 3D flag) ─── -->
     <!-- ════════════════════════════════════════════════════ -->
     <section class="gallery-section" id="gallery">
         <div class="container">
@@ -3500,19 +3485,7 @@
                     </div>
                 </div>
 
-                <!-- LARGE RORI GALLERY IMAGE -->
-                <div class="gallery-item gallery-large">
-                    <img src="file_00000000d1d0722f9b7014cef8b18652.png"
-                         alt="RORI Community FC"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/1200x900/102d50/d4af37?text=RORI+FC+%E2%80%A2+Large'">
-                    <div class="gallery-overlay">
-                        <h3>⚽ RORI Community FC</h3>
-                        <p>RORI FC • Hawassa</p>
-                    </div>
-                </div>
-
-                <!-- የተቀሩት የጋለሪ እቃዎች -->
+                <!-- Flag (small) -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="RORI Community FC Flag"
@@ -3524,6 +3497,7 @@
                     </div>
                 </div>
 
+                <!-- Logo -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="RORI Community FC Logo"
@@ -3535,6 +3509,7 @@
                     </div>
                 </div>
 
+                <!-- Fitness Zone -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="Rori Hotel Fitness Center"
@@ -3546,6 +3521,7 @@
                     </div>
                 </div>
 
+                <!-- RORI HOTEL Logo -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="RORI HOTEL Logo"
@@ -3557,6 +3533,7 @@
                     </div>
                 </div>
 
+                <!-- RORI HOTEL Banner -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=600&fit=crop&crop=center&q=80"
                          alt="RORI HOTEL Banner"
@@ -3568,6 +3545,7 @@
                     </div>
                 </div>
 
+                <!-- Hawassa Sunshine School -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="Hawassa Sunshine School"
@@ -3579,6 +3557,7 @@
                     </div>
                 </div>
 
+                <!-- Messi 4K #1 -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="Messi 4K Action"
@@ -3590,6 +3569,7 @@
                     </div>
                 </div>
 
+                <!-- Messi 4K #2 -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="Messi 4K Celebration"
@@ -3601,6 +3581,7 @@
                     </div>
                 </div>
 
+                <!-- Messi 4K #3 -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="Messi 4K Portrait"
@@ -3612,6 +3593,7 @@
                     </div>
                 </div>
 
+                <!-- CR7 4K #1 -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="CR7 4K Action"
@@ -3623,6 +3605,7 @@
                     </div>
                 </div>
 
+                <!-- CR7 4K #2 -->
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&h=600&fit=crop&crop=center&q=80"
                          alt="CR7 4K Celebration"
@@ -3942,7 +3925,7 @@
             }
         });
 
-        console.log('🏆 Rori Community FC website updated with 3D flag and large gallery image!');
+        console.log('🏆 Rori Community FC website updated with 3D flag gallery item!');
     </script>
 </body>
 </html>

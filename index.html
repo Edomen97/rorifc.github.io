@@ -3050,6 +3050,561 @@
                 margin: 4px 6px;
             }
         }
+
+        /* =========================
+           RORI NEWS, TRAINING, MATCHES (merged)
+           ========================= */
+        .rori-news *,
+        .rori-training *,
+        .rori-matches * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .rori-news,
+        .rori-training,
+        .rori-matches {
+            width: 100%;
+            padding: 90px 20px;
+            font-family: 'Inter', 'Poppins', 'Open Sans', sans-serif;
+        }
+
+        .rori-news {
+            background: #f7f8fa;
+        }
+
+        .news-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .news-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .news-label,
+        .training-title span,
+        .matches-title span {
+            display: inline-block;
+            font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #c9a227;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .news-heading h2,
+        .training-title h2,
+        .matches-title h2 {
+            margin: 0;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: #071a3d;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .news-heading p,
+        .training-title p,
+        .matches-title p {
+            max-width: 650px;
+            margin: 15px auto 0;
+            color: #667085;
+            line-height: 1.7;
+            font-size: clamp(1.1rem, 1.4vw, 1.2rem);
+            font-weight: 400;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .news-card {
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+            transition: .35s ease;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(0,0,0,.14);
+        }
+
+        .news-image {
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+            background: #071a3d;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .5s ease;
+        }
+
+        .news-card:hover .news-image img {
+            transform: scale(1.06);
+        }
+
+        .news-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #c9a227;
+            color: #071a3d;
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .news-category.match {
+            background: #071a3d;
+            color: #fff;
+        }
+
+        .news-category.team {
+            background: #fff;
+            color: #071a3d;
+            border: 1px solid #071a3d;
+        }
+
+        .news-content {
+            padding: 25px;
+        }
+
+        .news-date {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #c9a227;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .news-content h3 {
+            margin: 10px 0;
+            color: #071a3d;
+            font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .news-content p {
+            color: #667085;
+            line-height: 1.7;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            font-weight: 400;
+        }
+
+        .news-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #071a3d;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: clamp(0.9rem, 1.1vw, 1rem);
+            transition: color 0.3s ease;
+        }
+
+        .news-link:hover {
+            color: #c9a227;
+        }
+
+        .rori-training {
+            background: #071a3d;
+            color: #fff;
+        }
+
+        .training-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .training-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .training-title h2 {
+            color: #fff;
+        }
+
+        .training-title p {
+            color: #cbd5e1;
+        }
+
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .training-card {
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.1);
+            padding: 35px 25px;
+            border-radius: 18px;
+            text-align: center;
+            transition: .3s ease;
+        }
+
+        .training-card:hover {
+            transform: translateY(-7px);
+            background: rgba(255,255,255,.13);
+        }
+
+        .training-icon {
+            font-size: 3rem;
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .training-card h3 {
+            margin-bottom: 12px;
+            font-size: clamp(1.3rem, 1.8vw, 1.6rem);
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .training-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: clamp(0.9rem, 1.2vw, 1rem);
+            font-weight: 400;
+        }
+
+        .training-schedule {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: #c9a227;
+            color: #071a3d;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .training-schedule div {
+            padding: 25px;
+            text-align: center;
+            border-right: 1px solid rgba(7,26,61,.15);
+        }
+
+        .training-schedule div:last-child {
+            border-right: none;
+        }
+
+        .training-schedule strong,
+        .training-schedule span {
+            display: block;
+        }
+
+        .training-schedule strong {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .training-schedule span {
+            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            font-weight: 800;
+        }
+
+        .rori-matches {
+            background: #f7f8fa;
+        }
+
+        .matches-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .matches-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .match-card {
+            background: #fff;
+            border-radius: 22px;
+            padding: 35px;
+            box-shadow: 0 15px 45px rgba(0,0,0,.1);
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .match-status {
+            display: inline-block;
+            background: #c9a227;
+            color: #071a3d;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .match-date {
+            margin: 25px 0;
+        }
+
+        .match-date strong {
+            display: block;
+            font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+            color: #071a3d;
+        }
+
+        .match-date span {
+            display: block;
+            margin-top: 5px;
+            color: #667085;
+            font-size: clamp(1rem, 1.2vw, 1.1rem);
+        }
+
+        .teams {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 55px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .team {
+            min-width: 150px;
+        }
+
+        .team-logo {
+            width: 85px;
+            height: 85px;
+            margin: auto;
+            border-radius: 50%;
+            background: #071a3d;
+            color: #c9a227;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 900;
+            border: 4px solid #c9a227;
+        }
+
+        .team-logo.opponent {
+            background: #e9edf3;
+            color: #071a3d;
+            border-color: #071a3d;
+        }
+
+        .team h3 {
+            margin: 12px 0 4px;
+            color: #071a3d;
+            font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+            font-weight: 800;
+        }
+
+        .team span {
+            color: #667085;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .vs strong {
+            display: block;
+            font-size: 1.8rem;
+            color: #c9a227;
+        }
+
+        .vs span {
+            font-size: 1.5rem;
+        }
+
+        .match-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .match-info div {
+            padding: 18px;
+            background: #f5f6f8;
+            border-radius: 12px;
+        }
+
+        .match-info strong,
+        .match-info span {
+            display: block;
+        }
+
+        .match-info strong {
+            color: #071a3d;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .match-info span {
+            color: #667085;
+            font-size: clamp(0.9rem, 1.1vw, 1rem);
+            font-weight: 500;
+        }
+
+        .match-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 35px;
+            background: #071a3d;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            transition: .3s ease;
+            font-size: clamp(1rem, 1.2vw, 1.1rem);
+            border: 2px solid #071a3d;
+        }
+
+        .match-button:hover {
+            background: #c9a227;
+            border-color: #c9a227;
+            color: #071a3d;
+        }
+
+        @media (max-width: 800px) {
+
+            .rori-news,
+            .rori-training,
+            .rori-matches {
+                padding: 55px 15px;
+            }
+
+            .news-heading h2,
+            .training-title h2,
+            .matches-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .news-grid,
+            .training-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-image {
+                height: 200px;
+            }
+
+            .training-schedule {
+                grid-template-columns: 1fr;
+            }
+
+            .training-schedule div {
+                border-right: none;
+                border-bottom: 1px solid rgba(7,26,61,.15);
+            }
+
+            .training-schedule div:last-child {
+                border-bottom: none;
+            }
+
+            .teams {
+                gap: 15px;
+            }
+
+            .team {
+                min-width: 110px;
+            }
+
+            .team-logo {
+                width: 70px;
+                height: 70px;
+                font-size: 1.4rem;
+            }
+
+            .match-info {
+                grid-template-columns: 1fr;
+            }
+
+            .match-card {
+                padding: 25px 15px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .news-image {
+                height: 180px;
+            }
+
+            .news-content {
+                padding: 20px;
+            }
+
+            .news-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .teams {
+                gap: 8px;
+            }
+
+            .team h3 {
+                font-size: 0.95rem;
+            }
+
+            .team-logo {
+                width: 60px;
+                height: 60px;
+                font-size: 1.2rem;
+                border-width: 3px;
+            }
+
+            .vs strong {
+                font-size: 1.2rem;
+            }
+
+            .vs span {
+                font-size: 1rem;
+            }
+
+            .match-status {
+                font-size: 0.6rem;
+                padding: 6px 14px;
+            }
+
+            .match-date strong {
+                font-size: 1.3rem;
+            }
+
+            .match-button {
+                padding: 12px 25px;
+                font-size: 0.95rem;
+            }
+
+            .training-card {
+                padding: 25px 18px;
+            }
+
+            .training-icon {
+                font-size: 2.5rem;
+            }
+
+        }
     </style>
 </head>
 <body>
@@ -3073,7 +3628,9 @@
             <a href="#anthem">Anthem</a>
             <a href="#fixtures">Fixtures</a>
             <a href="#cafe">Café</a>
-            <a href="#news">News</a>
+            <a href="#rori-news">News</a>
+            <a href="#rori-training">Training</a>
+            <a href="#rori-matches">Matches</a>
             <a href="#gallery">Gallery</a>
             <a href="#register">Register</a>
             <a href="#contact">Contact</a>
@@ -3458,28 +4015,149 @@
         </div>
     </section>
 
-    <!-- ─── News ─── -->
-    <section id="news">
-        <h2 class="section-title">Club News &amp; AI Assistant</h2>
-        <div class="card-grid">
-            <div class="card"><h3>📰 New Training Kit</h3><p>2026 jerseys unveiled – navy &amp; gold stripes.</p></div>
-            <div class="card"><h3>🏆 Friendly Match</h3><p>Rori FC vs Hawassa City – Saturday 3:00 PM.</p></div>
-            <div class="card"><h3>🎓 Youth Trial</h3><p>Open trials for U-17 next month. Register below.</p></div>
-        </div>
-        <div class="chat-container">
-            <h3 style="color:#FFD600; margin-bottom:16px;">🤖 Ask Rori FC Anything</h3>
-            <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
-                <p><strong>Bot:</strong> Hello! Ask me about training, squad, Telegram, or anything Rori FC.</p>
+    <!-- ================================
+         RORI FC NEWS SECTION (FIXED)
+    ================================ -->
+    <section class="rori-news" id="rori-news">
+        <div class="news-container">
+            <div class="news-heading">
+                <span class="news-label">RORI COMMUNITY FC</span>
+                <h2>Latest News</h2>
+                <p>Follow the latest RORI FC training sessions, matches and team updates.</p>
             </div>
-            <div class="chat-input-area">
-                <input type="text" id="userQuestion" placeholder="e.g., What is the training schedule?" aria-label="Ask a question" />
-                <button onclick="sendMessage()">Send</button>
+            <div class="news-grid">
+                <!-- TRAINING -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/news/rori-training.jpg" alt="RORI FC Training" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x500/071a3d/c9a227?text=RORI+FC+Training'">
+                        <span class="news-category">TRAINING</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">RORI FC • Training</span>
+                        <h3>Team Training Session</h3>
+                        <p>RORI Community FC players continue their regular training sessions with focus, teamwork and fitness.</p>
+                        <a href="#rori-training" class="news-link">Read More →</a>
+                    </div>
+                </article>
+                <!-- MATCH -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/news/rori-match.jpg" alt="RORI FC Match" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x500/071a3d/c9a227?text=RORI+FC+Match'">
+                        <span class="news-category match">MATCH</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">RORI FC • Match</span>
+                        <h3>Match Day</h3>
+                        <p>RORI Community FC is ready for another exciting match. Follow our team and support RORI FC.</p>
+                        <a href="#rori-matches" class="news-link">Match Details →</a>
+                    </div>
+                </article>
+                <!-- TEAM -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/news/rori-team-training.jpg" alt="RORI Community FC Team" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x500/071a3d/c9a227?text=RORI+FC+Team'">
+                        <span class="news-category team">TEAM</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">RORI FC • Team</span>
+                        <h3>United as One</h3>
+                        <p>Our players continue to build a strong team spirit through unity, health and community.</p>
+                        <a href="#rori-squad" class="news-link">Meet the Team →</a>
+                    </div>
+                </article>
+            </div>
+            <!-- AI Chat -->
+            <div class="chat-container" style="margin-top:60px;">
+                <h3 style="color:#FFD600; margin-bottom:16px;">🤖 Ask Rori FC Anything</h3>
+                <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
+                    <p><strong>Bot:</strong> Hello! Ask me about training, squad, Telegram, or anything Rori FC.</p>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="userQuestion" placeholder="e.g., What is the training schedule?" aria-label="Ask a question" />
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+         RORI FC TRAINING SECTION (FIXED)
+    ================================ -->
+    <section class="rori-training" id="rori-training">
+        <div class="training-container">
+            <div class="training-title">
+                <span>RORI COMMUNITY FC</span>
+                <h2>Training</h2>
+                <p>Building stronger players through discipline, fitness and teamwork.</p>
+            </div>
+            <div class="training-grid">
+                <div class="training-card">
+                    <div class="training-icon">⚽</div>
+                    <h3>Football Training</h3>
+                    <p>Technical skills, passing, ball control, finishing and tactical development.</p>
+                </div>
+                <div class="training-card">
+                    <div class="training-icon">💪</div>
+                    <h3>Fitness</h3>
+                    <p>Strength, speed, endurance and physical preparation for match day.</p>
+                </div>
+                <div class="training-card">
+                    <div class="training-icon">🤝</div>
+                    <h3>Teamwork</h3>
+                    <p>Developing communication, discipline and team spirit on and off the pitch.</p>
+                </div>
+            </div>
+            <div class="training-schedule">
+                <div><strong>Training Days</strong><span>Tuesday & Saturday</span></div>
+                <div><strong>Training Time</strong><span>12:00 PM – 2:30 PM</span></div>
+                <div><strong>Club</strong><span>RORI COMMUNITY FC</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+         RORI FC MATCH SECTION (FIXED)
+    ================================ -->
+    <section class="rori-matches" id="rori-matches">
+        <div class="matches-container">
+            <div class="matches-title">
+                <span>RORI COMMUNITY FC</span>
+                <h2>Upcoming Matches</h2>
+                <p>Follow RORI FC match fixtures and support our team on match day.</p>
+            </div>
+            <div class="match-card">
+                <div class="match-status">UPCOMING MATCH</div>
+                <div class="match-date">
+                    <strong>COMING SOON</strong>
+                    <span>Match Date</span>
+                </div>
+                <div class="teams">
+                    <div class="team">
+                        <div class="team-logo">R</div>
+                        <h3>RORI FC</h3>
+                        <span>Home</span>
+                    </div>
+                    <div class="vs">
+                        <strong>VS</strong>
+                        <span>⚽</span>
+                    </div>
+                    <div class="team">
+                        <div class="team-logo opponent">FC</div>
+                        <h3>OPPONENT</h3>
+                        <span>Away</span>
+                    </div>
+                </div>
+                <div class="match-info">
+                    <div><strong>📍 Venue</strong><span>Hawassa</span></div>
+                    <div><strong>⏰ Time</strong><span>To Be Announced</span></div>
+                </div>
+                <a href="#contact" class="match-button">Match Information</a>
             </div>
         </div>
     </section>
 
     <!-- ════════════════════════════════════════════════════ -->
-    <!-- ─── GALLERY SECTION (3D flag + large image) ─── -->
+    <!-- ─── GALLERY SECTION (FIXED - all 4 images show) ─── -->
     <!-- ════════════════════════════════════════════════════ -->
     <section class="gallery-section" id="gallery">
         <div class="container">
@@ -3489,10 +4167,7 @@
                 <!-- 3D FLAG - full width -->
                 <div class="gallery-item rori-flag-3d">
                     <div class="flag-3d-container">
-                        <img src="1786737924092.png"
-                             alt="RORI Community FC"
-                             loading="lazy"
-                             onerror="this.src='https://placehold.co/1200x800/102d50/d4af37?text=RORI+FC+%E2%80%A2+glalare'">
+                        <img src="1786737924092.png" alt="RORI Community FC" loading="lazy" onerror="this.src='https://placehold.co/1200x800/102d50/d4af37?text=RORI+FC+%E2%80%A2+glalare'">
                     </div>
                     <div class="gallery-overlay">
                         <h3>🚩 RORI Community FC</h3>
@@ -3502,189 +4177,88 @@
 
                 <!-- LARGE RORI GALLERY IMAGE -->
                 <div class="gallery-item gallery-large">
-                    <img src="file_00000000d1d0722f9b7014cef8b18652.png"
-                         alt="RORI Community FC"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/1200x900/102d50/d4af37?text=RORI+FC+%E2%80%A2+Large'">
+                    <img src="file_00000000d1d0722f9b7014cef8b18652.png" alt="RORI Community FC" loading="lazy" onerror="this.src='https://placehold.co/1200x900/102d50/d4af37?text=RORI+FC+%E2%80%A2+Large'">
                     <div class="gallery-overlay">
                         <h3>⚽ RORI Community FC</h3>
                         <p>RORI FC • Hawassa</p>
                     </div>
                 </div>
 
-                <!-- የተቀሩት የጋለሪ እቃዎች -->
+                <!-- Unsplash images -->
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=600&fit=crop&crop=center&q=80"
-                         alt="RORI Community FC Flag"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+FC+FLAG'">
-                    <div class="gallery-overlay">
-                        <h3>RORI Community FC</h3>
-                        <p>RORI Community FC Flag • Hawassa</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=600&fit=crop&crop=center&q=80" alt="RORI Community FC Flag" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+FC+FLAG'">
+                    <div class="gallery-overlay"><h3>RORI Community FC</h3><p>RORI Community FC Flag • Hawassa</p></div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop&crop=center&q=80"
-                         alt="RORI Community FC Logo"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+FC+LOGO'">
-                    <div class="gallery-overlay">
-                        <h3>RORI Community FC</h3>
-                        <p>Official Club Logo • Hawassa</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop&crop=center&q=80" alt="RORI Community FC Logo" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+FC+LOGO'">
+                    <div class="gallery-overlay"><h3>RORI Community FC</h3><p>Official Club Logo • Hawassa</p></div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop&crop=center&q=80"
-                         alt="Rori Hotel Fitness Center"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=Fitness+Zone'">
-                    <div class="gallery-overlay">
-                        <h3>Fitness Zone</h3>
-                        <p>Rori Health Club</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop&crop=center&q=80" alt="Rori Hotel Fitness Center" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=Fitness+Zone'">
+                    <div class="gallery-overlay"><h3>Fitness Zone</h3><p>Rori Health Club</p></div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop&crop=center&q=80"
-                         alt="RORI HOTEL Logo"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+HOTEL'">
-                    <div class="gallery-overlay">
-                        <h3>🏨 RORI HOTEL</h3>
-                        <p>Official Club Logo</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop&crop=center&q=80" alt="RORI HOTEL Logo" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+HOTEL'">
+                    <div class="gallery-overlay"><h3>🏨 RORI HOTEL</h3><p>Official Club Logo</p></div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=600&fit=crop&crop=center&q=80"
-                         alt="RORI HOTEL Banner"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+HOTEL+Banner'">
-                    <div class="gallery-overlay">
-                        <h3>🏨 RORI HOTEL</h3>
-                        <p>Premium Hotel Banner</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=600&fit=crop&crop=center&q=80" alt="RORI HOTEL Banner" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+HOTEL+Banner'">
+                    <div class="gallery-overlay"><h3>🏨 RORI HOTEL</h3><p>Premium Hotel Banner</p></div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=600&fit=crop&crop=center&q=80"
-                         alt="Hawassa Sunshine School"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=Hawassa+Sunshine+School'">
-                    <div class="gallery-overlay">
-                        <h3>📍 Hawassa</h3>
-                        <p>Sunshine School</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&h=600&fit=crop&crop=center&q=80" alt="Hawassa Sunshine School" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=Hawassa+Sunshine+School'">
+                    <div class="gallery-overlay"><h3>📍 Hawassa</h3><p>Sunshine School</p></div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&h=600&fit=crop&crop=center&q=80"
-                         alt="Messi 4K Action"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=Messi+4K'">
-                    <div class="gallery-overlay">
-                        <h3>🐐 Messi 4K</h3>
-                        <p>#1 • Magic on the pitch</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Action" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=Messi+4K'">
+                    <div class="gallery-overlay"><h3>🐐 Messi 4K</h3><p>#1 • Magic on the pitch</p></div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=600&fit=crop&crop=center&q=80"
-                         alt="Messi 4K Celebration"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=Messi+4K'">
-                    <div class="gallery-overlay">
-                        <h3>🐐 Messi 4K</h3>
-                        <p>#2 • Celebration moment</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Celebration" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=Messi+4K'">
+                    <div class="gallery-overlay"><h3>🐐 Messi 4K</h3><p>#2 • Celebration moment</p></div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop&crop=center&q=80"
-                         alt="Messi 4K Portrait"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=Messi+4K'">
-                    <div class="gallery-overlay">
-                        <h3>🐐 Messi 4K</h3>
-                        <p>#3 • Portrait of a legend</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=600&fit=crop&crop=center&q=80" alt="Messi 4K Portrait" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=Messi+4K'">
+                    <div class="gallery-overlay"><h3>🐐 Messi 4K</h3><p>#3 • Portrait of a legend</p></div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&h=600&fit=crop&crop=center&q=80"
-                         alt="CR7 4K Action"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=CR7+4K'">
-                    <div class="gallery-overlay">
-                        <h3>🐐 CR7 4K</h3>
-                        <p>#1 • Power and precision</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&h=600&fit=crop&crop=center&q=80" alt="CR7 4K Action" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=CR7+4K'">
+                    <div class="gallery-overlay"><h3>🐐 CR7 4K</h3><p>#1 • Power and precision</p></div>
                 </div>
 
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&h=600&fit=crop&crop=center&q=80"
-                         alt="CR7 4K Celebration"
-                         loading="lazy"
-                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=CR7+4K'">
-                    <div class="gallery-overlay">
-                        <h3>🐐 CR7 4K</h3>
-                        <p>#2 • Siuuu! Celebration</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&h=600&fit=crop&crop=center&q=80" alt="CR7 4K Celebration" loading="lazy" onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=CR7+4K'">
+                    <div class="gallery-overlay"><h3>🐐 CR7 4K</h3><p>#2 • Siuuu! Celebration</p></div>
                 </div>
 
-                <!-- ============================================================ -->
-                <!-- ===== NEW GALLERY ITEMS (Team, Training, Match, Fans) ===== -->
-                <!-- ============================================================ -->
-                <!-- ሁሉም 4 ምስሎች አሁን በግልጽ ይታያሉ - እያንዳንዱ የራሱ የሆነ የመጠባበቂያ ምስል አለው -->
-
-                <!-- Team -->
+                <!-- ===== NEW GALLERY ITEMS (Team, Training, Match, Fans) - ALL 4 NOW VISIBLE ===== -->
                 <div class="gallery-item">
-                    <img src="images/gallery/rori-team.jpg"
-                         alt="RORI Community FC Team"
-                         loading="lazy"
-                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Team'">
-                    <div class="gallery-overlay">
-                        <h3>RORI Community FC Team</h3>
-                        <p>Team Photo</p>
-                    </div>
+                    <img src="images/gallery/rori-team.jpg" alt="RORI Community FC Team" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Team'">
+                    <div class="gallery-overlay"><h3>RORI Community FC Team</h3><p>Team Photo</p></div>
                 </div>
 
-                <!-- Training -->
                 <div class="gallery-item">
-                    <img src="images/gallery/rori-training-1.jpg"
-                         alt="RORI FC Training"
-                         loading="lazy"
-                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Training'">
-                    <div class="gallery-overlay">
-                        <h3>Training Session</h3>
-                        <p>RORI Community FC</p>
-                    </div>
+                    <img src="images/gallery/rori-training-1.jpg" alt="RORI FC Training" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Training'">
+                    <div class="gallery-overlay"><h3>Training Session</h3><p>RORI Community FC</p></div>
                 </div>
 
-                <!-- Match -->
                 <div class="gallery-item">
-                    <img src="images/gallery/rori-match-1.jpg"
-                         alt="RORI FC Match"
-                         loading="lazy"
-                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Match'">
-                    <div class="gallery-overlay">
-                        <h3>Match Day</h3>
-                        <p>RORI Community FC</p>
-                    </div>
+                    <img src="images/gallery/rori-match-1.jpg" alt="RORI FC Match" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Match'">
+                    <div class="gallery-overlay"><h3>Match Day</h3><p>RORI Community FC</p></div>
                 </div>
 
-                <!-- Fans -->
                 <div class="gallery-item">
-                    <img src="images/gallery/rori-fans.jpg"
-                         alt="RORI FC Supporters"
-                         loading="lazy"
-                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Fans'">
-                    <div class="gallery-overlay">
-                        <h3>RORI Supporters</h3>
-                        <p>Unity • Health • Community</p>
-                    </div>
+                    <img src="images/gallery/rori-fans.jpg" alt="RORI FC Supporters" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Fans'">
+                    <div class="gallery-overlay"><h3>RORI Supporters</h3><p>Unity • Health • Community</p></div>
                 </div>
 
             </div>
@@ -3996,7 +4570,7 @@
             }
         });
 
-        console.log('🏆 Rori Community FC website updated with 3D flag and large gallery image!');
+        console.log('🏆 Rori Community FC website fully updated with all fixes applied!');
     </script>
 </body>
 </html>

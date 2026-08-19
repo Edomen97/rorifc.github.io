@@ -3057,7 +3057,7 @@
     <!-- ─── Navigation ─── -->
     <nav aria-label="Main navigation">
         <div class="nav-logo">
-            <img id="navLogo" src="file_00000000f08882439925d3d288d1870f.png" alt="Rori Community FC Logo" />
+            <img id="navLogo" src="file_00000000f08882439925d3d288d1870f.png" alt="Rori Community FC Logo" onerror="this.src='https://placehold.co/200x200/102d50/d4af37?text=RORI+FC'">
         </div>
         <div class="nav-links">
             <a href="#home">Home</a>
@@ -3083,7 +3083,7 @@
     <!-- ─── Hero ─── -->
     <section class="hero" id="home">
         <div class="rori-profile">
-            <img src="file_00000000f08882439925d3d288d1870f.png" alt="RORI Community FC Logo" class="rori-logo" />
+            <img src="file_00000000f08882439925d3d288d1870f.png" alt="RORI Community FC Logo" class="rori-logo" onerror="this.src='https://placehold.co/400x400/102d50/d4af37?text=RORI+FC'">
             <h1>RORI COMMUNITY FC</h1>
             <p>HAWASSA • UNITY • HEALTH • COMMUNITY</p>
         </div>
@@ -3203,7 +3203,7 @@
             <h2 class="section-title">👨‍🏫 Head Coach</h2>
             <div class="coach-card">
                 <div class="coach-img-wrapper">
-                    <img class="coach-img" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=1000&fit=crop&crop=center&q=80" alt="Nebiyu Yonas - Head Coach">
+                    <img class="coach-img" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=1000&fit=crop&crop=center&q=80" alt="Nebiyu Yonas - Head Coach" onerror="this.src='https://placehold.co/800x1000/102d50/d4af37?text=Head+Coach'">
                     <span class="badge-tag">Head Coach</span>
                 </div>
                 <div class="coach-details">
@@ -3634,6 +3634,51 @@
                     </div>
                 </div>
 
+                <!-- ===== NEW GALLERY ITEMS (Team, Training, Match, Fans) ===== -->
+                <div class="gallery-item">
+                    <img src="images/gallery/rori-team.jpg"
+                         alt="RORI Community FC Team"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Team'">
+                    <div class="gallery-overlay">
+                        <h3>RORI Community FC Team</h3>
+                        <p>Team Photo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/gallery/rori-training-1.jpg"
+                         alt="RORI FC Training"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Training'">
+                    <div class="gallery-overlay">
+                        <h3>Training Session</h3>
+                        <p>RORI Community FC</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/gallery/rori-match-1.jpg"
+                         alt="RORI FC Match"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Match'">
+                    <div class="gallery-overlay">
+                        <h3>Match Day</h3>
+                        <p>RORI Community FC</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/gallery/rori-fans.jpg"
+                         alt="RORI FC Supporters"
+                         loading="lazy"
+                         onerror="this.src='https://placehold.co/800x600/102d50/d4af37?text=RORI+Fans'">
+                    <div class="gallery-overlay">
+                        <h3>RORI Supporters</h3>
+                        <p>Unity • Health • Community</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -3746,8 +3791,9 @@
                 card.className = "player-card" + (player.captain ? " captain" : "") + (player.star ? " star" : "");
                 const badge = player.captain ? `<span class="player-badge">⭐ CAPTAIN</span>` :
                     player.star ? `<span class="player-badge">🔥 BEST ATTACKER</span>` : "";
+                const imgSrc = player.image;
                 card.innerHTML = `
-                        <img class="player-photo" src="${player.image}" alt="${player.name}" loading="lazy"
+                        <img class="player-photo" src="${imgSrc}" alt="${player.name}" loading="lazy"
                              onerror="this.onerror=null; this.src='https://placehold.co/800x1000/102d50/d4af37?text=RORI+FC'; this.classList.add('fallback');">
                         <div class="player-number">${player.number}</div>
                         <div class="player-info">

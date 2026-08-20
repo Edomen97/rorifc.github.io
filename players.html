@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rori FC Admin - የተጫዋቾች መቆጣጠሪያ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- የጎንዮሽ ምናሌ (Sidebar) -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Rori FC <span>Admin</span></h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> ዳሽቦርድ (Dashboard)</a></li>
+            <li class="active"><a href="players.html"><i class="fas fa-users"></i> ተጫዋቾች (Players)</a></li>
+            <li><a href="#"><i class="fas fa-newspaper"></i> ዜናዎች (News)</a></li>
+            <li><a href="#"><i class="fas fa-table"></i> የሊግ ሰንጠረዥ (Table)</a></li>
+        </ul>
+        <button id="logout-btn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> ውጣ (Logout)</button>
+    </nav>
+
+    <!-- ዋናው ገጽ (Main Content) -->
+    <main class="main-content">
+        <header class="top-header">
+            <h1>የተጫዋቾች መቆጣጠሪያ ማዕከል ⚽</h1>
+        </header>
+
+        <!-- አዲስ ተጫዋች መመዝገቢያ ፎርም -->
+        <section class="form-section">
+            <h2>አዲስ ተጫዋች መዝግብ</h2>
+            <form id="add-player-form" class="player-form">
+                <div class="form-group">
+                    <input type="text" id="player-name" placeholder="ሙሉ ስም" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="jersey-number" placeholder="የማሊያ ቁጥር" required>
+                </div>
+                <div class="form-group">
+                    <select id="player-position" required>
+                        <option value="">ቦታ (Position) ይምረጡ</option>
+                        <option value="ግብ ጠባቂ">ግብ ጠባቂ (Goalkeeper)</option>
+                        <option value="ተከላካይ">ተከላካይ (Defender)</option>
+                        <option value="አማካይ">አማካይ (Midfielder)</option>
+                        <option value="አጥቂ">አጥቂ (Forward)</option>
+                    </select>
+                </div>
+                <button type="submit" id="save-player-btn">ተጫዋች ጨምር</button>
+            </form>
+        </section>
+
+        <!-- የተጫዋቾች ዝርዝር ሰንጠረዥ -->
+        <section class="table-section">
+            <h2>የተጫዋቾች ዝርዝር</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>የማሊያ ቁ.</th>
+                        <th>ስም</th>
+                        <th>ቦታ</th>
+                        <th>እርምጃ</th>
+                    </tr>
+                </thead>
+                <tbody id="players-table-body">
+                    <!-- የተጫዋቾች መረጃ በ JavaScript እዚህ ይገባል -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script type="module" src="players.js"></script>
+</body>
+</html>

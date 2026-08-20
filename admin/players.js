@@ -1,9 +1,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZVMhnoQ8jPPryIsRLQadhFaSG-Fae0BI",
   authDomain: "rori-fc-admin.firebaseapp.com",
+  databaseURL: "https://rori-fc-admin-default-rtdb.firebaseio.com",
   projectId: "rori-fc-admin",
   storageBucket: "rori-fc-admin.firebasestorage.app",
   messagingSenderId: "399039189474",
@@ -12,43 +13,66 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const db = getDatabase(app);
+const playersRef = ref(db, 'players');
 
-onAuthStateChanged(auth, (user) => {
-    if (!user) {
-        window.location.href = "index.html";
-    }
-});
+// ተጫዋች መመዝገቢያ ፎርም
+const playerForm = document.getElementById('playerForm');
+if (playerForm) {
+    playerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-const logoutBtn = document.getElementById('logout-btn');
-if(logoutBtn) {
-    logoutBtn.addEventListener('click', () => {
-        signOut(auth).then(() => {
-            window.location.href = "index.html";
+        const name = document.getElementById('playerName').value;
+        const position = document.getElementById('playerPosition').value;
+        const number = document.getElementById('playerNumber').value;
+        const image = document.getElementById('playerImage').value;
+
+        push(playersRef, {
+            name: name,
+            position: position,
+            number: number,
+            image: image
+        }).then(() => {
+            alert("ተጫዋቹ በትክክል ተመዝግቧል!");
+            playerForm.reset();
+        }).catch((error) => {
+            alert("ስህተት ተከሰተ፦ " + error.message);
         });
     });
 }
 
-const playerForm = document.getElementById('add-player-form');
-const playersTableBody = document.getElementById('players-table-body');
+// የተጫዋቾች ዝርዝር ማሳያ (አድሚን ገጽ)
+onValue(playersRef, (snapshot) => {
+    const tableBody = document.getElementById('playerList');
+    if (!tableBody) return;
+    
+    tableBody.innerHTML = '';
+    const data = snapshot.val();
+    
+    if (data) {
+        Object.keys(data).forEach((key) => {
+            const item = data[key];
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td style="padding: 10px;"><strong>${item.name || ''}</strong></td>
+                <td style="padding: 10px;">${item.position || ''}</td>
+                <td style="padding: 10px;">#${item.number || ''}</td>
+                <td style="padding: 10px;">
+                    <button onclick="deletePlayer('${key}')" style="background-color: #dc3545; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">ሰርዝ</button>
+                </td>
+            `;
+            tableBody.appendChild(row);
+        });
+    } else {
+        tableBody.innerHTML = '<tr><td colspan="4" style="padding: 15px; text-align: center; color: #777;">ምንም የተመዘገበ ተጫዋች የለም።</td></tr>';
+    }
+});
 
-if (playerForm) {
-    playerForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('player-name').value;
-        const number = document.getElementById('jersey-number').value;
-        const position = document.getElementById('player-position').value;
+// ተጫዋች ለመሰረዝ
+window.deletePlayer = function(id) {
+    if (confirm("እርግጠኛ ነህ ይህን ተጫዋች ማጥፋት ትፈልጋለህ?")) {
+        const itemRef = ref(db, 'players/' + id);
+        remove(itemRef);
+    }
+};
 
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td><strong>#${number}</strong></td>
-            <td>${name}</td>
-            <td><span class="pos-badge">${position}</span></td>
-            <td><button class="delete-btn" onclick="this.parentElement.parentElement.remove()"><i class="fas fa-trash"></i> ሰርዝ</button></td>
-        `;
-
-        playersTableBody.appendChild(row);
-        playerForm.reset();
-    });
-}

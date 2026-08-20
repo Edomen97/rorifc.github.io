@@ -4,36 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>የዜና መቆጣጠሪያ - Rori FC Admin</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="admin-container" style="max-width: 800px; margin: 20px auto; padding: 20px;">
-        <h2>📰 የዜና መቆጣጠሪያ (News Manager)</h2>
-        <a href="index.html">← ወደ ዳሽቦርድ ተመለስ</a>
-        <hr>
+<body style="margin: 0; font-family: Arial, sans-serif;">
+    <div class="admin-container" style="display: flex; min-height: 100vh;">
+        
+        <!-- Sidebar Navigation -->
+        <div class="sidebar" style="width: 250px; background-color: #1a252f; color: white; padding: 20px; box-sizing: border-box;">
+            <h2 style="font-size: 1.2rem; color: #ecf0f1; margin-bottom: 30px;">Rori FC <span style="color: #3498db;">Admin</span></h2>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 15px;"><a href="index.html" style="color: #bdc3c7; text-decoration: none; display: block; padding: 8px;">🏠 ዳሽቦርድ (Dashboard)</a></li>
+                <li style="margin-bottom: 15px;"><a href="players.html" style="color: #bdc3c7; text-decoration: none; display: block; padding: 8px;">👥 ተጫዋቾች (Players)</a></li>
+                <li style="margin-bottom: 15px; background-color: #34495e; border-radius: 4px;"><a href="news.html" style="color: #ffffff; font-weight: bold; text-decoration: none; display: block; padding: 8px;">📰 ዜናዎች (News)</a></li>
+            </ul>
+        </div>
 
-        <form id="newsForm" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px;">
-            <input type="text" id="newsTitle" placeholder="የዜናው ርዕስ" required>
-            <input type="date" id="newsDate" required>
-            <input type="url" id="newsImage" placeholder="የምስል ሊንክ (Image URL)">
-            <textarea id="newsContent" placeholder="የዜናው ዝርዝር መረጃ..." rows="4" required></textarea>
-            <button type="submit" style="padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer;">ዜና ጨምር</button>
-        </form>
+        <!-- Main Content -->
+        <div class="main-content" style="flex: 1; padding: 30px; background-color: #f4f6f9; box-sizing: border-box;">
+            <h2 style="color: #2c3e50;">📰 የዜና መቆጣጠሪያ ማዕከል</h2>
+            
+            <!-- News Form Card -->
+            <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                <h3 style="margin-top: 0; color: #34495e;">አዲስ ዜና መመዝገቢያ</h3>
+                <form id="newsForm" style="display: flex; flex-direction: column; gap: 12px; max-width: 600px;">
+                    <input type="text" id="newsTitle" placeholder="የዜናው ርዕስ" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="date" id="newsDate" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="url" id="newsImage" placeholder="የምስል ሊንክ (Image URL)" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <textarea id="newsContent" placeholder="የዜናው ዝርዝር መረጃ..." rows="4" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                    <button type="submit" style="padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">ዜና ጨምር</button>
+                </form>
+            </div>
 
-        <h3>የተለቀቁ ዜናዎች</h3>
-        <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
-            <thead>
-                <tr style="background-color: #f2f2f2;">
-                    <th style="padding: 8px;">ርዕስ</th>
-                    <th style="padding: 8px;">ቀን</th>
-                    <th style="padding: 8px;">ዝርዝር</th>
-                    <th style="padding: 8px;">ድርጊት</th>
-                </tr>
-            </thead>
-            <tbody id="newsList">
-                <!-- ዜናዎች እዚህ ይገባሉ -->
-            </tbody>
-        </table>
+            <!-- News Table Card -->
+            <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                <h3 style="margin-top: 0; color: #34495e;">የተለቀቁ ዜናዎች</h3>
+                <table border="1" style="width: 100%; text-align: left; border-collapse: collapse; border-color: #eee;">
+                    <thead>
+                        <tr style="background-color: #f8f9fa;">
+                            <th style="padding: 10px;">ርዕስ</th>
+                            <th style="padding: 10px;">ቀን</th>
+                            <th style="padding: 10px;">ዝርዝር</th>
+                            <th style="padding: 10px;">ድርጊት</th>
+                        </tr>
+                    </thead>
+                    <tbody id="newsList">
+                        <!-- ዜናዎች እዚህ ይገባሉ -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 
     <script src="news.js"></script>

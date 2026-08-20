@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>የዜና መቆጣጠሪያ - Rori FC Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="admin-container" style="max-width: 800px; margin: 20px auto; padding: 20px;">
+        <h2>📰 የዜና መቆጣጠሪያ (News Manager)</h2>
+        <a href="index.html">← ወደ ዳሽቦርድ ተመለስ</a>
+        <hr>
+
+        <form id="newsForm" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px;">
+            <input type="text" id="newsTitle" placeholder="የዜናው ርዕስ" required>
+            <input type="date" id="newsDate" required>
+            <input type="url" id="newsImage" placeholder="የምስል ሊንክ (Image URL)">
+            <textarea id="newsContent" placeholder="የዜናው ዝርዝር መረጃ..." rows="4" required></textarea>
+            <button type="submit" style="padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer;">ዜና ጨምር</button>
+        </form>
+
+        <h3>የተለቀቁ ዜናዎች</h3>
+        <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="padding: 8px;">ርዕስ</th>
+                    <th style="padding: 8px;">ቀን</th>
+                    <th style="padding: 8px;">ዝርዝር</th>
+                    <th style="padding: 8px;">ድርጊት</th>
+                </tr>
+            </thead>
+            <tbody id="newsList">
+                <!-- ዜናዎች እዚህ ይገባሉ -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="news.js"></script>
+</body>
+</html>
+document.getElementById('newsForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const title = document.getElementById('newsTitle').value;
+    const date = document.getElementById('newsDate').value;
+    const content = document.getElementById('newsContent').value;
+
+    const tableBody = document.getElementById('newsList');
+    const row = document.createElement('tr');
+
+    row.innerHTML = `
+        <td style="padding: 8px;"><strong>${title}</strong></td>
+        <td style="padding: 8px;">${date}</td>
+        <td style="padding: 8px;">${content.substring(0, 40)}...</td>
+        <td style="padding: 8px;"><button onclick="deleteNews(this)" style="background-color: #dc3545; color: white; border: none; padding: 5px 10px; cursor: pointer;">ሰርዝ</button></td>
+    `;
+
+    tableBody.appendChild(row);
+    document.getElementById('newsForm').reset();
+});
+
+function deleteNews(button) {
+    button.parentElement.parentElement.remove();
+}

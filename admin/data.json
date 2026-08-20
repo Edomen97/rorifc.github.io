@@ -1,0 +1,7 @@
+{
+  "news": "እንኳን ወደ ሮሪ ኤፍሲ አድሚን ገጽ በሰላም መጡ!",
+  "table": [
+    { "rank": 1, "team": "ሮሪ ኤፍሲ", "played": 5, "won": 4, "points": 13 },
+    { "rank": 2, "team": "ቡድን B", "played": 5, "won": 3, "points": 10 }
+  ]
+}

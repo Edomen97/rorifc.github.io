@@ -5,3 +5,24 @@
     { "rank": 2, "team": "ቡድን B", "played": 5, "won": 3, "points": 10 }
   ]
 }
+fetch('./data.json')
+    .then(response => response.json())
+    .then(data => {
+        // የዜና ማሳያ logic
+        const newsContainer = document.getElementById('newsContainer');
+        
+        if (newsContainer && data.news) {
+            if (data.news.length === 0) {
+                newsContainer.innerHTML = "<p>እስከሁን ምንም አዲስ ዜና አልተጨመረም!</p>";
+            } else {
+                newsContainer.innerHTML = data.news.map(item => `
+                    <div style="background: #f8f9fa; border-left: 4px solid #3498db; padding: 12px; margin-bottom: 10px; border-radius: 4px; text-align: left;">
+                        <h4 style="margin-bottom: 5px; color: #2c3e50;">${item.title}</h4>
+                        <p style="font-size: 0.9rem; color: #555; margin-bottom: 5px;">${item.content}</p>
+                        <small style="color: #888;">📅 ${item.date}</small>
+                    </div>
+                `).join('');
+            }
+        }
+    })
+    .catch(err => console.error("Error loading news:", err));

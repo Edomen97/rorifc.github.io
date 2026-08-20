@@ -4636,6 +4636,64 @@
             }
         });
     </script>
-</body>
+</body><!-- የተጫዋቾች ማሳያ ክፍል -->
+<section id="players-section" style="max-width: 1000px; margin: 40px auto; padding: 20px;">
+    <h2 style="text-align: center; color: #1a252f; border-bottom: 2px solid #28a745; padding-bottom: 10px;">⚽ የክሉቡ ተጫዋቾች</h2>
+    <div id="playersContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+        <p style="text-align: center; color: #777; grid-column: 1/-1;">ተጫዋቾች በመጫን ላይ ናቸው...</p>
+    </div>
+</section>
+
+<!-- Firebase Players Fetch Script -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAZVMhnoQ8jPPryIsRLQadhFaSG-Fae0BI",
+      authDomain: "rori-fc-admin.firebaseapp.com",
+      databaseURL: "https://rori-fc-admin-default-rtdb.firebaseio.com",
+      projectId: "rori-fc-admin",
+      storageBucket: "rori-fc-admin.firebasestorage.app",
+      messagingSenderId: "399039189474",
+      appId: "1:399039189474:web:e773eef1300df7b12de9bb",
+      measurementId: "G-LXFG47JJ14"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const playersRef = ref(db, 'players');
+
+    const playersContainer = document.getElementById('playersContainer');
+
+    onValue(playersRef, (snapshot) => {
+        if (!playersContainer) return;
+        playersContainer.innerHTML = '';
+        const data = snapshot.val();
+        
+        if (data) {
+            Object.keys(data).forEach((key) => {
+                const item = data[key];
+                const playerCard = document.createElement('div');
+                playerCard.style.cssText = "background: #ffffff; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 1px solid #eee;";
+
+                const defaultImg = 'https://via.placeholder.com/150?text=Player';
+                const imageSrc = item.image ? item.image : defaultImg;
+
+                playerCard.innerHTML = `
+                    <img src="${imageSrc}" alt="${item.name}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+                    <h3 style="margin: 5px 0; color: #2c3e50; font-size: 1.1rem;">${item.name || ''}</h3>
+                    <p style="margin: 2px 0; color: #007bff; font-weight: bold;">${item.position || ''}</p>
+                    <span style="background: #28a745; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: bold;">#${item.number || ''}</span>
+                `;
+                
+                playersContainer.appendChild(playerCard);
+            });
+        } else {
+            playersContainer.innerHTML = '<p style="text-align: center; color: #777; grid-column: 1/-1;">ምንም የተመዘገበ ተጫዋች የለም።</p>';
+        }
+    });
+</script>
+
 </html>
 

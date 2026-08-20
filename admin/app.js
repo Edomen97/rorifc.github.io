@@ -45,3 +45,41 @@ loginForm.addEventListener('submit', (e) => {
             console.error("ስህተት:", error.message);
         });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            // ተጫዋችና ዜና ብዛት
+            if(document.getElementById('totalPlayers')) document.getElementById('totalPlayers').textContent = data.total_players;
+            
+            // ዜናዎችን ማሳየት
+            let newsContainer = document.getElementById('newsContainer');
+            if(newsContainer && data.news) {
+                newsContainer.innerHTML = data.news.map(item => `
+                    <div style="background:#f8f9fa; border-left:4px solid #3498db; padding:10px; margin-bottom:10px;">
+                        <h4>${item.title}</h4>
+                        <p>${item.content}</p>
+                        <small>${item.date}</small>
+                    </div>
+                `).join('');
+            }
+
+            // የሊግ ሰንጠረዥ ማሳየት
+            let tableBody = document.getElementById('leagueTableBody');
+            if(tableBody && data.table) {
+                tableBody.innerHTML = data.table.map(row => `
+                    <tr>
+                        <td>${row.rank}</td>
+                        <td><strong>${row.team}</strong></td>
+                        <td>${row.played}</td>
+                        <td>${row.won}</td>
+                        <td>${row.drawn}</td>
+                        <td>${row.lost}</td>
+                        <td>${row.gd}</td>
+                        <td><strong>${row.points}</strong></td>
+                    </tr>
+                `).join('');
+            }
+        })
+        .catch(err => console.error("Error loading data.json:", err));
+});
